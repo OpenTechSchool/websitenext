@@ -1,0 +1,39 @@
+{
+  "name": "ots_website",
+  "version": "1.0.0",
+  "description": "new website for ots in nextjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "next start",
+    "dev": "next",
+    "build": "next build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ots",
+    "next"
+  ],
+  "author": "designbygio",
+  "license": "ISC",
+  "dependencies": {
+    "gray-matter": "4.0.2",
+    "next": "9.1.4",
+    "raw-loader": "4.0.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-markdown": "4.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.13",
+    "@types/react-dom": "^16.9.4",
+    "@types/webpack-env": "^1.14.1",
+    "eslint": "^6.7.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "typescript": "^3.7.2"
+  }
+}
