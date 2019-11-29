@@ -1,45 +1,79 @@
 import Link from 'next/link'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+import Button from '@material-ui/core/Button'
 
 export default function Header({ siteTitle }) {
+  const isDesktop = useMediaQuery('(min-width: 768px)')
+
   return (
-    <header className='header'>
-      <nav className='nav' role='navigation' aria-label='main navigation'>
-        <Link href='/'>
-          <h1>{siteTitle}</h1>
-        </Link>
-      </nav>
+    <header>
+      <Link href='/'>
+        <a>
+          <h1>OpenTechSchool</h1>
+        </a>
+      </Link>
+      {!isDesktop && (
+        <div className='hamburgerIcon'>
+          <div className='line'></div>
+          <div className='line'></div>
+          <div className='line'></div>
+        </div>
+      )}
+
+      {isDesktop && (
+        <nav role='navigation' aria-label='main navigation'>
+          <Link href='/learn'>
+            <a>Learn</a>
+          </Link>
+
+          <Link href='/contributes'>
+            <a>Contribute</a>
+          </Link>
+
+          <Link href='/community'>
+            <a>Community</a>
+          </Link>
+
+          <Link href='/about'>
+            <a>About</a>
+          </Link>
+
+          <Link href='/donate'>
+            <Button variant='contained' color='primary'>
+              Donate
+            </Button>
+          </Link>
+        </nav>
+      )}
+
       <style jsx>
         {`
-          h1 {
-            margin-bottom: 0;
-          }
-          h1:hover {
-            cursor: pointer;
-          }
-          nav {
-            padding: 1.5rem 1.25rem;
-            border-bottom: 1px solid #ebebeb;
+          header {
+            padding: 16px 20px;
+            color: white;
+            background: var(--otsColor);
             display: flex;
             justify-content: space-between;
-            flex-direction: row;
             align-items: center;
           }
-          @media (min-width: 768px) {
-            .header {
-              height: 100vh;
-              position: fixed;
-              left: 0;
-              top: 0;
-            }
-            .nav {
-              padding: 2rem;
-              width: 30vw;
-              height: 100%;
-              border-right: 1px solid #ebebeb;
-              border-bottom: none;
-              flex-direction: column;
-              align-items: flex-start;
-            }
+
+          .hamburgerIcon {
+            width: 30px;
+          }
+
+          .line {
+            height: 5px;
+            width: 100%;
+            border-radius: 4px;
+            background-color: white;
+          }
+
+          .line:not(:last-child) {
+            margin-bottom: 5px;
+          }
+
+          nav a {
+            padding-right: 50px;
           }
         `}
       </style>

@@ -16,6 +16,7 @@
   "author": "designbygio",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.7.0",
     "gray-matter": "4.0.2",
     "next": "9.1.4",
     "raw-loader": "4.0.0",
