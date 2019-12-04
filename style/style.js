@@ -1,3 +1,5 @@
+import { createMuiTheme } from '@material-ui/core/styles'
+
 // export const colors = {
 //   ostBlue: '#085886'
 // }
@@ -12,6 +14,13 @@
 //     return `${this.fontRegular} ${this.primaryFontSize} ${this.primaryFontFamily}`
 //   }
 // }
+
+export const otsTheme = createMuiTheme({
+  palette: {
+    primary: { main: '#2D9CDB' },
+    secondary: { main: '#FF3877' }
+  }
+})
 
 export const mediaquery = {
   mobile: 'max-width: 550px',

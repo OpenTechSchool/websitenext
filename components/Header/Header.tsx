@@ -1,9 +1,12 @@
 import Link from 'next/link'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import Button from '@material-ui/core/Button'
+import OutlineButton from '../Button/OutlineButton'
+import MenuIcon from '@material-ui/icons/Menu'
+
+import { mediaquery } from '../../style/style'
 
 export default function Header({ siteTitle }) {
-  const isDesktop = useMediaQuery('(min-width: 768px)')
+  const isDesktop = useMediaQuery(`(${mediaquery.smallToTablet})`)
 
   return (
     <header>
@@ -12,13 +15,7 @@ export default function Header({ siteTitle }) {
           <h1>OpenTechSchool</h1>
         </a>
       </Link>
-      {!isDesktop && (
-        <div className='hamburgerIcon'>
-          <div className='line'></div>
-          <div className='line'></div>
-          <div className='line'></div>
-        </div>
-      )}
+      {!isDesktop && <MenuIcon />}
 
       {isDesktop && (
         <nav role='navigation' aria-label='main navigation'>
@@ -39,9 +36,9 @@ export default function Header({ siteTitle }) {
           </Link>
 
           <Link href='/donate'>
-            <Button variant='contained' color='primary'>
-              Donate
-            </Button>
+            <a>
+              <OutlineButton>Donate</OutlineButton>
+            </a>
           </Link>
         </nav>
       )}
@@ -57,23 +54,9 @@ export default function Header({ siteTitle }) {
             align-items: center;
           }
 
-          .hamburgerIcon {
-            width: 30px;
-          }
-
-          .line {
-            height: 5px;
-            width: 100%;
-            border-radius: 4px;
-            background-color: white;
-          }
-
-          .line:not(:last-child) {
-            margin-bottom: 5px;
-          }
-
           nav a {
             padding-right: 50px;
+            color: white;
           }
         `}
       </style>

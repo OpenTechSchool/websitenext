@@ -4,9 +4,14 @@
   "description": "new website for ots in nextjs",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint --fix --ext .tsx pages/**/** components/**/**",
+    "lint:watch": "esw -w --fix pages/**/** components/**/**",
+    "clean-cache": "rimraf -rf ./node_modules/.cache",
     "start": "next start",
-    "dev": "next",
-    "build": "next build",
+    "dev-start": "next",
+    "open": "open http://localhost:3000",
+    "dev": "npm run lint && npm run clean-cache && npm-run-all -p dev-start open",
+    "build": "npm run clean-cache && next build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,7 +21,7 @@
   "author": "designbygio",
   "license": "ISC",
   "dependencies": {
-    "@material-ui/core": "^4.7.0",
+    "@material-ui/core": "4.7.0",
     "gray-matter": "4.0.2",
     "next": "9.1.4",
     "raw-loader": "4.0.0",
@@ -25,16 +30,28 @@
     "react-markdown": "4.2.2"
   },
   "devDependencies": {
+    "@material-ui/icons": "^4.5.1",
     "@types/node": "^12.12.14",
     "@types/react": "^16.9.13",
     "@types/react-dom": "^16.9.4",
     "@types/webpack-env": "^1.14.1",
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.3.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
     "typescript": "^3.7.2"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "jsxBracketSameLine": false
   }
 }

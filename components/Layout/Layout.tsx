@@ -1,14 +1,15 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Meta from '../Meta'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 
 import globalStyle from '../../style/style-global'
-// import { colors } from '../../style/style'
+import { ThemeProvider } from '@material-ui/core/styles'
+import { otsTheme } from '../../style/style'
 
 export default function Layout({ siteTitle, siteDescription, children }) {
   return (
-    <Fragment>
+    <ThemeProvider theme={otsTheme}>
       <Meta siteTitle={siteTitle} siteDescription={siteDescription} />
       <Header siteTitle={siteTitle} />
 
@@ -17,6 +18,6 @@ export default function Layout({ siteTitle, siteDescription, children }) {
       <style jsx global>
         {globalStyle}
       </style>
-    </Fragment>
+    </ThemeProvider>
   )
 }

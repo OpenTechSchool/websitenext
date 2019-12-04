@@ -4,7 +4,7 @@ import Layout from '../Layout/Layout'
 export default function HomepageLayout({
   siteTitle,
   siteDescription,
-  children
+  children,
 }) {
   return (
     <Layout siteTitle={siteTitle} siteDescription={siteDescription}>

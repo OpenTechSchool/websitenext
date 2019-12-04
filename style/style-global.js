@@ -5,6 +5,11 @@ export default css.global`
   :root {
     /* COLORS */
     --otsColor: #085886;
+    --mainBlue: #2D9CDB;
+    --pink: #FF3877;
+    --pink-darker: #D52B61;
+    --secondaryBlue: #1F709E;
+    --mainGrey: #FAFAFA;
   }
 
   * {
@@ -51,6 +56,15 @@ export default css.global`
 
   a {
     text-decoration: none;
+    color: var(--mainBlue);
+  }
+
+  a.invert {
+    color: var(--pink);
+  }
+
+  a:hover {
+    opacity: 1;
   }
 
   h1, h2, h3 {

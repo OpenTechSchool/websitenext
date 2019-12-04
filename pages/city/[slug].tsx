@@ -8,7 +8,7 @@ export default function CityTemplate({
   content,
   data,
   siteTitle,
-  siteDescription
+  siteDescription,
 }) {
   const markdownBody = content
   const frontmatter = data
@@ -29,12 +29,12 @@ CityTemplate.getInitialProps = async function(context) {
   const { slug } = context.query
 
   const content = await import(`../../data/cities/${slug}.md`)
-  //gray-matter parses the yaml frontmatter from the md body
+  // gray-matter parses the yaml frontmatter from the md body
   const data = matter(content.default)
 
   return {
     siteTitle: slug,
     siteDescription: 'some description',
-    ...data
+    ...data,
   }
 }
