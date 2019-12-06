@@ -1,4 +1,5 @@
 ---
+slug: leipzig
 title: Leipzig
 location: Leipzig, Germany
 tagline: Coding without the hype

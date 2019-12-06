@@ -7,9 +7,11 @@ export default function Index({ siteTitle, siteDescription, cities }) {
   return (
     <HomepageLayout siteTitle={siteTitle} siteDescription={siteDescription}>
       Index! Cities List:
-      {cities.map(({ document: { data }, slug }) => (
-        <Link href={{ pathname: '/city', query: { id: slug } }} key={slug}>
-          <h2>{data.title}</h2>
+      {cities.map(({ document: { data } }) => (
+        <Link href={{ pathname: `/city/${data.slug}` }} key={data.slug}>
+          <a>
+            <h2>{data.title}</h2>
+          </a>
         </Link>
       ))}
     </HomepageLayout>
@@ -28,7 +30,7 @@ Index.getInitialProps = async function() {
       const document = matter(value.default)
 
       return {
-        document
+        document,
       }
     })
 
@@ -38,6 +40,6 @@ Index.getInitialProps = async function() {
   return {
     siteTitle: 'ots',
     siteDescription: 'some description',
-    cities: cities
+    cities: cities,
   }
 }

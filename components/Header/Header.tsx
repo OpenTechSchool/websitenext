@@ -1,19 +1,17 @@
 import Link from 'next/link'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import OutlineButton from '../Button/OutlineButton'
 import MenuIcon from '@material-ui/icons/Menu'
+import OutlineButton from '../Button/OutlineButton'
 
 import { mediaquery } from '../../style/style'
 
-export default function Header({ siteTitle }) {
+export default function Header() {
   const isDesktop = useMediaQuery(`(${mediaquery.smallToTablet})`)
 
   return (
     <header>
       <Link href='/'>
-        <a>
-          <h1>OpenTechSchool</h1>
-        </a>
+        <a className='logo'>OpenTechSchool</a>
       </Link>
       {!isDesktop && <MenuIcon />}
 
@@ -54,9 +52,26 @@ export default function Header({ siteTitle }) {
             align-items: center;
           }
 
+          .logo {
+            color: white;
+            font-size: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+
           nav a {
+            font-size: 18px;
+            font-size: 1.8rem;
+            font-weight: 400;
             padding-right: 50px;
             color: white;
+          }
+
+          @media (${mediaquery.tabletToDesktop}) {
+            .logo {
+              font-size: 30px;
+              font-size: 3rem;
+            }
           }
         `}
       </style>

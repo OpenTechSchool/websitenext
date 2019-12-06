@@ -11,7 +11,7 @@ export default function Layout({ siteTitle, siteDescription, children }) {
   return (
     <ThemeProvider theme={otsTheme}>
       <Meta siteTitle={siteTitle} siteDescription={siteDescription} />
-      <Header siteTitle={siteTitle} />
+      <Header />
 
       <div className='main'>{children}</div>
       <Footer />

@@ -9,13 +9,12 @@ export default function HomepageLayout({
   return (
     <Layout siteTitle={siteTitle} siteDescription={siteDescription}>
       <section className='homepage'>
-        <h1> HOME PAGE! </h1>
         <div className='main'>{children}</div>
       </section>
 
       <style jsx>{`
         .homepage {
-          background-color: pink;
+          background-color: white;
         }
       `}</style>
     </Layout>

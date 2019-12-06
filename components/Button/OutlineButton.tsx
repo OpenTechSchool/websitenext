@@ -4,6 +4,7 @@ import MuiButton from '@material-ui/core/Button'
 const ButtonStyle = withStyles({
   root: {
     background: 'var(--pink)',
+    fontSize: '1.4rem',
     borderRadius: '15px',
     boxShadow: '0',
     color: 'white',

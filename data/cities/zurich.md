@@ -1,4 +1,5 @@
 ---
+slug: zurich
 title: Zürich
 location: 'Zürich, Switzerland'
 tagline: 'The real Mountain View'
