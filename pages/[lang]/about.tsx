@@ -1,13 +1,18 @@
-import PageLayout from '../components/PageLayout/PageLayout'
-import TextSection from '../components/Section/TextSection'
+import PageLayout from '../../components/PageLayout/PageLayout'
+import TextSection from '../../components/Section/TextSection'
+import useTranslation from '../../hooks/useTranslation'
+import withLocale from '../../containers/withLocale'
 
-import { mediaquery } from '../style/style'
+import { mediaquery } from '../../style/style'
 
-export default function About() {
+function About() {
+  const { locale, t } = useTranslation()
+
   return (
     <PageLayout siteTitle='About' siteDescription='opentechschool about page'>
       <TextSection classname='default' title='History'>
         <div className='historySection'>
+          <h3>{t('bio')}</h3>
           <p>
             OTS was born in April of 2012 in Berlin. The first local RailsGirls
             event — a free tech workshop with freshly created learning materials
@@ -83,3 +88,5 @@ export default function About() {
     </PageLayout>
   )
 }
+
+export default withLocale(About)

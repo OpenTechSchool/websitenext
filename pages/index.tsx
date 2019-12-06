@@ -1,20 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import matter from 'gray-matter'
+import Head from 'next/head'
+import { getInitialLocale } from '../translations/getInitialLocale'
 import HomepageLayout from '../components/HomepageLayout/HomepageLayout'
 
 export default function Index({ siteTitle, siteDescription, cities }) {
+  const router = useRouter()
+  useEffect(() => {
+    router.replace('/[lang]', `${getInitialLocale()}`)
+  })
+
   return (
-    <HomepageLayout siteTitle={siteTitle} siteDescription={siteDescription}>
-      Index! Cities List:
-      {cities.map(({ document: { data } }) => (
-        <Link href={{ pathname: `/city/${data.slug}` }} key={data.slug}>
-          <a>
-            <h2>{data.title}</h2>
-          </a>
-        </Link>
-      ))}
-    </HomepageLayout>
+    <Head>
+      <meta name='robots' content='noindex, nofollow' />
+    </Head>
+    // <HomepageLayout siteTitle={siteTitle} siteDescription={siteDescription}>
+    //   Index! Cities List:
+    //   {cities.map(({ document: { data } }) => (
+    //     <Link href={{ pathname: `/city/${data.slug}` }} key={data.slug}>
+    //       <a>
+    //         <h2>{data.title}</h2>
+    //       </a>
+    //     </Link>
+    //   ))}
+    // </HomepageLayout>
   )
 }
 
