@@ -2,11 +2,14 @@ import Link from 'next/link'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import MenuIcon from '@material-ui/icons/Menu'
 import OutlineButton from '../Button/OutlineButton'
+import withLocale from '../../containers/withLocale'
+import useTranslation from '../../hooks/useTranslation'
 
 import { mediaquery } from '../../style/style'
 
-export default function Header() {
+export function Header() {
   const isDesktop = useMediaQuery(`(${mediaquery.smallToTablet})`)
+  const { locale, t } = useTranslation()
 
   return (
     <header>
@@ -17,23 +20,23 @@ export default function Header() {
 
       {isDesktop && (
         <nav role='navigation' aria-label='main navigation'>
-          <Link href='/learn'>
+          <Link href={`/${locale}/learn`}>
             <a>Learn</a>
           </Link>
 
-          <Link href='/contributes'>
+          <Link href={`/${locale}/contributes`}>
             <a>Contribute</a>
           </Link>
 
-          <Link href='/community'>
+          <Link href={`/${locale}/community`}>
             <a>Community</a>
           </Link>
 
-          <Link href='/about'>
+          <Link href={`/${locale}/about`}>
             <a>About</a>
           </Link>
 
-          <Link href='/donate'>
+          <Link href={`/${locale}/donate`}>
             <a>
               <OutlineButton>Donate</OutlineButton>
             </a>
@@ -78,3 +81,5 @@ export default function Header() {
     </header>
   )
 }
+
+export default withLocale(Header)

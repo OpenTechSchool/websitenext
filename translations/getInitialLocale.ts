@@ -14,5 +14,6 @@ export function getInitialLocale(): Locale {
     return browserSetting
   }
 
+  console.log('default')
   return defaultLocale
 }

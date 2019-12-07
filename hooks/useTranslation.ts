@@ -1,16 +1,24 @@
 import { useContext } from 'react'
 import { LocaleContext } from '../context/LocaleContext'
-import strings from '../translations/strings'
-import { defaultLocale } from '../translations/config'
+import ENstrings from '../translations/en/strings'
+import DEstrings from '../translations/de/strings'
 
 export default function useTranslation() {
   const { locale } = useContext(LocaleContext)
+  let strings
+
+  switch (locale) {
+    case 'de':
+      strings = DEstrings
+    default:
+      strings = ENstrings
+  }
 
   function t(key: string) {
-    if (!strings[locale][key]) {
+    if (!strings[key]) {
       console.warn(`Translation '${key}' for locale '${locale}' not found.`)
     }
-    return strings[locale][key] || strings[defaultLocale][key] || ''
+    return strings[key] || ''
   }
 
   return {

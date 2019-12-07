@@ -1,6 +1,5 @@
 import { NextPage } from 'next'
 import Error from 'next/error'
-import { getDisplayName } from 'next-server/dist/lib/utils'
 import { isLocale, Locale } from '../translations/types'
 import { LocaleProvider } from '../context/LocaleContext'
 
@@ -9,7 +8,7 @@ interface LangProps {
 }
 
 export default (WrappedPage: NextPage<any>) => {
-  function WithLocale: NextPage<any, LangProps> ({ locale, ...pageProps }) => {
+  function WithLocale({ locale, ...pageProps }) {
     if (!locale) {
       return <Error statusCode={404} />
     }
@@ -34,8 +33,5 @@ export default (WrappedPage: NextPage<any>) => {
     return { ...pageProps, locale: ctx.query.lang }
   }
 
-  
-  // pretty display name for the debugger
-  WithLocale.displayName = `withLang(${getDisplayName(WrappedPage)})`
   return WithLocale
 }
