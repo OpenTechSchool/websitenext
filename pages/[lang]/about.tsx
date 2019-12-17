@@ -13,46 +13,18 @@ const About: NextPage<any> = () => {
     <PageLayout siteTitle='About' siteDescription='opentechschool about page'>
       <TextSection classname='default' title='History'>
         <div className='historySection'>
-          <h3>{t('bio')}</h3>
-          <p>
-            OTS was born in April of 2012 in Berlin. The first local RailsGirls
-            event — a free tech workshop with freshly created learning materials
-            dedicated to an audience of women of all ages and backgrounds during
-            a both thrilling and cosy weekend — had just taken place, and had
-            created much admiration and enthusiasm in its wake. Why not expand
-            the concept to all tech topics people might possibly want to learn
-            and open the events to an audience of all genders and experience
-            levels? The challenge couldn’t be greater. Since then, hundreds of
-            people have joined OTS as coaches, learners, organizers, and
-            sponsors, in Berlin, Stockholm, and soon: even in more new cities
-            (yours!).
-          </p>
+          <p>{t('about.history')}</p>
           <img src='/about.jpg' />
         </div>
       </TextSection>
       <TextSection classname='pink' title='What is OpenTechSchool?'>
-        <p>
-          OpenTechSchool is a movement aiming to offer free tech education. Our
-          events are open to technology enthusiasts of all genders, backgrounds,
-          and experience levels, willing to coach or learn in a friendly
-          environment. Our learning materials are shared and collectively
-          improved by the online community and anyone is welcome to use it to
-          organize new OTS chapters anywhere in the world.
-        </p>
+        <p>{t('about.explanation')}</p>
       </TextSection>
       <TextSection classname='highlight' title='Core values'>
-        <p>OpenTechSchool is best described through our core values.</p>
+        <p>{t('about.values.title')}</p>
       </TextSection>
       <TextSection classname='slide' title='Openness'>
-        <p>
-          All OTS discussions, training materials, and blueprints are openly
-          accessible through our website so that anyone can find them and
-          contribute to their development. Furthermore, for OTS, openness also
-          means sharing: our coaches share their skills and time, and our
-          learners share their own knowledge with the community, both by
-          presenting their achievements during the beginners meetup and by later
-          becoming coaches themselves.
-        </p>
+        <p>{t('about.values.openness')}</p>
       </TextSection>
       <TextSection classname='grey' title='Our Licensing Policy'>
         <p>
