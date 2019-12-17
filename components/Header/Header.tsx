@@ -2,7 +2,6 @@ import Link from 'next/link'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import MenuIcon from '@material-ui/icons/Menu'
 import OutlineButton from '../Button/OutlineButton'
-import withLocale from '../../containers/withLocale'
 import useTranslation from '../../hooks/useTranslation'
 
 import { mediaquery } from '../../style/style'
@@ -82,4 +81,4 @@ export function Header() {
   )
 }
 
-export default withLocale(Header)
+export default Header

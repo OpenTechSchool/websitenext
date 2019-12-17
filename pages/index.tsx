@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { getInitialLocale } from '../translations/getInitialLocale'
 
 // only purpose of this page is to redirect to a language specific subpages
-export default function Index() {
+export const Index: React.FC = () => {
   const router = useRouter()
   useEffect(() => {
     router.replace('/[lang]', `/${getInitialLocale()}`)
@@ -16,3 +16,5 @@ export default function Index() {
     </Head>
   )
 }
+
+export default Index

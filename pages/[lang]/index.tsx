@@ -1,10 +1,19 @@
+import { NextPage } from 'next'
 import Link from 'next/link'
 import matter from 'gray-matter'
 import HomepageLayout from '../../components/HomepageLayout/HomepageLayout'
+import withLocale from '../../containers/withLocale'
 
-export default function Index({ siteTitle, siteDescription, cities }) {
+interface IndexProps {
+  cities?: Array<Object>
+}
+
+export const Index: NextPage<any, IndexProps> = ({ cities }) => {
   return (
-    <HomepageLayout siteTitle={siteTitle} siteDescription={siteDescription}>
+    <HomepageLayout
+      siteTitle='OTS Homepage'
+      siteDescription='this is the OTS homepage'
+    >
       Index! Cities List:
       {cities.map(({ document: { data } }) => (
         <Link href={{ pathname: `/city/${data.slug}` }} key={data.slug}>
@@ -17,12 +26,12 @@ export default function Index({ siteTitle, siteDescription, cities }) {
   )
 }
 
-Index.getInitialProps = async function() {
-  const cities = (context => {
+Index.getInitialProps = async ctx => {
+  const cities = (ctx => {
     // get all keys from src/data/cities
-    const keys = context.keys()
+    const keys = ctx.keys()
     // grab the values from these files
-    const values = keys.map(context)
+    const values = keys.map(ctx)
 
     const data = keys.map((key, index) => {
       const value: any = values[index]
@@ -36,9 +45,7 @@ Index.getInitialProps = async function() {
     return data
   })(require.context('../../data/cities', true, /\.md$/))
 
-  return {
-    siteTitle: 'ots',
-    siteDescription: 'some description',
-    cities: cities,
-  }
+  return { cities }
 }
+
+export default withLocale(Index)

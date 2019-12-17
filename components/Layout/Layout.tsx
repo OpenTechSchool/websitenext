@@ -7,7 +7,7 @@ import globalStyle from '../../style/style-global'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { otsTheme } from '../../style/style'
 
-export default function Layout({ siteTitle, siteDescription, children }) {
+export const Layout = ({ siteTitle, siteDescription, children }) => {
   return (
     <ThemeProvider theme={otsTheme}>
       <Meta siteTitle={siteTitle} siteDescription={siteDescription} />
@@ -21,3 +21,5 @@ export default function Layout({ siteTitle, siteDescription, children }) {
     </ThemeProvider>
   )
 }
+
+export default Layout

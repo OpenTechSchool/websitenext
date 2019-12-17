@@ -12,10 +12,12 @@ export const LocaleContext = createContext<ContextProps>({
   setLocale: () => null,
 })
 
-export function LocaleProvider({ lang, children }) {
+export const LocaleProvider: React.FC<{ lang: Locale }> = ({
+  lang,
+  children,
+}) => {
   const [locale, setLocale] = useState(lang)
-  const { query } = useRouter()
-
+  const router = useRouter()
   // store preference in local storage
   useEffect(() => {
     if (locale !== localStorage.getItem('locale')) {
@@ -24,15 +26,18 @@ export function LocaleProvider({ lang, children }) {
   }, [locale])
 
   // sync locale when route change
-  useEffect(() => {
-    if (
-      typeof query.lang === 'string' &&
-      isLocale(query.lang) &&
-      locale !== query.lang
-    ) {
-      setLocale(query.lang)
-    }
-  }, [query.lang, locale])
+  if (router) {
+    const { query } = router
+    useEffect(() => {
+      if (
+        typeof query.lang === 'string' &&
+        isLocale(query.lang) &&
+        locale !== query.lang
+      ) {
+        setLocale(query.lang)
+      }
+    }, [query.lang, locale])
+  }
 
   return (
     <LocaleContext.Provider value={{ locale, setLocale }}>
