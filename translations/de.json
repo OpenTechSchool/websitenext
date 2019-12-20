@@ -1,1 +1,13 @@
-{}
+{
+  "about": {
+    "pageTitle": "über uns",
+    "historyTitle": "Geschichte",
+    "history": "OTS war in April 2012 in Berlin geboren.",
+    "explanation": "OpenTechSchool ist ein movement das hat free tech education als Zeil.",
+    "coreValue": {
+      "title": "OpenTechSchool ist das Besten in der ganze Welt.",
+      "openness": "ich weiss es nicht wass ich muss auf deutsch schreiben. Ich bin keine übersetzerin!"
+    },
+    "policy": "und hier viele langweilig Sache über policy..."
+  }
+}

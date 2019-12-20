@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import PageLayout from '../../components/PageLayout/PageLayout'
 import TextSection from '../../components/Section/TextSection'
 import useTranslation from '../../hooks/useTranslation'
+import WithLocale from '../../containers/withLocale'
 
 import { mediaquery } from '../../style/style'
 
@@ -9,8 +10,11 @@ const About: NextPage<any> = () => {
   const { t } = useTranslation()
 
   return (
-    <PageLayout siteTitle='About' siteDescription='opentechschool about page'>
-      <TextSection classname='default' title='History'>
+    <PageLayout
+      siteTitle='about.pageTitle'
+      siteDescription='opentechschool about page'
+    >
+      <TextSection classname='default' title={t('about.historyTitle')}>
         <div className='historySection'>
           <p>{t('about.history')}</p>
           <img src='/about.jpg' />
@@ -61,4 +65,4 @@ const About: NextPage<any> = () => {
   )
 }
 
-export default About
+export default WithLocale(About)

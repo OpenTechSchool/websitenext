@@ -1,12 +1,14 @@
 import Head from 'next/head'
+import useTranslation from '../hooks/useTranslation'
 
 export default function Meta({ siteTitle, siteDescription }) {
+  const { t } = useTranslation()
   return (
     <>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta charSet='utf-8' />
-        <title>{siteTitle}</title>
+        <title>{t(siteTitle)}</title>
         <meta name='Description' content={siteDescription}></meta>
         <link
           rel='stylesheet'

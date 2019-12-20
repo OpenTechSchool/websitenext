@@ -3,6 +3,7 @@ import Link from 'next/link'
 import matter from 'gray-matter'
 import HomepageLayout from '../../components/HomepageLayout/HomepageLayout'
 import useTranslation from '../../hooks/useTranslation'
+import WithLocale from '../../containers/withLocale'
 
 interface IndexProps {
   cities?: Array<Object>
@@ -58,4 +59,4 @@ Index.getInitialProps = async context => {
   return { cities }
 }
 
-export default Index
+export default WithLocale(Index)

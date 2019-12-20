@@ -22,7 +22,6 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
 
 CityTemplate.getInitialProps = async ctx => {
   const { lang, slug } = ctx.query
-  console.log(ctx.query)
 
   const content = await import(`../../../data/cities/${lang}/${slug}.md`)
   // gray-matter parses the yaml frontmatter from the md body
