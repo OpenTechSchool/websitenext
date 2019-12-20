@@ -1,9 +1,10 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
 import matter from 'gray-matter'
-import HomepageLayout from '../../components/HomepageLayout/HomepageLayout'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
+import HomepageLayout from '../../components/HomepageLayout/HomepageLayout'
+import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 
 interface IndexProps {
   cities?: Array<Object>
@@ -14,21 +15,26 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
 
   return (
     <HomepageLayout
-      siteTitle='OTS Homepage'
+      siteTitle='homepage.siteTitle'
       siteDescription='this is the OTS homepage'
     >
-      Index! Cities List:
-      {cities &&
-        cities.map(({ document: { data } }) => (
-          <Link
-            href={{ pathname: `${locale}/city/${data.slug}` }}
-            key={data.slug}
-          >
-            <a>
-              <h2>{data.title}</h2>
-            </a>
-          </Link>
-        ))}
+      <section>
+        <LocalSwitcher />
+      </section>
+      <section>
+        {t('homepage.cityListTitle')}
+        {cities &&
+          cities.map(({ document: { data } }) => (
+            <Link
+              href={{ pathname: `${locale}/city/${data.slug}` }}
+              key={data.slug}
+            >
+              <a>
+                <h2>{data.title}</h2>
+              </a>
+            </Link>
+          ))}
+      </section>
     </HomepageLayout>
   )
 }

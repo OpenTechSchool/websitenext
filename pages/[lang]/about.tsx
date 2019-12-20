@@ -1,6 +1,7 @@
 import { NextPage } from 'next'
 import PageLayout from '../../components/PageLayout/PageLayout'
 import TextSection from '../../components/Section/TextSection'
+import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
 
@@ -14,6 +15,9 @@ const About: NextPage<any> = () => {
       siteTitle='about.pageTitle'
       siteDescription='opentechschool about page'
     >
+      <section>
+        <LocalSwitcher />
+      </section>
       <TextSection classname='default' title={t('about.historyTitle')}>
         <div className='historySection'>
           <p>{t('about.history')}</p>

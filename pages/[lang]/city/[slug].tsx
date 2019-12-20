@@ -1,7 +1,7 @@
 import * as React from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-
+import LocalSwitcher from '../../../components/LocalSwitcher/LocalSwitcher'
 import CityLayout from '../../../components/CityLayout/CityLayout'
 
 export function CityTemplate({ content, data, siteTitle, siteDescription }) {
@@ -10,6 +10,9 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
 
   return (
     <CityLayout siteTitle={siteTitle} siteDescription={siteDescription}>
+      <section>
+        <LocalSwitcher />
+      </section>
       <article>
         <h1>{frontmatter.title}</h1>
         <div>

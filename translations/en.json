@@ -2,6 +2,10 @@
   "common": {
     "login": "login"
   },
+  "homepage": {
+    "siteTitle": "OpenTechSchool",
+    "cityListTitle": "Our chapter everywhere in the world!"
+  },
   "about": {
     "pageTitle": "About",
     "historyTitle": "History",
