@@ -19,6 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/[lang]/city/[slug].tsx"
+    "pages/[lang]/[slug].tsx",
+    "pages/index.tsx"
   ]
 }

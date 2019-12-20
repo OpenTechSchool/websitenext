@@ -2,12 +2,11 @@ import { NextPage } from 'next'
 import PageLayout from '../../components/PageLayout/PageLayout'
 import TextSection from '../../components/Section/TextSection'
 import useTranslation from '../../hooks/useTranslation'
-import withLocale from '../../containers/withLocale'
 
 import { mediaquery } from '../../style/style'
 
 const About: NextPage<any> = () => {
-  const { locale, t } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <PageLayout siteTitle='About' siteDescription='opentechschool about page'>
@@ -62,4 +61,4 @@ const About: NextPage<any> = () => {
   )
 }
 
-export default withLocale(About)
+export default About

@@ -2,14 +2,9 @@ import * as React from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 
-import CityLayout from '../../components/CityLayout/CityLayout'
+import CityLayout from '../../../components/CityLayout/CityLayout'
 
-export default function CityTemplate({
-  content,
-  data,
-  siteTitle,
-  siteDescription,
-}) {
+export function CityTemplate({ content, data, siteTitle, siteDescription }) {
   const markdownBody = content
   const frontmatter = data
 
@@ -25,10 +20,11 @@ export default function CityTemplate({
   )
 }
 
-CityTemplate.getInitialProps = async function(context) {
-  const { slug } = context.query
+CityTemplate.getInitialProps = async ctx => {
+  const { lang, slug } = ctx.query
+  console.log(ctx.query)
 
-  const content = await import(`../../data/cities/${slug}.md`)
+  const content = await import(`../../../data/cities/${lang}/${slug}.md`)
   // gray-matter parses the yaml frontmatter from the md body
   const data = matter(content.default)
 
@@ -38,3 +34,5 @@ CityTemplate.getInitialProps = async function(context) {
     ...data,
   }
 }
+
+export default CityTemplate
