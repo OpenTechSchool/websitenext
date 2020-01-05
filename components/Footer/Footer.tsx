@@ -102,12 +102,12 @@ export default function Footer() {
             © {new Date().getFullYear()} by{' '}
             <Link href=''>
               <a>OpenTechSchool e.V.</a>
-            </Link>{' '}
-            ||{' '}
+            </Link>
+            <span className='spacer'>||</span>
             <Link href=''>
               <a>Contact us</a>
-            </Link>{' '}
-            ||{' '}
+            </Link>
+            <span className='spacer'>||</span>
             <Link href=''>
               <a>Impressum</a>
             </Link>
@@ -162,6 +162,10 @@ export default function Footer() {
           text-align: center;
           font-size: 18px;
           margin-top: 32px;
+        }
+
+        .spacer {
+          padding: 0 15px;
         }
       `}</style>
     </footer>
