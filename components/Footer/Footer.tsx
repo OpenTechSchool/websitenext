@@ -84,6 +84,35 @@ export default function Footer() {
             </Col>
           </Row>
         </Grid>
+        <div className='note'>
+          <p className='license'>
+            Except{' '}
+            <Link href=''>
+              <a>where otherwise noted</a>
+            </Link>
+            , content on this site is licensed under a{' '}
+            <Link href=''>
+              <a>
+                Creative Commons Attribution-ShareAlike 3.0 Unported License
+              </a>
+            </Link>
+            .
+          </p>
+          <p className='imprint'>
+            © {new Date().getFullYear()} by{' '}
+            <Link href=''>
+              <a>OpenTechSchool e.V.</a>
+            </Link>{' '}
+            ||{' '}
+            <Link href=''>
+              <a>Contact us</a>
+            </Link>{' '}
+            ||{' '}
+            <Link href=''>
+              <a>Impressum</a>
+            </Link>
+          </p>
+        </div>
       </div>
       <style jsx>{`
         footer {
@@ -96,11 +125,6 @@ export default function Footer() {
           color: #9dd3f2;
         }
 
-        .grid-wrapper {
-          max-width: 900px;
-          margin: 0 auto;
-        }
-
         h3 {
           font-weight: 800;
           font-size: 24px;
@@ -110,6 +134,34 @@ export default function Footer() {
         a {
           color: #9dd3f2;
           font-weight: 500;
+          text-decoration: none;
+          transition: opacity 0.2s ease;
+        }
+
+        a:hover {
+          opacity: 1;
+          text-decoration-color: inherit;
+        }
+
+        .grid-wrapper {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        .note {
+          font-size: 14px;
+          padding: 0 2rem;
+          margin-top: 92px;
+        }
+
+        .note a {
+          color: white;
+        }
+
+        .imprint {
+          text-align: center;
+          font-size: 18px;
+          margin-top: 32px;
         }
       `}</style>
     </footer>
