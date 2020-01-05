@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Grid, Col, Row } from 'react-styled-flexboxgrid'
+import { mediaqueryGrid } from '../../style/style'
 
 export default function Footer() {
   return (
@@ -166,6 +167,12 @@ export default function Footer() {
 
         .spacer {
           padding: 0 15px;
+        }
+
+        @media (${mediaqueryGrid.xs}) {
+          footer {
+            text-align: center;
+          }
         }
       `}</style>
     </footer>
