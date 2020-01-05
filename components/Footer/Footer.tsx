@@ -136,12 +136,6 @@ export default function Footer() {
           color: #9dd3f2;
           font-weight: 500;
           text-decoration: none;
-          transition: opacity 0.2s ease;
-        }
-
-        a:hover {
-          opacity: 1;
-          text-decoration-color: inherit;
         }
 
         .grid-wrapper {
