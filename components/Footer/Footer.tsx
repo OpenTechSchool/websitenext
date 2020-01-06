@@ -1,40 +1,43 @@
 import Link from 'next/link'
 import { Grid, Col, Row } from 'react-styled-flexboxgrid'
 import { mediaqueryGrid } from '../../style/style'
+import useTranslation from '../../hooks/useTranslation'
 
 export default function Footer() {
+  const { t } = useTranslation()
+
   return (
     <footer>
       <div className='grid-wrapper'>
         <Grid fluid>
           <Row around='sm'>
             <Col xs={12} sm={3}>
-              <h3>Get involved</h3>
+              <h3>{t('footer.getinvolved')}</h3>
               <ul>
                 <li>
                   <Link href=''>
-                    <a>Join a meetup</a>
+                    <a>{t('footer.joinMeetup')}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href=''>
-                    <a>Organize an event</a>
+                    <a>{t('footer.organizeEvent')}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href=''>
-                    <a>Start a chapter</a>
+                    <a>{t('footer.startChapter')}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href=''>
-                    <a>Become a sponsor</a>
+                    <a>{t('footer.becomeSponsor')}</a>
                   </Link>
                 </li>
               </ul>
             </Col>
             <Col xs={12} sm={3}>
-              <h3>Our values</h3>
+              <h3>{t('footer.ourValues')}</h3>
               <ul>
                 <li>
                   <Link href=''>
@@ -43,42 +46,42 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href=''>
-                    <a>Chore values</a>
+                    <a>{t('footer.coreValues')}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href=''>
-                    <a>Coaching guidelines</a>
+                    <a>{t('footer.coachingGuidelines')}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href=''>
-                    <a>Code of Conduct</a>
+                    <a>{t('footer.codeOfConduct')}</a>
                   </Link>
                 </li>
               </ul>
             </Col>
             <Col xs={12} sm={3}>
-              <h3>About us</h3>
+              <h3>{t('footer.aboutUs')}</h3>
               <ul>
                 <li>
                   <Link href=''>
-                    <a>Learn more</a>
+                    <a>{t('footer.learnMore')}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href=''>
-                    <a>Press</a>
+                    <a>{t('footer.press')}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href=''>
-                    <a>Imprint</a>
+                    <a>{t('footer.imprint')}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href=''>
-                    <a>Privacy Policy</a>
+                    <a>{t('footer.privacyPolicy')}</a>
                   </Link>
                 </li>
               </ul>
@@ -86,19 +89,7 @@ export default function Footer() {
           </Row>
         </Grid>
         <div className='note'>
-          <p className='license'>
-            Except{' '}
-            <Link href=''>
-              <a>where otherwise noted</a>
-            </Link>
-            , content on this site is licensed under a{' '}
-            <Link href=''>
-              <a>
-                Creative Commons Attribution-ShareAlike 3.0 Unported License
-              </a>
-            </Link>
-            .
-          </p>
+          <p className='license'>{t('footer.createCommons')}</p>
           <p className='imprint'>
             © {new Date().getFullYear()} by{' '}
             <Link href=''>
@@ -106,11 +97,11 @@ export default function Footer() {
             </Link>
             <span className='spacer'>||</span>
             <Link href=''>
-              <a>Contact us</a>
+              <a>{t('footer.contactUs')}</a>
             </Link>
             <span className='spacer'>||</span>
             <Link href=''>
-              <a>Impressum</a>
+              <a>{t('footer.imprint')}</a>
             </Link>
           </p>
         </div>
