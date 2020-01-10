@@ -6,25 +6,15 @@
 
 `npm`
 
-## How to start the project:
+# How to start the project:
 
 1. `npm i`
 2. `npm run dev`
 3. open `http:localhost:3000`
 
-## Styles
+# File Structure
 
-The global styles can be found in `style/style-global.js` file.
-
-## Grid
-
-We use flexbox grid to position elements on the site.
-
-For general information on how to use the grid please see http://flexboxgrid.com/ and for specific details about the react component see [react-styled-flexboxgrid](https://github.com/LoicMahieu/react-styled-flexboxgrid). As an example implementation you can checkout the [demo](https://loicmahieu.github.io/react-styled-flexboxgrid/demo/index.html).
-
-## File Structure
-
-# Index file
+## Index file
 
 The index.js file found in the particular Nextjs `/pages` directory, is a file which only purpose is to redirect to a language specific subpages.
 Edit on this file must be reduced to the minimum.
@@ -32,19 +22,19 @@ The actual <b>Homepage</b> can be found in `pages/[lang]/index.tsx`.
 
 Any new pages (page is a content that has its own url) should be created under `pages/[lang]/`
 
-# Styles
+## Styles
 
 The global styles can be found in `style/style-global.js` file.
 
-# Cities data
+## Cities data
 
 Markdown for city can be found in data/cities. There there is a division based by language.
 Each city must have at least english language to be visible.
 Add as many language as you wish for your city. File must have always the same name: the city name.
 
-## TO CONTRIBUTE TO THE IDEA AND FURTHER DEVELOPMENT, READ HERE
+# TO CONTRIBUTE TO THE IDEA AND FURTHER DEVELOPMENT, READ HERE
 
-# Idea behind this MVP:
+## Idea behind this MVP:
 
 What i want to achieve with this MVP is to show how we can easily and fast build the next OTS
 website with Nextjs framework keeping in mind the three main obstacle we previously had:
