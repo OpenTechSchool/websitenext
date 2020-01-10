@@ -8,6 +8,7 @@
   },
   "about": {
     "pageTitle": "About",
+    "pageDescription": "About OpenTechSchool",
     "historyTitle": "History",
     "history": "OTS was born in April of 2012 in Berlin. The first local RailsGirls event — a free tech workshop with freshly created learning materials dedicated to an audience of women of all ages and backgrounds during a both thrilling and cosy weekend — had just taken place, and had created much admiration and enthusiasm in its wake. Why not expand the concept to all tech topics people might possibly want to learn and open the events to an audience of all genders and experience levels? The challenge couldn’t be greater. Since then, hundreds of people have joined OTS as coaches, learners, organizers, and sponsors, in Berlin, Stockholm, and soon: even in more new cities (yours!).",
     "explanation": "OpenTechSchool is a movement aiming to offer free tech education. Our events are open to technology enthusiasts of all genders, backgrounds, and experience levels, willing to coach or learn in a friendly environment. Our learning materials are shared and collectively improved by the online community and anyone is welcome to use it to organize new OTS chapters anywhere in the world.",
@@ -16,5 +17,24 @@
       "openness": "All OTS discussions, training materials, and blueprints are openly accessible through our website so that anyone can find them and contribute to their development. Furthermore, for OTS, openness also means sharing: our coaches share their skills and time, and our learners share their own knowledge with the community, both by presenting their achievements during the beginners meetup and by later becoming coaches themselves."
     },
     "policy": "In correspondence with our values we release all learning materials, blueprints and any other kind of content under the %{link} As long as you attribute the work to the OpenTechSchool (usually by mentioning such and providing the link to the original material) and share it under the same licence again, you are free to use, share, copy and modify it - even in a commercial context."
+  },
+  "footer": {
+    "getinvolved": "Get involved",
+    "joinMeetup": "Join a meetup",
+    "organizeEvent": "Organize an event",
+    "startChapter": "Start a chapter",
+    "becomeSponsor": "Become a sponsor",
+    "ourValues": "Our Values",
+    "whatDrivesUs": "What drives us",
+    "coreValues": "Core values",
+    "coachingGuidelines": "Coaching guidelines",
+    "codeOfConduct": "Code of Conduct",
+    "aboutUs": "About us",
+    "learnMore": "Learn more",
+    "press": "Press",
+    "imprint": "Imprint",
+    "privacyPolicy": "Privacy Policy",
+    "contactUs": "Contact us",
+    "createCommons": "Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License."
   }
 }

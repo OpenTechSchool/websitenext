@@ -35,11 +35,10 @@ export default css.global`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     word-break: break-word;
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 20px;
+    font-size: 2rem;
     letter-spacing: -0.5px;
     line-height: 1.5;
-    text-align: justify;
   }
   body > svg {
     display: block;
@@ -223,6 +222,10 @@ export default css.global`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
+  }
+  .content-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
   }
 
   @media (min-width: 990px) {

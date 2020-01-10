@@ -1,80 +1,162 @@
-import { Fragment } from 'react'
-// import Link from 'next/link'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import FacebookIcon from '@material-ui/icons/Facebook'
-
-import { mediaquery } from '../../style/style'
+import Link from 'next/link'
+import { Grid, Col, Row } from 'react-styled-flexboxgrid'
+import { mediaqueryGrid } from '../../style/style'
+import useTranslation from '../../hooks/useTranslation'
 
 export default function Footer() {
-  const isDesktop = useMediaQuery('(min-width: 768px)')
+  const { t } = useTranslation()
 
   return (
     <footer>
-      {!isDesktop && (
-        <Fragment>
-          <h3>Connect</h3>
-          <a>
-            <FacebookIcon />
-          </a>
-          <a>
-            <FacebookIcon />
-          </a>
-          <a>
-            <FacebookIcon />
-          </a>
-          <a>
-            <FacebookIcon />
-          </a>
-        </Fragment>
-      )}
-
-      {isDesktop && (
-        <Fragment>
-          <div>
-            <h3>Get involved</h3>
-            <ul>
-              <li>Organize an event</li>
-              <li>Host an event</li>
-              <li>Become a sponsor</li>
-            </ul>
-          </div>
-          <div>
-            <h3>our values</h3>
-            <ul>
-              <li>Organize an event</li>
-              <li>Host an event</li>
-              <li>Become a sponsor</li>
-            </ul>
-          </div>
-          <div>
-            <h3>About us</h3>
-            <ul>
-              <li>Organize an event</li>
-              <li>Host an event</li>
-              <li>Become a sponsor</li>
-            </ul>
-          </div>
-        </Fragment>
-      )}
+      <div className='grid-wrapper'>
+        <Grid fluid>
+          <Row around='sm'>
+            <Col xs={12} sm={3}>
+              <h3>{t('footer.getinvolved')}</h3>
+              <ul>
+                <li>
+                  <Link href=''>
+                    <a>{t('footer.joinMeetup')}</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href=''>
+                    <a>{t('footer.organizeEvent')}</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href=''>
+                    <a>{t('footer.startChapter')}</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href=''>
+                    <a>{t('footer.becomeSponsor')}</a>
+                  </Link>
+                </li>
+              </ul>
+            </Col>
+            <Col xs={12} sm={3}>
+              <h3>{t('footer.ourValues')}</h3>
+              <ul>
+                <li>
+                  <Link href=''>
+                    <a>What drives us</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href=''>
+                    <a>{t('footer.coreValues')}</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href=''>
+                    <a>{t('footer.coachingGuidelines')}</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href=''>
+                    <a>{t('footer.codeOfConduct')}</a>
+                  </Link>
+                </li>
+              </ul>
+            </Col>
+            <Col xs={12} sm={3}>
+              <h3>{t('footer.aboutUs')}</h3>
+              <ul>
+                <li>
+                  <Link href=''>
+                    <a>{t('footer.learnMore')}</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href=''>
+                    <a>{t('footer.press')}</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href=''>
+                    <a>{t('footer.imprint')}</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href=''>
+                    <a>{t('footer.privacyPolicy')}</a>
+                  </Link>
+                </li>
+              </ul>
+            </Col>
+          </Row>
+        </Grid>
+        <div className='note'>
+          <p className='license'>{t('footer.createCommons')}</p>
+          <p className='imprint'>
+            © {new Date().getFullYear()} by{' '}
+            <Link href=''>
+              <a>OpenTechSchool e.V.</a>
+            </Link>
+            <span className='spacer'>||</span>
+            <Link href=''>
+              <a>{t('footer.contactUs')}</a>
+            </Link>
+            <span className='spacer'>||</span>
+            <Link href=''>
+              <a>{t('footer.imprint')}</a>
+            </Link>
+          </p>
+        </div>
+      </div>
       <style jsx>{`
         footer {
           width: 100%;
+          padding: 72px 0 92px 0;
           background-color: var(--secondaryBlue);
           min-height: 100px;
-          color: white;
-          padding: 40px 25px;
+          font-weight: 500;
+          font-size: 20px;
+          color: #9dd3f2;
         }
 
         h3 {
+          font-weight: 800;
+          font-size: 24px;
           color: white;
-          padding-top: 0;
-          text-align: center;
         }
 
-        @media (${mediaquery.tabletToDesktop}) {
+        a {
+          color: #9dd3f2;
+          font-weight: 500;
+          text-decoration: none;
+        }
+
+        .grid-wrapper {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        .note {
+          font-size: 14px;
+          padding: 0 2rem;
+          margin-top: 92px;
+        }
+
+        .note a {
+          color: white;
+        }
+
+        .imprint {
+          text-align: center;
+          font-size: 18px;
+          margin-top: 32px;
+        }
+
+        .spacer {
+          padding: 0 15px;
+        }
+
+        @media (${mediaqueryGrid.xs}) {
           footer {
-            display: flex;
-            justify-content: space-evenly;
+            text-align: center;
           }
         }
       `}</style>

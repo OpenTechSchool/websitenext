@@ -16,7 +16,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
       <article>
         <h1>{frontmatter.title}</h1>
         <div>
-          <ReactMarkdown source={markdownBody} />
+          <ReactMarkdown source={markdownBody} escapeHtml={false} />
         </div>
       </article>
     </CityLayout>

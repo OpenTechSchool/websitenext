@@ -13,7 +13,7 @@ const About: NextPage<any> = () => {
   return (
     <PageLayout
       siteTitle='about.pageTitle'
-      siteDescription='opentechschool about page'
+      siteDescription={t('about.pageDescription')}
     >
       <section>
         <LocalSwitcher />
@@ -28,10 +28,10 @@ const About: NextPage<any> = () => {
         <p>{t('about.explanation')}</p>
       </TextSection>
       <TextSection classname='highlight' title='Core values'>
-        <p>{t('about.values.title')}</p>
+        <p>{t('about.coreValue.title')}</p>
       </TextSection>
       <TextSection classname='slide' title='Openness'>
-        <p>{t('about.values.openness')}</p>
+        <p>{t('about.coreValue.openness')}</p>
       </TextSection>
       <TextSection classname='grey' title='Our Licensing Policy'>
         <p>
