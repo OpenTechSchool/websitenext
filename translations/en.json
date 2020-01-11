@@ -18,6 +18,38 @@
     },
     "policy": "In correspondence with our values we release all learning materials, blueprints and any other kind of content under the %{link} As long as you attribute the work to the OpenTechSchool (usually by mentioning such and providing the link to the original material) and share it under the same licence again, you are free to use, share, copy and modify it - even in a commercial context."
   },
+  "community": {
+    "pageTitle": "OpenTechSchool Community",
+    "pageDescription": "OpenTechSchool Community",
+    "formats": {
+      "title": "Formats",
+      "who": "Who",
+      "when": "When",
+      "workshop": {
+        "title": "Workshop",
+        "description": "With a strong focus on friendly and welcoming environment, these self-learning, peer-driven workshops try to get people together that want to get into or better at coding.",
+        "who": "Everyone who likes to learn coding.",
+        "when": "While the introduction workshops often take place on weekends, many smaller workshops also happen during the week."
+      },
+      "coLearning": {
+        "title": "Co-Learning",
+        "description": "Maybe you don’t know how to get started, got stuck in a tutorial or need help with your project you are welcome to join a Co-Learning group.",
+        "who": "Everyone who likes to learn coding and wants to meet other learners.",
+        "when": "Meeting weekly or bi-weekly on weekday evenings, these groups always have coaches there to help you, while each one just continues on their project in a relaxed and welcoming atmosphere."
+      }
+    },
+    "chapter": {
+      "title": "Chapter",
+      "description": "",
+      "active": {
+        "berlin": "Berlin",
+        "leipzig": "Leipzig",
+        "zuerich": "Zürich",
+        "brussels": "Brussels",
+        "bristol": "Bristol"
+      }
+    }
+  },
   "footer": {
     "getinvolved": "Get involved",
     "joinMeetup": "Join a meetup",
