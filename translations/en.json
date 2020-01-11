@@ -6,6 +6,14 @@
     "siteTitle": "OpenTechSchool",
     "cityListTitle": "Our chapter everywhere in the world!"
   },
+  "chapter": {
+    "active": "Active chapter",
+    "berlin": "Berlin",
+    "leipzig": "Leipzig",
+    "zuerich": "Zürich",
+    "brussels": "Brussels",
+    "bristol": "Bristol"
+  },
   "about": {
     "pageTitle": "About",
     "pageDescription": "About OpenTechSchool",
@@ -37,17 +45,15 @@
         "who": "Everyone who likes to learn coding and wants to meet other learners.",
         "when": "Meeting weekly or bi-weekly on weekday evenings, these groups always have coaches there to help you, while each one just continues on their project in a relaxed and welcoming atmosphere."
       }
-    },
-    "chapter": {
-      "title": "Chapter",
-      "description": "",
-      "active": {
-        "berlin": "Berlin",
-        "leipzig": "Leipzig",
-        "zuerich": "Zürich",
-        "brussels": "Brussels",
-        "bristol": "Bristol"
-      }
+    }
+  },
+  "contribute": {
+    "pageTitle": "OpenTechSchool Contribute",
+    "pageDescription": "OpenTechSchool Contribute",
+    "howToContribute": {
+      "title": "How to contribute",
+      "joinChapter": "Join a chapter",
+      "openChapter": "Open a chapter in your city"
     }
   },
   "footer": {

@@ -1,14 +1,17 @@
 import { Grid, Col, Row } from 'react-styled-flexboxgrid'
 import { Link } from '@material-ui/core'
+import useTranslation from '../../hooks/useTranslation'
 
 export default function ChapterSection() {
+  const { t } = useTranslation()
+
   return (
     <section>
       <div className='content-wrapper'>
         <Grid fluid>
           <Row center='xs'>
             <Col>
-              <span>Active chapter</span>
+              <span>{t('chapter.active')}</span>
             </Col>
           </Row>
           <Row between='xs'>

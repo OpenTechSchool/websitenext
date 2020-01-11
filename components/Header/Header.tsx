@@ -23,7 +23,7 @@ export function Header() {
             <a>Learn</a>
           </Link>
 
-          <Link href={`/${locale}/contributes`}>
+          <Link href={`/${locale}/contribute`}>
             <a>Contribute</a>
           </Link>
 
