@@ -4,6 +4,7 @@ import PageLayout from '../../components/PageLayout/PageLayout'
 import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
+import TextSection from '../../components/Section/TextSection'
 
 const Community: NextPage<any> = () => {
   const { t } = useTranslation()
@@ -17,30 +18,30 @@ const Community: NextPage<any> = () => {
         <LocalSwitcher />
       </section>
 
-      <h1>{t('contribute.howToContribute.title')}</h1>
+      <TextSection classname='' title={t('contribute.howToContribute.title')}>
+        <div className='content-wrapper'>
+          <Grid fluid>
+            <Row between='sm'>
+              <Col xs={12} sm={5}>
+                <h2>{t('contribute.howToContribute.joinChapter')}</h2>
+              </Col>
+              <Col xs={12} sm={5}>
+                <div className='placeholder'></div>
+              </Col>
+            </Row>
 
-      <div className='content-wrapper'>
-        <Grid fluid>
-          <Row between='sm'>
-            <Col xs={12} sm={5}>
-              <h2>{t('contribute.howToContribute.joinChapter')}</h2>
-            </Col>
-            <Col xs={12} sm={5}>
-              <div className='placeholder'></div>
-            </Col>
-          </Row>
-
-          <Row between='sm'>
-            <Col xs={12} sm={5}>
-              <div className='placeholder'></div>
-            </Col>
-            <Col xs={12} sm={5}>
-              <h2>{t('contribute.howToContribute.openChapter')}</h2>
-              <p></p>
-            </Col>
-          </Row>
-        </Grid>
-      </div>
+            <Row between='sm'>
+              <Col xs={12} sm={5}>
+                <div className='placeholder'></div>
+              </Col>
+              <Col xs={12} sm={5}>
+                <h2>{t('contribute.howToContribute.openChapter')}</h2>
+                <p></p>
+              </Col>
+            </Row>
+          </Grid>
+        </div>
+      </TextSection>
 
       <style jsx>{`
         h1 {

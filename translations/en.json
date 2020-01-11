@@ -3,10 +3,20 @@
     "login": "login"
   },
   "homepage": {
-    "siteTitle": "OpenTechSchool",
-    "cityListTitle": "Our chapter everywhere in the world!"
+    "pageTitle": "OpenTechSchool",
+    "pageDescription": "OpenTechSchool",
+    "otsInitiative": {
+      "title": "The OTS initiative",
+      "otsInitiativeDesc": "Hi, we are OpenTechSchool, a distributed community initiative organising welcoming and inclusive code learning happenings with real people in the real world.",
+      "otsInitiativeDesc2": "On top, we invite anyone to become an organizer themselves. Set up their own local chapter and join our community of coaches around the world. Creating original teaching materials under the open Creative Commons Licence.",
+      "learnMore": "More about OpenTechSchool..."
+    },
+    "waysToJoin": {
+      "title": "Ways to join us"
+    }
   },
   "chapter": {
+    "title": "Find events close to you",
     "active": "Active chapter",
     "berlin": "Berlin",
     "leipzig": "Leipzig",

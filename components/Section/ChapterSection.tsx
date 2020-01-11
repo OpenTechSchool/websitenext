@@ -1,12 +1,14 @@
 import { Grid, Col, Row } from 'react-styled-flexboxgrid'
 import { Link } from '@material-ui/core'
 import useTranslation from '../../hooks/useTranslation'
+import matter from 'gray-matter'
+import TextSection from '../../components/Section/TextSection'
 
-export default function ChapterSection() {
+export default function ChapterSection({ title }) {
   const { t } = useTranslation()
 
   return (
-    <section>
+    <TextSection classname='' title={title}>
       <div className='content-wrapper'>
         <Grid fluid>
           <Row center='xs'>
@@ -43,16 +45,21 @@ export default function ChapterSection() {
           </Row>
         </Grid>
       </div>
+
       <style jsx>{`
+        h1 {
+          text-align: center;
+        }
+
         section {
           font-family: var(--primaryFont);
           font-weight: 600;
           font-size: 24px;
-          text-transform: uppercase;
         }
 
         a {
           color: var(--pink);
+          text-transform: uppercase;
         }
 
         a:hover {
@@ -66,6 +73,31 @@ export default function ChapterSection() {
           color: #828282;
         }
       `}</style>
-    </section>
+    </TextSection>
   )
+}
+
+ChapterSection.getInitialProps = async context => {
+  const { lang } = context.query
+
+  const cities = (ctx => {
+    // get all keys from data/cities
+    const keys = ctx.keys()
+    // grab the values from these files
+    const values = keys.map(ctx)
+
+    const data = keys.map((key, index) => {
+      const value: any = values[index]
+      const document = matter(value.default)
+
+      return {
+        document,
+      }
+    })
+
+    return data
+    // TODO: Make language a dynamic value
+  })(require.context(`../../data/cities/en`, true, /\.md$/))
+
+  return { cities }
 }
