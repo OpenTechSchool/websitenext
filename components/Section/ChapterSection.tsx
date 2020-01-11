@@ -1,7 +1,6 @@
 import { Grid, Col, Row } from 'react-styled-flexboxgrid'
-import { Link } from '@material-ui/core'
+import Link from 'next/link'
 import useTranslation from '../../hooks/useTranslation'
-import matter from 'gray-matter'
 import TextSection from '../../components/Section/TextSection'
 
 export default function ChapterSection({ title }) {
@@ -75,29 +74,4 @@ export default function ChapterSection({ title }) {
       `}</style>
     </TextSection>
   )
-}
-
-ChapterSection.getInitialProps = async context => {
-  const { lang } = context.query
-
-  const cities = (ctx => {
-    // get all keys from data/cities
-    const keys = ctx.keys()
-    // grab the values from these files
-    const values = keys.map(ctx)
-
-    const data = keys.map((key, index) => {
-      const value: any = values[index]
-      const document = matter(value.default)
-
-      return {
-        document,
-      }
-    })
-
-    return data
-    // TODO: Make language a dynamic value
-  })(require.context(`../../data/cities/en`, true, /\.md$/))
-
-  return { cities }
 }

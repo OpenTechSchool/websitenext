@@ -19,9 +19,7 @@ export function Header() {
 
       {isDesktop && (
         <nav role='navigation' aria-label='main navigation'>
-          <Link href='https://learn.opentechschool.org/'>
-            <a>Learn</a>
-          </Link>
+          <a href='https://learn.opentechschool.org/'>Learn</a>
 
           <Link href={`/${locale}/contribute`}>
             <a>Contribute</a>
