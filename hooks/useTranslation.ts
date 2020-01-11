@@ -32,12 +32,12 @@ export default function useTranslation() {
         console.warn(
           `Translation '${translation}' for locale '${locale}' not found.`
         )
-        return
+        return translation
       }
       return obj[i]
     }, strings)
 
-    return text || ''
+    return text || translation
   }
 
   return {
