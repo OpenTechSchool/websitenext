@@ -17,12 +17,7 @@
   },
   "chapter": {
     "title": "Find events close to you",
-    "active": "Active chapter",
-    "berlin": "Berlin",
-    "leipzig": "Leipzig",
-    "zuerich": "Zürich",
-    "brussels": "Brussels",
-    "bristol": "Bristol"
+    "active": "Active chapter"
   },
   "about": {
     "pageTitle": "About",
