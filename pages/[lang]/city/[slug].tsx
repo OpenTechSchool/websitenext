@@ -13,11 +13,23 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
       <section>
         <LocalSwitcher />
       </section>
-      <article>
+      <article className='content-wrapper'>
         <h1>{frontmatter.title}</h1>
-        <div>
-          <ReactMarkdown source={markdownBody} escapeHtml={false} />
-        </div>
+        <ReactMarkdown
+          source={markdownBody}
+          escapeHtml={false}
+          renderers={{ paragraph: props => <p {...props} /> }}
+        />
+        <style jsx>{`
+          p {
+            margin: 1em 0;
+          }
+
+          .content-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+          }
+        `}</style>
       </article>
     </CityLayout>
   )

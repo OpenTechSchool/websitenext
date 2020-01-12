@@ -33,7 +33,7 @@ export default function ChapterSection({ title }) {
         {cities &&
           cities.map(({ document: { data } }) => (
             <Grid item key={data.slug}>
-              <Link href={{ pathname: `${locale}/city/${data.slug}` }}>
+              <Link href={{ pathname: `/${locale}/city/${data.slug}` }}>
                 <a>{data.title}</a>
               </Link>
             </Grid>
