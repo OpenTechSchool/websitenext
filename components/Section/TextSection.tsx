@@ -1,9 +1,10 @@
 export default function TextSection({ classname, title, children }) {
   return (
-    <section className={`${classname} content-wrapper`}>
-      <h1>{title}</h1>
-      {children}
-
+    <section className={classname}>
+      <div className='content-wrapper'>
+        <h1>{title}</h1>
+        {children}
+      </div>
       <style jsx>{`
         section {
           padding: 40px 25px;
@@ -17,6 +18,8 @@ export default function TextSection({ classname, title, children }) {
           background: var(--pink);
           color: white;
           line-height: 28px;
+          margin: 0 -25px;
+          padding: 40px 50px;
         }
 
         .pink h1 {
@@ -26,6 +29,8 @@ export default function TextSection({ classname, title, children }) {
 
         .grey {
           background: var(--mainGrey);
+          margin: 0 -25px;
+          padding: 40px 50px;
         }
 
         .grey h1 {
