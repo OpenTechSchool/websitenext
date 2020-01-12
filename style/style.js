@@ -14,10 +14,3 @@ export const mediaquery = {
   desktopToBigScreen: 'min-width: 1200px',
   bigScreenBreakpoint: '1200px',
 }
-
-export const mediaqueryGrid = {
-  xs: 'max-width: 48rem',
-  sm: 'min-width: 48rem',
-  md: 'min-width: 64rem',
-  lg: 'min-width: 48rem',
-}

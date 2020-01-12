@@ -7,12 +7,6 @@ export default function PageLayout({ siteTitle, siteDescription, children }) {
       <section className='page'>
         <div className='main'>{children}</div>
       </section>
-
-      <style jsx>{`
-        .page {
-          margin: 40px 25px;
-        }
-      `}</style>
     </Layout>
   )
 }

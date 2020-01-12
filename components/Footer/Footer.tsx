@@ -1,6 +1,5 @@
+import Grid from '@material-ui/core/Grid'
 import Link from 'next/link'
-import { Grid, Col, Row } from 'react-styled-flexboxgrid'
-import { mediaqueryGrid } from '../../style/style'
 import useTranslation from '../../hooks/useTranslation'
 
 export default function Footer() {
@@ -9,84 +8,82 @@ export default function Footer() {
   return (
     <footer>
       <div className='grid-wrapper'>
-        <Grid fluid>
-          <Row around='sm'>
-            <Col xs={12} sm={3}>
-              <h3>{t('footer.getinvolved')}</h3>
-              <ul>
-                <li>
-                  <Link href=''>
-                    <a>{t('footer.joinMeetup')}</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href=''>
-                    <a>{t('footer.organizeEvent')}</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href=''>
-                    <a>{t('footer.startChapter')}</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href=''>
-                    <a>{t('footer.becomeSponsor')}</a>
-                  </Link>
-                </li>
-              </ul>
-            </Col>
-            <Col xs={12} sm={3}>
-              <h3>{t('footer.ourValues')}</h3>
-              <ul>
-                <li>
-                  <Link href=''>
-                    <a>What drives us</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href=''>
-                    <a>{t('footer.coreValues')}</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href=''>
-                    <a>{t('footer.coachingGuidelines')}</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href=''>
-                    <a>{t('footer.codeOfConduct')}</a>
-                  </Link>
-                </li>
-              </ul>
-            </Col>
-            <Col xs={12} sm={3}>
-              <h3>{t('footer.aboutUs')}</h3>
-              <ul>
-                <li>
-                  <Link href=''>
-                    <a>{t('footer.learnMore')}</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href=''>
-                    <a>{t('footer.press')}</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href=''>
-                    <a>{t('footer.imprint')}</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href=''>
-                    <a>{t('footer.privacyPolicy')}</a>
-                  </Link>
-                </li>
-              </ul>
-            </Col>
-          </Row>
+        <Grid container justify='space-around'>
+          <Grid item xs={12} sm={3}>
+            <h3>{t('footer.getinvolved')}</h3>
+            <ul>
+              <li>
+                <Link href=''>
+                  <a>{t('footer.joinMeetup')}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href=''>
+                  <a>{t('footer.organizeEvent')}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href=''>
+                  <a>{t('footer.startChapter')}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href=''>
+                  <a>{t('footer.becomeSponsor')}</a>
+                </Link>
+              </li>
+            </ul>
+          </Grid>
+          <Grid item xs={12} sm={3}>
+            <h3>{t('footer.ourValues')}</h3>
+            <ul>
+              <li>
+                <Link href=''>
+                  <a>What drives us</a>
+                </Link>
+              </li>
+              <li>
+                <Link href=''>
+                  <a>{t('footer.coreValues')}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href=''>
+                  <a>{t('footer.coachingGuidelines')}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href=''>
+                  <a>{t('footer.codeOfConduct')}</a>
+                </Link>
+              </li>
+            </ul>
+          </Grid>
+          <Grid item xs={12} sm={3}>
+            <h3>{t('footer.aboutUs')}</h3>
+            <ul>
+              <li>
+                <Link href=''>
+                  <a>{t('footer.learnMore')}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href=''>
+                  <a>{t('footer.press')}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href=''>
+                  <a>{t('footer.imprint')}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href=''>
+                  <a>{t('footer.privacyPolicy')}</a>
+                </Link>
+              </li>
+            </ul>
+          </Grid>
         </Grid>
         <div className='note'>
           <p className='license'>{t('footer.createCommons')}</p>
@@ -152,12 +149,6 @@ export default function Footer() {
 
         .spacer {
           padding: 0 15px;
-        }
-
-        @media (${mediaqueryGrid.xs}) {
-          footer {
-            text-align: center;
-          }
         }
       `}</style>
     </footer>

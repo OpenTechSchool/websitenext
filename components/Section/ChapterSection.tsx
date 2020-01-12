@@ -1,4 +1,4 @@
-import { Grid, Col, Row } from 'react-styled-flexboxgrid'
+import Grid from '@material-ui/core/Grid'
 import Link from 'next/link'
 import matter from 'gray-matter'
 import useTranslation from '../../hooks/useTranslation'
@@ -28,22 +28,17 @@ export default function ChapterSection({ title }) {
   return (
     <TextSection classname='' title={title}>
       <div className='content-wrapper'>
-        <Grid fluid>
-          <Row center='xs'>
-            <Col>
-              <span>{t('chapter.active')}</span>
-            </Col>
-          </Row>
-          <Row around='xs'>
-            {cities &&
-              cities.map(({ document: { data } }) => (
-                <Col key={data.slug}>
-                  <Link href={{ pathname: `${locale}/city/${data.slug}` }}>
-                    <a>{data.title}</a>
-                  </Link>
-                </Col>
-              ))}
-          </Row>
+        <h4>{t('chapter.active')}</h4>
+
+        <Grid container justify='space-around'>
+          {cities &&
+            cities.map(({ document: { data } }) => (
+              <Grid item key={data.slug}>
+                <Link href={{ pathname: `${locale}/city/${data.slug}` }}>
+                  <a>{data.title}</a>
+                </Link>
+              </Grid>
+            ))}
         </Grid>
       </div>
 
@@ -60,11 +55,13 @@ export default function ChapterSection({ title }) {
           color: var(--mainBlue);
         }
 
-        span {
+        h4 {
           font-family: var(--secondaryFont);
           font-weight: 500;
           font-size: 22px;
           color: #828282;
+          text-align: center;
+          text-transform: uppercase;
         }
       `}</style>
     </TextSection>
