@@ -53,9 +53,9 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
       <TextSection classname='grey' title={t('homepage.waysToJoin.title')}>
         <Grid container justify='space-between' spacing={10}>
           <Grid item xs={12} md={4}>
+            <div className='placeholder-sm'></div>
             <h3>{t('homepage.waysToJoin.learner.title')}</h3>
             <p className='ways-to-join'>
-              <div className='placeholder-sm'></div>
               {t('homepage.waysToJoin.learner.description')}
               <br />
               <br />
@@ -63,9 +63,9 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
             </p>
           </Grid>
           <Grid item xs={12} md={4}>
+            <div className='placeholder-sm'></div>
             <h3>{t('homepage.waysToJoin.corporate.title')}</h3>
             <p className='ways-to-join'>
-              <div className='placeholder-sm'></div>
               {t('homepage.waysToJoin.corporate.description')}
               <br />
               <br />
@@ -73,9 +73,9 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
             </p>
           </Grid>
           <Grid item xs={12} md={4}>
+            <div className='placeholder-sm'></div>
             <h3>{t('homepage.waysToJoin.coach.title')}</h3>
             <p className='ways-to-join'>
-              <div className='placeholder-sm'></div>
               {t('homepage.waysToJoin.coach.description')}
               <br />
               <br />
@@ -130,9 +130,9 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
 
         .placeholder-sm {
           background: var(--pink);
-          min-height: 100px;
+          min-height: 200px;
           width: 100%;
-          margin: 40px 0;
+          margin: 20px 0;
         }
       `}</style>
     </HomepageLayout>
