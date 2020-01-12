@@ -12,8 +12,8 @@ const Community: NextPage<any> = () => {
 
   return (
     <PageLayout
-      siteTitle={t('community.pageTitle')}
-      siteDescription={t('community.pageDescription')}
+      siteTitle={t('community.siteTitle')}
+      siteDescription={t('community.siteDescription')}
     >
       <section>
         <LocalSwitcher />

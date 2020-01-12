@@ -12,8 +12,8 @@ const About: NextPage<any> = () => {
 
   return (
     <PageLayout
-      siteTitle='about.pageTitle'
-      siteDescription={t('about.pageDescription')}
+      siteTitle='about.siteTitle'
+      siteDescription={t('about.siteDescription')}
     >
       <section>
         <LocalSwitcher />

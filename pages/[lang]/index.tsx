@@ -17,8 +17,8 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
 
   return (
     <HomepageLayout
-      siteTitle='homepage.pageTitle'
-      siteDescription='homepage.pageDescription'
+      siteTitle='homepage.siteTitle'
+      siteDescription='homepage.siteDescription'
     >
       <section>
         <LocalSwitcher />
