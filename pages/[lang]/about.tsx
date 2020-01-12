@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
 import PageLayout from '../../components/PageLayout/PageLayout'
+import Grid from '@material-ui/core/Grid'
 import TextSection from '../../components/Section/TextSection'
 import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 import useTranslation from '../../hooks/useTranslation'
@@ -18,20 +19,41 @@ const About: NextPage<any> = () => {
       <section>
         <LocalSwitcher />
       </section>
-      <TextSection classname='default' title={t('about.historyTitle')}>
-        <div className='historySection'>
-          <p>{t('about.history')}</p>
-          <img src='/about.jpg' />
-        </div>
+      <TextSection classname='default' title={t('about.history.title')}>
+        <Grid container justify='space-between' alignItems='center'>
+          <Grid item xs={12} md={5}>
+            <img src='/about.jpg' />
+          </Grid>
+          <Grid item xs={12} md={5}>
+            <p>{t('about.history.description')}</p>
+            <br />
+            <p>{t('about.history.description2')}</p>
+          </Grid>
+        </Grid>
       </TextSection>
-      <TextSection classname='pink' title='What is OpenTechSchool?'>
-        <p>{t('about.explanation')}</p>
+      <TextSection classname='pink' title={t('about.explanation.title')}>
+        <p>{t('about.explanation.description')}</p>
       </TextSection>
-      <TextSection classname='highlight' title='Core values'>
-        <p>{t('about.coreValue.title')}</p>
-      </TextSection>
-      <TextSection classname='slide' title='Openness'>
-        <p>{t('about.coreValue.openness')}</p>
+      <TextSection classname='highlight' title={t('about.coreValue.title')}>
+        <p>{t('about.coreValue.description')}</p>
+
+        <h2>{t('about.coreValue.openness.title')}</h2>
+        <p>{t('about.coreValue.openness.description')}</p>
+
+        <h2>{t('about.coreValue.empowerment.title')}</h2>
+        <p>{t('about.coreValue.empowerment.description')}</p>
+
+        <h2>{t('about.coreValue.handsOn.title')}</h2>
+        <p>{t('about.coreValue.handsOn.description')}</p>
+
+        <h2>{t('about.coreValue.welcoming.title')}</h2>
+        <p>{t('about.coreValue.welcoming.description')}</p>
+
+        <h2>{t('about.coreValue.transparency.title')}</h2>
+        <p>{t('about.coreValue.transparency.description')}</p>
+
+        <h2>{t('about.coreValue.nonProfit.title')}</h2>
+        <p>{t('about.coreValue.nonProfit.description')}</p>
       </TextSection>
       <TextSection classname='grey' title='Our Licensing Policy'>
         <p>
@@ -47,24 +69,7 @@ const About: NextPage<any> = () => {
           copy and modify it - even in a commercial context.
         </p>
       </TextSection>
-      <style jsx>{`
-        .historySection {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .historySection img {
-          padding-top: 30px;
-        }
-
-        @media (${mediaquery.tabletToDesktop}) {
-          .historySection {
-            flex-direction: wrap;
-          }
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </PageLayout>
   )
 }
