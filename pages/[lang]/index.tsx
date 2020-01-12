@@ -55,6 +55,7 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
           <Grid item xs={12} md={4}>
             <h3>{t('homepage.waysToJoin.learner.title')}</h3>
             <p className='ways-to-join'>
+              <div className='placeholder-sm'></div>
               {t('homepage.waysToJoin.learner.description')}
               <br />
               <br />
@@ -64,6 +65,7 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
           <Grid item xs={12} md={4}>
             <h3>{t('homepage.waysToJoin.corporate.title')}</h3>
             <p className='ways-to-join'>
+              <div className='placeholder-sm'></div>
               {t('homepage.waysToJoin.corporate.description')}
               <br />
               <br />
@@ -73,6 +75,7 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
           <Grid item xs={12} md={4}>
             <h3>{t('homepage.waysToJoin.coach.title')}</h3>
             <p className='ways-to-join'>
+              <div className='placeholder-sm'></div>
               {t('homepage.waysToJoin.coach.description')}
               <br />
               <br />
@@ -121,6 +124,13 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
         .placeholder {
           background: var(--pink);
           min-height: 500px;
+          width: 100%;
+          margin: 40px 0;
+        }
+
+        .placeholder-sm {
+          background: var(--pink);
+          min-height: 100px;
           width: 100%;
           margin: 40px 0;
         }
