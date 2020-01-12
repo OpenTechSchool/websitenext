@@ -30,6 +30,12 @@ const Community: NextPage<any> = () => {
         <Grid container justify='space-between'>
           <Grid item xs={12} md={5}>
             <h2>{t('contribute.howToContribute.joinChapter')}</h2>
+            <p>
+              Aliquam erat volutpat. Nunc orci enim, scelerisque non rhoncus
+              maximus, vestibulum sit amet elit. Proin venenatis, justo non
+              mattis tristique, lorem justo porta quam, ac pretium sapien eros
+              sed ligula.
+            </p>
           </Grid>
           <Grid item xs={12} md={5}>
             <div className='placeholder'></div>
@@ -41,7 +47,17 @@ const Community: NextPage<any> = () => {
           </Grid>
           <Grid item xs={12} md={5}>
             <h2>{t('contribute.howToContribute.openChapter')}</h2>
-            <p></p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              efficitur libero ac nunc malesuada mattis. Proin dolor lorem,
+              luctus at purus ut, lacinia feugiat quam. Suspendisse molestie
+              volutpat risus, vel tempus leo mollis ac. Maecenas facilisis augue
+              at gravida efficitur. Pellentesque lectus risus, ultricies ac
+              justo semper, tincidunt fringilla urna. Aliquam erat volutpat.
+              Mauris fermentum diam in velit auctor vestibulum. Sed nisi mi,
+              pharetra sit amet faucibus sed, suscipit sit amet sapien. Sed
+              semper libero nec pulvinar vestibulum.
+            </p>
           </Grid>
         </Grid>
       </TextSection>
