@@ -1,5 +1,7 @@
 import { NextPage } from 'next'
-import { Grid, Col, Row } from 'react-styled-flexboxgrid'
+import { useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+import Grid, { GridDirection } from '@material-ui/core/Grid'
 import PageLayout from '../../components/PageLayout/PageLayout'
 import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 import useTranslation from '../../hooks/useTranslation'
@@ -8,6 +10,12 @@ import TextSection from '../../components/Section/TextSection'
 
 const Community: NextPage<any> = () => {
   const { t } = useTranslation()
+  const theme = useTheme()
+  const direction: GridDirection = useMediaQuery(theme.breakpoints.up('md'))
+    ? 'row'
+    : 'column-reverse'
+
+  console.log(direction)
 
   return (
     <PageLayout
@@ -20,25 +28,22 @@ const Community: NextPage<any> = () => {
 
       <TextSection classname='' title={t('contribute.howToContribute.title')}>
         <div className='content-wrapper'>
-          <Grid fluid>
-            <Row between='sm'>
-              <Col xs={12} sm={5}>
-                <h2>{t('contribute.howToContribute.joinChapter')}</h2>
-              </Col>
-              <Col xs={12} sm={5}>
-                <div className='placeholder'></div>
-              </Col>
-            </Row>
-
-            <Row between='sm'>
-              <Col xs={12} sm={5}>
-                <div className='placeholder'></div>
-              </Col>
-              <Col xs={12} sm={5}>
-                <h2>{t('contribute.howToContribute.openChapter')}</h2>
-                <p></p>
-              </Col>
-            </Row>
+          <Grid container justify='space-between'>
+            <Grid item xs={12} md={5}>
+              <h2>{t('contribute.howToContribute.joinChapter')}</h2>
+            </Grid>
+            <Grid item xs={12} md={5}>
+              <div className='placeholder'></div>
+            </Grid>
+          </Grid>
+          <Grid container direction={direction} justify='space-between'>
+            <Grid item xs={12} md={5}>
+              <div className='placeholder'></div>
+            </Grid>
+            <Grid item xs={12} md={5}>
+              <h2>{t('contribute.howToContribute.openChapter')}</h2>
+              <p></p>
+            </Grid>
           </Grid>
         </div>
       </TextSection>

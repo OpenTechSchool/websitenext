@@ -1,8 +1,8 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
+import Grid from '@material-ui/core/Grid'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
-import { Grid, Col, Row } from 'react-styled-flexboxgrid'
 import HomepageLayout from '../../components/HomepageLayout/HomepageLayout'
 import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 import TextSection from '../../components/Section/TextSection'
@@ -26,23 +26,21 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
 
       <TextSection classname='' title=''>
         <div className='content-wrapper'>
-          <Grid fluid>
-            <Row between='sm'>
-              <Col xs={12} sm={5}>
-                <h1>{t('homepage.otsInitiative.title')}</h1>
-                <p>{t('homepage.otsInitiative.otsInitiativeDesc')}</p>
-                <br />
-                <p>{t('homepage.otsInitiative.otsInitiativeDesc2')}</p>
-                <br />
-                <br />
-                <Link href=''>
-                  <a>{t('homepage.otsInitiative.learnMore')}</a>
-                </Link>
-              </Col>
-              <Col xs={12} sm={5}>
-                <div className='placeholder'></div>
-              </Col>
-            </Row>
+          <Grid container justify='space-between'>
+            <Grid item xs={12} md={5}>
+              <h1>{t('homepage.otsInitiative.title')}</h1>
+              <p>{t('homepage.otsInitiative.otsInitiativeDesc')}</p>
+              <br />
+              <p>{t('homepage.otsInitiative.otsInitiativeDesc2')}</p>
+              <br />
+              <br />
+              <Link href=''>
+                <a>{t('homepage.otsInitiative.learnMore')}</a>
+              </Link>
+            </Grid>
+            <Grid item xs={12} md={5}>
+              <div className='placeholder'></div>
+            </Grid>
           </Grid>
         </div>
       </TextSection>
