@@ -24,25 +24,23 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
         <LocalSwitcher />
       </section>
 
-      <TextSection classname='' title=''>
-        <div className='content-wrapper'>
-          <Grid container justify='space-between'>
-            <Grid item xs={12} md={5}>
-              <h1>{t('homepage.otsInitiative.title')}</h1>
-              <p>{t('homepage.otsInitiative.otsInitiativeDesc')}</p>
-              <br />
-              <p>{t('homepage.otsInitiative.otsInitiativeDesc2')}</p>
-              <br />
-              <br />
-              <Link href=''>
-                <a>{t('homepage.otsInitiative.learnMore')}</a>
-              </Link>
-            </Grid>
-            <Grid item xs={12} md={5}>
-              <div className='placeholder'></div>
-            </Grid>
+      <TextSection>
+        <Grid container justify='space-between'>
+          <Grid item xs={12} md={5}>
+            <h1>{t('homepage.otsInitiative.title')}</h1>
+            <p>{t('homepage.otsInitiative.otsInitiativeDesc')}</p>
+            <br />
+            <p>{t('homepage.otsInitiative.otsInitiativeDesc2')}</p>
+            <br />
+            <br />
+            <Link href=''>
+              <a>{t('homepage.otsInitiative.learnMore')}</a>
+            </Link>
           </Grid>
-        </div>
+          <Grid item xs={12} md={5}>
+            <div className='placeholder'></div>
+          </Grid>
+        </Grid>
       </TextSection>
 
       <TextSection classname='grey' title={t('homepage.waysToJoin.title')}>

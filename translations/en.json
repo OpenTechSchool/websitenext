@@ -61,6 +61,11 @@
       "openChapter": "Open a chapter in your city"
     }
   },
+  "donate": {
+    "pageTitle": "OpenTechSchool Donate",
+    "pageDescription": "OpenTechSchool Donate",
+    "title": "Donate"
+  },
   "footer": {
     "getinvolved": "Get involved",
     "joinMeetup": "Join a meetup",

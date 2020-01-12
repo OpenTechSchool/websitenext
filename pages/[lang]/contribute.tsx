@@ -26,26 +26,24 @@ const Community: NextPage<any> = () => {
         <LocalSwitcher />
       </section>
 
-      <TextSection classname='' title={t('contribute.howToContribute.title')}>
-        <div className='content-wrapper'>
-          <Grid container justify='space-between'>
-            <Grid item xs={12} md={5}>
-              <h2>{t('contribute.howToContribute.joinChapter')}</h2>
-            </Grid>
-            <Grid item xs={12} md={5}>
-              <div className='placeholder'></div>
-            </Grid>
+      <TextSection title={t('contribute.howToContribute.title')}>
+        <Grid container justify='space-between'>
+          <Grid item xs={12} md={5}>
+            <h2>{t('contribute.howToContribute.joinChapter')}</h2>
           </Grid>
-          <Grid container direction={direction} justify='space-between'>
-            <Grid item xs={12} md={5}>
-              <div className='placeholder'></div>
-            </Grid>
-            <Grid item xs={12} md={5}>
-              <h2>{t('contribute.howToContribute.openChapter')}</h2>
-              <p></p>
-            </Grid>
+          <Grid item xs={12} md={5}>
+            <div className='placeholder'></div>
           </Grid>
-        </div>
+        </Grid>
+        <Grid container direction={direction} justify='space-between'>
+          <Grid item xs={12} md={5}>
+            <div className='placeholder'></div>
+          </Grid>
+          <Grid item xs={12} md={5}>
+            <h2>{t('contribute.howToContribute.openChapter')}</h2>
+            <p></p>
+          </Grid>
+        </Grid>
       </TextSection>
 
       <style jsx>{`

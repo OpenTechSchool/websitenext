@@ -1,4 +1,14 @@
-export default function TextSection({ classname, title, children }) {
+interface TextSectionProps {
+  classname?: string
+  title?: string
+  children: any
+}
+
+export default function TextSection({
+  classname,
+  title,
+  children,
+}: TextSectionProps) {
   return (
     <section className={classname}>
       <div className='content-wrapper'>
@@ -39,6 +49,11 @@ export default function TextSection({ classname, title, children }) {
 
         .highlight {
           text-align: center;
+        }
+
+        .content-wrapper {
+          max-width: 1280px;
+          margin: 0 auto;
         }
       `}</style>
     </section>

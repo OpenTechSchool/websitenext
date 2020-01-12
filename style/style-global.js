@@ -223,10 +223,6 @@ export default css.global`
     padding-top: 0;
     margin-bottom: 1.45rem;
   }
-  .content-wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-  }
 
   @media (min-width: 990px) {
     h1 {

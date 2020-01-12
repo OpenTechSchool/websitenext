@@ -26,21 +26,19 @@ export default function ChapterSection({ title }) {
   })(require.context(`../../data/cities/en`, true, /\.md$/))
 
   return (
-    <TextSection classname='' title={title}>
-      <div className='content-wrapper'>
-        <h4>{t('chapter.active')}</h4>
+    <TextSection title={title}>
+      <h4>{t('chapter.active')}</h4>
 
-        <Grid container justify='space-around'>
-          {cities &&
-            cities.map(({ document: { data } }) => (
-              <Grid item key={data.slug}>
-                <Link href={{ pathname: `${locale}/city/${data.slug}` }}>
-                  <a>{data.title}</a>
-                </Link>
-              </Grid>
-            ))}
-        </Grid>
-      </div>
+      <Grid container justify='space-around'>
+        {cities &&
+          cities.map(({ document: { data } }) => (
+            <Grid item key={data.slug}>
+              <Link href={{ pathname: `${locale}/city/${data.slug}` }}>
+                <a>{data.title}</a>
+              </Link>
+            </Grid>
+          ))}
+      </Grid>
 
       <style jsx>{`
         a {
