@@ -9,6 +9,8 @@ const ButtonStyle = withStyles({
     boxShadow: '0',
     color: 'white',
     padding: '8px 20px',
+    fontSize: '18px',
+    textTransform: 'inherit',
     '&:hover': {
       background: 'var(--pink-darker)',
       boxShadow:
@@ -17,6 +19,6 @@ const ButtonStyle = withStyles({
   },
 })(MuiButton)
 
-export default function Button({ children }) {
-  return <ButtonStyle>{children}</ButtonStyle>
+export default function Button({ href, children }) {
+  return <ButtonStyle href={href}>{children}</ButtonStyle>
 }

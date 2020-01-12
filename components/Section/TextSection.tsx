@@ -9,19 +9,32 @@ export default function TextSection({
   title,
   children,
 }: TextSectionProps) {
+  const showTitle = title ? (
+    <h1>
+      {title}
+      <style jsx>{`
+        h1 {
+          text-align: center;
+        }
+
+        :global(.pink) h1 {
+          color: white;
+          padding-top: 0;
+        }
+      `}</style>
+    </h1>
+  ) : (
+    ''
+  )
   return (
     <section className={classname}>
       <div className='content-wrapper'>
-        <h1>{title}</h1>
+        {showTitle}
         {children}
       </div>
       <style jsx>{`
         section {
           padding: 40px 25px;
-        }
-
-        h1 {
-          text-align: center;
         }
 
         .pink {
@@ -30,11 +43,6 @@ export default function TextSection({
           line-height: 28px;
           margin: 0 -25px;
           padding: 40px 50px;
-        }
-
-        .pink h1 {
-          color: white;
-          padding-top: 0;
         }
 
         .grey {

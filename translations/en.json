@@ -8,16 +8,37 @@
     "otsInitiative": {
       "title": "The OTS initiative",
       "otsInitiativeDesc": "Hi, we are OpenTechSchool, a distributed community initiative organising welcoming and inclusive code learning happenings with real people in the real world.",
-      "otsInitiativeDesc2": "On top, we invite anyone to become an organizer themselves. Set up their own local chapter and join our community of coaches around the world. Creating original teaching materials under the open Creative Commons Licence.",
-      "learnMore": "More about OpenTechSchool..."
+      "otsInitiativeDesc2": "On top, we invite anyone to become an organizer themselves. Set up their own local chapter and join our community of coaches around the world",
+      "learnMore": "More about OpenTechSchool ..."
     },
     "waysToJoin": {
-      "title": "Ways to join us"
+      "title": "Ways to join us",
+      "learner": {
+        "title": "Learner",
+        "description": "If you are looking to learn coding/about tech yourself, you probably want to find out where and when the next events takes place near you.",
+        "cta": "Get started"
+      },
+      "corporate": {
+        "title": "Corporate",
+        "description": "We welcome collaboration with corporations that want to engage with local OT chapters in order to share their programing expertise.",
+        "cta": "How to corporate"
+      },
+      "coach": {
+        "title": "Coach",
+        "description": "If you feel like donating some of your time and knowledge, our chapters are always need passionate coaches to help run programming workshops.",
+        "cta": "Ways to support"
+      }
+    },
+    "getInTouch": {
+      "title": "Get in touch",
+      "description": "Got a space to offer for our events? Want to collaborate with us? Got a great idea and want to discuss with us? Willing to support one of our projects? Find the right person to speak with and save time.",
+      "slack": "Join us in Slack",
+      "email": "Send an email"
     }
   },
   "chapter": {
     "title": "Find events close to you",
-    "active": "Active chapter"
+    "active": "Active chapters"
   },
   "about": {
     "siteTitle": "About",
