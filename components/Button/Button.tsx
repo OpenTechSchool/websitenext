@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 import MuiButton from '@material-ui/core/Button'
 
@@ -20,5 +21,14 @@ const ButtonStyle = withStyles({
 })(MuiButton)
 
 export default function Button({ href, children }) {
-  return <ButtonStyle href={href}>{children}</ButtonStyle>
+  if (href) {
+    return <ButtonStyle href={href}>{children}</ButtonStyle>
+  } else {
+    return <ButtonStyle>{children}</ButtonStyle>
+  }
+}
+
+Button.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.node.isRequired,
 }

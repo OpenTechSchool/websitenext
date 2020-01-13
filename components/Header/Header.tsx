@@ -8,7 +8,7 @@ import { mediaquery } from '../../style/style'
 
 export function Header() {
   const isDesktop = useMediaQuery(`(${mediaquery.smallToTablet})`)
-  const { locale, t } = useTranslation()
+  const { locale } = useTranslation()
 
   return (
     <header>

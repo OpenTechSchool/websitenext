@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 import MuiButton from '@material-ui/core/Button'
 
@@ -20,4 +21,8 @@ const ButtonStyle = withStyles({
 
 export default function OutlineButton({ children }) {
   return <ButtonStyle>{children}</ButtonStyle>
+}
+
+OutlineButton.propTypes = {
+  children: PropTypes.node.isRequired,
 }

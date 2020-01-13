@@ -1,7 +1,7 @@
 interface TextSectionProps {
   classname?: string
   title?: string
-  children: any
+  children
 }
 
 export default function TextSection({

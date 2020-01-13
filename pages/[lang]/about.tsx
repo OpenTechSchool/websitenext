@@ -6,9 +6,9 @@ import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
 
-import { mediaquery } from '../../style/style'
+// import { mediaquery } from '../../style/style'
 
-const About: NextPage<any> = () => {
+const About: NextPage = () => {
   const { t } = useTranslation()
 
   return (

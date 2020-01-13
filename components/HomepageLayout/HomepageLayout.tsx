@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Layout from '../Layout/Layout'
 
 export default function HomepageLayout({
@@ -19,4 +20,10 @@ export default function HomepageLayout({
       `}</style>
     </Layout>
   )
+}
+
+HomepageLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+  siteTitle: PropTypes.string.isRequired,
+  siteDescription: PropTypes.string.isRequired,
 }

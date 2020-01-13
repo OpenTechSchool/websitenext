@@ -8,7 +8,7 @@ import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
 import TextSection from '../../components/Section/TextSection'
 
-const Community: NextPage<any> = () => {
+const Community: NextPage = () => {
   const { t } = useTranslation()
   const theme = useTheme()
   const direction: GridDirection = useMediaQuery(theme.breakpoints.up('md'))

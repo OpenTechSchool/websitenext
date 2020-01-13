@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Meta from '../Meta'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
@@ -23,3 +24,9 @@ export const Layout = ({ siteTitle, siteDescription, children }) => {
 }
 
 export default Layout
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+  siteTitle: PropTypes.string.isRequired,
+  siteDescription: PropTypes.string.isRequired,
+}

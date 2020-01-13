@@ -1,29 +1,11 @@
+import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 import Link from 'next/link'
-import matter from 'gray-matter'
 import useTranslation from '../../hooks/useTranslation'
-import TextSection from '../../components/Section/TextSection'
+import TextSection from './TextSection'
 
-export default function ChapterSection({ title }) {
+export default function ChapterSection({ title, cities }) {
   const { locale, t } = useTranslation()
-  const cities = (ctx => {
-    // get all keys from data/cities
-    const keys = ctx.keys()
-    // grab the values from these files
-    const values = keys.map(ctx)
-
-    const data = keys.map((key, index) => {
-      const value: any = values[index]
-      const document = matter(value.default)
-
-      return {
-        document,
-      }
-    })
-
-    return data
-    // TODO: Make language a dynamic value
-  })(require.context(`../../data/cities/en`, true, /\.md$/))
 
   return (
     <TextSection title={title}>
@@ -64,4 +46,9 @@ export default function ChapterSection({ title }) {
       `}</style>
     </TextSection>
   )
+}
+
+ChapterSection.propTypes = {
+  title: PropTypes.string.isRequired,
+  cities: PropTypes.array.isRequired,
 }

@@ -1,7 +1,9 @@
 import { NextPage } from 'next'
+import PropTypes from 'prop-types'
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Grid, { GridDirection } from '@material-ui/core/Grid'
+import matter from 'gray-matter'
 import Link from 'next/link'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
@@ -15,7 +17,7 @@ interface IndexProps {
   cities?: Array<Object>
 }
 
-export const Index: NextPage<any, IndexProps> = ({ cities }) => {
+export const Index: NextPage<IndexProps> = ({ cities }) => {
   const { t } = useTranslation()
   const theme = useTheme()
   const direction: GridDirection = useMediaQuery(theme.breakpoints.up('md'))
@@ -85,7 +87,7 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
         </Grid>
       </TextSection>
 
-      <ChapterSection title={t('chapter.title')} />
+      <ChapterSection title={t('chapter.title')} cities={cities} />
 
       <TextSection classname='grey'>
         <Grid container direction={direction} justify='space-between'>
@@ -137,6 +139,30 @@ export const Index: NextPage<any, IndexProps> = ({ cities }) => {
       `}</style>
     </HomepageLayout>
   )
+}
+
+Index.getInitialProps = async function() {
+  const cities = (ctx => {
+    // get all keys from data/cities
+    const keys = ctx.keys()
+    // grab the values from these files
+    const values = keys.map(ctx)
+
+    const data = keys.map((key, index) => {
+      const value = values[index]
+
+      const valueTest = (value as any).default
+      const document = matter(valueTest)
+      return {
+        document,
+      }
+    })
+
+    return data
+    // TODO: Make language a dynamic value
+  })(require.context(`../../data/cities/en`, true, /\.md$/))
+
+  return { cities }
 }
 
 export default WithLocale(Index)

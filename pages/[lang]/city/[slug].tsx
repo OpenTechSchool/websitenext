@@ -1,4 +1,5 @@
 import * as React from 'react'
+import PropTypes from 'prop-types'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import LocalSwitcher from '../../../components/LocalSwitcher/LocalSwitcher'
@@ -46,3 +47,10 @@ CityTemplate.getInitialProps = async ctx => {
 }
 
 export default CityTemplate
+
+CityTemplate.propTypes = {
+  content: PropTypes.string.isRequired,
+  data: PropTypes.string.isRequired,
+  siteTitle: PropTypes.string.isRequired,
+  siteDescription: PropTypes.string.isRequired,
+}

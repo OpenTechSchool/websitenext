@@ -20,6 +20,7 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/[lang]/[slug].tsx",
-    "pages/index.tsx"
+    "pages/index.tsx",
+    "components/Section/ChapterSection.js"
   ]
 }

@@ -9,7 +9,7 @@
     "clean-cache": "rimraf -rf ./node_modules/.cache",
     "start": "next start",
     "dev-start": "next",
-    "open": "open http://localhost:3000",
+    "open": "sleepms 3000 && open http://localhost:3000",
     "dev": "npm run lint && npm run clean-cache && npm-run-all -p dev-start open",
     "build": "npm run clean-cache && next build",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,7 +28,7 @@
     "react": "^16.12.0",
     "react-dom": "16.12.0",
     "react-markdown": "4.2.2",
-    "styled-components": "^4.4.1"
+    "styled-components": "4.4.1"
   },
   "devDependencies": {
     "@material-ui/icons": "^4.5.1",
@@ -47,6 +47,8 @@
     "lodash": "^4.17.15",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
+    "prop-types": "^15.7.2",
+    "sleep-ms": "^2.0.1",
     "typescript": "^3.7.2"
   },
   "prettier": {
