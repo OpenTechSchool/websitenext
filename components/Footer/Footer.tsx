@@ -3,7 +3,7 @@ import Link from 'next/link'
 import useTranslation from '../../hooks/useTranslation'
 
 export default function Footer() {
-  const { t } = useTranslation()
+  const { locale, t } = useTranslation()
 
   return (
     <footer>
@@ -28,7 +28,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href=''>
+                <Link href={`/${locale}/contribute#sponsor`} scroll={false}>
                   <a>{t('footer.becomeSponsor')}</a>
                 </Link>
               </li>

@@ -1,10 +1,12 @@
 interface TextSectionProps {
+  anchor?: string
   classname?: string
   title?: string
   children
 }
 
 export default function TextSection({
+  anchor,
   classname,
   title,
   children,
@@ -26,8 +28,9 @@ export default function TextSection({
   ) : (
     ''
   )
+
   return (
-    <section className={classname}>
+    <section id={anchor} className={classname}>
       <div className='content-wrapper'>
         {showTitle}
         {children}

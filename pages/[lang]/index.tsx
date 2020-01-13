@@ -14,7 +14,7 @@ import ChapterSection from '../../components/Section/ChapterSection'
 import Button from '../../components/Button/Button'
 
 interface IndexProps {
-  cities?: Array<Object>
+  cities?: Array<Record<string, any>>
 }
 
 export const Index: NextPage<IndexProps> = ({ cities }) => {

@@ -111,12 +111,10 @@
       "title": "How to contribute",
       "joinChapter": "Join a chapter",
       "openChapter": "Open a chapter in your city"
+    },
+    "sponsor": {
+      "title": "Become a sponsor"
     }
-  },
-  "donate": {
-    "siteTitle": "OpenTechSchool Donate",
-    "siteDescription": "OpenTechSchool Donate",
-    "title": "Donate"
   },
   "footer": {
     "getinvolved": "Get involved",
