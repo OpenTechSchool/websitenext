@@ -15,14 +15,10 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
       </section>
       <article className='content-wrapper'>
         <h1>{frontmatter.title}</h1>
-        <ReactMarkdown
-          source={markdownBody}
-          escapeHtml={false}
-          renderers={{ paragraph: props => <p {...props} /> }}
-        />
+        <ReactMarkdown source={markdownBody} escapeHtml={false} />
         <style jsx>{`
-          p {
-            margin: 1em 0;
+          :global(p) {
+            margin: 2em 0;
           }
 
           .content-wrapper {
