@@ -62,6 +62,10 @@ const Community: NextPage = () => {
         </Grid>
       </TextSection>
 
+      <TextSection title={t('contribute.sponsor.title')} anchor='sponsor'>
+        Text
+      </TextSection>
+
       <style jsx>{`
         h1 {
           text-align: center;

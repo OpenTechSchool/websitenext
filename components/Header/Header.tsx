@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import MenuIcon from '@material-ui/icons/Menu'
-import OutlineButton from '../Button/OutlineButton'
 import useTranslation from '../../hooks/useTranslation'
 
 import { mediaquery } from '../../style/style'
@@ -31,12 +30,6 @@ export function Header() {
 
           <Link href={`/${locale}/about`}>
             <a>About</a>
-          </Link>
-
-          <Link href={`/${locale}/donate`}>
-            <a>
-              <OutlineButton>Donate</OutlineButton>
-            </a>
           </Link>
         </nav>
       )}
