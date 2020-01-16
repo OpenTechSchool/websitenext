@@ -37,9 +37,9 @@ export const Index: NextPage<IndexProps> = ({ cities }) => {
         <Grid container justify='space-between'>
           <Grid item xs={12} md={5}>
             <h1>{t('homepage.otsInitiative.title')}</h1>
-            <p>{t('homepage.otsInitiative.otsInitiativeDesc')}</p>
+            <p>{t('homepage.otsInitiative.description')}</p>
             <br />
-            <p>{t('homepage.otsInitiative.otsInitiativeDesc2')}</p>
+            <p>{t('homepage.otsInitiative.description2')}</p>
             <br />
             <br />
             <Link href=''>
@@ -48,6 +48,23 @@ export const Index: NextPage<IndexProps> = ({ cities }) => {
           </Grid>
           <Grid item xs={12} md={5}>
             <div className='placeholder'></div>
+          </Grid>
+        </Grid>
+      </TextSection>
+
+      <TextSection>
+        <Grid container justify='space-between'>
+          <Grid item xs={12} md={5}>
+            <div className='placeholder'></div>
+          </Grid>
+          <Grid item xs={12} md={5}>
+            <h1>{t('homepage.otsCommunity.title')}</h1>
+            <p>{t('homepage.otsCommunity.description')}</p>
+            <br />
+            <br />
+            <Link href=''>
+              <a>{t('homepage.otsCommunity.learnMore')}</a>
+            </Link>
           </Grid>
         </Grid>
       </TextSection>
@@ -66,12 +83,12 @@ export const Index: NextPage<IndexProps> = ({ cities }) => {
           </Grid>
           <Grid item xs={12} md={4}>
             <div className='placeholder-sm'></div>
-            <h3>{t('homepage.waysToJoin.corporate.title')}</h3>
+            <h3>{t('homepage.waysToJoin.support.title')}</h3>
             <p className='ways-to-join'>
-              {t('homepage.waysToJoin.corporate.description')}
+              {t('homepage.waysToJoin.support.description')}
               <br />
               <br />
-              <Button href=''>{t('homepage.waysToJoin.corporate.cta')}</Button>
+              <Button href=''>{t('homepage.waysToJoin.support.cta')}</Button>
             </p>
           </Grid>
           <Grid item xs={12} md={4}>
@@ -97,6 +114,9 @@ export const Index: NextPage<IndexProps> = ({ cities }) => {
           <Grid item xs={12} md={5}>
             <h1>{t('homepage.getInTouch.title')}</h1>
             <p>{t('homepage.getInTouch.description')}</p>
+            <p>{t('homepage.getInTouch.description2')}</p>
+            <br />
+            <p>{t('homepage.getInTouch.description3')}</p>
             <br />
             <br />
             <Grid container justify='space-between'>

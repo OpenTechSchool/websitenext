@@ -7,31 +7,38 @@
     "siteDescription": "OpenTechSchool",
     "otsInitiative": {
       "title": "The OTS initiative",
-      "otsInitiativeDesc": "Hi, we are OpenTechSchool, a distributed community initiative organising welcoming and inclusive code learning happenings with real people in the real world.",
-      "otsInitiativeDesc2": "On top, we invite anyone to become an organizer themselves. Set up their own local chapter and join our community of coaches around the world",
+      "description": "The OpenTechSchool is a movement aiming to offer free tech education.",
+      "description2": "Volunteers from different cities in Europe organizing welcoming and inclusive code learning happenings around the year. The meetups bring people together and provides a space for hands-on learning.",
       "learnMore": "More about OpenTechSchool ..."
+    },
+    "otsCommunity": {
+      "title": "Your local community",
+      "description": "Meet other learners at weekly meetups in your city. Bring your projects, questions and positive attitude. Get the chance to meet people with different experience levels and backgrounds. This is the place to get support, learn together and connect.",
+      "learnMore": "More about the community ..."
     },
     "waysToJoin": {
       "title": "Ways to join us",
       "learner": {
         "title": "Learner",
-        "description": "If you are looking to learn coding/about tech yourself, you probably want to find out where and when the next events takes place near you.",
-        "cta": "Get started"
+        "description": "If you are looking to learn coding yourself, you probably want to find out more about the community and when the next meetup takes place near you.",
+        "cta": "The Community"
       },
-      "corporate": {
-        "title": "Corporate",
-        "description": "We welcome collaboration with corporations that want to engage with local OT chapters in order to share their programing expertise.",
-        "cta": "How to corporate"
+      "support": {
+        "title": "Supporter",
+        "description": "If you like what OTS is doing, there are multiple ways to support the initiative. Maybe you have a space to offer or want to sponsor the next event.",
+        "cta": "Become supporter"
       },
       "coach": {
-        "title": "Coach",
-        "description": "If you feel like donating some of your time and knowledge, our chapters are always need passionate coaches to help run programming workshops.",
-        "cta": "Ways to support"
+        "title": "Volunteer",
+        "description": "If you feel like donating some of your time and knowledge, our chapters always need passionate coaches and organizers for the events.",
+        "cta": "Be a volunteer"
       }
     },
     "getInTouch": {
       "title": "Get in touch",
-      "description": "Got a space to offer for our events? Want to collaborate with us? Got a great idea and want to discuss with us? Willing to support one of our projects? Find the right person to speak with and save time.",
+      "description": "The best way to get in touch with the community is at one of our local event. Feel free to join anytime.",
+      "description2": "You can also find some of us in Slack where we share information beyond the events.",
+      "description3": "If you have a general question about OTS you can also send us an email.",
       "slack": "Join us in Slack",
       "email": "Send an email"
     }
