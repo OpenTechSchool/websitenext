@@ -53,7 +53,7 @@
     "history": {
       "title": "History",
       "description": "OTS was born in April of 2012 in Berlin. The first local RailsGirls event — a free tech workshop with freshly created learning materials dedicated to an audience of women of all ages and backgrounds during a both thrilling and cosy weekend — had just taken place, and had created much admiration and enthusiasm in its wake.",
-      "description2": "Why not expand the concept to all tech topics people might possibly want to learn and open the events to an audience of all genders and experience levels? The challenge couldn’t be greater. Since then, hundreds of people have joined OTS as coaches, learners, organizers, and sponsors, in Berlin, Stockholm, and soon: even in more new cities (yours!)."
+      "description2": "Why not expand the concept to all tech topics people might possibly want to learn and open the events to an audience of all genders and experience levels? The challenge couldn’t be greater. Since then, hundreds of people have joined OTS as coaches, learners, organizers, and sponsors, in Berlin, Leipzig, and soon: even in more new cities (yours!)."
     },
     "explanation": {
       "title": "What is OpenTechSchool?",
@@ -88,7 +88,28 @@
         "description2": "That is why we run OpenTechSchool as a non-profit and operate on the lowest costs possible. Most workshops are run at no cost and are self-organised by the local communities. And while company sponsorship is welcome and makes events and parties more comfortable, it is not required to fund the day-to-day business of OTS, nor will it ever govern the way OTS functions."
       }
     },
-    "policy": "In correspondence with our values we release all learning materials, blueprints and any other kind of content under the %{link} As long as you attribute the work to the OpenTechSchool (usually by mentioning such and providing the link to the original material) and share it under the same licence again, you are free to use, share, copy and modify it - even in a commercial context."
+    "policy": {
+      "title": "Our Licensing Policy",
+      "description": "In correspondence with our values we release all learning materials, blueprints and any other kind of content under the",
+      "description2": "As long as you attribute the work to the OpenTechSchool (usually by mentioning such and providing the link to the original material) and share it under the same licence again, you are free to use, share, copy and modify it - even in a commercial context.",
+      "link": "Creative Commons Attribution-ShareAlike 3.0 Unported License:"
+    },
+    "foundation": {
+      "description": "The OpenTechSchool e.V. has officially been established January 5th, 2013. As of March 25th, 2013 it is officially registered as a \"gemeinütziger e.V.\" — a non-profit foundation under German law. The main objective of creating the OpenTechSchool e.V. was to have a legal entity to help with sponsoring and structural things. Generally the foundations goal is to provide any kinds of service and help to nurture the OpenTechSchool movement all over the globe.",
+      "details": "Details",
+      "address": "Postal Address:",
+      "registered": "Registered at",
+      "representedByBoard": "The foundation is represented by its board:",
+      "contactTheBoard": "To contact the board send an email at",
+      "membership": "Membership",
+      "membershipDesc": "The OpenTechSchool is a public Foundation, free for anyone to join. As decided by the general assembly on January 5th 2013 the membership fee is 2€ a month, due as quarterly payments (you'll receive an information on how to do that after registering).",
+      "noMembershipRequired": "There is no membership required in order to participate in any activities either as learner, coach or any kind volunteer work.",
+      "signup": "Sign up for a membership",
+      "agree": "Please remember, by signing up, you agree to our",
+      "agree2": "current charter.",
+      "donation": "Donate",
+      "donationDesc": "Donations are always welcome. Please use the following button."
+    }
   },
   "community": {
     "siteTitle": "OpenTechSchool Community",
@@ -141,7 +162,9 @@
     "sponsor": {
       "title": "Become a sponsor",
       "description": "If you like what OpenTechSchool is doing, but you can't volunteer there are other ways to support the initiative. Maybe you have a space to offer or you want to sponsor the next event. Please get in touch with us via email.",
-      "description2": "The OpenTechSchool is non-profit foundation that also offers a membership. Or you can simply contribute us a donation."
+      "description2": "The OpenTechSchool is non-profit foundation that also offers a membership. Or you can simply contribute us a donation.",
+      "membership": "Membership",
+      "donation": "Donation"
     }
   },
   "footer": {

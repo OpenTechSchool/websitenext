@@ -76,8 +76,8 @@ const Community: NextPage = () => {
             <br />
             <p>{t('contribute.sponsor.description2')}</p>
             <br />
-            <Button href=''>Membership</Button>{' '}
-            <Button href=''>Donation</Button>
+            <Button href=''>{t('contribute.sponsor.membership')}</Button>{' '}
+            <Button href=''>{t('contribute.sponsor.donation')}</Button>
           </Grid>
         </Grid>
       </TextSection>

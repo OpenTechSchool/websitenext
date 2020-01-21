@@ -3,8 +3,10 @@ import PageLayout from '../../components/PageLayout/PageLayout'
 import Grid from '@material-ui/core/Grid'
 import TextSection from '../../components/Section/TextSection'
 import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
+import Button from '../../components/Button/Button'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
+import { Link } from '@material-ui/core'
 
 // import { mediaquery } from '../../style/style'
 
@@ -55,21 +57,79 @@ const About: NextPage = () => {
         <h2>{t('about.coreValue.nonProfit.title')}</h2>
         <p>{t('about.coreValue.nonProfit.description')}</p>
       </TextSection>
-      <TextSection classname='grey' title='Our Licensing Policy'>
+      <TextSection classname='grey' title={t('about.policy.title')}>
         <p>
-          In correspondence with our values we release all learning materials,
-          blueprints and any other kind of content under the{` `}
+          {t('about.policy.description')}
+          {` `}
           <a href='https://creativecommons.org/licenses/by-sa/3.0/deed.en_US'>
-            Creative Commons Attribution-ShareAlike 3.0 Unported License:
+            {t('about.policy.link')}
           </a>
           {` `}
-          As long as you attribute the work to the OpenTechSchool (usually by
-          mentioning such and providing the link to the original material) and
-          share it under the same licence again, you are free to use, share,
-          copy and modify it - even in a commercial context.
+          {t('about.policy.description2')}
         </p>
       </TextSection>
-      <style jsx>{``}</style>
+      <TextSection title='Foundation'>
+        <h2>OpenTechSchool e.V.</h2>
+        <p>{t('about.foundation.description')}</p>
+        <h2>{t('about.foundation.details')}</h2>
+        <p>
+          {t('about.foundation.address')}
+          <br />
+          OpenTechSchool e.V. <br />
+          c/o co.up <br />
+          Adalbertstr. 8 <br />
+          10999 Berlin <br />
+        </p>
+        <br />
+        <p>
+          {t('about.foundation.registered')}{' '}
+          <Link href='https://www.opentechschool.org/foundation/archive/Register_Bestaetigung.pdf'>
+            Amtsgericht Charlottenburg under VR32310B
+          </Link>
+          .
+        </p>
+        <br />
+        <p>{t('about.foundation.representedByBoard')}</p>
+        <ul>
+          <li>Bastian Albers</li>
+          <li>Giorgia Sambrotta</li>
+          <li>Martin Meyerhoff</li>
+        </ul>
+        <br />
+        {t('about.foundation.contactTheBoard')}{' '}
+        <Link href='mailto:foundation.board@opentechschool.org'>
+          foundation.board [at] opentechschool.org
+        </Link>
+        .<h2>{t('about.foundation.membership')}</h2>
+        <p>{t('about.foundation.membershipDesc')}</p>
+        <p>{t('about.foundation.noMembershipRequired')}</p>
+        <br />
+        <Button href='https://docs.google.com/a/opentechschool.org/spreadsheet/viewform?formkey=dGYycmhYal9SSW1WRUdQcUhUSk9FYWc6MQ#gid=0'>
+          {t('about.foundation.signup')}
+        </Button>
+        <br />
+        <br />
+        <p>
+          {t('about.foundation.agree')}{' '}
+          <Link href='https://www.opentechschool.org/foundation/archive/aktuelle-Satzung.pdf'>
+            {t('about.foundation.agree2')}
+          </Link>
+        </p>
+        <h2>{t('about.foundation.donation')}</h2>
+        <p>{t('about.foundation.donationDesc')}</p>
+        <br />
+        <Button href=''>Donate</Button>
+      </TextSection>
+      <style jsx>{`
+        ul {
+          list-style: inherit;
+          margin-left: 25px;
+        }
+
+        li {
+          padding-left: 5px;
+        }
+      `}</style>
     </PageLayout>
   )
 }
