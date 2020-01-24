@@ -1,7 +1,5 @@
 import { NextPage } from 'next'
-import { useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import Grid, { GridDirection } from '@material-ui/core/Grid'
+import Grid from '@material-ui/core/Grid'
 import Link from 'next/link'
 import PageLayout from '../../components/PageLayout/PageLayout'
 import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
@@ -13,10 +11,6 @@ import ContactSection from '../../components/Section/ContactSection'
 
 const Community: NextPage = () => {
   const { t } = useTranslation()
-  const theme = useTheme()
-  const direction: GridDirection = useMediaQuery(theme.breakpoints.up('md'))
-    ? 'row'
-    : 'column-reverse'
 
   return (
     <PageLayout

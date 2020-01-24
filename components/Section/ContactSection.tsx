@@ -6,7 +6,7 @@ import useTranslation from '../../hooks/useTranslation'
 import TextSection from './TextSection'
 
 export default function ContactSection() {
-  const { locale, t } = useTranslation()
+  const { t } = useTranslation()
   const theme = useTheme()
   const direction: GridDirection = useMediaQuery(theme.breakpoints.up('md'))
     ? 'row'
