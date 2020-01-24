@@ -2,6 +2,8 @@ interface TextSectionProps {
   anchor?: string
   classname?: string
   title?: string
+  icon?: string
+  iconDirection?: string
   children
 }
 
@@ -9,6 +11,8 @@ export default function TextSection({
   anchor,
   classname,
   title,
+  icon,
+  iconDirection,
   children,
 }: TextSectionProps) {
   const showTitle = title ? (

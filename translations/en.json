@@ -167,6 +167,11 @@
       "donation": "Donation"
     }
   },
+  "city": {
+    "aboutTitle": "About",
+    "eventsTitle": "Upcoming Events",
+    "tweetsFrom": "by"
+  },
   "footer": {
     "getinvolved": "Get involved",
     "joinMeetup": "Join a meetup",

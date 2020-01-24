@@ -8,9 +8,9 @@
     "lint:watch": "esw -w --fix pages/**/** components/**/**",
     "clean-cache": "rimraf -rf ./node_modules/.cache",
     "start": "next start",
-    "dev-start": "next",
+    "next-start": "next",
     "open": "sleepms 3000 && open http://localhost:3000",
-    "dev": "npm run lint && npm run clean-cache && npm-run-all -p dev-start open",
+    "dev": "npm run lint && npm run clean-cache && npm-run-all -p next-start open",
     "build": "npm run clean-cache && next build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

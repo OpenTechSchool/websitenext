@@ -8,8 +8,6 @@ import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
 import { Link } from '@material-ui/core'
 
-// import { mediaquery } from '../../style/style'
-
 const About: NextPage = () => {
   const { t } = useTranslation()
 

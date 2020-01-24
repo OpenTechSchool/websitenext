@@ -1,6 +1,5 @@
 import { NextPage } from 'next'
 import Grid from '@material-ui/core/Grid'
-import matter from 'gray-matter'
 import Link from 'next/link'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
@@ -11,11 +10,7 @@ import ChapterSection from '../../components/Section/ChapterSection'
 import Button from '../../components/Button/Button'
 import ContactSection from '../../components/Section/ContactSection'
 
-interface IndexProps {
-  cities?: Array<Record<string, any>>
-}
-
-export const Index: NextPage<IndexProps> = ({ cities }) => {
+export const Index: NextPage = () => {
   const { t } = useTranslation()
 
   return (
@@ -98,7 +93,7 @@ export const Index: NextPage<IndexProps> = ({ cities }) => {
         </Grid>
       </TextSection>
 
-      <ChapterSection title={t('chapter.title')} cities={cities} />
+      <ChapterSection title={t('chapter.title')} />
 
       <ContactSection />
 
@@ -128,30 +123,6 @@ export const Index: NextPage<IndexProps> = ({ cities }) => {
       `}</style>
     </HomepageLayout>
   )
-}
-
-Index.getInitialProps = async function() {
-  const cities = (ctx => {
-    // get all keys from data/cities
-    const keys = ctx.keys()
-    // grab the values from these files
-    const values = keys.map(ctx)
-
-    const data = keys.map((key, index) => {
-      const value = values[index]
-
-      const valueTest = (value as any).default
-      const document = matter(valueTest)
-      return {
-        document,
-      }
-    })
-
-    return data
-    // TODO: Make language a dynamic value
-  })(require.context(`../../data/cities/en`, true, /\.md$/))
-
-  return { cities }
 }
 
 export default WithLocale(Index)
