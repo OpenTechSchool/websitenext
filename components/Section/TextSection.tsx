@@ -11,8 +11,6 @@ export default function TextSection({
   anchor,
   classname,
   title,
-  icon,
-  iconDirection,
   children,
 }: TextSectionProps) {
   const showTitle = title ? (

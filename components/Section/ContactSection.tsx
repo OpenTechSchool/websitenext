@@ -28,7 +28,7 @@ export default function ContactSection() {
           <br />
           <Grid container justify='space-between'>
             <Grid item xs={6}>
-              <Button href='https://join.slack.com/t/opentechschool/shared_invite/enQtODg4MDM5MzA0OTMzLWM2ZGE2OWRkNmNmNDkyZGZjZGExMzQxYzMxMDRmOGFmMzUxMWM1YzczOWQ0M2I2MTBkODA4ZWYxYjQyNjk5NGY'>
+              <Button href='https://opentechschool-slack.herokuapp.com'>
                 {t('homepage.getInTouch.slack')}
               </Button>
             </Grid>

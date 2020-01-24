@@ -112,10 +112,33 @@
     }
   },
   "community": {
-    "siteTitle": "OpenTechSchool Community",
-    "siteDescription": "OpenTechSchool Community",
+    "siteTitle": "Join the OpenTechSchool Community",
+    "siteDescription": "Joing the OpenTechSchool Community",
+    "description": "The OTS community is a group of tech-enthausiast, that like to learn and teach coding in a friendly environment.",
+    "readCommunityValues": "Read more about our community values",
+    "readCodeOfConduct": "Read our Code of Conduct",
+    "getInvolved": {
+      "learner": {
+        "title": "Learner",
+        "description": "If you are looking to learn coding yourself, you probably want to find out more about the community and when the next meetup takes place near you.",
+        "link": "Find a chapter near you"
+      },
+      "coach": {
+        "title": "Coach",
+        "description": "If you can donate some of your time and knowledge to support your local chapter and you love to teach or coach other learners this job is for you.",
+        "link": "Read the coach guide"
+      },
+      "organizer": {
+        "title": "Organizer",
+        "description": "If you like to support the community in your city and love to organize events or meetups. We always need passionate organizers as part of the community.",
+        "link": "Read the organizers guide"
+      }
+    },
     "formats": {
       "title": "Formats",
+      "description": "If you got started with programming and would like to strengthen your skills or you are just curious what code is all about, the OpenTechSchool events are the best way to meet learners of all genders and experience levels.",
+      "description2": "OpenTechSchool also acts as a lab to experiement with new and interesting tech learning formats and projects.",
+      "description3": "The most common event formats currently are:",
       "who": "Who",
       "when": "When",
       "workshop": {
@@ -125,10 +148,10 @@
         "when": "While the introduction workshops often take place on weekends, many smaller workshops also happen during the week."
       },
       "coLearning": {
-        "title": "Co-Learning",
-        "description": "Maybe you don’t know how to get started, got stuck in a tutorial or need help with your project you are welcome to join a Co-Learning group.",
-        "who": "Everyone who likes to learn coding and wants to meet other learners.",
-        "when": "Meeting weekly or bi-weekly on weekday evenings, these groups always have coaches there to help you, while each one just continues on their project in a relaxed and welcoming atmosphere."
+        "title": "Co-learning",
+        "description": "Maybe you don’t know how to get started with coding, got stuck in a tutorial or need help with your project. The co-learning meetup is here for you.",
+        "who": "Everyone who likes to learn or teach coding and wants to meet other learners, or just likes to chat about tech.",
+        "when": "Meeting weekly or bi-weekly on a weekday evening, these groups always have coaches there to help you, while each one just continues on their project in a relaxed and welcoming atmosphere."
       }
     }
   },
@@ -166,6 +189,10 @@
       "membership": "Membership",
       "donation": "Donation"
     }
+  },
+  "guide": {
+    "siteTitle": "OpenTechSchool Guide",
+    "siteDescription": "OpenTechSchool Guide"
   },
   "city": {
     "aboutTitle": "About",
