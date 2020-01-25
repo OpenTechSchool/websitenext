@@ -169,7 +169,9 @@
   },
   "city": {
     "aboutTitle": "About",
-    "eventsTitle": "Upcoming Events",
+    "eventsTitle": "Upcoming Events"
+  },
+  "twitterfeed": {
     "tweetsFrom": "by"
   },
   "footer": {

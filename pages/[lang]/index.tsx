@@ -9,6 +9,7 @@ import TextSection from '../../components/Section/TextSection'
 import ChapterSection from '../../components/Section/ChapterSection'
 import Button from '../../components/Button/Button'
 import ContactSection from '../../components/Section/ContactSection'
+import TwitterFeed from '../../components/TwitterFeed'
 
 export const Index: NextPage = () => {
   const { t } = useTranslation()
@@ -94,6 +95,8 @@ export const Index: NextPage = () => {
       </TextSection>
 
       <ChapterSection title={t('chapter.title')} />
+
+      <TwitterFeed screenName='OpenTechSchool' />
 
       <ContactSection />
 

@@ -10,6 +10,7 @@ import LocalSwitcher from '../../../components/LocalSwitcher/LocalSwitcher'
 import CityLayout from '../../../components/CityLayout/CityLayout'
 import CityHero from '../../../components/CityHero/CityHero'
 import TextSection from '../../../components/Section/TextSection'
+import TwitterFeed from '../../../components/TwitterFeed'
 
 export function CityTemplate({ content, data, siteTitle, siteDescription }) {
   const { t } = useTranslation()
@@ -55,17 +56,9 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
       >
         team people here
       </TextSection>
-      <TextSection classname='default' title='Tweets'>
-        <span>
-          {t('city.tweetsFrom')}{' '}
-          <Link href={`https://twitter.com/${frontmatter.twitter}`}>
-            @{frontmatter.twitter}
-          </Link>
-        </span>
-        <Grid item xs={12} md={5}>
-          <div className='twitterContainer'></div>
-        </Grid>
-      </TextSection>
+
+      <TwitterFeed screenName={frontmatter.twitter} />
+
       <style jsx>{`
         :global(p) {
           margin: 2em 0;
