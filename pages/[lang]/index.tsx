@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid'
 import Link from 'next/link'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
-import HomepageLayout from '../../components/HomepageLayout/HomepageLayout'
+import PageLayout from '../../components/PageLayout/PageLayout'
 import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 import TextSection from '../../components/Section/TextSection'
 import ChapterSection from '../../components/Section/ChapterSection'
@@ -15,7 +15,7 @@ export const Index: NextPage = () => {
   const { t } = useTranslation()
 
   return (
-    <HomepageLayout
+    <PageLayout
       siteTitle='homepage.siteTitle'
       siteDescription='homepage.siteDescription'
     >
@@ -124,7 +124,7 @@ export const Index: NextPage = () => {
           margin: 20px 0;
         }
       `}</style>
-    </HomepageLayout>
+    </PageLayout>
   )
 }
 
