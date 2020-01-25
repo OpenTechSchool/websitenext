@@ -16,8 +16,8 @@ const TwitterFeed = ({ screenName }) => {
       <TwitterTimelineEmbed
         sourceType='profile'
         screenName={screenName}
-        noFooter='true'
-        noHeader='true'
+        noFooter={true}
+        noHeader={true}
         options={{ height: 600 }}
       />
       <style jsx>{`
