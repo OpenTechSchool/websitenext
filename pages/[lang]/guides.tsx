@@ -8,12 +8,12 @@ import WithLocale from '../../containers/withLocale'
 import TextSection from '../../components/Section/TextSection'
 
 const Guides: NextPage = () => {
-  const { t } = useTranslation()
+  const { t, locale } = useTranslation()
 
   return (
     <PageLayout
-      siteTitle={t('guide.siteTitle')}
-      siteDescription={t('guide.siteDescription')}
+      siteTitle={t('guides.siteTitle')}
+      siteDescription={t('guides.siteDescription')}
     >
       <section>
         <LocalSwitcher />
@@ -35,16 +35,22 @@ const Guides: NextPage = () => {
             </p>
             <p>Jump right to it:</p>
             <br />
-            <Link href=''>How to start OpenTechSchool in my city</Link>
+            <Link href={`/${locale}/guides#start-chapter`}>
+              How to start OpenTechSchool in my city
+            </Link>
             <br />
-            <Link href=''>How to organize an co-learning meetup</Link>
+            <Link href={`/${locale}/guides#organize-meetup`}>
+              How to organize an co-learning meetup
+            </Link>
             <br />
-            <Link href=''>How to coach at an co-learning meetup</Link>
+            <Link href={`/${locale}/guides#coaching-guidelines`}>
+              How to coach at an co-learning meetup
+            </Link>
           </Grid>
         </Grid>
       </TextSection>
 
-      <TextSection classname='grey'>
+      <TextSection classname='grey' anchor='start-chapter'>
         <Grid container justify='space-between'>
           <Grid item xs={12} md={5}>
             <h2>How to start OpenTechSchool in my city</h2>
@@ -89,7 +95,7 @@ const Guides: NextPage = () => {
         </Grid>
       </TextSection>
 
-      <TextSection classname='grey'>
+      <TextSection classname='grey' anchor='organize-meetup'>
         <Grid container justify='space-between'>
           <Grid item xs={12} md={5}>
             <h2>Organize an co-learning meetup</h2>
@@ -117,7 +123,8 @@ const Guides: NextPage = () => {
         <br />
         <p>
           Make sure the event and its idea is in agreement with our{' '}
-          <Link href=''>values</Link>. In particular:
+          <Link href={`/${locale}/about#core-values`}>values</Link>. In
+          particular:
         </p>
         <br />
         <ul>
@@ -204,7 +211,11 @@ const Guides: NextPage = () => {
         </ul>
       </TextSection>
 
-      <TextSection classname='grey' title='Coaching guidelines'>
+      <TextSection
+        classname='grey'
+        title='Coaching guidelines'
+        anchor='coaching-guidelines'
+      >
         <p>
           You are about to help out at an OpenTechSchool workshop as a coach. We
           want to give you a quick introduction of what that means. The focus

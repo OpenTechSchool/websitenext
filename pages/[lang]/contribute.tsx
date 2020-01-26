@@ -10,7 +10,7 @@ import Button from '../../components/Button/Button'
 import ContactSection from '../../components/Section/ContactSection'
 
 const Community: NextPage = () => {
-  const { t } = useTranslation()
+  const { t, locale } = useTranslation()
 
   return (
     <PageLayout
@@ -37,7 +37,7 @@ const Community: NextPage = () => {
             <h2>{t('contribute.volunteering.coach.title')}</h2>
             <p>{t('contribute.volunteering.coach.description')}</p>
             <br />
-            <Link href=''>
+            <Link href={`/${locale}/guides#coaching-guidelines`}>
               <a>{t('contribute.volunteering.coach.description2')}</a>
             </Link>
           </Grid>
@@ -45,7 +45,7 @@ const Community: NextPage = () => {
             <h2>{t('contribute.volunteering.organize.title')}</h2>
             <p>{t('contribute.volunteering.organize.description')}</p>
             <br />
-            <Link href=''>
+            <Link href={`/${locale}/guides#organize-meetup`}>
               <a>{t('contribute.volunteering.organize.description2')}</a>
             </Link>
           </Grid>
@@ -53,7 +53,7 @@ const Community: NextPage = () => {
             <h2>{t('contribute.volunteering.openChapter.title')}</h2>
             <p>{t('contribute.volunteering.openChapter.description')}</p>
             <br />
-            <Link href=''>
+            <Link href={`/${locale}/guides#start-chapter`}>
               <a>{t('contribute.volunteering.openChapter.description2')}</a>
             </Link>
           </Grid>

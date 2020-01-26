@@ -29,7 +29,7 @@ export default function ChapterSection({ title }) {
   })(require.context(`../../data/cities/en`, true, /\.md$/))
 
   return (
-    <TextSection title={title}>
+    <TextSection title={title} anchor='find-events'>
       <h4>{t('chapter.active')}</h4>
 
       <Grid container justify='space-around'>
