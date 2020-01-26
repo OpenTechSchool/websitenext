@@ -9,6 +9,7 @@ import TextSection from '../../components/Section/TextSection'
 import ChapterSection from '../../components/Section/ChapterSection'
 import Button from '../../components/Button/Button'
 import ContactSection from '../../components/Section/ContactSection'
+import SocialMediaSection from '../../components/Section/SocialMediaSection'
 import TwitterFeed from '../../components/TwitterFeed'
 import StarRateIcon from '@material-ui/icons/StarRate'
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople'
@@ -112,6 +113,8 @@ export const Index: NextPage = () => {
       <TwitterFeed screenName='OpenTechSchool' />
 
       <ContactSection />
+
+      <SocialMediaSection />
 
       <style jsx>{`
         .ways-to-join {

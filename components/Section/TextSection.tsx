@@ -68,6 +68,10 @@ export default function TextSection({
           max-width: 1280px;
           margin: 0 auto;
         }
+
+        .center {
+          text-align: center;
+        }
       `}</style>
     </section>
   )
