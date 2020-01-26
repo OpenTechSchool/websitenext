@@ -10,6 +10,9 @@ import ChapterSection from '../../components/Section/ChapterSection'
 import Button from '../../components/Button/Button'
 import ContactSection from '../../components/Section/ContactSection'
 import TwitterFeed from '../../components/TwitterFeed'
+import StarRateIcon from '@material-ui/icons/StarRate'
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople'
+import SchoolIcon from '@material-ui/icons/School'
 
 export const Index: NextPage = () => {
   const { t, locale } = useTranslation()
@@ -62,7 +65,11 @@ export const Index: NextPage = () => {
       <TextSection classname='grey' title={t('homepage.waysToJoin.title')}>
         <Grid container justify='space-between' spacing={10}>
           <Grid item xs={12} md={4}>
-            <div className='placeholder-sm'></div>
+            <div className='round-icon'>
+              <SchoolIcon
+                style={{ fontSize: 170, color: 'white', marginTop: '10px' }}
+              />
+            </div>
             <h3>{t('homepage.waysToJoin.learner.title')}</h3>
             <p className='ways-to-join'>
               {t('homepage.waysToJoin.learner.description')}
@@ -72,7 +79,9 @@ export const Index: NextPage = () => {
             </p>
           </Grid>
           <Grid item xs={12} md={4}>
-            <div className='placeholder-sm'></div>
+            <div className='round-icon'>
+              <StarRateIcon style={{ fontSize: 200, color: 'white' }} />
+            </div>
             <h3>{t('homepage.waysToJoin.support.title')}</h3>
             <p className='ways-to-join'>
               {t('homepage.waysToJoin.support.description')}
@@ -82,7 +91,11 @@ export const Index: NextPage = () => {
             </p>
           </Grid>
           <Grid item xs={12} md={4}>
-            <div className='placeholder-sm'></div>
+            <div className='round-icon'>
+              <EmojiPeopleIcon
+                style={{ fontSize: 180, color: 'white', marginTop: '10px' }}
+              />
+            </div>
             <h3>{t('homepage.waysToJoin.coach.title')}</h3>
             <p className='ways-to-join'>
               {t('homepage.waysToJoin.coach.description')}
@@ -117,11 +130,13 @@ export const Index: NextPage = () => {
           margin: 40px 0;
         }
 
-        .placeholder-sm {
-          background: var(--pink);
-          min-height: 200px;
-          width: 100%;
-          margin: 20px 0;
+        .round-icon {
+          background: var(--mainBlue);
+          height: 200px;
+          width: 200px;
+          margin: 0 auto;
+          text-align: center;
+          border-radius: 200px;
         }
       `}</style>
     </PageLayout>

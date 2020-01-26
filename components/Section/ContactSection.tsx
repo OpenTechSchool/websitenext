@@ -4,6 +4,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Button from '../../components/Button/Button'
 import useTranslation from '../../hooks/useTranslation'
 import TextSection from './TextSection'
+import ChatIcon from '@material-ui/icons/Chat'
 
 export default function ContactSection() {
   const { t } = useTranslation()
@@ -14,9 +15,17 @@ export default function ContactSection() {
 
   return (
     <TextSection classname='grey' anchor='get-in-touch'>
-      <Grid container direction={direction} justify='space-between'>
-        <Grid item xs={12} md={5}>
-          <div className='placeholder'></div>
+      <Grid container direction={direction} justify='center'>
+        <Grid item xs={12} md={4}>
+          <div className='message-icons'>
+            <ChatIcon style={{ fontSize: 180, color: 'var(--pink)' }} />
+            <ChatIcon
+              style={{ fontSize: 100, color: 'var(--pink)', marginTop: '10px' }}
+            />
+            <ChatIcon
+              style={{ fontSize: 180, color: 'var(--pink)', marginTop: '-5px' }}
+            />
+          </div>
         </Grid>
         <Grid item xs={12} md={5}>
           <h1>{t('homepage.getInTouch.title')}</h1>
@@ -39,11 +48,10 @@ export default function ContactSection() {
         </Grid>
       </Grid>
       <style jsx>{`
-        .placeholder {
-          background: var(--pink);
-          min-height: 500px;
-          width: 100%;
-          margin: 40px 0;
+        .message-icons {
+          text-align: center;
+          width: 300px;
+          margin-top: 20px;
         }
       `}</style>
     </TextSection>
