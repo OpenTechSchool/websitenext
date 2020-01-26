@@ -13,17 +13,17 @@ export default function Footer() {
             <h3>{t('footer.getinvolved')}</h3>
             <ul>
               <li>
-                <Link href=''>
+                <Link href={`/${locale}/community#event-formats`}>
                   <a>{t('footer.joinMeetup')}</a>
                 </Link>
               </li>
               <li>
-                <Link href=''>
+                <Link href={`/${locale}/guides#organize-meetup`}>
                   <a>{t('footer.organizeEvent')}</a>
                 </Link>
               </li>
               <li>
-                <Link href=''>
+                <Link href={`/${locale}/guides#start-chapter`}>
                   <a>{t('footer.startChapter')}</a>
                 </Link>
               </li>
@@ -38,22 +38,22 @@ export default function Footer() {
             <h3>{t('footer.ourValues')}</h3>
             <ul>
               <li>
-                <Link href=''>
-                  <a>What drives us</a>
+                <Link href={`/${locale}/about#what-drives-us`}>
+                  <a>{t('footer.whatDrivesUs')}</a>
                 </Link>
               </li>
               <li>
-                <Link href=''>
+                <Link href={`/${locale}/about#core-values`}>
                   <a>{t('footer.coreValues')}</a>
                 </Link>
               </li>
               <li>
-                <Link href=''>
+                <Link href={`/${locale}/guides#coaching-guidelines`}>
                   <a>{t('footer.coachingGuidelines')}</a>
                 </Link>
               </li>
               <li>
-                <Link href=''>
+                <Link href={`/${locale}/codeOfConduct`}>
                   <a>{t('footer.codeOfConduct')}</a>
                 </Link>
               </li>
@@ -63,23 +63,8 @@ export default function Footer() {
             <h3>{t('footer.aboutUs')}</h3>
             <ul>
               <li>
-                <Link href=''>
+                <Link href={`/${locale}/about`}>
                   <a>{t('footer.learnMore')}</a>
-                </Link>
-              </li>
-              <li>
-                <Link href=''>
-                  <a>{t('footer.press')}</a>
-                </Link>
-              </li>
-              <li>
-                <Link href=''>
-                  <a>{t('footer.imprint')}</a>
-                </Link>
-              </li>
-              <li>
-                <Link href=''>
-                  <a>{t('footer.privacyPolicy')}</a>
                 </Link>
               </li>
             </ul>
@@ -89,15 +74,15 @@ export default function Footer() {
           <p className='license'>{t('footer.createCommons')}</p>
           <p className='imprint'>
             © {new Date().getFullYear()} by{' '}
-            <Link href=''>
+            <Link href={`/${locale}/about`}>
               <a>OpenTechSchool e.V.</a>
             </Link>
             <span className='spacer'>||</span>
-            <Link href=''>
+            <Link href={`/${locale}/#get-in-touch`}>
               <a>{t('footer.contactUs')}</a>
             </Link>
             <span className='spacer'>||</span>
-            <Link href=''>
+            <Link href={`/${locale}/imprint`}>
               <a>{t('footer.imprint')}</a>
             </Link>
           </p>

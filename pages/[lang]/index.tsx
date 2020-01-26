@@ -12,7 +12,7 @@ import ContactSection from '../../components/Section/ContactSection'
 import TwitterFeed from '../../components/TwitterFeed'
 
 export const Index: NextPage = () => {
-  const { t } = useTranslation()
+  const { t, locale } = useTranslation()
 
   return (
     <PageLayout
@@ -32,7 +32,7 @@ export const Index: NextPage = () => {
             <p>{t('homepage.otsInitiative.description2')}</p>
             <br />
             <br />
-            <Link href=''>
+            <Link href={`/${locale}/about`}>
               <a>{t('homepage.otsInitiative.learnMore')}</a>
             </Link>
           </Grid>
@@ -52,7 +52,7 @@ export const Index: NextPage = () => {
             <p>{t('homepage.otsCommunity.description')}</p>
             <br />
             <br />
-            <Link href=''>
+            <Link href={`/${locale}/community`}>
               <a>{t('homepage.otsCommunity.learnMore')}</a>
             </Link>
           </Grid>

@@ -10,7 +10,7 @@ import TextSection from '../../components/Section/TextSection'
 import ContactSection from '../../components/Section/ContactSection'
 
 const Community: NextPage = () => {
-  const { t } = useTranslation()
+  const { t, locale } = useTranslation()
 
   return (
     <PageLayout
@@ -46,11 +46,11 @@ const Community: NextPage = () => {
         <br />
         <Grid container justify='flex-end'>
           <Grid item xs={12} md={5}>
-            <Link href=''>
+            <Link href={`/${locale}/about#core-values`}>
               <a>{t('community.readCommunityValues')}</a>
             </Link>
             <br />
-            <Link href=''>
+            <Link href={`/${locale}/codeOfConduct`}>
               <a>{t('community.readCodeOfConduct')}</a>
             </Link>
           </Grid>
@@ -58,7 +58,7 @@ const Community: NextPage = () => {
         </Grid>
       </TextSection>
 
-      <TextSection classname='grey' title='Get involved'>
+      <TextSection classname='grey' title={t('community.getInvolved.title')}>
         <Grid container justify='space-between' spacing={10}>
           <Grid item xs={12} md={4}>
             <div className='placeholder-sm'></div>
@@ -67,7 +67,7 @@ const Community: NextPage = () => {
               {t('community.getInvolved.learner.description')}
               <br />
               <br />
-              <Link href=''>
+              <Link href={`/${locale}#find-events`}>
                 <a>{t('community.getInvolved.learner.link')}</a>
               </Link>
             </p>
@@ -79,7 +79,7 @@ const Community: NextPage = () => {
               {t('community.getInvolved.coach.description')}
               <br />
               <br />
-              <Link href=''>
+              <Link href={`/${locale}/guides#coaching-guidelines`}>
                 <a>{t('community.getInvolved.coach.link')}</a>
               </Link>
             </p>
@@ -91,7 +91,7 @@ const Community: NextPage = () => {
               {t('community.getInvolved.organizer.description')}
               <br />
               <br />
-              <Link href=''>
+              <Link href={`/${locale}/guides#organize-meetup`}>
                 <a>{t('community.getInvolved.organizer.link')}</a>
               </Link>
             </p>
@@ -99,7 +99,7 @@ const Community: NextPage = () => {
         </Grid>
       </TextSection>
 
-      <TextSection title={t('community.formats.title')}>
+      <TextSection title={t('community.formats.title')} anchor='event-formats'>
         <p>{t('community.formats.description')}</p>
         <p>{t('community.formats.description2')}</p>
         <p>{t('community.formats.description3')}</p>

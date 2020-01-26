@@ -118,6 +118,7 @@
     "readCommunityValues": "Read more about our community values",
     "readCodeOfConduct": "Read our Code of Conduct",
     "getInvolved": {
+      "title": "Get involved",
       "learner": {
         "title": "Learner",
         "description": "If you are looking to learn coding yourself, you probably want to find out more about the community and when the next meetup takes place near you.",
@@ -173,7 +174,7 @@
       "organize": {
         "title": "Organize a meetup",
         "description": "As an organizer you pland and schedule events, promote them and make sure there are enough coaches available.",
-        "description2": "Read more about how to schedule a co-learning meetup."
+        "description2": "Read more about how to organize a co-learning meetup."
       },
       "openChapter": {
         "title": "Open a new chapter",
@@ -190,7 +191,7 @@
       "donation": "Donation"
     }
   },
-  "guide": {
+  "guides": {
     "siteTitle": "OpenTechSchool Guide",
     "siteDescription": "OpenTechSchool Guide"
   },
@@ -214,9 +215,7 @@
     "codeOfConduct": "Code of Conduct",
     "aboutUs": "About us",
     "learnMore": "Learn more",
-    "press": "Press",
     "imprint": "Imprint",
-    "privacyPolicy": "Privacy Policy",
     "contactUs": "Contact us",
     "createCommons": "Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License."
   }

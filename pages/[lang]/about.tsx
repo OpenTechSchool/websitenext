@@ -34,7 +34,11 @@ const About: NextPage = () => {
       <TextSection classname='pink' title={t('about.explanation.title')}>
         <p>{t('about.explanation.description')}</p>
       </TextSection>
-      <TextSection classname='highlight' title={t('about.coreValue.title')}>
+      <TextSection
+        classname='highlight'
+        title={t('about.coreValue.title')}
+        anchor='core-values'
+      >
         <p>{t('about.coreValue.description')}</p>
 
         <h2>{t('about.coreValue.openness.title')}</h2>

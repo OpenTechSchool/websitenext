@@ -13,7 +13,7 @@ export default function ContactSection() {
     : 'column-reverse'
 
   return (
-    <TextSection classname='grey'>
+    <TextSection classname='grey' anchor='get-in-touch'>
       <Grid container direction={direction} justify='space-between'>
         <Grid item xs={12} md={5}>
           <div className='placeholder'></div>
