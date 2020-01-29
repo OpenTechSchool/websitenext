@@ -1,10 +1,16 @@
+import React from 'react'
+import Icon from '@material-ui/core/Icon'
+
+const WrappedIcon = props => <Icon {...props} />
+WrappedIcon.muiName = 'Icon'
+
 interface TextSectionProps {
   anchor?: string
   classname?: string
   title?: string
   icon?: string
   iconDirection?: string
-  children
+  children: React.ReactNode
 }
 
 export default function TextSection({
@@ -16,6 +22,15 @@ export default function TextSection({
   const showTitle = title ? (
     <h1>
       {title}
+      {iconDirection === 'center' ? (
+        <div className='icon'>
+          <WrappedIcon>{icon}</WrappedIcon>
+        </div>
+      ) : (
+        <span className='icon'>
+          <WrappedIcon>{icon}</WrappedIcon>
+        </span>
+      )}
       <style jsx>{`
         h1 {
           text-align: center;

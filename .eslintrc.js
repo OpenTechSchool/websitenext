@@ -41,4 +41,10 @@ module.exports = {
   settings: {
     react: 'detect',
   },
+  overrides: [
+    {
+      files: ['*.js'],
+      parser: 'babel-eslint',
+    },
+  ],
 }

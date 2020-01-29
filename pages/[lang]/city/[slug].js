@@ -1,4 +1,3 @@
-import * as React from 'react'
 import PropTypes from 'prop-types'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
@@ -42,7 +41,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
       <TextSection
         classname='default'
         title={t('city.eventsTitle')}
-        icon='calendar'
+        icon='event'
       >
         <p>Suggest one!</p>
         <div>more</div>
@@ -50,7 +49,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
       <TextSection
         classname='pink'
         title={`Team ${frontmatter.title}`}
-        icon='chat'
+        icon='assistant'
         iconDirection='center'
       >
         team people here

@@ -4,7 +4,7 @@
   "description": "new website for ots in nextjs",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --fix --ext .tsx pages/**/** components/**/**",
+    "lint": "eslint --fix --ext .tsx,.js pages/**/** components/**/**",
     "lint:watch": "esw -w --fix pages/**/** components/**/**",
     "clean-cache": "rimraf -rf ./node_modules/.cache",
     "start": "next start",
@@ -33,12 +33,14 @@
   },
   "devDependencies": {
     "@material-ui/icons": "^4.5.1",
+    "@types/material-ui": "^0.21.7",
     "@types/node": "^12.12.14",
     "@types/react": "^16.9.13",
     "@types/react-dom": "^16.9.4",
     "@types/webpack-env": "^1.14.1",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
+    "babel-eslint": "^10.0.3",
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",

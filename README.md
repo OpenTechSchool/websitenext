@@ -26,6 +26,21 @@ Any new pages (page is a content that has its own url) should be created under `
 
 The global styles can be found in `style/style-global.js` file.
 
+### Material UI
+
+<b>Tips:</b>
+MaterialUI has its own way to pass a component as prop.
+Here is the [documentation to help you out with it](https://material-ui.com/guides/composition/)
+
+The component has some material UI props that need to be pass down to the child component.
+You need to wrap the component that you want to forward the properties.
+
+```
+const WrappedIcon = props => <Icon {...props} />;
+WrappedIcon.muiName = Icon.muiName;
+
+```
+
 ## Cities data
 
 Markdown for city can be found in data/cities. There there is a division based by language.
