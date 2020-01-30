@@ -3,8 +3,11 @@ slug: leipzig
 title: Leipzig
 location: Leipzig, Germany
 tagline: Coding without the hype
-twitter: ots_le
 meetup_link: https://www.meetup.com/OpenTechSchool-Leipzig/
+twitter: ots_le
+socials:
+  - twitter: https://twitter.com/ots_bln
+  - facebook: https://facebook.com/
 members:
   - christina: Christina
   - daniel: Daniel
@@ -12,6 +15,8 @@ members:
   - norma: Norma
   - markus: Markus
 ---
+
+# ABOUT US
 
 Leipzig's reputation as 'the new Berlin' - it's thriving creative scene, affordable living and the active art- and club scene led to the nickname 'Hypezig'. Residents might not love this name, but the continous growth of the city and it's tech and startup community can't be dismissed. New possibilities open up in this space and are waiting for you to get involved. Through OpenTechSchool we would like to offer a beginner friendly and safe learning environment for everyone interested in getting started with programming.
 

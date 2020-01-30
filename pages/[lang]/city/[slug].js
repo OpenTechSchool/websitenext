@@ -9,6 +9,11 @@ import CityLayout from '../../../components/CityLayout/CityLayout'
 import CityHero from '../../../components/CityHero/CityHero'
 import TextSection from '../../../components/Section/TextSection'
 import TwitterFeed from '../../../components/TwitterFeed'
+import Icon from '@material-ui/core/Icon'
+import capitalize from 'lodash/capitalize'
+
+const WrappedIcon = props => <Icon {...props} />
+WrappedIcon.muiName = 'Icon'
 
 export function CityTemplate({ content, data, siteTitle, siteDescription }) {
   const { t } = useTranslation()
@@ -26,12 +31,40 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
       <section>
         <LocalSwitcher />
       </section>
-      <TextSection classname='default' title={t('city.aboutTitle')}>
-        <Grid container justify='space-between' alignItems='center'>
-          <Grid item xs={12} md={5}>
+      <TextSection classname='default'>
+        <Grid
+          container
+          justify='space-between'
+          alignItems='stretch'
+          spacing={4}
+        >
+          <Grid item xs={12} md={6}>
             <ReactMarkdown source={markdownBody} escapeHtml={false} />
+            {frontmatter.socials.length !== 0 &&
+              frontmatter.socials.map(social => {
+                const iconString = Object.keys(social)[0]
+                const link = social[iconString]
+                // TODO: figured out correct icon name for social icons
+                return (
+                  <a
+                    href={link}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    key={iconString}
+                  >
+                    <WrappedIcon
+                      style={{
+                        fontSize: 50,
+                        color: 'var(--mainBlue)',
+                      }}
+                    >
+                      {capitalize(iconString)}
+                    </WrappedIcon>
+                  </a>
+                )
+              })}
           </Grid>
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={6}>
             <div className='aboutImgContainer'>
               <img src={`/${frontmatter.title}_cityAbout.jpg`} />
             </div>
@@ -43,8 +76,15 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
         title={t('city.eventsTitle')}
         icon='event'
       >
-        <p>Suggest one!</p>
-        <div>more</div>
+        <Grid
+          container
+          direction='column'
+          justify='space-between'
+          alignItems='center'
+        >
+          <h4>{t('city.suggestEvent')}</h4>
+          <div>more</div>
+        </Grid>
       </TextSection>
       <TextSection
         classname='pink'
@@ -64,6 +104,16 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
 
         .aboutImgContainer {
           background-color: var(--mainGrey);
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 60px;
+        }
+
+        h4 {
+          color: var(--pink);
         }
       `}</style>
     </CityLayout>

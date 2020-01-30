@@ -17,13 +17,15 @@ export default function TextSection({
   anchor,
   classname,
   title,
+  iconDirection,
+  icon,
   children,
 }: TextSectionProps) {
   const showTitle = title ? (
     <h1>
       {title}
       {iconDirection === 'center' ? (
-        <div className='icon'>
+        <div className='iconCenter'>
           <WrappedIcon>{icon}</WrappedIcon>
         </div>
       ) : (
@@ -39,6 +41,17 @@ export default function TextSection({
         :global(.pink) h1 {
           color: white;
           padding-top: 0;
+        }
+
+        .icon :global(span) {
+          font-size: 50px;
+          line-height: 60px;
+          margin-left: 20px;
+        }
+
+        .iconCenter :global(span) {
+          font-size: 50px;
+          margin-top: 20px;
         }
       `}</style>
     </h1>
