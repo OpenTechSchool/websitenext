@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import OutlineButton from '../Button/OutlineButton'
 import { PermIdentity } from '@material-ui/icons'
 
-function CityHero({ title, tagline, ctaLink, membersNumber }) {
+function CityHero({ cityName, title, tagline, ctaLink, membersNumber }) {
   return (
     <div>
-      <section style={{ backgroundImage: `url(/${title}_cityBg.jpg)` }}>
+      <section style={{ backgroundImage: `url(/${cityName}_cityBg.jpg)` }}>
         <h1>{title}</h1>
         <p className='tagline'>
           <i>&quot;{tagline}&quot;</i>
@@ -83,6 +83,7 @@ function CityHero({ title, tagline, ctaLink, membersNumber }) {
 }
 
 CityHero.propTypes = {
+  cityName: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   tagline: PropTypes.string.isRequired,
   ctaLink: PropTypes.string.isRequired,

@@ -10,7 +10,15 @@ import CityHero from '../../../components/CityHero/CityHero'
 import TextSection from '../../../components/Section/TextSection'
 import TwitterFeed from '../../../components/TwitterFeed'
 import Icon from '@material-ui/core/Icon'
-import capitalize from 'lodash/capitalize'
+import FacebookIcon from '@material-ui/icons/Facebook'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import TwitterIcon from '@material-ui/icons/Twitter'
+
+const socialIconsList = {
+  facebook: <FacebookIcon />,
+  twitter: <TwitterIcon />,
+  gihutb: <GitHubIcon />,
+}
 
 const WrappedIcon = props => <Icon {...props} />
 WrappedIcon.muiName = 'Icon'
@@ -19,10 +27,12 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
   const { t } = useTranslation()
   const markdownBody = content
   const frontmatter = data
+  const cityName = `${frontmatter.title}`.toLowerCase()
 
   return (
     <CityLayout siteTitle={siteTitle} siteDescription={siteDescription}>
       <CityHero
+        cityName={cityName}
         title={frontmatter.title}
         tagline={frontmatter.tagline}
         ctaLink={frontmatter.meetup_link}
@@ -42,23 +52,23 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
             <ReactMarkdown source={markdownBody} escapeHtml={false} />
             {frontmatter.socials.length !== 0 &&
               frontmatter.socials.map(social => {
-                const iconString = Object.keys(social)[0]
-                const link = social[iconString]
-                // TODO: figured out correct icon name for social icons
+                const iconName = Object.keys(social)[0]
+                const link = social[iconName]
                 return (
                   <a
                     href={link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    key={iconString}
+                    key={iconName}
+                    className='socialLink'
                   >
                     <WrappedIcon
                       style={{
-                        fontSize: 50,
                         color: 'var(--mainBlue)',
+                        transform: `scale(1.6)`,
                       }}
                     >
-                      {capitalize(iconString)}
+                      {socialIconsList[iconName]}
                     </WrappedIcon>
                   </a>
                 )
@@ -66,7 +76,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
           </Grid>
           <Grid item xs={12} md={6}>
             <div className='aboutImgContainer'>
-              <img src={`/${frontmatter.title}_cityAbout.jpg`} />
+              <img src={`/${cityName}_cityAbout.jpg`} />
             </div>
           </Grid>
         </Grid>
@@ -114,6 +124,14 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
 
         h4 {
           color: var(--pink);
+        }
+
+        .socialLink {
+          display: inline-block;
+          width: 33px;
+          height: 33px;
+          margin-right: 12px;
+          margin-top: 12px;
         }
       `}</style>
     </CityLayout>
