@@ -28,7 +28,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/contribute#sponsor`} scroll={false}>
+                <Link
+                  href={`/${locale}/contribute#sponsor`}
+                  scroll={false}
+                  prefetch={false}
+                >
                   <a>{t('footer.becomeSponsor')}</a>
                 </Link>
               </li>
@@ -38,7 +42,7 @@ export default function Footer() {
             <h3>{t('footer.ourValues')}</h3>
             <ul>
               <li>
-                <Link href={`/${locale}/about#what-drives-us`}>
+                <Link href={`/${locale}/about#what-drives-us`} prefetch={false}>
                   <a>{t('footer.whatDrivesUs')}</a>
                 </Link>
               </li>
@@ -53,7 +57,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/codeOfConduct`}>
+                <Link href={`/${locale}/codeOfConduct`} prefetch={false}>
                   <a>{t('footer.codeOfConduct')}</a>
                 </Link>
               </li>
@@ -78,11 +82,11 @@ export default function Footer() {
               <a>OpenTechSchool e.V.</a>
             </Link>
             <span className='spacer'>||</span>
-            <Link href={`/${locale}/#get-in-touch`}>
+            <Link href={`/${locale}/#get-in-touch`} prefetch={false}>
               <a>{t('footer.contactUs')}</a>
             </Link>
             <span className='spacer'>||</span>
-            <Link href={`/${locale}/imprint`}>
+            <Link href={`/${locale}/imprint`} prefetch={false}>
               <a>{t('footer.imprint')}</a>
             </Link>
           </p>
