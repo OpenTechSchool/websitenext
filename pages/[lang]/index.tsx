@@ -36,7 +36,7 @@ export const Index: NextPage = () => {
             <p>{t('homepage.otsInitiative.description2')}</p>
             <br />
             <br />
-            <Link href={`/${locale}/about`}>
+            <Link href={`/[lang]/about`} as={`/${locale}/about`}>
               <a>{t('homepage.otsInitiative.learnMore')}</a>
             </Link>
           </Grid>
@@ -56,7 +56,7 @@ export const Index: NextPage = () => {
             <p>{t('homepage.otsCommunity.description')}</p>
             <br />
             <br />
-            <Link href={`/${locale}/community`}>
+            <Link href={`/[lang]/community`} as={`/${locale}/community`}>
               <a>{t('homepage.otsCommunity.learnMore')}</a>
             </Link>
           </Grid>

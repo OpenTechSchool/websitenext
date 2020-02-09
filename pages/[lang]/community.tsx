@@ -46,11 +46,17 @@ const Community: NextPage = () => {
         <br />
         <Grid container justify='flex-end'>
           <Grid item xs={12} md={5}>
-            <Link href={`/${locale}/about#core-values`}>
+            <Link
+              href={`/[lang]/about#core-values`}
+              as={`/${locale}/about#core-values`}
+            >
               <a>{t('community.readCommunityValues')}</a>
             </Link>
             <br />
-            <Link href={`/${locale}/codeOfConduct`}>
+            <Link
+              href={`/[lang]/codeOfConduct`}
+              as={`/${locale}/codeOfConduct`}
+            >
               <a>{t('community.readCodeOfConduct')}</a>
             </Link>
           </Grid>
@@ -67,7 +73,7 @@ const Community: NextPage = () => {
               {t('community.getInvolved.learner.description')}
               <br />
               <br />
-              <Link href={`/${locale}#find-events`}>
+              <Link href={`/[lang]#find-events`} as={`/${locale}#find-events`}>
                 <a>{t('community.getInvolved.learner.link')}</a>
               </Link>
             </p>
@@ -79,7 +85,10 @@ const Community: NextPage = () => {
               {t('community.getInvolved.coach.description')}
               <br />
               <br />
-              <Link href={`/${locale}/guides#coaching-guidelines`}>
+              <Link
+                href={`/[lang]/guides#coaching-guidelines`}
+                as={`/${locale}/guides#coaching-guidelines`}
+              >
                 <a>{t('community.getInvolved.coach.link')}</a>
               </Link>
             </p>
@@ -91,7 +100,10 @@ const Community: NextPage = () => {
               {t('community.getInvolved.organizer.description')}
               <br />
               <br />
-              <Link href={`/${locale}/guides#organize-meetup`}>
+              <Link
+                href={`/[lang]/guides#organize-meetup`}
+                as={`/${locale}/guides#organize-meetup`}
+              >
                 <a>{t('community.getInvolved.organizer.link')}</a>
               </Link>
             </p>
