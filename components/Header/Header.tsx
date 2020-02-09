@@ -20,15 +20,15 @@ export function Header() {
         <nav role='navigation' aria-label='main navigation'>
           <a href='https://learn.opentechschool.org/'>Learn</a>
 
-          <Link href={`/${locale}/contribute`}>
+          <Link href={`/[lang]/contribute`} as={`/${locale}/contribute`}>
             <a>Contribute</a>
           </Link>
 
-          <Link href={`/${locale}/community`}>
+          <Link href={`/[lang]/community`} as={`/${locale}/community`}>
             <a>Community</a>
           </Link>
 
-          <Link href={`/${locale}/about`}>
+          <Link href={`/[lang]/about`} as={`/${locale}/about`}>
             <a>About</a>
           </Link>
         </nav>

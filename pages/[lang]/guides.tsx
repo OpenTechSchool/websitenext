@@ -35,15 +35,24 @@ const Guides: NextPage = () => {
             </p>
             <p>Jump right to it:</p>
             <br />
-            <Link href={`/${locale}/guides#start-chapter`}>
+            <Link
+              href={`/[lang]/guides#start-chapter`}
+              as={`/${locale}/guides#start-chapter`}
+            >
               How to start OpenTechSchool in my city
             </Link>
             <br />
-            <Link href={`/${locale}/guides#organize-meetup`}>
+            <Link
+              href={`/[lang]/guides#organize-meetup`}
+              as={`/${locale}/guides#organize-meetup`}
+            >
               How to organize an co-learning meetup
             </Link>
             <br />
-            <Link href={`/${locale}/guides#coaching-guidelines`}>
+            <Link
+              href={`/[lang]/guides#coaching-guidelines`}
+              as={`/${locale}/guides#coaching-guidelines`}
+            >
               How to coach at an co-learning meetup
             </Link>
           </Grid>
@@ -123,8 +132,13 @@ const Guides: NextPage = () => {
         <br />
         <p>
           Make sure the event and its idea is in agreement with our{' '}
-          <Link href={`/${locale}/about#core-values`}>values</Link>. In
-          particular:
+          <Link
+            href={`/[lang]/about#core-values`}
+            as={`/${locale}/about#core-values`}
+          >
+            <a>values</a>
+          </Link>
+          . In particular:
         </p>
         <br />
         <ul>

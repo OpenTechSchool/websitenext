@@ -37,7 +37,10 @@ const Community: NextPage = () => {
             <h2>{t('contribute.volunteering.coach.title')}</h2>
             <p>{t('contribute.volunteering.coach.description')}</p>
             <br />
-            <Link href={`/${locale}/guides#coaching-guidelines`}>
+            <Link
+              href={`/[lang]/guides#coaching-guidelines`}
+              as={`/${locale}/guides#coaching-guidelines`}
+            >
               <a>{t('contribute.volunteering.coach.description2')}</a>
             </Link>
           </Grid>
@@ -45,7 +48,10 @@ const Community: NextPage = () => {
             <h2>{t('contribute.volunteering.organize.title')}</h2>
             <p>{t('contribute.volunteering.organize.description')}</p>
             <br />
-            <Link href={`/${locale}/guides#organize-meetup`}>
+            <Link
+              href={`/[lang]/guides#organize-meetup`}
+              as={`/${locale}/guides#organize-meetup`}
+            >
               <a>{t('contribute.volunteering.organize.description2')}</a>
             </Link>
           </Grid>
@@ -53,7 +59,10 @@ const Community: NextPage = () => {
             <h2>{t('contribute.volunteering.openChapter.title')}</h2>
             <p>{t('contribute.volunteering.openChapter.description')}</p>
             <br />
-            <Link href={`/${locale}/guides#start-chapter`}>
+            <Link
+              href={`/[lang]/guides#start-chapter`}
+              as={`/${locale}/guides#start-chapter`}
+            >
               <a>{t('contribute.volunteering.openChapter.description2')}</a>
             </Link>
           </Grid>
