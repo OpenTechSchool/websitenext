@@ -1,4 +1,5 @@
 ---
+slug: berlin
 title: Berlin
 location: "Berlin, Germany"
 tagline: "Where everything started... and you can take a ride in a rotating TV tower"
