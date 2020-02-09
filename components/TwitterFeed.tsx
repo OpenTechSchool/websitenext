@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import Link from 'next/link'
 import useTranslation from '../hooks/useTranslation'
 import TextSection from '../components/Section/TextSection'
 import { TwitterTimelineEmbed } from 'react-twitter-embed'
@@ -12,9 +11,13 @@ const TwitterFeed = ({ screenName }) => {
       <div className='wrapper'>
         <div className='tweets-from'>
           {t('twitterfeed.tweetsFrom')}{' '}
-          <Link href={`https://twitter.com/${screenName}`}>
-            <a>@{screenName}</a>
-          </Link>
+          <a
+            href={`https://twitter.com/${screenName}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            @{screenName}
+          </a>
         </div>
         <TwitterTimelineEmbed
           sourceType='profile'
