@@ -8,6 +8,7 @@ import LocalSwitcher from '../../../components/LocalSwitcher/LocalSwitcher'
 import CityLayout from '../../../components/CityLayout/CityLayout'
 import CityHero from '../../../components/CityHero/CityHero'
 import TextSection from '../../../components/Section/TextSection'
+import Team from '../../../components/Team'
 import TwitterFeed from '../../../components/TwitterFeed'
 import Icon from '@material-ui/core/Icon'
 import FacebookIcon from '@material-ui/icons/Facebook'
@@ -102,7 +103,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
         icon='assistant'
         iconDirection='center'
       >
-        team people here
+        <Team discourseGroupName={frontmatter.discourse_group} />
       </TextSection>
 
       <TwitterFeed screenName={frontmatter.twitter} />
