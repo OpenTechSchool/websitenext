@@ -2,6 +2,10 @@ import PropTypes from 'prop-types'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import Grid from '@material-ui/core/Grid'
+import Icon from '@material-ui/core/Icon'
+import FacebookIcon from '@material-ui/icons/Facebook'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import TwitterIcon from '@material-ui/icons/Twitter'
 import useTranslation from '../../../hooks/useTranslation'
 import WithLocale from '../../../containers/withLocale'
 import LocalSwitcher from '../../../components/LocalSwitcher/LocalSwitcher'
@@ -9,10 +13,7 @@ import CityLayout from '../../../components/CityLayout/CityLayout'
 import CityHero from '../../../components/CityHero/CityHero'
 import TextSection from '../../../components/Section/TextSection'
 import TwitterFeed from '../../../components/TwitterFeed'
-import Icon from '@material-ui/core/Icon'
-import FacebookIcon from '@material-ui/icons/Facebook'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import TwitterIcon from '@material-ui/icons/Twitter'
+import Events from '../../../components/Events'
 
 const socialIconsList = {
   facebook: <FacebookIcon />,
@@ -92,8 +93,10 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
           justify='space-between'
           alignItems='center'
         >
-          <h4>{t('city.suggestEvent')}</h4>
-          <div>more</div>
+          <Events
+            title={t('city.suggestEvent')}
+            meetupName='opentechschool-berlin'
+          />
         </Grid>
       </TextSection>
       <TextSection
