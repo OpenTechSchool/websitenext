@@ -36,8 +36,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
         cityName={cityName}
         title={frontmatter.title}
         tagline={frontmatter.tagline}
-        ctaLink={frontmatter.meetup_link}
-        membersNumber={853}
+        meetupName={frontmatter.meetup_name}
       />
       <section>
         <LocalSwitcher />
@@ -87,17 +86,10 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
         title={t('city.eventsTitle')}
         icon='event'
       >
-        <Grid
-          container
-          direction='column'
-          justify='space-between'
-          alignItems='center'
-        >
-          <Events
-            title={t('city.suggestEvent')}
-            meetupName='opentechschool-berlin'
-          />
-        </Grid>
+        <Events
+          title={t('city.suggestEvent')}
+          meetupName='opentechschool-berlin'
+        />
       </TextSection>
       <TextSection
         classname='pink'
