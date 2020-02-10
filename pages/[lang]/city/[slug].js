@@ -88,7 +88,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
       >
         <Events
           title={t('city.suggestEvent')}
-          meetupName='opentechschool-berlin'
+          meetupName={frontmatter.meetup_name}
         />
       </TextSection>
       <TextSection

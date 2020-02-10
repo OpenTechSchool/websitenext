@@ -148,10 +148,9 @@ function Events({ title, meetupName }) {
         {!isLoading && hasEvents && (
           <Fragment>
             <Grid container spacing={3}>
-              {!events.secondBatch &&
-                events.firstBatch.map((event, i) => (
-                  <Event event={event} key={i} />
-                ))}
+              {events.firstBatch.map((event, i) => (
+                <Event event={event} key={i} />
+              ))}
 
               {events.secondBatch &&
                 events.secondBatch.map((event, i) => (
