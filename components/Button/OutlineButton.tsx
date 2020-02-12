@@ -20,7 +20,11 @@ const ButtonStyle = withStyles({
 })(MuiButton)
 
 export default function OutlineButton({ href, children }) {
-  return <ButtonStyle href={href && href}>{children}</ButtonStyle>
+  if (href) {
+    return <ButtonStyle href={href}>{children}</ButtonStyle>
+  } else {
+    return <ButtonStyle>{children}</ButtonStyle>
+  }
 }
 
 OutlineButton.propTypes = {

@@ -1,6 +1,9 @@
 {
   "common": {
-    "login": "login"
+    "login": "login",
+    "learners": "learners",
+    "joinNow": "join now",
+    "more": "more"
   },
   "homepage": {
     "siteTitle": "OpenTechSchool",
