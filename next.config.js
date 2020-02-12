@@ -9,4 +9,9 @@ module.exports = {
     })
     return config
   },
+  env: {
+    external: {
+      MEETUP_URL: 'http://meetup.com',
+    },
+  },
 }

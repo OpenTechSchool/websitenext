@@ -1,16 +1,16 @@
 ---
 slug: berlin
 title: Berlin
-location: "Berlin, Germany"
-tagline: "Where everything started... and you can take a ride in a rotating TV tower"
+location: 'Berlin, Germany'
+tagline: 'Where everything started... and you can take a ride in a rotating TV tower'
 twitter: OTS_BLN
+meetup_name: opentechschool-berlin
 socials:
   - twitter: https://twitter.com/ots_bln
   - facebook: https://www.facebook.com/opentechschool.berlin
 widget_id: 276335676528672768
 discourse_group: TeamBerlin
-does:
-  hackership
+does: hackership
   learninggroups
   workshops
   learnersmeetup

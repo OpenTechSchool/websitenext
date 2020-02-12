@@ -3,7 +3,7 @@ slug: zurich
 title: Zürich
 location: 'Zürich, Switzerland'
 tagline: 'The real Mountain View'
-meetup_link: https://www.meetup.com/OpenTechSchool-Leipzig/
+meetup_name: opentechschool-zurich
 twitter: ots_le
 socials:
   - twitter: https://twitter.com/ots_bln

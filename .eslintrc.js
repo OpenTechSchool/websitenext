@@ -45,6 +45,7 @@ module.exports = {
     {
       files: ['*.js'],
       parser: 'babel-eslint',
+      rules: { '@typescript-eslint/camelcase': 0 },
     },
   ],
 }
