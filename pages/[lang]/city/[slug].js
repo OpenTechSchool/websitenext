@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import fetchJsonp from 'fetch-jsonp'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import Grid from '@material-ui/core/Grid'
@@ -30,6 +32,49 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
   const markdownBody = content
   const frontmatter = data
   const cityName = `${frontmatter.title}`.toLowerCase()
+  const meetupName = frontmatter.meetup_name
+
+  const [events, setEvents] = useState({})
+  const [hasEvents, setHasEvents] = useState(false)
+  const [showMoreLink, setShowMoreLink] = useState(true)
+  const [isLoading, setLoading] = useState(true)
+  useEffect(() => {
+    const fetchData = async () => {
+      if (events.firstBatch) {
+        const secondBatch = [...events.allEvents].splice(6, 10)
+        if (!secondBatch.length) setShowMoreLink(false)
+        setEvents({ ...events, secondBatch })
+        return
+      }
+
+      try {
+        setLoading(true)
+
+        const result = await fetchJsonp(
+          `https://api.meetup.com/${meetupName}/events`
+        )
+
+        if (result.ok) {
+          setLoading(false)
+
+          const json = await result.json()
+          const allEvents = json.data
+          if (allEvents.length) {
+            const firstBatch = [...allEvents].splice(0, 6)
+            setEvents({ firstBatch, allEvents })
+            setHasEvents(true)
+          } else {
+            setHasEvents(false)
+          }
+        }
+      } catch (err) {
+        // TODO: render proper fetch error design
+        setLoading(true)
+        console.error('fetch error', err)
+      }
+    }
+    fetchData()
+  }, [showMoreLink])
 
   return (
     <CityLayout siteTitle={siteTitle} siteDescription={siteDescription}>
@@ -89,7 +134,11 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
       >
         <Events
           title={t('city.suggestEvent')}
-          meetupName={frontmatter.meetup_name}
+          events={events}
+          isLoading={isLoading}
+          hasEvents={hasEvents}
+          showMoreLink={showMoreLink}
+          setShowMoreLink={setShowMoreLink}
         />
       </TextSection>
 

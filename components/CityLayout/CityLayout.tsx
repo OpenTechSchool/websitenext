@@ -4,7 +4,11 @@ import Layout from '../Layout/Layout'
 
 export default function CityLayout({ siteTitle, siteDescription, children }) {
   return (
-    <Layout siteTitle={siteTitle} siteDescription={siteDescription}>
+    <Layout
+      siteTitle={siteTitle}
+      siteDescription={siteDescription}
+      noTranslation
+    >
       <section className='cityPage'>
         <div className='main'>{children}</div>
       </section>

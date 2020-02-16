@@ -8,10 +8,19 @@ import globalStyle from '../../style/style-global'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { otsTheme } from '../../style/style'
 
-export const Layout = ({ siteTitle, siteDescription, children }) => {
+export const Layout = ({
+  siteTitle,
+  siteDescription,
+  noTranslation,
+  children,
+}) => {
   return (
     <ThemeProvider theme={otsTheme}>
-      <Meta siteTitle={siteTitle} siteDescription={siteDescription} />
+      <Meta
+        siteTitle={siteTitle}
+        siteDescription={siteDescription}
+        noTranslation
+      />
       <Header />
 
       <div className='main'>{children}</div>
@@ -29,4 +38,5 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   siteTitle: PropTypes.string.isRequired,
   siteDescription: PropTypes.string.isRequired,
+  noTranslation: PropTypes.bool.isRequired,
 }
