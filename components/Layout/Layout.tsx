@@ -38,5 +38,5 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   siteTitle: PropTypes.string.isRequired,
   siteDescription: PropTypes.string.isRequired,
-  noTranslation: PropTypes.bool,
+  noTranslation: PropTypes.bool.isRequired,
 }
