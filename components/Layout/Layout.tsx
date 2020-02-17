@@ -19,7 +19,7 @@ export const Layout = ({
       <Meta
         siteTitle={siteTitle}
         siteDescription={siteDescription}
-        noTranslation
+        noTranslation={noTranslation}
       />
       <Header />
 
@@ -38,5 +38,5 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   siteTitle: PropTypes.string.isRequired,
   siteDescription: PropTypes.string.isRequired,
-  noTranslation: PropTypes.bool.isRequired,
+  noTranslation: PropTypes.bool,
 }

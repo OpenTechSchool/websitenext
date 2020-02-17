@@ -87,6 +87,7 @@ function Events({
   hasEvents,
   showMoreLink,
   setShowMoreLink,
+  hasMixedGroups,
 }) {
   const arrowDownStyle = {
     fontSize: 30,
@@ -98,15 +99,18 @@ function Events({
   }
 
   const { locale, t } = useTranslation()
-  const meetupName = hasEvents && events.firstBatch[0].group.urlname
+  const meetupName =
+    !isLoading && hasEvents && events.firstBatch[0].group.urlname
 
   return (
     <div className='eventSection'>
-      <h3>
-        <Link href={`/[lang]/guides`} as={`/${locale}/guides`}>
-          <a>{title}</a>
-        </Link>
-      </h3>
+      {!hasMixedGroups && (
+        <h3>
+          <Link href={`/[lang]/guides`} as={`/${locale}/guides`}>
+            <a>{title}</a>
+          </Link>
+        </h3>
+      )}
       <div className='events'>
         {isLoading && '...'}
         {!isLoading && !hasEvents && <p> No events planned </p>}
@@ -130,7 +134,7 @@ function Events({
                 <p>{t('common.more')}</p>
                 <ArrowDown style={arrowDownStyle} />
               </div>
-            ) : (
+            ) : hasMixedGroups ? null : (
               <div>
                 <a
                   className='moreEvents'

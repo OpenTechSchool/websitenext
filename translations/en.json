@@ -48,7 +48,8 @@
   },
   "chapter": {
     "title": "Find events close to you",
-    "active": "Active chapters"
+    "active": "Active chapters",
+    "events": "Next events"
   },
   "about": {
     "siteTitle": "About",

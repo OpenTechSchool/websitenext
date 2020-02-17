@@ -1,32 +1,78 @@
+import { useState, useEffect } from 'react'
+import fetchJsonp from 'fetch-jsonp'
 import PropTypes from 'prop-types'
-import Grid from '@material-ui/core/Grid'
 import Link from 'next/link'
+import matter from 'gray-matter'
+import flatten from 'lodash/flatten'
+import Grid from '@material-ui/core/Grid'
 import useTranslation from '../../hooks/useTranslation'
 import TextSection from './TextSection'
-import matter from 'gray-matter'
+import Events from '../Events'
 
-export default function ChapterSection({ title }) {
+interface ChapterSectionProps {
+  title: string
+}
+
+export default function ChapterSection({ title }: ChapterSectionProps) {
   const { locale, t } = useTranslation()
 
   const cities = (ctx => {
-    // get all keys from data/cities
-    const keys = ctx.keys()
-    // grab the values from these files
-    const values = keys.map(ctx)
+    const keys = ctx.keys() // get all keys from data/cities
+    const values = keys.map(ctx) // grab the values from these files
 
     const data = keys.map((key, index) => {
       const value = values[index]
+      const cityContent = matter((value as any).default)
 
-      const valueTest = (value as any).default
-      const document = matter(valueTest)
       return {
-        document,
+        cityContent,
+      }
+    })
+    return data
+  })(require.context(`../../data/cities/en`, true, /\.md$/))
+
+  const meetupNames = cities
+    .filter(
+      ({ cityContent: { data } }) => !data.is_inactive && data.meetup_name
+    )
+    .map(({ cityContent: { data } }) => data.meetup_name)
+
+  const [events, setEvents] = useState<any>({})
+  const [hasEvents, setHasEvents] = useState(false)
+  const [showMoreLink, setShowMoreLink] = useState(true)
+  const [isLoading, setLoading] = useState(true)
+  useEffect(() => {
+    if (events.firstBatch) {
+      const secondBatch = [...events.allEvents].splice(6, 10)
+      if (!secondBatch.length) setShowMoreLink(false)
+      setEvents({ ...events, secondBatch })
+      return
+    }
+
+    setLoading(true)
+    Promise.all(
+      meetupNames.map(meetupName =>
+        fetchJsonp(`https://api.meetup.com/${meetupName}/events`).then(resp =>
+          resp.json()
+        )
+      )
+    ).then(jsons => {
+      const mixEvents = flatten(jsons.map(({ data }) => data.splice(0, 10)))
+      mixEvents.sort(
+        (a, b) => Date.parse(a.local_date) - Date.parse(b.local_date)
+      )
+
+      if (mixEvents.length) {
+        const firstBatch = [...mixEvents].splice(0, 6)
+        setEvents({ firstBatch, allEvents: mixEvents })
+        setHasEvents(true)
+      } else {
+        setHasEvents(false)
       }
     })
 
-    return data
-    // TODO: Make language a dynamic value
-  })(require.context(`../../data/cities/en`, true, /\.md$/))
+    setLoading(false)
+  }, [showMoreLink])
 
   return (
     <TextSection title={title} anchor='find-events'>
@@ -34,17 +80,31 @@ export default function ChapterSection({ title }) {
 
       <Grid container justify='space-around'>
         {cities &&
-          cities.map(({ document: { data } }) => (
-            <Grid item key={data.slug}>
-              <Link
-                href={`/[lang]/city/[slug]`}
-                as={`/${locale}/city/${data.slug}`}
-              >
-                <a>{data.title}</a>
-              </Link>
-            </Grid>
-          ))}
+          cities.map(({ cityContent: { data } }, i) => {
+            if (!data.is_inactive)
+              return (
+                <Grid item key={i}>
+                  <Link
+                    href={`/[lang]/city/[slug]`}
+                    as={`/${locale}/city/${data.slug}`}
+                  >
+                    <a>{data.title}</a>
+                  </Link>
+                </Grid>
+              )
+          })}
       </Grid>
+
+      <h4>{t('chapter.events')}</h4>
+      <Events
+        title={t('city.suggestEvent')}
+        events={events}
+        isLoading={isLoading}
+        hasEvents={hasEvents}
+        showMoreLink={showMoreLink}
+        setShowMoreLink={setShowMoreLink}
+        hasMixedGroups
+      />
 
       <style jsx>{`
         a {
