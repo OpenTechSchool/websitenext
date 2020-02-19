@@ -46,14 +46,20 @@ const Guides: NextPage = () => {
               href={`/[lang]/guides#organize-meetup`}
               as={`/${locale}/guides#organize-meetup`}
             >
-              How to organize an co-learning meetup
+              How to organize a co-learning meetup
             </Link>
             <br />
             <Link
               href={`/[lang]/guides#coaching-guidelines`}
               as={`/${locale}/guides#coaching-guidelines`}
             >
-              How to coach at an co-learning meetup
+              How to coach at a co-learning meetup
+            </Link>
+            <Link
+              href={`/[lang]/guides#request-event`}
+              as={`/${locale}/guides#request-event`}
+            >
+              How to request a meetup or workshop
             </Link>
           </Grid>
         </Grid>
@@ -263,6 +269,26 @@ const Guides: NextPage = () => {
         <p>
           Read the full guidelines:
           http://opentechschool.github.io/slides/presentations/coaching/
+        </p>
+      </TextSection>
+
+      <TextSection title='Requesting an event' anchor='request-event'>
+        <h2>Do you also offer.. ?</h2>
+        <p>
+          Do you have an idea for a new meetup or workshop but can't organize it
+          by your self? Or perhaps you really want to learn that specific
+          technology but don't see any event close to you and don't manage to
+          organize an event? Join our Slack channel and get in contact with us.
+          Maybe we can make your dream come true!
+        </p>
+        <h3>{'How to join us on Slack'}</h3>
+        <p>
+          You can join us on our{' '}
+          <a href='https://opentechschool-slack.herokuapp.com/'>
+            general channel
+          </a>
+          Feel free to search through our Slack channels to find if the OTS
+          chapter closer to you has a specific slack channel.
         </p>
       </TextSection>
 
