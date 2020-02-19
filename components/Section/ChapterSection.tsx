@@ -6,8 +6,8 @@ import useTranslation from '../../hooks/useTranslation'
 import { mediaquery } from '../../style/style'
 
 export const cities = (ctx => {
-  const keys = ctx.keys() // get all keys from data/cities
-  const values = keys.map(ctx) // grab the values from these files
+  const keys = ctx.keys() // get all keys from data/cities/en
+  const values = keys.map(ctx) // grab the content from these files
 
   const data = keys.map((key, index) => {
     const value = values[index]
@@ -50,7 +50,7 @@ export default function ChapterSection() {
           text-transform: uppercase;
           font-family: var(--primaryFont);
           font-weight: 600;
-          font-size: 24px;
+          font-size: 20px;
         }
 
         a:hover {
@@ -58,18 +58,17 @@ export default function ChapterSection() {
         }
 
         h4 {
-          display: none;
+          font-family: var(--secondaryFont);
+          font-weight: 500;
+          font-size: 22px;
+          color: #828282;
+          text-align: center;
+          text-transform: uppercase;
         }
 
         @media (${mediaquery.tabletToDesktop}) {
-          h4 {
-            display: block;
-            font-family: var(--secondaryFont);
-            font-weight: 500;
-            font-size: 22px;
-            color: #828282;
-            text-align: center;
-            text-transform: uppercase;
+          a {
+            font-size: 24px;
           }
         }
       `}</style>

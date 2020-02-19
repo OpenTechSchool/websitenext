@@ -1,5 +1,6 @@
 import React from 'react'
 import Icon from '@material-ui/core/Icon'
+import { mediaquery } from '../../style/style'
 
 const WrappedIcon = props => <Icon {...props} />
 WrappedIcon.muiName = 'Icon'
@@ -31,11 +32,7 @@ export default function TextSection({
           margin-left: 20px;
         }
 
-        .icon-center {
-          display: block;
-        }
-
-        .icon-center :global(span) {
+        .iconCenter :global(span) {
           font-size: 50px;
           margin-top: 20px;
         }
@@ -46,21 +43,17 @@ export default function TextSection({
   )
 
   const showTitle = title ? (
-    <h1>
+    <h2>
       {title}
       {showIcon}
       <style jsx>{`
-        h1 {
+        :global(.pink) h2 {
           text-align: center;
-          padding-top: 0;
-        }
-
-        :global(.pink) h1 {
           color: white;
           padding-top: 0;
         }
       `}</style>
-    </h1>
+    </h2>
   ) : (
     ''
   )

@@ -297,10 +297,6 @@ const Guides: NextPage = () => {
       </TextSection>
 
       <style jsx>{`
-        h1 {
-          text-align: center;
-        }
-
         .placeholder {
           background: var(--pink);
           min-height: 300px;

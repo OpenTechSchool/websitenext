@@ -212,6 +212,15 @@ export const Index: NextPage = () => {
 
         .ways-to-join {
           text-align: center;
+          display: block;
+        }
+
+        .ways-to-join-wrapper {
+          text-align: center;
+        }
+
+        .ways-to-join {
+          margin-bottom: 30px;
         }
 
         .ways-to-join p {
@@ -246,19 +255,22 @@ export const Index: NextPage = () => {
         }
 
         .chapter-events {
-          display: none;
+          font-family: var(--secondaryFont);
+          font-weight: 500;
+          font-size: 22px;
+          color: #828282;
+          text-align: center;
+          text-transform: uppercase;
+          margin-top: 40px;
         }
 
         @media (${mediaquery.tabletToDesktop}) {
-          .chapter-events {
-            display: block;
-            font-family: var(--secondaryFont);
-            font-weight: 500;
-            font-size: 22px;
-            color: #828282;
-            text-align: center;
-            text-transform: uppercase;
-            margin-top: 40px;
+          .a {
+            text-align: left;
+          }
+
+          .ways-to-join {
+            margin-bottom: 36px;
           }
         }
       `}</style>

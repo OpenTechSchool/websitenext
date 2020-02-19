@@ -131,6 +131,16 @@ export default css.global`
     font-weight: bold;
     padding: 12px 0;
   }
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-align: center;
+  }
+  p {
+    text-align: justify;
+    margin-bottom: 26px;
+  }
 
   @media (${mediaquery.tabletToDesktop}) {
     h1 {
@@ -152,6 +162,17 @@ export default css.global`
       font-size: 20px;
       font-size: 2rem;
       padding: 25px 0;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-align: left;
+    }
+
+    p {
+      text-align: left;
+      margin-bottom: 30px;
     }
   }
 

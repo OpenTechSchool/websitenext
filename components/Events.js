@@ -34,7 +34,6 @@ function Event({ event }) {
         }
 
         .timeInfo {
-          border-right: 2px solid var(--mainBlue);
           padding: 6px 6px 6px 0;
         }
 
@@ -54,6 +53,7 @@ function Event({ event }) {
         .info {
           padding: 6px;
           text-align: left;
+          border-left: 2px solid var(--mainBlue);
         }
 
         .eventName {
@@ -131,7 +131,7 @@ function Events({
                 className='moreEvents'
                 onClick={() => setShowMoreLink(false)}
               >
-                <p>{t('common.more')}</p>
+                <div>{t('common.more')}</div>
                 <ArrowDown style={arrowDownStyle} />
               </div>
             ) : hasMixedGroups ? null : (
@@ -193,6 +193,7 @@ Events.propTypes = {
   isLoading: PropTypes.bool.isRequired,
   hasEvents: PropTypes.bool.isRequired,
   showMoreLink: PropTypes.bool.isRequired,
+  hasMixedGroups: PropTypes.bool.isRequired,
   setShowMoreLink: PropTypes.func.isRequired,
 }
 

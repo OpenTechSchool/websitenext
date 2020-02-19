@@ -140,10 +140,6 @@ const Community: NextPage = () => {
       <ContactSection />
 
       <style jsx>{`
-        h1 {
-          text-align: center;
-        }
-
         :global(.pink) h2 {
           color: white;
         }

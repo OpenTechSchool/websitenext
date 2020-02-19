@@ -47,30 +47,24 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
         return
       }
 
-      try {
-        setLoading(true)
+      setLoading(true)
 
-        const result = await fetchJsonp(
-          `https://api.meetup.com/${meetupName}/events`
-        )
+      const result = await fetchJsonp(
+        `https://api.meetup.com/${meetupName}/events`
+      )
 
-        if (result.ok) {
-          setLoading(false)
+      if (result.ok) {
+        setLoading(false)
 
-          const json = await result.json()
-          const allEvents = json.data
-          if (allEvents.length) {
-            const firstBatch = [...allEvents].splice(0, 6)
-            setEvents({ firstBatch, allEvents })
-            setHasEvents(true)
-          } else {
-            setHasEvents(false)
-          }
+        const json = await result.json()
+        const allEvents = json.data
+        if (allEvents.length) {
+          const firstBatch = [...allEvents].splice(0, 6)
+          setEvents({ firstBatch, allEvents })
+          setHasEvents(true)
+        } else {
+          setHasEvents(false)
         }
-      } catch (err) {
-        // TODO: render proper fetch error design
-        setLoading(true)
-        console.error('fetch error', err)
       }
     }
     fetchData()
