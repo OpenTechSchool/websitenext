@@ -5,6 +5,10 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
 
 export default function SocialMediaSection() {
+  const iconStyle = {
+    fontSize: 50,
+    color: 'var(--mainBlue)',
+  }
   return (
     <TextSection title='' classname='center'>
       <h4>Connect</h4>
@@ -15,12 +19,7 @@ export default function SocialMediaSection() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <FacebookIcon
-              style={{
-                fontSize: 50,
-                color: 'var(--mainBlue)',
-              }}
-            />
+            <FacebookIcon style={iconStyle} />
           </a>
         </Grid>
         <Grid item md={1}>
@@ -29,12 +28,7 @@ export default function SocialMediaSection() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <TwitterIcon
-              style={{
-                fontSize: 50,
-                color: 'var(--mainBlue)',
-              }}
-            />
+            <TwitterIcon style={iconStyle} />
           </a>
         </Grid>
         <Grid item md={1}>
@@ -43,16 +37,10 @@ export default function SocialMediaSection() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <GitHubIcon
-              style={{
-                fontSize: 50,
-                color: 'var(--mainBlue)',
-              }}
-            />
+            <GitHubIcon style={iconStyle} />
           </a>
         </Grid>
       </Grid>
-      <style jsx>{``}</style>
     </TextSection>
   )
 }
