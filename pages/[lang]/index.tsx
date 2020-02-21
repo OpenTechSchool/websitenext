@@ -11,7 +11,7 @@ import Button from '../../components/Button/Button'
 import ContactSection from '../../components/Section/ContactSection'
 import SocialMediaSection from '../../components/Section/SocialMediaSection'
 import TwitterFeed from '../../components/TwitterFeed'
-import Main from '../../components/Header/Masthead'
+import Masthead from '../../components/Header/Masthead'
 import StarRateIcon from '@material-ui/icons/StarRate'
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople'
 import SchoolIcon from '@material-ui/icons/School'
@@ -24,7 +24,7 @@ export const Index: NextPage = () => {
       siteTitle='homepage.siteTitle'
       siteDescription='homepage.siteDescription'
     >
-      <Main />
+      <Masthead />
 
       <section>
         <LocalSwitcher />
