@@ -93,7 +93,7 @@ export default function TextSection({
         }
 
         .content-wrapper {
-          max-width: 1280px;
+          max-width: 1180px;
           margin: 0 auto;
         }
 
