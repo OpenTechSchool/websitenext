@@ -12,9 +12,9 @@ import ContactSection from '../../components/Section/ContactSection'
 import SocialMediaSection from '../../components/Section/SocialMediaSection'
 import TwitterFeed from '../../components/TwitterFeed'
 import Masthead from '../../components/Header/Masthead'
-import StarRateIcon from '@material-ui/icons/StarRate'
-import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople'
-import SchoolIcon from '@material-ui/icons/School'
+import LaptopCircle from '../../components/Svg/LaptopCircle'
+import Community from '../../components/Svg/Community'
+import LearnerSquid from '../../components/Svg/LearnerSquid'
 
 export const Index: NextPage = () => {
   const { t, locale } = useTranslation()
@@ -31,11 +31,9 @@ export const Index: NextPage = () => {
       </section>
 
       <TextSection>
-        <Grid container justify='space-between'>
+        <Grid container justify='space-between' alignItems='center'>
           <Grid item xs={12} md={5}>
             <h1>{t('homepage.otsInitiative.title')}</h1>
-            <p>{t('homepage.otsInitiative.description')}</p>
-            <br />
             <p>{t('homepage.otsInitiative.description2')}</p>
             <br />
             <br />
@@ -44,15 +42,15 @@ export const Index: NextPage = () => {
             </Link>
           </Grid>
           <Grid item xs={12} md={5}>
-            <div className='placeholder'></div>
+            <LaptopCircle />
           </Grid>
         </Grid>
       </TextSection>
 
       <TextSection>
-        <Grid container justify='space-between'>
+        <Grid container justify='space-between' alignItems='center'>
           <Grid item xs={12} md={5}>
-            <div className='placeholder'></div>
+            <Community />
           </Grid>
           <Grid item xs={12} md={5}>
             <h1>{t('homepage.otsCommunity.title')}</h1>
@@ -66,14 +64,10 @@ export const Index: NextPage = () => {
         </Grid>
       </TextSection>
 
-      <TextSection classname='grey' title={t('homepage.waysToJoin.title')}>
+      <TextSection classname='pink' title={t('homepage.waysToJoin.title')}>
         <Grid container justify='space-between' spacing={10}>
           <Grid item xs={12} md={4}>
-            <div className='round-icon'>
-              <SchoolIcon
-                style={{ fontSize: 170, color: 'white', marginTop: '10px' }}
-              />
-            </div>
+            <LearnerSquid />
             <h3>{t('homepage.waysToJoin.learner.title')}</h3>
             <p className='ways-to-join'>
               {t('homepage.waysToJoin.learner.description')}
@@ -83,9 +77,7 @@ export const Index: NextPage = () => {
             </p>
           </Grid>
           <Grid item xs={12} md={4}>
-            <div className='round-icon'>
-              <StarRateIcon style={{ fontSize: 200, color: 'white' }} />
-            </div>
+            <div className='round-icon'></div>
             <h3>{t('homepage.waysToJoin.support.title')}</h3>
             <p className='ways-to-join'>
               {t('homepage.waysToJoin.support.description')}
@@ -95,11 +87,7 @@ export const Index: NextPage = () => {
             </p>
           </Grid>
           <Grid item xs={12} md={4}>
-            <div className='round-icon'>
-              <EmojiPeopleIcon
-                style={{ fontSize: 180, color: 'white', marginTop: '10px' }}
-              />
-            </div>
+            <div className='round-icon'></div>
             <h3>{t('homepage.waysToJoin.coach.title')}</h3>
             <p className='ways-to-join'>
               {t('homepage.waysToJoin.coach.description')}
@@ -127,13 +115,7 @@ export const Index: NextPage = () => {
         h3 {
           text-transform: uppercase;
           text-align: center;
-        }
-
-        .placeholder {
-          background: var(--pink);
-          min-height: 500px;
-          width: 100%;
-          margin: 40px 0;
+          color: white;
         }
 
         .round-icon {
@@ -143,6 +125,14 @@ export const Index: NextPage = () => {
           margin: 0 auto;
           text-align: center;
           border-radius: 200px;
+        }
+
+        .center {
+          text-align: center;
+        }
+
+        h2 {
+          color: var(--secondaryBlue);
         }
       `}</style>
     </PageLayout>
