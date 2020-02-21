@@ -37,9 +37,6 @@ export function Masthead() {
           h1 {
             color: white;
           }
-          .wave svg {
-            width: 100%;
-          }
           .content-wrapper {
             max-width: 1180px;
             margin: 0px auto;

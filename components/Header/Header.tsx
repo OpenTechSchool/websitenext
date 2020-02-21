@@ -80,6 +80,7 @@ export function Header() {
           nav a:hover {
             border-bottom: 2px solid white;
           }
+
           @media (${mediaquery.desktopToBigScreen}) {
             .content-wrapper {
               padding: 0;
