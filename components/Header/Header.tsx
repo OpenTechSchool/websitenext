@@ -7,29 +7,29 @@ import { mediaquery } from '../../style/style'
 
 export function Header() {
   const isDesktop = useMediaQuery(`(${mediaquery.smallToTablet})`)
-  const { locale } = useTranslation()
+  const { locale, t } = useTranslation()
 
   return (
     <header>
       <Link href='/'>
-        <a className='logo'>OpenTechSchool</a>
+        <a className='logo'>{t('header.websiteTitle')}</a>
       </Link>
       {!isDesktop && <MenuIcon />}
 
       {isDesktop && (
         <nav role='navigation' aria-label='main navigation'>
-          <a href='https://learn.opentechschool.org/'>Learn</a>
+          <a href='https://learn.opentechschool.org/'>{t('header.learn')}</a>
 
           <Link href={`/[lang]/contribute`} as={`/${locale}/contribute`}>
-            <a>Contribute</a>
+            <a>{t('header.contribute')}</a>
           </Link>
 
           <Link href={`/[lang]/community`} as={`/${locale}/community`}>
-            <a>Community</a>
+            <a>{t('header.community')}</a>
           </Link>
 
           <Link href={`/[lang]/about`} as={`/${locale}/about`}>
-            <a>About</a>
+            <a>{t('header.about')}</a>
           </Link>
         </nav>
       )}

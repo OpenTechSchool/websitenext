@@ -205,6 +205,13 @@
   "twitterfeed": {
     "tweetsFrom": "by"
   },
+  "header": {
+    "websiteTitle": "OpenTechSchool",
+    "learn": "Learn",
+    "contribute": "Contribute",
+    "community": "Community",
+    "about": "About"
+  },
   "footer": {
     "getinvolved": "Get involved",
     "joinMeetup": "Join a meetup",
