@@ -275,18 +275,22 @@ const Guides: NextPage = () => {
       <TextSection title='Requesting an event' anchor='request-event'>
         <h2>Do you also offer.. ?</h2>
         <p>
-          Do you have an idea for a new meetup or workshop but can't organize it
-          by your self? Or perhaps you really want to learn that specific
-          technology but don't see any event close to you and don't manage to
-          organize an event? Join our Slack channel and get in contact with us.
+          Do you have an idea for a new meetup or workshop but can&apos;t
+          organize it by your self? <br />
+          Or perhaps you really want to learn that specific technology but
+          don&apos;t see any event close to you and don&apos;t manage to
+          organize an event? <br />
+          Join our Slack channel and get in contact with us. <br />
           Maybe we can make your dream come true!
         </p>
         <h3>{'How to join us on Slack'}</h3>
         <p>
-          You can join us on our{' '}
+          You can join us on our
           <a href='https://opentechschool-slack.herokuapp.com/'>
-            general channel
+            {' '}
+            general channel{' '}
           </a>
+          <br />
           Feel free to search through our Slack channels to find if the OTS
           chapter closer to you has a specific slack channel.
         </p>

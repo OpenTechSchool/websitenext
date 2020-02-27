@@ -1,7 +1,7 @@
 import Grid, { GridDirection } from '@material-ui/core/Grid'
 import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import Button from '../../components/Button/Button'
+//import Button from '../../components/Button/Button'
 import useTranslation from '../../hooks/useTranslation'
 import TextSection from './TextSection'
 import ChatIcon from '@material-ui/icons/Chat'

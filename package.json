@@ -1,18 +1,22 @@
 {
   "name": "ots_website",
-  "version": "1.0.0",
-  "description": "new website for ots in nextjs",
+  "version": "2.0.0",
+  "description": "OpenTechSchool website 2.0",
   "main": "index.js",
   "scripts": {
     "lint": "eslint --fix --ext .tsx,.js pages/**/** components/**/**",
-    "lint:watch": "esw -w --fix pages/**/** components/**/**",
+    "lint:watch": "nodemon --exec \"npm run lint || exit 1\" --ext ts,js",
     "clean-cache": "rimraf -rf ./node_modules/.cache",
-    "start": "next start",
-    "next-start": "next",
-    "open": "sleepms 3000 && open http://localhost:3000",
-    "dev": "npm run lint && npm run clean-cache && npm-run-all -p next-start open",
+    "prod": "next start",
+    "open": "sleepms 5000 && open http://localhost:3000",
+    "dev": "npm run clean-cache && npm run lint && concurrently \"npm run lint:watch\" next \"npm run open\" --names \"🛂,🏗️,🖥️\" --prefix name ",
     "build": "npm run clean-cache && next build",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint"
+    }
   },
   "keywords": [
     "ots",
@@ -43,14 +47,16 @@
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "babel-eslint": "^10.0.3",
+    "concurrently": "^5.1.0",
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.3.0",
+    "husky": "^4.2.3",
     "lodash": "^4.17.15",
-    "npm-run-all": "^4.1.5",
+    "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "sleep-ms": "^2.0.1",
