@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import fetchJsonp from 'fetch-jsonp'
 import { PermIdentity } from '@material-ui/icons'
-import Link from 'next/link'
-import OutlineButton from '../Button/OutlineButton'
+// import Link from 'next/link'
+// import OutlineButton from '../Button/OutlineButton'
 import useTranslation from '../../hooks/useTranslation'
 
 function CityHero({ cityName, title, tagline, meetupName }) {
-  const { locale, t } = useTranslation()
+  const { t } = useTranslation()
   const [members, setMembers] = useState()
 
   useEffect(() => {
