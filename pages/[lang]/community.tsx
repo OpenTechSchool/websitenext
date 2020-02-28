@@ -135,7 +135,7 @@ const Community: NextPage = () => {
         </Grid>
       </TextSection>
 
-      <ChapterSection title={t('chapter.title')} />
+      <ChapterSection />
 
       <ContactSection />
 
