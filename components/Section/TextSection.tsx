@@ -21,37 +21,43 @@ export default function TextSection({
   icon,
   children,
 }: TextSectionProps) {
-  const showTitle = title ? (
-    <h1>
-      {title}
-      {iconDirection === 'center' ? (
-        <div className='iconCenter'>
-          <WrappedIcon>{icon}</WrappedIcon>
-        </div>
-      ) : (
-        <span className='icon'>
-          <WrappedIcon>{icon}</WrappedIcon>
-        </span>
-      )}
+  const showIcon = icon ? (
+    <span className={iconDirection ? 'icon-center' : 'icon'}>
+      <WrappedIcon>{icon}</WrappedIcon>
       <style jsx>{`
-        h1 {
-          text-align: center;
-        }
-
-        :global(.pink) h1 {
-          color: white;
-          padding-top: 0;
-        }
-
         .icon :global(span) {
           font-size: 50px;
           line-height: 60px;
           margin-left: 20px;
         }
 
-        .iconCenter :global(span) {
+        .icon-center {
+          display: block;
+        }
+
+        .icon-center :global(span) {
           font-size: 50px;
           margin-top: 20px;
+        }
+      `}</style>
+    </span>
+  ) : (
+    ''
+  )
+
+  const showTitle = title ? (
+    <h1>
+      {title}
+      {showIcon}
+      <style jsx>{`
+        h1 {
+          text-align: center;
+          padding-top: 0;
+        }
+
+        :global(.pink) h1 {
+          color: white;
+          padding-top: 0;
         }
       `}</style>
     </h1>
@@ -67,7 +73,7 @@ export default function TextSection({
       </div>
       <style jsx>{`
         section {
-          padding: 40px 25px;
+          padding: 60px 25px;
         }
 
         .pink {
@@ -75,17 +81,13 @@ export default function TextSection({
           color: white;
           line-height: 28px;
           margin: 0 -25px;
-          padding: 40px 50px;
+          padding: 60px 50px;
         }
 
         .grey {
           background: var(--mainGrey);
           margin: 0 -25px;
-          padding: 40px 50px;
-        }
-
-        .grey h1 {
-          padding-top: 0;
+          padding: 60px 50px;
         }
 
         .highlight {
