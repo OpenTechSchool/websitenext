@@ -10,6 +10,10 @@ export function Header() {
   const isDesktop = useMediaQuery(`(${mediaquery.smallToTablet})`)
   const { locale, t } = useTranslation()
 
+  const menuIconStyle = {
+    fontSize: 40,
+  }
+
   return (
     <header>
       <div className='content-wrapper'>
@@ -17,7 +21,7 @@ export function Header() {
           <Link href='/'>
             <a className='logo'>{t('header.websiteTitle')}</a>
           </Link>
-          {!isDesktop && <MenuIcon />}
+          {!isDesktop && <MenuIcon style={menuIconStyle} />}
 
           {isDesktop && (
             <nav role='navigation' aria-label='main navigation'>
