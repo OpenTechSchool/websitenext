@@ -1,7 +1,9 @@
 import { NextPage } from 'next'
-import Grid from '@material-ui/core/Grid'
 import Link from 'next/link'
+import Grid, { GridDirection } from '@material-ui/core/Grid'
+import { useTheme } from '@material-ui/core/styles'
 import useTranslation from '../../hooks/useTranslation'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import WithLocale from '../../containers/withLocale'
 import PageLayout from '../../components/PageLayout/PageLayout'
 import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
@@ -11,99 +13,117 @@ import Button from '../../components/Button/Button'
 import ContactSection from '../../components/Section/ContactSection'
 import SocialMediaSection from '../../components/Section/SocialMediaSection'
 import TwitterFeed from '../../components/TwitterFeed'
-import StarRateIcon from '@material-ui/icons/StarRate'
-import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople'
-import SchoolIcon from '@material-ui/icons/School'
+import Masthead from '../../components/Header/Masthead'
 
 export const Index: NextPage = () => {
   const { t, locale } = useTranslation()
+  const theme = useTheme()
+  const direction: GridDirection = useMediaQuery(theme.breakpoints.up('md'))
+    ? 'row'
+    : 'column-reverse'
 
   return (
     <PageLayout
       siteTitle='homepage.siteTitle'
       siteDescription='homepage.siteDescription'
     >
+      <Masthead />
+
       <section>
         <LocalSwitcher />
       </section>
 
       <TextSection>
-        <Grid container justify='space-between'>
+        <Grid container justify='space-between' alignItems='center'>
           <Grid item xs={12} md={5}>
-            <h1>{t('homepage.otsInitiative.title')}</h1>
-            <p>{t('homepage.otsInitiative.description')}</p>
-            <br />
-            <p>{t('homepage.otsInitiative.description2')}</p>
-            <br />
-            <br />
-            <Link href={`/[lang]/about`} as={`/${locale}/about`}>
-              <a>{t('homepage.otsInitiative.learnMore')}</a>
-            </Link>
+            <div className='ots-initiative'>
+              <h1>{t('homepage.otsInitiative.title')}</h1>
+              <p>{t('homepage.otsInitiative.description2')}</p>
+              <Link href={`/[lang]/about`} as={`/${locale}/about`}>
+                <a>{t('homepage.otsInitiative.learnMore')}</a>
+              </Link>
+            </div>
           </Grid>
           <Grid item xs={12} md={5}>
-            <div className='placeholder'></div>
+            <img src='/illustrations/code.svg' alt='code' className='image' />
           </Grid>
         </Grid>
       </TextSection>
 
       <TextSection>
-        <Grid container justify='space-between'>
+        <Grid
+          container
+          direction={direction}
+          justify='space-between'
+          alignItems='center'
+        >
           <Grid item xs={12} md={5}>
-            <div className='placeholder'></div>
+            <img
+              src='/illustrations/community.svg'
+              alt='community'
+              className='image'
+            />
           </Grid>
           <Grid item xs={12} md={5}>
-            <h1>{t('homepage.otsCommunity.title')}</h1>
-            <p>{t('homepage.otsCommunity.description')}</p>
-            <br />
-            <br />
-            <Link href={`/[lang]/community`} as={`/${locale}/community`}>
-              <a>{t('homepage.otsCommunity.learnMore')}</a>
-            </Link>
+            <div className='ots-community'>
+              <h1>{t('homepage.otsCommunity.title')}</h1>
+              <p>{t('homepage.otsCommunity.description')}</p>
+              <Link href={`/[lang]/community`} as={`/${locale}/community`}>
+                <a>{t('homepage.otsCommunity.learnMore')}</a>
+              </Link>
+            </div>
           </Grid>
         </Grid>
       </TextSection>
 
       <TextSection classname='grey' title={t('homepage.waysToJoin.title')}>
-        <Grid container justify='space-between' spacing={10}>
+        <Grid
+          container
+          justify='space-between'
+          alignItems='center'
+          spacing={10}
+        >
           <Grid item xs={12} md={4}>
-            <div className='round-icon'>
-              <SchoolIcon
-                style={{ fontSize: 170, color: 'white', marginTop: '10px' }}
-              />
-            </div>
-            <h3>{t('homepage.waysToJoin.learner.title')}</h3>
-            <p className='ways-to-join'>
-              {t('homepage.waysToJoin.learner.description')}
-              <br />
-              <br />
+            <div className='ways-to-join'>
+              <div className='ways-to-join-img'>
+                <img
+                  src='/illustrations/learner.svg'
+                  alt='learner'
+                  className='center'
+                />
+              </div>
+              <h3>{t('homepage.waysToJoin.learner.title')}</h3>
+              <p>{t('homepage.waysToJoin.learner.description')}</p>
               <Button href=''>{t('homepage.waysToJoin.learner.cta')}</Button>
-            </p>
+            </div>
           </Grid>
           <Grid item xs={12} md={4}>
-            <div className='round-icon'>
-              <StarRateIcon style={{ fontSize: 200, color: 'white' }} />
-            </div>
-            <h3>{t('homepage.waysToJoin.support.title')}</h3>
-            <p className='ways-to-join'>
-              {t('homepage.waysToJoin.support.description')}
-              <br />
-              <br />
+            <div className='ways-to-join'>
+              <div className='ways-to-join-img'>
+                <img
+                  src='/illustrations/sponsor.svg'
+                  alt='sponsor'
+                  className='center'
+                />
+              </div>
+              <h3>{t('homepage.waysToJoin.support.title')}</h3>
+              <p>{t('homepage.waysToJoin.support.description')}</p>
               <Button href=''>{t('homepage.waysToJoin.support.cta')}</Button>
-            </p>
+            </div>
           </Grid>
           <Grid item xs={12} md={4}>
-            <div className='round-icon'>
-              <EmojiPeopleIcon
-                style={{ fontSize: 180, color: 'white', marginTop: '10px' }}
-              />
-            </div>
-            <h3>{t('homepage.waysToJoin.coach.title')}</h3>
-            <p className='ways-to-join'>
-              {t('homepage.waysToJoin.coach.description')}
-              <br />
-              <br />
+            <div className='ways-to-join'>
+              <div className='ways-to-join-img'>
+                <img
+                  src='/illustrations/organizer.svg'
+                  alt='organizer'
+                  className='center'
+                />
+              </div>
+              <h3>{t('homepage.waysToJoin.coach.title')}</h3>
+              <p>{t('homepage.waysToJoin.coach.description')}</p>
               <Button href=''>{t('homepage.waysToJoin.coach.cta')}</Button>
-            </p>
+            </div>
           </Grid>
         </Grid>
       </TextSection>
@@ -117,29 +137,52 @@ export const Index: NextPage = () => {
       <SocialMediaSection />
 
       <style jsx>{`
+        h1 {
+          padding-top: 0;
+        }
+
+        p {
+          margin-bottom: 20px;
+        }
+
+        .image {
+          width: 280px;
+          margin: 0 auto;
+        }
+
         .ways-to-join {
           text-align: center;
         }
 
-        h3 {
+        .ways-to-join p {
+          margin-bottom: 40px;
+        }
+
+        .ways-to-join h3 {
           text-transform: uppercase;
-          text-align: center;
         }
 
-        .placeholder {
-          background: var(--pink);
-          min-height: 500px;
-          width: 100%;
-          margin: 40px 0;
+        .ways-to-join-img {
+          position: relative;
+          height: 250px;
         }
 
-        .round-icon {
-          background: var(--mainBlue);
-          height: 200px;
-          width: 200px;
-          margin: 0 auto;
-          text-align: center;
-          border-radius: 200px;
+        .ways-to-join img.center {
+          max-height: 100%;
+          max-width: 100%;
+          width: auto;
+          height: auto;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+
+        .ots-initiative,
+        .ots-community {
+          margin-bottom: 30px;
         }
       `}</style>
     </PageLayout>
