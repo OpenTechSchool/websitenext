@@ -39,7 +39,6 @@ export const Index: NextPage = () => {
             <div className='ots-initiative'>
               <h1>{t('homepage.otsInitiative.title')}</h1>
               <p>{t('homepage.otsInitiative.description2')}</p>
-              <br />
               <Link href={`/[lang]/about`} as={`/${locale}/about`}>
                 <a>{t('homepage.otsInitiative.learnMore')}</a>
               </Link>
@@ -69,7 +68,6 @@ export const Index: NextPage = () => {
             <div className='ots-community'>
               <h1>{t('homepage.otsCommunity.title')}</h1>
               <p>{t('homepage.otsCommunity.description')}</p>
-              <br />
               <Link href={`/[lang]/community`} as={`/${locale}/community`}>
                 <a>{t('homepage.otsCommunity.learnMore')}</a>
               </Link>
@@ -95,12 +93,8 @@ export const Index: NextPage = () => {
                 />
               </div>
               <h3>{t('homepage.waysToJoin.learner.title')}</h3>
-              <p>
-                {t('homepage.waysToJoin.learner.description')}
-                <br />
-                <br />
-                <Button href=''>{t('homepage.waysToJoin.learner.cta')}</Button>
-              </p>
+              <p>{t('homepage.waysToJoin.learner.description')}</p>
+              <Button href=''>{t('homepage.waysToJoin.learner.cta')}</Button>
             </div>
           </Grid>
           <Grid item xs={12} md={4}>
@@ -113,12 +107,8 @@ export const Index: NextPage = () => {
                 />
               </div>
               <h3>{t('homepage.waysToJoin.support.title')}</h3>
-              <p>
-                {t('homepage.waysToJoin.support.description')}
-                <br />
-                <br />
-                <Button href=''>{t('homepage.waysToJoin.support.cta')}</Button>
-              </p>
+              <p>{t('homepage.waysToJoin.support.description')}</p>
+              <Button href=''>{t('homepage.waysToJoin.support.cta')}</Button>
             </div>
           </Grid>
           <Grid item xs={12} md={4}>
@@ -131,12 +121,8 @@ export const Index: NextPage = () => {
                 />
               </div>
               <h3>{t('homepage.waysToJoin.coach.title')}</h3>
-              <p>
-                {t('homepage.waysToJoin.coach.description')}
-                <br />
-                <br />
-                <Button href=''>{t('homepage.waysToJoin.coach.cta')}</Button>
-              </p>
+              <p>{t('homepage.waysToJoin.coach.description')}</p>
+              <Button href=''>{t('homepage.waysToJoin.coach.cta')}</Button>
             </div>
           </Grid>
         </Grid>
@@ -155,6 +141,10 @@ export const Index: NextPage = () => {
           padding-top: 0;
         }
 
+        p {
+          margin-bottom: 20px;
+        }
+
         .image {
           width: 280px;
           margin: 0 auto;
@@ -162,6 +152,10 @@ export const Index: NextPage = () => {
 
         .ways-to-join {
           text-align: center;
+        }
+
+        .ways-to-join p {
+          margin-bottom: 40px;
         }
 
         .ways-to-join h3 {
