@@ -138,11 +138,11 @@ export default css.global`
     text-align: center;
   }
   p {
-    text-align: justify;
+    text-align: center;
     margin-bottom: 26px;
   }
 
-  @media (${mediaquery.tabletToDesktop}) {
+  @media (${mediaquery.smallToTablet}) {
     h1 {
       font-size: 38px;
       font-size: 3.8rem;
@@ -169,7 +169,6 @@ export default css.global`
     h4 {
       text-align: left;
     }
-
     p {
       text-align: left;
       margin-bottom: 30px;

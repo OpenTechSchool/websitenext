@@ -225,10 +225,12 @@ export const Index: NextPage = () => {
 
         .ways-to-join p {
           margin-bottom: 40px;
+          text-align: center;
         }
 
         .ways-to-join h3 {
           text-transform: uppercase;
+          text-align: center;
         }
 
         .ways-to-join-img {
@@ -252,6 +254,7 @@ export const Index: NextPage = () => {
         .ots-initiative,
         .ots-community {
           margin-bottom: 30px;
+          text-align: center;
         }
 
         .chapter-events {
@@ -264,8 +267,9 @@ export const Index: NextPage = () => {
           margin-top: 40px;
         }
 
-        @media (${mediaquery.tabletToDesktop}) {
-          .a {
+        @media (${mediaquery.smallToTablet}) {
+          .ots-initiative,
+          .ots-community {
             text-align: left;
           }
 

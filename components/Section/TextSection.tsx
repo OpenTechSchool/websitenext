@@ -47,10 +47,12 @@ export default function TextSection({
       {title}
       {showIcon}
       <style jsx>{`
-        :global(.pink) h2 {
+        h2 {
           text-align: center;
-          color: white;
           padding-top: 0;
+        }
+        :global(.pink) h2 {
+          color: white;
         }
       `}</style>
     </h2>
