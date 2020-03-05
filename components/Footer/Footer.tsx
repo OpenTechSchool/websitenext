@@ -9,84 +9,116 @@ export default function Footer() {
     <footer>
       <div className='grid-wrapper'>
         <Grid container justify='space-around'>
-          <Grid item xs={12} sm={3}>
+          <Grid item xs={10} sm={3}>
             <h3>{t('footer.getinvolved')}</h3>
             <ul>
               <li>
-                <Link href={`/${locale}/community#event-formats`}>
+                <Link
+                  href={`/[lang]/community#event-formats`}
+                  as={`/${locale}/community#event-formats`}
+                >
                   <a>{t('footer.joinMeetup')}</a>
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/guides#organize-meetup`}>
+                <Link
+                  href={`/[lang]/guides#organize-meetup`}
+                  as={`/${locale}/guides#organize-meetup`}
+                >
                   <a>{t('footer.organizeEvent')}</a>
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/guides#start-chapter`}>
+                <Link
+                  href={`/[lang]/guides#start-chapter`}
+                  as={`/${locale}/guides#start-chapter`}
+                >
                   <a>{t('footer.startChapter')}</a>
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/contribute#sponsor`} scroll={false}>
+                <Link
+                  href={`/[lang]/contribute#sponsor`}
+                  as={`/${locale}/contribute#sponsor`}
+                  scroll={false}
+                >
                   <a>{t('footer.becomeSponsor')}</a>
                 </Link>
               </li>
             </ul>
           </Grid>
-          <Grid item xs={12} sm={3}>
+          <Grid item xs={10} sm={3}>
             <h3>{t('footer.ourValues')}</h3>
             <ul>
               <li>
-                <Link href={`/${locale}/about#what-drives-us`}>
+                <Link
+                  href={`/[lang]/about#what-drives-us`}
+                  as={`/${locale}/about#what-drives-us`}
+                >
                   <a>{t('footer.whatDrivesUs')}</a>
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/about#core-values`}>
+                <Link
+                  href={`/[lang]/about#core-values`}
+                  as={`/${locale}/about#core-values`}
+                >
                   <a>{t('footer.coreValues')}</a>
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/guides#coaching-guidelines`}>
+                <Link
+                  href={`/[lang]/guides#coaching-guidelines`}
+                  as={`/${locale}/guides#coaching-guidelines`}
+                >
                   <a>{t('footer.coachingGuidelines')}</a>
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/codeOfConduct`}>
+                <Link
+                  href={`/[lang]/codeOfConduct`}
+                  as={`/${locale}/codeOfConduct`}
+                >
                   <a>{t('footer.codeOfConduct')}</a>
                 </Link>
               </li>
             </ul>
           </Grid>
-          <Grid item xs={12} sm={3}>
+          <Grid item xs={10} sm={3}>
             <h3>{t('footer.aboutUs')}</h3>
             <ul>
               <li>
-                <Link href={`/${locale}/about`}>
+                <Link href={`/[lang]/about`} as={`/${locale}/about`}>
                   <a>{t('footer.learnMore')}</a>
                 </Link>
               </li>
             </ul>
           </Grid>
         </Grid>
-        <div className='note'>
-          <p className='license'>{t('footer.createCommons')}</p>
-          <p className='imprint'>
-            © {new Date().getFullYear()} by{' '}
-            <Link href={`/${locale}/about`}>
-              <a>OpenTechSchool e.V.</a>
-            </Link>
-            <span className='spacer'>||</span>
-            <Link href={`/${locale}/#get-in-touch`}>
-              <a>{t('footer.contactUs')}</a>
-            </Link>
-            <span className='spacer'>||</span>
-            <Link href={`/${locale}/imprint`}>
-              <a>{t('footer.imprint')}</a>
-            </Link>
-          </p>
-        </div>
+        <Grid container justify='space-around'>
+          <Grid item xs={10} sm={11}>
+            <div className='note'>
+              <p className='license'>{t('footer.createCommons')}</p>
+              <p className='imprint'>
+                © {new Date().getFullYear()} by{' '}
+                <Link href={`/[lang]/about`} as={`/${locale}/about`}>
+                  <a>OpenTechSchool e.V.</a>
+                </Link>
+                <span className='spacer'>||</span>
+                <Link
+                  href={`/[lang]/#get-in-touch`}
+                  as={`/${locale}/#get-in-touch`}
+                >
+                  <a>{t('footer.contactUs')}</a>
+                </Link>
+                <span className='spacer'>||</span>
+                <Link href={`/[lang]/imprint`} as={`/${locale}/imprint`}>
+                  <a>{t('footer.imprint')}</a>
+                </Link>
+              </p>
+            </div>
+          </Grid>
+        </Grid>
       </div>
       <style jsx>{`
         footer {
@@ -118,7 +150,6 @@ export default function Footer() {
 
         .note {
           font-size: 14px;
-          padding: 0 2rem;
           margin-top: 92px;
         }
 

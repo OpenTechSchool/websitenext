@@ -1,6 +1,9 @@
 {
   "common": {
-    "login": "login"
+    "login": "login",
+    "learners": "learners",
+    "joinNow": "join now",
+    "more": "more"
   },
   "homepage": {
     "siteTitle": "OpenTechSchool",
@@ -201,6 +204,13 @@
   },
   "twitterfeed": {
     "tweetsFrom": "by"
+  },
+  "header": {
+    "websiteTitle": "OpenTechSchool",
+    "learn": "Learn",
+    "contribute": "Contribute",
+    "community": "Community",
+    "about": "About"
   },
   "footer": {
     "getinvolved": "Get involved",

@@ -3,17 +3,10 @@ slug: leipzig
 title: Leipzig
 location: Leipzig, Germany
 tagline: Coding without the hype
-meetup_link: https://www.meetup.com/OpenTechSchool-Leipzig/
+meetup_name: opentechschool-leipzig
 twitter: ots_le
 socials:
-  - twitter: https://twitter.com/ots_bln
-  - facebook: https://facebook.com/
-members:
-  - christina: Christina
-  - daniel: Daniel
-  - krissi: Krissi
-  - norma: Norma
-  - markus: Markus
+  - twitter: https://twitter.com/ots_le
 ---
 
 # ABOUT US

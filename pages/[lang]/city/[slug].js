@@ -2,6 +2,10 @@ import PropTypes from 'prop-types'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import Grid from '@material-ui/core/Grid'
+import Icon from '@material-ui/core/Icon'
+import FacebookIcon from '@material-ui/icons/Facebook'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import TwitterIcon from '@material-ui/icons/Twitter'
 import useTranslation from '../../../hooks/useTranslation'
 import WithLocale from '../../../containers/withLocale'
 import LocalSwitcher from '../../../components/LocalSwitcher/LocalSwitcher'
@@ -10,10 +14,7 @@ import CityHero from '../../../components/CityHero/CityHero'
 import TextSection from '../../../components/Section/TextSection'
 import Team from '../../../components/Team'
 import TwitterFeed from '../../../components/TwitterFeed'
-import Icon from '@material-ui/core/Icon'
-import FacebookIcon from '@material-ui/icons/Facebook'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import TwitterIcon from '@material-ui/icons/Twitter'
+import Events from '../../../components/Events'
 
 const socialIconsList = {
   facebook: <FacebookIcon />,
@@ -36,8 +37,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
         cityName={cityName}
         title={frontmatter.title}
         tagline={frontmatter.tagline}
-        ctaLink={frontmatter.meetup_link}
-        membersNumber={853}
+        meetupName={frontmatter.meetup_name}
       />
       <section>
         <LocalSwitcher />
@@ -87,15 +87,10 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
         title={t('city.eventsTitle')}
         icon='event'
       >
-        <Grid
-          container
-          direction='column'
-          justify='space-between'
-          alignItems='center'
-        >
-          <h4>{t('city.suggestEvent')}</h4>
-          <div>more</div>
-        </Grid>
+        <Events
+          title={t('city.suggestEvent')}
+          meetupName={frontmatter.meetup_name}
+        />
       </TextSection>
       <TextSection
         classname='pink'

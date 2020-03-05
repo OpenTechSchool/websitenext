@@ -48,6 +48,7 @@ export default css.global`
     transition: opacity 0.2s ease;
     color: var(--mainBlue);
     font-weight: bold;
+    cursor: pointer;
   }
   a:hover {
     opacity: 1;
