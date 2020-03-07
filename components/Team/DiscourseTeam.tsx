@@ -23,8 +23,7 @@ const Team = ({ discourseGroupName }) => {
     const team = discourseGroupName || 'opentechschool'
 
     fetch(
-      `https://discourse.opentechschool.org/groups/${team}/members.json?limit=100`,
-      { mode: 'no-cors' }
+      `https://discourse.opentechschool.org/groups/${team}/members.json?limit=100`
     )
       .then(response => response.json())
       .then(data => {
