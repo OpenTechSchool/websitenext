@@ -6,7 +6,7 @@ import Footer from '../Footer/Footer'
 
 import globalStyle from '../../style/style-global'
 import { ThemeProvider } from '@material-ui/core/styles'
-import { otsTheme, mediaquery } from '../../style/style'
+import { otsTheme } from '../../style/style'
 
 export const Layout = ({
   siteTitle,

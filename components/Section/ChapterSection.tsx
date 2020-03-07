@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import Link from 'next/link'
 import matter from 'gray-matter'
 import Grid from '@material-ui/core/Grid'
@@ -24,7 +23,7 @@ export default function ChapterSection() {
   const { locale, t } = useTranslation()
 
   return (
-    <Fragment>
+    <div className='chaptersWrapper'>
       <h4>{t('chapter.active')}</h4>
 
       <Grid container justify='space-around'>
@@ -37,7 +36,7 @@ export default function ChapterSection() {
                     href={`/[lang]/city/[slug]`}
                     as={`/${locale}/city/${data.slug}`}
                   >
-                    <a>{data.title}</a>
+                    <a className='city'>{data.title}</a>
                   </Link>
                 </Grid>
               )
@@ -45,15 +44,23 @@ export default function ChapterSection() {
       </Grid>
 
       <style jsx>{`
-        a {
+        .chaptersWrapper {
+          max-width: 550px;
+          margin: 0 auto;
+        }
+
+        .city {
           color: var(--pink);
           text-transform: uppercase;
           font-family: var(--primaryFont);
           font-weight: 600;
           font-size: 20px;
+          padding: 0 8px;
+          margin-bottom: 20px;
+          display: inline-block;
         }
 
-        a:hover {
+        .city:hover {
           color: var(--mainBlue);
         }
 
@@ -66,12 +73,25 @@ export default function ChapterSection() {
           text-transform: uppercase;
         }
 
+        @media (${mediaquery.mobile}) {
+          .city {
+            padding: 0 100px;
+          }
+        }
+
         @media (${mediaquery.tabletToDesktop}) {
-          a {
+          .chaptersWrapper {
+            max-width: 100%;
+            margin: 0;
+          }
+
+          .city {
             font-size: 24px;
+            padding: 0 12px;
+            display: inline;
           }
         }
       `}</style>
-    </Fragment>
+    </div>
   )
 }

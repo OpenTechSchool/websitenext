@@ -13,6 +13,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noImplicitAny": false,
+    "noExplicitAny": false,
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
     "types": ["react", "webpack-env", "material-ui"]
