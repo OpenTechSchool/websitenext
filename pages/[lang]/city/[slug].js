@@ -12,7 +12,7 @@ import LocalSwitcher from '../../../components/LocalSwitcher/LocalSwitcher'
 import CityLayout from '../../../components/CityLayout/CityLayout'
 import CityHero from '../../../components/CityHero/CityHero'
 import TextSection from '../../../components/Section/TextSection'
-import Team from '../../../components/Team'
+import TeamSection from '../../../components/Section/TeamSection'
 import TwitterFeed from '../../../components/TwitterFeed'
 import Events from '../../../components/Events'
 
@@ -92,14 +92,8 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
           meetupName={frontmatter.meetup_name}
         />
       </TextSection>
-      <TextSection
-        classname='pink'
-        title={`Team ${frontmatter.title}`}
-        icon='assistant'
-        iconDirection='center'
-      >
-        <Team discourseGroupName={frontmatter.discourse_group} />
-      </TextSection>
+
+      <TeamSection frontmatter={frontmatter} />
 
       <TwitterFeed screenName={frontmatter.twitter} />
 

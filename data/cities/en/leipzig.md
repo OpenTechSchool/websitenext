@@ -7,6 +7,11 @@ meetup_name: opentechschool-leipzig
 twitter: ots_le
 socials:
   - twitter: https://twitter.com/ots_le
+members:
+  - christina: Christina
+  - daniel: Daniel
+  - krissi: Krissi
+  - norma: Norma
 ---
 
 # ABOUT US
