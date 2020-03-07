@@ -36,9 +36,16 @@ export function Masthead() {
           }
           h1 {
             color: white;
+            text-align: left;
+            font-size: 38px;
+            font-size: 3.8rem;
           }
           p {
             min-height: 100px;
+            text-align: left;
+            font-size: 20px;
+            font-size: 2rem;
+            margin-bottom: 0;
           }
           .content-wrapper {
             max-width: 1180px;
@@ -67,6 +74,11 @@ export function Masthead() {
             }
           }
           @media (${mediaquery.desktopToBigScreen}) {
+            h1 {
+              font-size: 58px;
+              font-size: 5.8rem;
+              padding: 60px 0;
+            }
             .squid {
               right: 10%;
             }

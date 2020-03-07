@@ -90,12 +90,18 @@ export default function TextSection({
         }
 
         .content-wrapper {
-          max-width: 1180px;
+          max-width: 650px;
           margin: 0 auto;
         }
 
         .center {
           text-align: center;
+        }
+
+        @media (${mediaquery.tabletToDesktop}) {
+          .content-wrapper {
+            max-width: 1180px;
+          }
         }
       `}</style>
     </section>

@@ -41,6 +41,11 @@ export default function SocialMediaSection() {
           </a>
         </Grid>
       </Grid>
+      <style jsx>{`
+        h4 {
+          text-align: center;
+        }
+      `}</style>
     </TextSection>
   )
 }

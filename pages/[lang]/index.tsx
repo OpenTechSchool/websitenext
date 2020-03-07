@@ -84,7 +84,7 @@ export const Index: NextPage = () => {
         <Grid container justify='space-between' alignItems='center'>
           <Grid item xs={12} md={5}>
             <div className='ots-initiative'>
-              <h1>{t('homepage.otsInitiative.title')}</h1>
+              <h2>{t('homepage.otsInitiative.title')}</h2>
               <p>{t('homepage.otsInitiative.description2')}</p>
               <Link href={`/[lang]/about`} as={`/${locale}/about`}>
                 <a>{t('homepage.otsInitiative.learnMore')}</a>
@@ -113,7 +113,7 @@ export const Index: NextPage = () => {
           </Grid>
           <Grid item xs={12} md={5}>
             <div className='ots-community'>
-              <h1>{t('homepage.otsCommunity.title')}</h1>
+              <h2>{t('homepage.otsCommunity.title')}</h2>
               <p>{t('homepage.otsCommunity.description')}</p>
               <Link href={`/[lang]/community`} as={`/${locale}/community`}>
                 <a>{t('homepage.otsCommunity.learnMore')}</a>
@@ -213,19 +213,13 @@ export const Index: NextPage = () => {
         .ways-to-join {
           text-align: center;
           display: block;
-        }
-
-        .ways-to-join-wrapper {
-          text-align: center;
-        }
-
-        .ways-to-join {
-          margin-bottom: 30px;
+          max-width: 400px;
+          margin: 0 auto;
         }
 
         .ways-to-join p {
-          margin-bottom: 40px;
           text-align: center;
+          margin-bottom: 40px;
         }
 
         .ways-to-join h3 {
@@ -272,9 +266,12 @@ export const Index: NextPage = () => {
           .ots-community {
             text-align: left;
           }
+        }
 
+        @media (${mediaquery.tabletToDesktop}) {
           .ways-to-join {
-            margin-bottom: 36px;
+            margin: 0 0 36px 0;
+            max-width: 100%;
           }
         }
       `}</style>
