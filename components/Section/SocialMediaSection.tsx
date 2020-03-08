@@ -4,16 +4,16 @@ import FacebookIcon from '@material-ui/icons/Facebook'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
 
-export default function SocialMediaSection() {
+export default function SocialMediaSection({ bgColor = '' }) {
   const iconStyle = {
     fontSize: 50,
     color: 'var(--mainBlue)',
   }
   return (
-    <TextSection title='' classname='center'>
+    <TextSection title='' classname={`center ${bgColor}`}>
       <h4>Connect</h4>
       <Grid container justify='center'>
-        <Grid item md={1}>
+        <Grid item xs={4} md={1}>
           <a
             href='https://www.facebook.com/OpenTechSchool'
             target='_blank'
@@ -22,7 +22,7 @@ export default function SocialMediaSection() {
             <FacebookIcon style={iconStyle} />
           </a>
         </Grid>
-        <Grid item md={1}>
+        <Grid item xs={4} md={1}>
           <a
             href='https://twitter.com/OpenTechSchool'
             target='_blank'
@@ -31,7 +31,7 @@ export default function SocialMediaSection() {
             <TwitterIcon style={iconStyle} />
           </a>
         </Grid>
-        <Grid item md={1}>
+        <Grid item xs={4} md={1}>
           <a
             href='https://github.com/OpenTechSchool'
             target='_blank'
