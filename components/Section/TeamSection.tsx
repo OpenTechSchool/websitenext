@@ -35,7 +35,7 @@ const TeamSection = ({ frontmatter }) => {
           text-align: center;
         }
         :global(img) {
-          margin: 0 auto;
+          margin: 0 auto 20px auto;
         }
         .team-members :global(img) {
           width: 150px;

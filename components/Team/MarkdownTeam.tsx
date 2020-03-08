@@ -36,7 +36,7 @@ const TeamSection = ({ members }) => {
             <style jsx>{`
               p.name {
                 font-weight: bold;
-                font-size: 24px;
+                font-size: 20px;
               }
             `}</style>
           </Grid>

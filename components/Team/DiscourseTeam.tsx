@@ -71,16 +71,13 @@ const Team = ({ discourseGroupName }) => {
                   return (
                     <Grid className='item' item key={member.name}>
                       <img src={thumbnail} alt={member.username} />
-                      <p className='name'>{member.name}</p>
-                      <p>
-                        <a
-                          href={`//discourse.opentechschool.org/users/${member.username}`}
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          @{member.username}
-                        </a>
-                      </p>
+                      <a
+                        href={`//discourse.opentechschool.org/users/${member.username}`}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        {member.name}
+                      </a>
                       <p className='member-title'>{member.title}</p>
                     </Grid>
                   )
@@ -89,18 +86,20 @@ const Team = ({ discourseGroupName }) => {
                   p {
                     margin: 0;
                   }
-                  p.name {
-                    font-weight: bold;
-                    font-size: 24px;
-                  }
                   p.member-title {
                     text-transform: uppercase;
-                    font-size: 18px;
+                    font-size: 16px;
+                    max-width: 150px;
                   }
                   a {
                     color: #fff;
-                    font-weight: normal;
-                    font-size: 16px;
+                    font-weight: bold;
+                    font-size: 20px;
+                    max-width: 150px;
+                    display: block;
+                  }
+                  a:hover {
+                    text-decoration: underline;
                   }
                 `}</style>
               </Grid>
