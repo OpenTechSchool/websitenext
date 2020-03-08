@@ -2,20 +2,44 @@
 slug: leipzig
 title: Leipzig
 location: Leipzig, Germany
-tagline: Coding without the hype
+tagline: Your beginners friendly tech community in Leipzig
+credits: Thanks to Christian Doeller (www.christiandoeller.de)
+meetup_name: opentechschool-leipzig
 twitter: ots_le
+socials:
+  - twitter: https://twitter.com/ots_le
+  - github: http://github.com/opentechschool-leipzig
+  - facebook: http://facebook.com/opentechschool.leipzig
 members:
   - christina: Christina
   - daniel: Daniel
   - krissi: Krissi
   - norma: Norma
-  - markus: Markus
 ---
 
-## ÜBER UNS
+Wir sind eine Gruppe technikbegeisterter Menschen die sich regelmäßig trifft um an Projekten zu arbeiten, Technologien zu diskutieren und sich austauscht und unterstützt.
 
-Leipzig's reputation as 'the new Berlin' - it's thriving creative scene, affordable living and the active art- and club scene led to the nickname 'Hypezig'. Residents might not love this name, but the continous growth of the city and it's tech and startup community can't be dismissed. New possibilities open up in this space and are waiting for you to get involved. Through OpenTechSchool we would like to offer a beginner friendly and safe learning environment for everyone interested in getting started with programming.
+Wir organisieren Veranstaltungen zum Lernen, Zusammenzuarbeiten und um andere Lernende zu treffen. Wenn du Dich für Technik interessierst, du programmieren lernen möchtest oder wenn du Unterstützung bei deinem Projekt brauchst, dann ist die OTS Community genau das Richtige für dich.
 
-We organize events to learn, collaborate and meet other learners. If you interested in tech, would like to try out programming or if you need help with your project, feel free to join our OpenTechSchool Events. Everyone who agrees with our [Code of Conduct]({{site.baseurl}}/code-of-conduct/) is invited to participate.
+## Unser Meetup
 
-<span style="color: #777; font-size: smaller">Image: [Leipzig Aussicht](https://pixabay.com/de/leipzig-stadt-aussicht-sachsen-263165/) by [Thomas Wolter](https://pixabay.com/de/users/ThomasWolter-92511/) used under [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.de)</span>
+Wir treffen uns regelmäßig Montag oder Donnerstag zwischen 19 und 22 Uhr im Basislager um gemeinsam zu lernen, uns bei der Arbeit an Projekten zu unterstützen oder gegenseitig zu motivieren.
+
+Die Veranstaltung ist kostenlos und jeder ist herzlich eingeladen teilzunehmen. Wir bieten keine fortlaufenden Programmierworkshops an, aber wir treffen uns um deine Fragen zu beantworten und dich beim Lernen zu unterstützen. Die Teilnehmer unseres Meetups haben unterschiedliche Erfahrungsbereiche und helfen dir gerne weiter.
+
+Bitte lies unseren [Code of Conduct]({{site.baseurl}}/code-of-conduct/) bevor du vorbei kommst.
+
+Vielen Dank auch an das [Basislager](https://www.basislager.co) für die Bereitstellung der Räumlichkeiten.
+
+## Lernressourcen
+
+Eine Sammlung an Lernressourcen findest du [hier](https://github.com/OpenTechSchool-Leipzig/learning-resources). Gerne kannst du dein Lieblingstutorial hinzufügen.
+
+## Projekte
+
+Wir haben eine Reihe an Projekten die wir betreuen und bei denen du dich gern beteiligen kannst.
+Um mehr zu Erfahren, schaue auf unseren [Github Seite](http://github.com/opentechschool-leipzig) oder sprich uns direkt an.
+
+## Kontakt
+
+Hast du noch Fragen, dann sende uns eine [E-Mail](mailto:leipzig@opentechschool.org) or melde dich in unserem [Slack](https://opentechschool-slack.herokuapp.com) (channel: #leipzig).

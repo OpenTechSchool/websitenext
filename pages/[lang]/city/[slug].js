@@ -21,7 +21,7 @@ import Events from '../../../components/Events'
 const socialIconsList = {
   facebook: <FacebookIcon />,
   twitter: <TwitterIcon />,
-  gihutb: <GitHubIcon />,
+  github: <GitHubIcon />,
 }
 
 const WrappedIcon = props => <Icon {...props} />
@@ -77,6 +77,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
         title={frontmatter.title}
         tagline={frontmatter.tagline}
         meetupName={frontmatter.meetup_name}
+        credits={frontmatter.credits}
       />
       <section>
         <LocalSwitcher />
@@ -89,7 +90,9 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
           spacing={4}
         >
           <Grid item xs={12} md={6}>
-            <ReactMarkdown source={markdownBody} escapeHtml={false} />
+            <div className='markdown'>
+              <ReactMarkdown source={markdownBody} escapeHtml={false} />
+            </div>
             {frontmatter.socials.length !== 0 &&
               frontmatter.socials.map(social => {
                 const iconName = Object.keys(social)[0]
@@ -100,7 +103,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
                     target='_blank'
                     rel='noopener noreferrer'
                     key={iconName}
-                    className='socialLink'
+                    className='social-link'
                   >
                     <WrappedIcon
                       style={{
@@ -115,8 +118,9 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
               })}
           </Grid>
           <Grid item xs={12} md={6}>
-            <div className='aboutImgContainer'>
+            <div className='about-img-container'>
               <img src={`/${cityName}_cityAbout.jpg`} />
+              <p className='credits'>Credits: {frontmatter.credits}</p>
             </div>
           </Grid>
         </Grid>
@@ -141,17 +145,11 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
       <TwitterFeed screenName={frontmatter.twitter} />
 
       <style jsx>{`
-        :global(p) {
-          margin: 2em 0;
+        .markdown :global(p) {
+          margin-bottom: 20px;
         }
 
-        .aboutImgContainer {
-          background-color: var(--mainGrey);
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        .about-img-container {
           padding: 60px;
         }
 
@@ -159,12 +157,16 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
           color: var(--pink);
         }
 
-        .socialLink {
+        .social-link {
           display: inline-block;
           width: 33px;
           height: 33px;
           margin-right: 12px;
           margin-top: 12px;
+        }
+
+        .credits {
+          font-size: 14px;
         }
       `}</style>
     </CityLayout>
