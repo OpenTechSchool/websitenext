@@ -69,7 +69,14 @@ const Team = ({ discourseGroupName }) => {
                     thumbnail = `//discourse.opentechschool.org/${thumbnail}`
                   }
                   return (
-                    <Grid className='item' item key={member.name}>
+                    <Grid
+                      xs={12}
+                      sm={6}
+                      md={3}
+                      className='member-item'
+                      item
+                      key={member.name}
+                    >
                       <img src={thumbnail} alt={member.username} />
                       <a
                         href={`//discourse.opentechschool.org/users/${member.username}`}
@@ -89,14 +96,11 @@ const Team = ({ discourseGroupName }) => {
                   p.member-title {
                     text-transform: uppercase;
                     font-size: 16px;
-                    max-width: 150px;
                   }
                   a {
                     color: #fff;
                     font-weight: bold;
                     font-size: 20px;
-                    max-width: 150px;
-                    display: block;
                   }
                   a:hover {
                     text-decoration: underline;

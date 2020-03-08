@@ -27,7 +27,14 @@ const TeamSection = ({ members }) => {
           >
             {memberChunk.map((member, key) => {
               return (
-                <Grid className='item' key={key} item>
+                <Grid
+                  xs={12}
+                  sm={6}
+                  md={3}
+                  className='member-item'
+                  key={key}
+                  item
+                >
                   <img src={`/members/${Object.keys(member)[0]}.jpg`} />
                   <p className='name'>{Object.values(member)}</p>
                 </Grid>

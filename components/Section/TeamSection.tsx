@@ -25,23 +25,22 @@ const TeamSection = ({ frontmatter }) => {
     >
       <div className='team-members'>{teamMembers}</div>
       <style jsx>{`
-        :global(.row) {
-          margin-bottom: 40px;
-        }
-        :global(.row:last-child) {
-          margin-bottom: 0;
-        }
-        :global(.item) {
+        .team-members :global(.member-item) {
           text-align: center;
-        }
-        :global(img) {
-          margin: 0 auto 20px auto;
+          width: 200px;
         }
         .team-members :global(img) {
           width: 150px;
           height: 150px;
           border: 4px solid #fff;
           border-radius: 150px;
+          margin: 0 auto 20px auto;
+        }
+        .team-members :global(.row) {
+          margin-bottom: 40px;
+        }
+        .team-members :global(.row:last-child) {
+          margin-bottom: 0;
         }
       `}</style>
     </TextSection>
