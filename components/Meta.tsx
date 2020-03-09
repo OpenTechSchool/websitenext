@@ -1,15 +1,19 @@
+import PropTypes from 'prop-types'
 import Head from 'next/head'
 import useTranslation from '../hooks/useTranslation'
 
-export default function Meta({ siteTitle, siteDescription }) {
+export default function Meta({ siteTitle, siteDescription, noTranslation }) {
   const { t } = useTranslation()
   return (
     <>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta charSet='utf-8' />
-        <title>{t(siteTitle)}</title>
-        <meta name='Description' content={siteDescription}></meta>
+        <title>{noTranslation ? siteTitle : t(siteTitle)}</title>
+        <meta
+          name='Description'
+          content={noTranslation ? siteDescription : t(siteDescription)}
+        ></meta>
         <link
           rel='stylesheet'
           href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
@@ -25,4 +29,10 @@ export default function Meta({ siteTitle, siteDescription }) {
       </Head>
     </>
   )
+}
+
+Meta.propTypes = {
+  siteTitle: PropTypes.string.isRequired,
+  siteDescription: PropTypes.string.isRequired,
+  noTranslation: PropTypes.bool,
 }

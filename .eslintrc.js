@@ -37,6 +37,7 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 0,
     '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/member-delimiter-style': 0,
+    '@typescript-eslint/no-explicit-any': 0,
   },
   settings: {
     react: 'detect',

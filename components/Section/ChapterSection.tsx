@@ -1,61 +1,66 @@
-import PropTypes from 'prop-types'
-import Grid from '@material-ui/core/Grid'
 import Link from 'next/link'
-import useTranslation from '../../hooks/useTranslation'
-import TextSection from './TextSection'
 import matter from 'gray-matter'
+import Grid from '@material-ui/core/Grid'
+import useTranslation from '../../hooks/useTranslation'
+import { mediaquery } from '../../style/style'
 
-export default function ChapterSection({ title }) {
+export const cities = (ctx => {
+  const keys = ctx.keys() // get all keys from data/cities/en
+  const values = keys.map(ctx) // grab the content from these files
+
+  const data = keys.map((key, index) => {
+    const value = values[index]
+    const cityContent = matter((value as any).default)
+
+    return {
+      cityContent,
+    }
+  })
+  return data
+})(require.context(`../../data/cities/en`, true, /\.md$/))
+
+export default function ChapterSection() {
   const { locale, t } = useTranslation()
 
-  const cities = (ctx => {
-    // get all keys from data/cities
-    const keys = ctx.keys()
-    // grab the values from these files
-    const values = keys.map(ctx)
-
-    const data = keys.map((key, index) => {
-      const value = values[index]
-
-      const valueTest = (value as any).default
-      const document = matter(valueTest)
-      return {
-        document,
-      }
-    })
-
-    return data
-    // TODO: Make language a dynamic value
-  })(require.context(`../../data/cities/en`, true, /\.md$/))
-
   return (
-    <TextSection title={title} anchor='find-events'>
+    <div className='chaptersWrapper'>
       <h4>{t('chapter.active')}</h4>
 
       <Grid container justify='space-around'>
         {cities &&
-          cities.map(({ document: { data } }) => (
-            <Grid item key={data.slug}>
-              <Link
-                href={`/[lang]/city/[slug]`}
-                as={`/${locale}/city/${data.slug}`}
-              >
-                <a>{data.title}</a>
-              </Link>
-            </Grid>
-          ))}
+          cities.map(({ cityContent: { data } }, i) => {
+            if (!data.is_inactive)
+              return (
+                <Grid item key={i}>
+                  <Link
+                    href={`/[lang]/city/[slug]`}
+                    as={`/${locale}/city/${data.slug}`}
+                  >
+                    <a className='city'>{data.title}</a>
+                  </Link>
+                </Grid>
+              )
+          })}
       </Grid>
 
       <style jsx>{`
-        a {
+        .chaptersWrapper {
+          max-width: 550px;
+          margin: 0 auto;
+        }
+
+        .city {
           color: var(--pink);
           text-transform: uppercase;
           font-family: var(--primaryFont);
           font-weight: 600;
-          font-size: 24px;
+          font-size: 20px;
+          padding: 0 8px;
+          margin-bottom: 20px;
+          display: inline-block;
         }
 
-        a:hover {
+        .city:hover {
           color: var(--mainBlue);
         }
 
@@ -67,11 +72,26 @@ export default function ChapterSection({ title }) {
           text-align: center;
           text-transform: uppercase;
         }
-      `}</style>
-    </TextSection>
-  )
-}
 
-ChapterSection.propTypes = {
-  title: PropTypes.string.isRequired,
+        @media (${mediaquery.mobile}) {
+          .city {
+            padding: 0 100px;
+          }
+        }
+
+        @media (${mediaquery.tabletToDesktop}) {
+          .chaptersWrapper {
+            max-width: 100%;
+            margin: 0;
+          }
+
+          .city {
+            font-size: 24px;
+            padding: 0 12px;
+            display: inline;
+          }
+        }
+      `}</style>
+    </div>
+  )
 }

@@ -1,4 +1,5 @@
 import css from 'styled-jsx/css'
+import { mediaquery } from './style.js'
 
 export default css.global`
   :root {
@@ -35,10 +36,17 @@ export default css.global`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     word-break: break-word;
-    font-size: 20px;
-    font-size: 2rem;
+    font-size: 18px;
+    font-size: 1.8rem;
     letter-spacing: -0.5px;
     line-height: 1.5;
+  }
+  @media (${mediaquery.desktopToBigScreen}) {
+    body {
+      font-size: 20px;
+      font-size: 2rem;
+      line-height: 1.6;
+    }
   }
   body > svg {
     display: block;
@@ -98,26 +106,92 @@ export default css.global`
     padding: 40px 0;
   }
   h2 {
-    font-size: 26px;
-    font-size: 2.6rem;
+    font-size: 36px;
+    font-size: 3.6rem;
     font-weight: bold;
     letter-spacing: -0.75px;
     line-height: 1.2;
     padding: 30px 0;
   }
   h3 {
-    font-size: 24px;
-    font-size: 2.4rem;
+    font-size: 26px;
+    font-size: 2.6rem;
     font-weight: bold;
     letter-spacing: -0.5px;
     line-height: 1.1875;
     padding: 25px 0;
   }
   h4 {
-    font-size: 20px;
-    font-size: 2rem;
+    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: bold;
-    padding: 25px 0;
+    padding: 20px 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    margin-bottom: 26px;
+  }
+
+  @media (${mediaquery.smallToTablet}) {
+    h1 {
+      font-size: 40px;
+      font-size: 4rem;
+      padding: 50px 0;
+    }
+    h2 {
+      font-size: 38px;
+      font-size: 3.8rem;
+      padding: 40px 0;
+    }
+    h3 {
+      font-size: 28px;
+      font-size: 2.8rem;
+      padding: 25px 0;
+    }
+    h4 {
+      font-size: 24px;
+      font-size: 2.4rem;
+      padding: 25px 0;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-align: left;
+    }
+    p {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (${mediaquery.desktopToBigScreen}) {
+    h1 {
+      font-size: 58px;
+      font-size: 5.8rem;
+      padding: 70px 0;
+    }
+    h2 {
+      font-size: 44px;
+      font-size: 4.4rem;
+      padding: 50px 0;
+    }
+    h3 {
+      font-size: 30px;
+      font-size: 3rem;
+      padding: 35px 0;
+    }
+    h4 {
+      font-size: 28px;
+      font-size: 2.8rem;
+      padding: 25px 0;
+    }
   }
 
   /* LIST ------------------------------------- */
@@ -223,26 +297,5 @@ export default css.global`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-  }
-
-  @media (min-width: 990px) {
-    h1 {
-      font-size: 5.8rem;
-      font-size: 58px;
-    }
-    h2 {
-      font-size: 3.6rem;
-      font-size: 36px;
-    }
-    h3 {
-      font-size: 2.8rem;
-      font-size: 28px;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    body {
-      line-height: 1.6;
-    }
   }
 `

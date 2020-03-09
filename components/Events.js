@@ -1,7 +1,6 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment } from 'react'
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
-import fetchJsonp from 'fetch-jsonp'
 import format from 'date-fns/format'
 import Link from 'next/link'
 import useTranslation from '../hooks/useTranslation'
@@ -35,7 +34,6 @@ function Event({ event }) {
         }
 
         .timeInfo {
-          border-right: 2px solid var(--mainBlue);
           padding: 6px 6px 6px 0;
         }
 
@@ -55,6 +53,7 @@ function Event({ event }) {
         .info {
           padding: 6px;
           text-align: left;
+          border-left: 2px solid var(--mainBlue);
         }
 
         .eventName {
@@ -81,7 +80,15 @@ Event.propTypes = {
   }).isRequired,
 }
 
-function Events({ title, meetupName }) {
+function Events({
+  title,
+  events,
+  isLoading,
+  hasEvents,
+  showMoreLink,
+  setShowMoreLink,
+  hasMixedGroups,
+}) {
   const arrowDownStyle = {
     fontSize: 30,
     marginTop: '-20px',
@@ -92,56 +99,18 @@ function Events({ title, meetupName }) {
   }
 
   const { locale, t } = useTranslation()
-
-  const [events, setEvents] = useState({})
-  const [hasEvents, setHasEvents] = useState(false)
-  const [showMoreLink, setShowMoreLink] = useState(true)
-  const [isLoading, setLoading] = useState(true)
-  useEffect(() => {
-    const fetchData = async () => {
-      if (events.firstBatch) {
-        const secondBatch = [...events.allEvents].splice(6, 10)
-        if (!secondBatch.length) setShowMoreLink(false)
-        setEvents({ ...events, secondBatch })
-        return
-      }
-
-      try {
-        setLoading(true)
-
-        const result = await fetchJsonp(
-          `https://api.meetup.com/${meetupName}/events`
-        )
-
-        if (result.ok) {
-          setLoading(false)
-
-          const json = await result.json()
-          const allEvents = json.data
-          if (allEvents.length) {
-            const firstBatch = [...allEvents].splice(0, 6)
-            setEvents({ firstBatch, allEvents })
-            setHasEvents(true)
-          } else {
-            setHasEvents(false)
-          }
-        }
-      } catch (err) {
-        // TODO: render proper fetch error design
-        setLoading(true)
-        console.error('fetch error', err)
-      }
-    }
-    fetchData()
-  }, [showMoreLink])
+  const meetupName =
+    !isLoading && hasEvents && events.firstBatch[0].group.urlname
 
   return (
     <div className='eventSection'>
-      <h3>
-        <Link href={`/[lang]/guides`} as={`/${locale}/guides`}>
-          <a>{title}</a>
-        </Link>
-      </h3>
+      {!hasMixedGroups && (
+        <h3>
+          <Link href={`/[lang]/guides`} as={`/${locale}/guides`}>
+            <a>{title}</a>
+          </Link>
+        </h3>
+      )}
       <div className='events'>
         {isLoading && '...'}
         {!isLoading && !hasEvents && <p> No events planned </p>}
@@ -162,10 +131,10 @@ function Events({ title, meetupName }) {
                 className='moreEvents'
                 onClick={() => setShowMoreLink(false)}
               >
-                <p>{t('common.more')}</p>
+                <div>{t('common.more')}</div>
                 <ArrowDown style={arrowDownStyle} />
               </div>
-            ) : (
+            ) : hasMixedGroups ? null : (
               <div>
                 <a
                   className='moreEvents'
@@ -220,7 +189,12 @@ function Events({ title, meetupName }) {
 
 Events.propTypes = {
   title: PropTypes.string.isRequired,
-  meetupName: PropTypes.string.isRequired,
+  events: PropTypes.object.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  hasEvents: PropTypes.bool.isRequired,
+  showMoreLink: PropTypes.bool.isRequired,
+  hasMixedGroups: PropTypes.bool.isRequired,
+  setShowMoreLink: PropTypes.func.isRequired,
 }
 
 export default Events

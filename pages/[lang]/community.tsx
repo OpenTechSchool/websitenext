@@ -135,15 +135,11 @@ const Community: NextPage = () => {
         </Grid>
       </TextSection>
 
-      <ChapterSection title={t('chapter.title')} />
+      <ChapterSection />
 
       <ContactSection />
 
       <style jsx>{`
-        h1 {
-          text-align: center;
-        }
-
         :global(.pink) h2 {
           color: white;
         }

@@ -9,7 +9,7 @@ export const otsTheme = createMuiTheme({
 
 export const mediaquery = {
   mobile: 'max-width: 550px',
-  smallToTablet: 'min-width: 768px',
+  smallToTablet: 'min-width: 760px',
   tabletToDesktop: 'min-width: 990px',
   desktopToBigScreen: 'min-width: 1200px',
   bigScreenBreakpoint: '1200px',

@@ -1,6 +1,7 @@
 import Grid from '@material-ui/core/Grid'
 import Link from 'next/link'
 import useTranslation from '../../hooks/useTranslation'
+import { mediaquery } from '../../style/style'
 
 export default function Footer() {
   const { locale, t } = useTranslation()
@@ -10,7 +11,7 @@ export default function Footer() {
       <div className='grid-wrapper'>
         <Grid container justify='space-around'>
           <Grid item xs={10} sm={3}>
-            <h3>{t('footer.getinvolved')}</h3>
+            <h4>{t('footer.getinvolved')}</h4>
             <ul>
               <li>
                 <Link
@@ -48,7 +49,7 @@ export default function Footer() {
             </ul>
           </Grid>
           <Grid item xs={10} sm={3}>
-            <h3>{t('footer.ourValues')}</h3>
+            <h4>{t('footer.ourValues')}</h4>
             <ul>
               <li>
                 <Link
@@ -85,7 +86,7 @@ export default function Footer() {
             </ul>
           </Grid>
           <Grid item xs={10} sm={3}>
-            <h3>{t('footer.aboutUs')}</h3>
+            <h4>{t('footer.aboutUs')}</h4>
             <ul>
               <li>
                 <Link href={`/[lang]/about`} as={`/${locale}/about`}>
@@ -129,12 +130,17 @@ export default function Footer() {
           font-weight: 500;
           font-size: 20px;
           color: #9dd3f2;
+          text-align: center;
         }
 
-        h3 {
+        h4 {
           font-weight: 800;
           font-size: 24px;
           color: white;
+        }
+
+        ul {
+          margin-bottom: 20px;
         }
 
         a {
@@ -150,7 +156,10 @@ export default function Footer() {
 
         .note {
           font-size: 14px;
-          margin-top: 92px;
+           {
+            /* margin-top: 92px; */
+          }
+          margin-top: 70px;
         }
 
         .note a {
@@ -165,6 +174,21 @@ export default function Footer() {
 
         .spacer {
           padding: 0 15px;
+        }
+
+        @media (${mediaquery.smallToTablet}) {
+          footer {
+            text-align: left;
+          }
+
+          ul {
+            margin-bottom: 0px;
+          }
+
+          .note {
+            font-size: 14px;
+            margin-top: 92px;
+          }
         }
       `}</style>
     </footer>

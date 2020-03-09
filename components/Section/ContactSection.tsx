@@ -35,7 +35,7 @@ export default function ContactSection() {
           </div>
         </Grid>
         <Grid item xs={12} md={5}>
-          <h1>{t('homepage.getInTouch.title')}</h1>
+          <h2>{t('homepage.getInTouch.title')}</h2>
           <p>{t('homepage.getInTouch.description')}</p>
           <p>{t('homepage.getInTouch.description2')}</p>
           <br />
