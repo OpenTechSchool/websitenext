@@ -20,7 +20,9 @@ function Event({ event }) {
           </div>
           <div className='info'>
             <div className='eventName'>{name}</div>
-            <div className='venue'>{venue && venue.name}</div>
+            <div className='venue'>
+              {venue && `${venue.name} - ${venue.city}`}
+            </div>
           </div>
         </div>
       </a>
@@ -62,6 +64,7 @@ function Event({ event }) {
 
         .venue {
           color: var(--pink);
+          font-size: 16px;
         }
       `}</style>
     </Grid>
@@ -76,6 +79,7 @@ Event.propTypes = {
     local_time: PropTypes.string.isRequired,
     venue: PropTypes.shape({
       name: PropTypes.string.isRequired,
+      city: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 }
