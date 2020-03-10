@@ -1,14 +1,16 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 import Link from 'next/link'
 import Grid from '@material-ui/core/Grid'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import MenuIcon from '@material-ui/icons/Menu'
+import CloseIcon from '@material-ui/icons/Close'
 import useTranslation from '../../hooks/useTranslation'
 import SocialMediaSection from '../Section/SocialMediaSection'
 
 import { mediaquery } from '../../style/style'
 
-export function Header() {
+export function Header({ setIsMenuOpen }) {
   const isDesktop = useMediaQuery(`(${mediaquery.smallToTablet})`)
   const { locale, t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
@@ -26,7 +28,13 @@ export function Header() {
           </Link>
           {!isDesktop && (
             <span className='MenuIconMobile'>
-              <MenuIcon style={menuIconStyle} onClick={() => setIsOpen(true)} />
+              <MenuIcon
+                style={menuIconStyle}
+                onClick={() => {
+                  setIsOpen(true)
+                  setIsMenuOpen(true)
+                }}
+              />
             </span>
           )}
 
@@ -52,8 +60,8 @@ export function Header() {
         </Grid>
       </div>
 
-      {!isDesktop && !isOpen && (
-        <div className='mobileMenuWrapper'>
+      {!isDesktop && isOpen && (
+        <div className='mobileMenuWrapper open'>
           <header>
             <div className='content-wrapper'>
               <Grid container justify='space-between'>
@@ -61,9 +69,12 @@ export function Header() {
                   <a className='logo'>{t('header.websiteTitle')}</a>
                 </Link>
                 <span className='MenuIconMobile'>
-                  <MenuIcon
+                  <CloseIcon
                     style={menuIconStyle}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setIsOpen(false)
+                      setIsMenuOpen(false)
+                    }}
                   />
                 </span>
               </Grid>
@@ -89,7 +100,9 @@ export function Header() {
             </Link>
           </nav>
 
-          <SocialMediaSection bgColor='ots-blue' />
+          <div className='socialSection'>
+            <SocialMediaSection bgColor='ots-blue' />
+          </div>
         </div>
       )}
 
@@ -112,6 +125,10 @@ export function Header() {
             font-size: 22px;
             font-size: 2.2rem;
             font-weight: bold;
+          }
+
+          .MenuIconMobile {
+            cursor: pointer;
           }
 
           .MenuIconMobile :global(svg) {
@@ -139,13 +156,6 @@ export function Header() {
           }
 
           /* Mobile Menu */
-           {
-            /* .mobileMenuWrapper {
-            height: 0;
-            transition: height 0.2s ease-out;
-          } */
-          }
-
           .mobileMenuWrapper {
             position: fixed;
             top: 0;
@@ -169,6 +179,16 @@ export function Header() {
             padding: 20px 0;
           }
 
+          .mobile-nav a:hover {
+            border-bottom: 0px;
+          }
+
+          .socialSection {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+          }
+
           @media (${mediaquery.smallToTablet}) {
             .logo {
               font-size: 20px;
@@ -185,6 +205,10 @@ export function Header() {
       </style>
     </header>
   )
+}
+
+Header.propTypes = {
+  setIsMenuOpen: PropTypes.func.isRequired,
 }
 
 export default Header

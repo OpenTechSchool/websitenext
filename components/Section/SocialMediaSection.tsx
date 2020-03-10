@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 import TextSection from './TextSection'
 import FacebookIcon from '@material-ui/icons/Facebook'
@@ -7,11 +8,11 @@ import TwitterIcon from '@material-ui/icons/Twitter'
 export default function SocialMediaSection({ bgColor = '' }) {
   const iconStyle = {
     fontSize: 50,
-    color: 'var(--mainBlue)',
+    color: bgColor !== '' ? 'white' : 'var(--mainBlue)',
   }
   return (
     <TextSection title='' classname={`center ${bgColor}`}>
-      <h4>Connect</h4>
+      <h4 className={bgColor !== '' ? 'with-bgColor' : ''}>Connect</h4>
       <Grid container justify='center'>
         <Grid item xs={4} md={1}>
           <a
@@ -45,7 +46,15 @@ export default function SocialMediaSection({ bgColor = '' }) {
         h4 {
           text-align: center;
         }
+
+        .with-bgColor {
+          color: white;
+        }
       `}</style>
     </TextSection>
   )
+}
+
+SocialMediaSection.propTypes = {
+  bgColor: PropTypes.string,
 }
