@@ -1,19 +1,20 @@
+import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 import TextSection from './TextSection'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
 
-export default function SocialMediaSection() {
+export default function SocialMediaSection({ bgColor = '' }) {
   const iconStyle = {
     fontSize: 50,
-    color: 'var(--mainBlue)',
+    color: bgColor !== '' ? 'white' : 'var(--mainBlue)',
   }
   return (
-    <TextSection title='' classname='center'>
-      <h4>Connect</h4>
+    <TextSection title='' classname={`center ${bgColor}`}>
+      <h4 className={bgColor !== '' ? 'with-bgColor' : ''}>Connect</h4>
       <Grid container justify='center'>
-        <Grid item md={1}>
+        <Grid item xs={4} md={1}>
           <a
             href='https://www.facebook.com/OpenTechSchool'
             target='_blank'
@@ -22,7 +23,7 @@ export default function SocialMediaSection() {
             <FacebookIcon style={iconStyle} />
           </a>
         </Grid>
-        <Grid item md={1}>
+        <Grid item xs={4} md={1}>
           <a
             href='https://twitter.com/OpenTechSchool'
             target='_blank'
@@ -31,7 +32,7 @@ export default function SocialMediaSection() {
             <TwitterIcon style={iconStyle} />
           </a>
         </Grid>
-        <Grid item md={1}>
+        <Grid item xs={4} md={1}>
           <a
             href='https://github.com/OpenTechSchool'
             target='_blank'
@@ -45,7 +46,15 @@ export default function SocialMediaSection() {
         h4 {
           text-align: center;
         }
+
+        .with-bgColor {
+          color: white;
+        }
       `}</style>
     </TextSection>
   )
+}
+
+SocialMediaSection.propTypes = {
+  bgColor: PropTypes.string,
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Meta from '../Meta'
 import Header from '../Header/Header'
@@ -14,6 +14,8 @@ export const Layout = ({
   noTranslation,
   children,
 }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   return (
     <ThemeProvider theme={otsTheme}>
       <Meta
@@ -21,13 +23,20 @@ export const Layout = ({
         siteDescription={siteDescription}
         noTranslation={noTranslation}
       />
-      <Header />
+      <body className={isMenuOpen ? 'bodyFixed' : ''}>
+        <Header setIsMenuOpen={setIsMenuOpen} />
 
-      <div className='main'>{children}</div>
-      <Footer />
-      <style jsx global>
-        {globalStyle}
-      </style>
+        <div className='main'>{children}</div>
+        <Footer />
+        <style jsx global>
+          {globalStyle}
+        </style>
+        <style jsx>{`
+          .bodyFixed {
+            position: fixed;
+          }
+        `}</style>
+      </body>
     </ThemeProvider>
   )
 }
@@ -38,5 +47,5 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   siteTitle: PropTypes.string.isRequired,
   siteDescription: PropTypes.string.isRequired,
-  noTranslation: PropTypes.bool,
+  noTranslation: PropTypes.bool.isRequired,
 }

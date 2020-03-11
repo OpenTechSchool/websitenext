@@ -85,6 +85,10 @@ export default function TextSection({
           padding: 60px 50px;
         }
 
+        .ots-blue {
+          background: var(--otsColor);
+        }
+
         .highlight {
           text-align: center;
         }
