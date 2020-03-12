@@ -88,8 +88,21 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
             background-color: var(--mainBlue);
           }
           section div {
-            max-width: 1200px;
+            max-width: 1440px;
             margin: 0 auto;
+          }
+        }
+
+        @media screen and (min-width: 1440px) {
+          section {
+            background-color: inherit;
+          }
+          section div {
+            max-width: auto;
+            margin-top: 50px;
+          }
+          section div:after {
+            background-color: inherit;
           }
         }
 
@@ -128,7 +141,8 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
           z-index: 1;
           position: absolute;
           left: 10px;
-          bottom: 0px;
+          bottom: 10px;
+          margin-bottom: 0px;
         }
       `}</style>
     </div>
