@@ -93,7 +93,7 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
           }
         }
 
-        @media screen and (min-width: 1440px) {
+        @media screen and (min-width: 1441px) {
           section {
             background-color: inherit;
           }
