@@ -84,9 +84,6 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
         }
 
         @media (${mediaquery.desktopToBigScreen}) {
-          section {
-            background-color: var(--mainBlue);
-          }
           section div {
             max-width: 1440px;
             margin: 0 auto;
@@ -94,15 +91,8 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
         }
 
         @media screen and (min-width: 1441px) {
-          section {
-            background-color: inherit;
-          }
           section div {
-            max-width: auto;
             margin-top: 50px;
-          }
-          section div:after {
-            background-color: inherit;
           }
         }
 
@@ -136,7 +126,7 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
         }
 
         .credits {
-          font-color: #fff;
+          color: #fff;
           font-size: 14px;
           z-index: 1;
           position: absolute;
