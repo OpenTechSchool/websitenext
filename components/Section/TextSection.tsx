@@ -51,9 +51,6 @@ export default function TextSection({
           text-align: center;
           padding-top: 0;
         }
-        :global(.pink) h2 {
-          color: white;
-        }
       `}</style>
     </h2>
   ) : (
@@ -77,6 +74,16 @@ export default function TextSection({
           line-height: 28px;
           margin: 0 -25px;
           padding: 60px 50px;
+        }
+
+        .pink :global(h2),
+        .pink :global(h3) {
+          color: white;
+        }
+
+        .pink :global(a) {
+          color: white;
+          text-decoration: underline;
         }
 
         .grey {

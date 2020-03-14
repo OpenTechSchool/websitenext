@@ -22,30 +22,37 @@ const Community: NextPage = () => {
       </section>
 
       <TextSection title='Community'>
-        <Grid container justify='space-around'>
-          <Grid item xs={12} md={5}>
+        <Grid container justify='center' alignItems='center'>
+          <Grid item xs={12} md={3}>
+            <img
+              src='/illustrations/community.svg'
+              alt='community'
+              className='community-img'
+            />
+          </Grid>
+          <Grid item xs={12} md={3}>
             <p>{t('community.description')}</p>
           </Grid>
         </Grid>
       </TextSection>
 
       <TextSection classname='pink' title='Our values'>
-        <Grid container justify='flex-end'>
-          <Grid item xs={12} md={5}>
-            <h2>{t('about.coreValue.empowerment.title')}</h2>
-            <h2>{t('about.coreValue.handsOn.title')}</h2>
-            <h2>{t('about.coreValue.welcoming.title')}</h2>
+        <Grid container justify='center'>
+          <Grid item xs={12} md={4}>
+            <h3>{t('about.coreValue.empowerment.title')}</h3>
+            <h3>{t('about.coreValue.handsOn.title')}</h3>
+            <h3>{t('about.coreValue.welcoming.title')}</h3>
           </Grid>
-          <Grid item xs={12} md={5}>
-            <h2>{t('about.coreValue.openness.title')}</h2>
-            <h2>{t('about.coreValue.transparency.title')}</h2>
-            <h2>{t('about.coreValue.nonProfit.title')}</h2>
+          <Grid item xs={12} md={3}>
+            <h3>{t('about.coreValue.openness.title')}</h3>
+            <h3>{t('about.coreValue.transparency.title')}</h3>
+            <h3>{t('about.coreValue.nonProfit.title')}</h3>
           </Grid>
         </Grid>
         <br />
         <br />
-        <Grid container justify='flex-end'>
-          <Grid item xs={12} md={5}>
+        <Grid container justify='center'>
+          <Grid item xs={12} md={4}>
             <Link
               href={`/[lang]/about#core-values`}
               as={`/${locale}/about#core-values`}
@@ -60,7 +67,7 @@ const Community: NextPage = () => {
               <a>{t('community.readCodeOfConduct')}</a>
             </Link>
           </Grid>
-          <Grid item xs={12} md={5}></Grid>
+          <Grid item xs={12} md={3}></Grid>
         </Grid>
       </TextSection>
 
@@ -135,18 +142,15 @@ const Community: NextPage = () => {
         </Grid>
       </TextSection>
 
-      <ChapterSection />
+      <TextSection title={t('community.chapter.title')} anchor='find-events'>
+        <ChapterSection />
+      </TextSection>
 
       <ContactSection />
 
       <style jsx>{`
-        :global(.pink) h2 {
-          color: white;
-        }
-
-        :global(.pink) a {
-          color: white;
-          text-decoration: underline;
+        .community-img {
+          margin: 0 auto 40px auto;
         }
       `}</style>
     </PageLayout>
