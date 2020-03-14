@@ -22,7 +22,14 @@ const Community: NextPage = () => {
       </section>
 
       <TextSection title={t('contribute.contribute.title')}>
-        <Grid container justify='space-around'>
+        <Grid container justify='center' alignItems='center'>
+          <Grid item xs={12} md={3}>
+            <img
+              src='/illustrations/organizer.svg'
+              alt='organizer'
+              className='organizer-img'
+            />
+          </Grid>
           <Grid item xs={12} md={5}>
             <p>{t('contribute.contribute.description')}</p>
             <br />
@@ -34,37 +41,40 @@ const Community: NextPage = () => {
       <TextSection title={t('contribute.volunteering.title')} classname='grey'>
         <Grid container justify='space-between'>
           <Grid item xs={12} md={3}>
-            <h2>{t('contribute.volunteering.coach.title')}</h2>
+            <h3>{t('contribute.volunteering.coach.title')}</h3>
             <p>{t('contribute.volunteering.coach.description')}</p>
-            <br />
-            <Link
-              href={`/[lang]/guides#coaching-guidelines`}
-              as={`/${locale}/guides#coaching-guidelines`}
-            >
-              <a>{t('contribute.volunteering.coach.description2')}</a>
-            </Link>
+            <p>
+              <Link
+                href={`/[lang]/guides#coaching-guidelines`}
+                as={`/${locale}/guides#coaching-guidelines`}
+              >
+                <a>{t('contribute.volunteering.coach.description2')}</a>
+              </Link>
+            </p>
           </Grid>
           <Grid item xs={12} md={3}>
-            <h2>{t('contribute.volunteering.organize.title')}</h2>
+            <h3>{t('contribute.volunteering.organize.title')}</h3>
             <p>{t('contribute.volunteering.organize.description')}</p>
-            <br />
-            <Link
-              href={`/[lang]/guides#organize-meetup`}
-              as={`/${locale}/guides#organize-meetup`}
-            >
-              <a>{t('contribute.volunteering.organize.description2')}</a>
-            </Link>
+            <p>
+              <Link
+                href={`/[lang]/guides#organize-meetup`}
+                as={`/${locale}/guides#organize-meetup`}
+              >
+                <a>{t('contribute.volunteering.organize.description2')}</a>
+              </Link>
+            </p>
           </Grid>
           <Grid item xs={12} md={3}>
-            <h2>{t('contribute.volunteering.openChapter.title')}</h2>
+            <h3>{t('contribute.volunteering.openChapter.title')}</h3>
             <p>{t('contribute.volunteering.openChapter.description')}</p>
-            <br />
-            <Link
-              href={`/[lang]/guides#start-chapter`}
-              as={`/${locale}/guides#start-chapter`}
-            >
-              <a>{t('contribute.volunteering.openChapter.description2')}</a>
-            </Link>
+            <p>
+              <Link
+                href={`/[lang]/guides#start-chapter`}
+                as={`/${locale}/guides#start-chapter`}
+              >
+                <a>{t('contribute.volunteering.openChapter.description2')}</a>
+              </Link>
+            </p>
           </Grid>
         </Grid>
         <br />
@@ -73,14 +83,21 @@ const Community: NextPage = () => {
       </TextSection>
 
       <TextSection title={t('contribute.sponsor.title')} anchor='sponsor'>
-        <Grid container justify='space-around'>
+        <Grid container justify='center' alignItems='center'>
+          <Grid item xs={12} md={3}>
+            <img
+              src='/illustrations/sponsor.svg'
+              alt='sponsor'
+              className='sponsor-img'
+            />
+          </Grid>
           <Grid item xs={12} md={6}>
             <p>{t('contribute.sponsor.description')}</p>
-            <br />
             <p>{t('contribute.sponsor.description2')}</p>
-            <br />
-            <Button href=''>{t('contribute.sponsor.membership')}</Button>{' '}
-            <Button href=''>{t('contribute.sponsor.donation')}</Button>
+            <p>
+              <Button href=''>{t('contribute.sponsor.membership')}</Button>{' '}
+              <Button href=''>{t('contribute.sponsor.donation')}</Button>
+            </p>
           </Grid>
         </Grid>
       </TextSection>
@@ -88,11 +105,9 @@ const Community: NextPage = () => {
       <ContactSection />
 
       <style jsx>{`
-        .placeholder {
-          background: var(--pink);
-          min-height: 300px;
-          width: 100%;
-          margin: 40px 0;
+        .sponsor-img,
+        .organizer-img {
+          margin: 0 auto 20px auto;
         }
       `}</style>
     </PageLayout>
