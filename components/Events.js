@@ -80,7 +80,7 @@ Event.propTypes = {
     venue: PropTypes.shape({
       name: PropTypes.string.isRequired,
       city: PropTypes.string.isRequired,
-    }).isRequired,
+    }),
   }).isRequired,
 }
 
