@@ -197,8 +197,8 @@ Events.propTypes = {
   isLoading: PropTypes.bool.isRequired,
   hasEvents: PropTypes.bool.isRequired,
   showMoreLink: PropTypes.bool.isRequired,
-  hasMixedGroups: PropTypes.bool.isRequired,
   setShowMoreLink: PropTypes.func.isRequired,
+  hasMixedGroups: PropTypes.bool,
 }
 
 export default Events
