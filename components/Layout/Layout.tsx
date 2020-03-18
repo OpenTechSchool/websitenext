@@ -23,7 +23,7 @@ export const Layout = ({
         siteDescription={siteDescription}
         noTranslation={noTranslation}
       />
-      <body className={isMenuOpen ? 'bodyFixed' : ''}>
+      <div className={isMenuOpen ? 'bodyFixed' : ''}>
         <Header setIsMenuOpen={setIsMenuOpen} />
 
         <div className='main'>{children}</div>
@@ -36,7 +36,7 @@ export const Layout = ({
             position: fixed;
           }
         `}</style>
-      </body>
+      </div>
     </ThemeProvider>
   )
 }
@@ -47,5 +47,5 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   siteTitle: PropTypes.string.isRequired,
   siteDescription: PropTypes.string.isRequired,
-  noTranslation: PropTypes.bool.isRequired,
+  noTranslation: PropTypes.bool,
 }
