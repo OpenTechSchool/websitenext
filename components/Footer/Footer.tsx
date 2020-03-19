@@ -9,14 +9,14 @@ export default function Footer() {
   return (
     <footer>
       <div className='grid-wrapper'>
-        <Grid container justify='space-around'>
-          <Grid item xs={10} sm={3}>
+        <Grid container justify='space-between'>
+          <Grid item xs={12} sm={3}>
             <h4>{t('footer.getinvolved')}</h4>
             <ul>
               <li>
                 <Link
-                  href={`/[lang]/community#event-formats`}
-                  as={`/${locale}/community#event-formats`}
+                  href={`/[lang]#find-events`}
+                  as={`/${locale}#find-events`}
                 >
                   <a>{t('footer.joinMeetup')}</a>
                 </Link>
@@ -48,15 +48,73 @@ export default function Footer() {
               </li>
             </ul>
           </Grid>
-          <Grid item xs={10} sm={3}>
-            <h4>{t('footer.ourValues')}</h4>
+          <Grid item xs={12} sm={2}>
+            <h4>{t('footer.connect')}</h4>
+            <ul>
+              <li>
+                <a
+                  href='https://twitter.com/opentechschool'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://www.facebook.com/OpenTechSchool'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://www.meetup.com/find/?allMeetups=true&keywords=opentechschool&radius=Infinity&sort=default'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Meetup
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://github.com/OpenTechSchool/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://discourse.opentechschool.org/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Discourse
+                </a>
+              </li>
+            </ul>
+          </Grid>
+          <Grid item xs={12} sm={2}>
+            <h4>{t('footer.aboutUs')}</h4>
             <ul>
               <li>
                 <Link
-                  href={`/[lang]/about#what-drives-us`}
-                  as={`/${locale}/about#what-drives-us`}
+                  href={`/[lang]/about#history`}
+                  as={`/${locale}/about#history`}
                 >
-                  <a>{t('footer.whatDrivesUs')}</a>
+                  <a>{t('footer.history')}</a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`/[lang]/about#foundation`}
+                  as={`/${locale}/about#foundation`}
+                >
+                  <a>{t('footer.foundation')}</a>
                 </Link>
               </li>
               <li>
@@ -65,6 +123,19 @@ export default function Footer() {
                   as={`/${locale}/about#core-values`}
                 >
                   <a>{t('footer.coreValues')}</a>
+                </Link>
+              </li>
+            </ul>
+          </Grid>
+          <Grid item xs={12} sm={3}>
+            <h4>{t('footer.moreContent')}</h4>
+            <ul>
+              <li>
+                <Link
+                  href={`/[lang]/codeOfConduct`}
+                  as={`/${locale}/codeOfConduct`}
+                >
+                  <a>{t('footer.codeOfConduct')}</a>
                 </Link>
               </li>
               <li>
@@ -76,118 +147,66 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href={`/[lang]/codeOfConduct`}
-                  as={`/${locale}/codeOfConduct`}
-                >
-                  <a>{t('footer.codeOfConduct')}</a>
-                </Link>
-              </li>
-            </ul>
-          </Grid>
-          <Grid item xs={10} sm={3}>
-            <h4>{t('footer.aboutUs')}</h4>
-            <ul>
-              <li>
-                <Link href={`/[lang]/about`} as={`/${locale}/about`}>
-                  <a>{t('footer.learnMore')}</a>
+                <Link href={`/[lang]/imprint`} as={`/${locale}/imprint`}>
+                  <a>{t('footer.imprint')}</a>
                 </Link>
               </li>
             </ul>
           </Grid>
         </Grid>
-        <Grid container justify='space-around'>
+        <Grid container justify='center'>
           <Grid item xs={10} sm={11}>
-            <div className='note'>
-              <p className='license'>{t('footer.createCommons')}</p>
-              <p className='imprint'>
-                © {new Date().getFullYear()} by{' '}
-                <Link href={`/[lang]/about`} as={`/${locale}/about`}>
-                  <a>OpenTechSchool e.V.</a>
-                </Link>
-                <span className='spacer'>||</span>
-                <Link
-                  href={`/[lang]/#get-in-touch`}
-                  as={`/${locale}/#get-in-touch`}
-                >
-                  <a>{t('footer.contactUs')}</a>
-                </Link>
-                <span className='spacer'>||</span>
-                <Link href={`/[lang]/imprint`} as={`/${locale}/imprint`}>
-                  <a>{t('footer.imprint')}</a>
-                </Link>
-              </p>
-            </div>
+            <p className='license'>{t('footer.createCommons')}</p>
+            <p className='copyright'>
+              © {new Date().getFullYear()} by OpenTechSchool e.V.
+            </p>
           </Grid>
         </Grid>
       </div>
       <style jsx>{`
-        footer {
-          width: 100%;
-          padding: 72px 0 92px 0;
-          background-color: var(--secondaryBlue);
-          min-height: 100px;
-          font-weight: 500;
-          font-size: 20px;
-          color: #9dd3f2;
-          text-align: center;
-        }
-
-        h4 {
-          font-weight: 800;
-          font-size: 24px;
-          color: white;
-        }
-
-        ul {
-          margin-bottom: 20px;
-        }
-
-        a {
-          color: #9dd3f2;
-          font-weight: 500;
-          text-decoration: none;
-        }
-
         .grid-wrapper {
           max-width: 900px;
           margin: 0 auto;
         }
 
-        .note {
+        footer {
+          width: 100%;
+          padding: 70px 20px 20px 20px;
+          background-color: var(--secondaryBlue);
+          color: #fff;
+        }
+
+        h4,
+        a {
+          color: #fff;
+        }
+
+        a {
+          font-weight: normal;
+        }
+
+        a:hover {
+          border-bottom: 2px solid #fff;
+        }
+
+        .license {
           font-size: 14px;
-           {
-            /* margin-top: 92px; */
-          }
-          margin-top: 70px;
+          margin-top: 100px;
         }
 
-        .note a {
-          color: white;
-        }
-
-        .imprint {
+        .copyright {
           text-align: center;
           font-size: 18px;
           margin-top: 32px;
         }
 
-        .spacer {
-          padding: 0 15px;
-        }
-
-        @media (${mediaquery.smallToTablet}) {
-          footer {
-            text-align: left;
+        @media (${mediaquery.mobile}) {
+          h4 {
+            margin-top: 20px;
           }
 
-          ul {
-            margin-bottom: 0px;
-          }
-
-          .note {
-            font-size: 14px;
-            margin-top: 92px;
+          .license {
+            margin-top: 50px;
           }
         }
       `}</style>
