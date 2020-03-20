@@ -68,26 +68,32 @@
       "description": "OpenTechSchool is best described through our core values.",
       "openness": {
         "title": "Openess",
+        "shortDescription": "All OTS discussions, training materials, and blueprints are openly accessible through our website",
         "description": "All OTS discussions, training materials, and blueprints are openly accessible through our website so that anyone can find them and contribute to their development. Furthermore, for OTS, openness also means sharing: our coaches share their skills and time, and our learners share their own knowledge with the community, both by presenting their achievements during the beginners meetup and by later becoming coaches themselves."
       },
       "empowerment": {
         "title": "Empowerment",
+        "shortDescription": "Encouraging people to coach, whatever their skill or experience level, lets them see how rewarding and valuable teaching others is.",
         "description": "Empowerment is something which we hope to provide everyone involved. Encouraging people to coach, whatever their skill or experience level, lets them see how rewarding and valuable teaching others is. By encouraging learners to become coaches themselves, we hope to create a sustainable movement of skilled and confident individuals who are eager to help others. Leaving the framework of workshop organization open to adaptation is done to empower others, providing a framework for them to rally their own communities and to organize similar initiatives."
       },
       "handsOn": {
         "title": "Hands-on learning",
+        "shortDescription": "We believe the best way to learn is by doing it hands-on, and feel that visible progress is the best motivation to continue learning.",
         "description": "We believe the best way to learn is by doing it hands-on, and feel that visible progress is the best motivation to continue learning. That is why our workshops are focused on practical exercises and provide a hands-on learning experience. We bring people together to learn in small groups, supported by coaches who keep an eye on individual progress. Our workshops aim to reach a certain goal of the learning process while also providing a roadmap on how to continue afterwards."
       },
       "welcoming": {
         "title": "Welcoming learning environment",
+        "shortDescription": "We aim to provide a safe learning environment in which no one feels shy asking any question.",
         "description": "We aim to provide a safe learning environment in which no one feels shy asking any question. Teaching only 3-4 people at a time, coaches can move at the pace most suited for their group, rather than moving on too quickly. Learners will be encouraged to share their progress, with the goal of solidifying their knowledge and helping them overcome any fears of speaking in front of others."
       },
       "transparency": {
         "title": "Transparency",
+        "shortDescription": "OTS is an open, transparent movement with which we want to encourage others to create similar or related projects in their own cities.",
         "description": "OTS is an open, transparent movement with which we want to encourage others to create similar or related projects in their own cities. We hope to inspire you with our successes and let you learn from our mistakes, as well as develop a strong support network for those new to coding, giving them a chance to learn and go on to teach others."
       },
       "nonProfit": {
         "title": "Not for Profit",
+        "shortDescription": "Coaches and team members donate their personal time for the greater good of the community and the learners.",
         "description": "We strongly believe that, in order for education to work, the learner needs to have the best learning experience possible. In order to achieve that, coaches and team members donate their personal time for the greater good of the community and the learners. It is only with this value as your main goal that you can create the experience needed to encourage learners to continue. If you'd do that for your personal gain the quality would simply suffer.",
         "description2": "That is why we run OpenTechSchool as a non-profit and operate on the lowest costs possible. Most workshops are run at no cost and are self-organised by the local communities. And while company sponsorship is welcome and makes events and parties more comfortable, it is not required to fund the day-to-day business of OTS, nor will it ever govern the way OTS functions."
       }
@@ -118,7 +124,8 @@
   "community": {
     "siteTitle": "Join the OpenTechSchool Community",
     "siteDescription": "Joing the OpenTechSchool Community",
-    "description": "The OTS community is a group of tech-enthausiast, that like to learn and teach coding in a friendly environment.",
+    "description": "The OTS community is a group of tech-enthusiast, that like to learn and teach coding in a friendly environment.",
+    "description2": "Tired of learning by yourself? We offer free local meetups, where learners with different experience levels can join, exchange knowledge, coach and motivate each other.",
     "readCommunityValues": "Read more about our community values",
     "readCodeOfConduct": "Read our Code of Conduct",
     "getInvolved": {
@@ -158,6 +165,11 @@
         "who": "Everyone who likes to learn or teach coding and wants to meet other learners, or just likes to chat about tech.",
         "when": "Meeting weekly or bi-weekly on a weekday evening, these groups always have coaches there to help you, while each one just continues on their project in a relaxed and welcoming atmosphere."
       }
+    },
+    "codeOfConduct": {
+      "title": "Code of Conduct",
+      "description": "The main goal of all OpenTechSchool events and online meetups is to provide a friendly and welcoming learning environment and to be inclusive to the largest number of participants, with the most varied and diverse backgrounds possible.",
+      "description2": "Before joining our local events or participating in our online communities please make sure you understand and agree to our Code of Conduct. All learners, coaches, organizers and volunteers are required to conform to the Code of Conduct."
     },
     "chapter": {
       "title": "Find a community near your"
