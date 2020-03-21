@@ -5,6 +5,7 @@ import useTranslation from '../../hooks/useTranslation'
 import TextSection from './TextSection'
 import ChatIcon from '@material-ui/icons/Chat'
 import Link from 'next/link'
+import { mediaquery } from '../../style/style.js'
 
 export default function ContactSection() {
   const { locale, t } = useTranslation()
@@ -88,6 +89,12 @@ export default function ContactSection() {
           text-align: center;
           width: 300px;
           margin-top: 20px;
+          display: none;
+        }
+        @media (${mediaquery.tabletToDesktop}) {
+          .message-icons {
+            display: initial;
+          }
         }
         .subHeading {
           padding-bottom: calc(1.45rem / 2); /* same as li > p */
