@@ -39,11 +39,21 @@
     },
     "getInTouch": {
       "title": "Get in touch",
-      "description": "The best way to get in touch with the community is at one of our local event. Feel free to join anytime.",
-      "description2": "You can also get in touch via Slack where we share information beyond the events.",
-      "description3": "If you have a general question about the OpenTechSchool you can also send us an email.",
-      "slack": "Join our Slack",
-      "email": "Send an email"
+      "events": {
+        "title": "At our events",
+        "description": "The best way to get in touch with the community is at our events. Just come by, feel the vibe and speak to one of the organizers. Nice to meet you!",
+        "cta": "Check out upcoming events"
+      },
+      "slack": {
+        "title": "Online chat",
+        "description": "We are using Slack to connect and share information beyond the events. Say hi in the #general channel or find the one for your city.",
+        "cta": "Join our Slack"
+      },
+      "email": {
+        "title": "Email",
+        "description": "Contact us directly if you have a general question and the above options are not working for you. We love to hear from you, but remember we are all volunteers and might need some time to reply.",
+        "cta": "Send an email"
+      }
     }
   },
   "chapter": {
