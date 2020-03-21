@@ -21,5 +21,4 @@ export const mediaquery = {
   smallToTablet: `min-width: ${customBreakpoints.sm}px`,
   tabletToDesktop: `min-width: ${customBreakpoints.md}px`,
   desktopToBigScreen: `min-width: ${customBreakpoints.lg}px`,
-  bigScreenBreakpoint: `${customBreakpoints.lg}px`,
 }
