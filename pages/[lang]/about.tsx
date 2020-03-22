@@ -118,19 +118,18 @@ const About: NextPage = () => {
           </Link>
           .
         </p>
-        <h2>{t('about.foundation.membership')}</h2>
-        <p>{t('about.foundation.membershipDesc')}</p>
-        <p>{t('about.foundation.noMembershipRequired')}</p>
-        <br />
-        <Button href='https://docs.google.com/a/opentechschool.org/spreadsheet/viewform?formkey=dGYycmhYal9SSW1WRUdQcUhUSk9FYWc6MQ#gid=0'>
-          {t('about.foundation.signup')}
-        </Button>
-        <br />
-        <br />
+        <h2>{t('about.foundation.membership.title')}</h2>
+        <p>{t('about.foundation.membership.description1')}</p>
+        <p>{t('about.foundation.membership.description2')}</p>
         <p>
-          {t('about.foundation.agree')}{' '}
+          <Button href='https://docs.google.com/a/opentechschool.org/spreadsheet/viewform?formkey=dGYycmhYal9SSW1WRUdQcUhUSk9FYWc6MQ#gid=0'>
+            {t('about.foundation.membership.signup')}
+          </Button>
+        </p>
+        <p>
+          {t('about.foundation.membership.agree')}{' '}
           <Link href='https://www.opentechschool.org/foundation/archive/aktuelle-Satzung.pdf'>
-            {t('about.foundation.agree2')}
+            {t('about.foundation.membership.agree2')}
           </Link>
         </p>
       </TextSection>
