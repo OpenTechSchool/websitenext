@@ -128,7 +128,7 @@ const About: NextPage = () => {
         </p>
         <p>
           {t('about.foundation.membership.agree')}{' '}
-          <Link href='https://www.opentechschool.org/foundation/archive/aktuelle-Satzung.pdf'>
+          <Link href='/foundation/archive/aktuelle-Satzung.pdf' target='_blank'>
             {t('about.foundation.membership.agree2')}
           </Link>
         </p>
