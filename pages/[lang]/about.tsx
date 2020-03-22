@@ -104,7 +104,6 @@ const About: NextPage = () => {
           </Link>
           .
         </p>
-        <br />
         <p>{t('about.foundation.representedByBoard')}</p>
         <ul>
           <li>Bastian Albers</li>
@@ -112,11 +111,14 @@ const About: NextPage = () => {
           <li>Martin Meyerhoff</li>
         </ul>
         <br />
-        {t('about.foundation.contactTheBoard')}{' '}
-        <Link href='mailto:foundation.board@opentechschool.org'>
-          foundation.board [at] opentechschool.org
-        </Link>
-        .<h2>{t('about.foundation.membership')}</h2>
+        <p>
+          {t('about.foundation.contactTheBoard')}{' '}
+          <Link href='mailto:foundation.board@opentechschool.org'>
+            foundation.board@opentechschool.org
+          </Link>
+          .
+        </p>
+        <h2>{t('about.foundation.membership')}</h2>
         <p>{t('about.foundation.membershipDesc')}</p>
         <p>{t('about.foundation.noMembershipRequired')}</p>
         <br />
