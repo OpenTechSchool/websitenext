@@ -61,7 +61,7 @@ export default function ContactSection() {
                   className='primaryLink'
                   href='https://opentechschool-slack.herokuapp.com/'
                   target='_blank'
-                  rel='noopener'
+                  rel='noopener noreferrer'
                 >
                   {t('homepage.getInTouch.slack.cta')}
                 </a>
