@@ -133,10 +133,6 @@ const About: NextPage = () => {
             {t('about.foundation.agree2')}
           </Link>
         </p>
-        <h2>{t('about.foundation.donation')}</h2>
-        <p>{t('about.foundation.donationDesc')}</p>
-        <br />
-        <Button href=''>Donate</Button>
       </TextSection>
       <style jsx>{`
         ul {
