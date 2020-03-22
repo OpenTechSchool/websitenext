@@ -74,15 +74,29 @@ const About: NextPage = () => {
         <h2>OpenTechSchool e.V.</h2>
         <p>{t('about.foundation.description')}</p>
         <h2>{t('about.foundation.details')}</h2>
-        <p>
-          {t('about.foundation.address')}
-          <br />
-          OpenTechSchool e.V. <br />
-          c/o co.up <br />
-          Adalbertstr. 8 <br />
-          10999 Berlin <br />
-        </p>
-        <br />
+        <Grid container>
+          <Grid item xs={12} sm={6}>
+            <p>
+              {t('about.foundation.address')}
+              <br />
+              OpenTechSchool e.V. <br />
+              c/o co.up <br />
+              Adalbertstr. 8 <br />
+              10999 Berlin <br />
+            </p>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <p>
+              {t('about.foundation.bankAccount')}
+              <br />
+              IBAN: DE66430609671146899500
+              <br />
+              SWIFT/BIC: GENODEM1GLS
+              <br />
+              GLS Bank Bochum
+            </p>
+          </Grid>
+        </Grid>
         <p>
           {t('about.foundation.registered')}{' '}
           <Link href='https://www.opentechschool.org/foundation/archive/Register_Bestaetigung.pdf'>
