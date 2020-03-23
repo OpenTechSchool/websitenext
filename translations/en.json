@@ -112,17 +112,18 @@
       "description": "The OpenTechSchool e.V. has officially been established January 5th, 2013. As of March 25th, 2013 it is officially registered as a \"gemeinütziger e.V.\" — a non-profit foundation under German law. The main objective of creating the OpenTechSchool e.V. was to have a legal entity to help with sponsoring and structural things. Generally the foundations goal is to provide any kinds of service and help to nurture the OpenTechSchool movement all over the globe.",
       "details": "Details",
       "address": "Postal Address:",
+      "bankAccount": "Bank Account:",
       "registered": "Registered at",
       "representedByBoard": "The foundation is represented by its board:",
       "contactTheBoard": "To contact the board send an email at",
-      "membership": "Membership",
-      "membershipDesc": "The OpenTechSchool is a public Foundation, free for anyone to join. As decided by the general assembly on January 5th 2013 the membership fee is 2€ a month, due as quarterly payments (you'll receive an information on how to do that after registering).",
-      "noMembershipRequired": "There is no membership required in order to participate in any activities either as learner, coach or any kind volunteer work.",
-      "signup": "Sign up for a membership",
-      "agree": "Please remember, by signing up, you agree to our",
-      "agree2": "current charter.",
-      "donation": "Donate",
-      "donationDesc": "Donations are always welcome. Please use the following button."
+      "membership": {
+        "title": "Membership",
+        "description1": "By becoming a member of the foundation you're actively supporting the community with your membership fees. You also get to vote for the board members and what we spend money on. We meet at least every two years for a general assembly.",
+        "description2": "The membership fee is 24€ per year (2€ per month). Currently, the money is mostly spent on operational costs such as meetup.com fees.",
+        "signup": "Sign up for membership",
+        "agree": "Please remember, by signing up, you agree to our",
+        "agree2": "current charter."
+      }
     }
   },
   "community": {
