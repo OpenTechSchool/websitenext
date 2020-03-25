@@ -178,7 +178,9 @@ export const Index: NextPage = () => {
       <TextSection title={t('chapter.title')} anchor='find-events'>
         <ChapterSection />
 
-        <h4 className='chapter-events'>{t('chapter.events')}</h4>
+        <h4 className='chapter-events' id='events'>
+          {t('chapter.events')}
+        </h4>
         <Events
           title={t('city.suggestEvent')}
           events={events}

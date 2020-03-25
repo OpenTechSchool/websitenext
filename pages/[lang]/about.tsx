@@ -74,15 +74,29 @@ const About: NextPage = () => {
         <h2>OpenTechSchool e.V.</h2>
         <p>{t('about.foundation.description')}</p>
         <h2>{t('about.foundation.details')}</h2>
-        <p>
-          {t('about.foundation.address')}
-          <br />
-          OpenTechSchool e.V. <br />
-          c/o co.up <br />
-          Adalbertstr. 8 <br />
-          10999 Berlin <br />
-        </p>
-        <br />
+        <Grid container>
+          <Grid item xs={12} sm={6}>
+            <p>
+              {t('about.foundation.address')}
+              <br />
+              OpenTechSchool e.V. <br />
+              c/o co.up <br />
+              Adalbertstr. 8 <br />
+              10999 Berlin <br />
+            </p>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <p>
+              {t('about.foundation.bankAccount')}
+              <br />
+              IBAN: DE66430609671146899500
+              <br />
+              SWIFT/BIC: GENODEM1GLS
+              <br />
+              GLS Bank Bochum
+            </p>
+          </Grid>
+        </Grid>
         <p>
           {t('about.foundation.registered')}{' '}
           <Link href='https://www.opentechschool.org/foundation/archive/Register_Bestaetigung.pdf'>
@@ -90,7 +104,6 @@ const About: NextPage = () => {
           </Link>
           .
         </p>
-        <br />
         <p>{t('about.foundation.representedByBoard')}</p>
         <ul>
           <li>Bastian Albers</li>
@@ -98,29 +111,27 @@ const About: NextPage = () => {
           <li>Martin Meyerhoff</li>
         </ul>
         <br />
-        {t('about.foundation.contactTheBoard')}{' '}
-        <Link href='mailto:foundation.board@opentechschool.org'>
-          foundation.board [at] opentechschool.org
-        </Link>
-        .<h2>{t('about.foundation.membership')}</h2>
-        <p>{t('about.foundation.membershipDesc')}</p>
-        <p>{t('about.foundation.noMembershipRequired')}</p>
-        <br />
-        <Button href='https://docs.google.com/a/opentechschool.org/spreadsheet/viewform?formkey=dGYycmhYal9SSW1WRUdQcUhUSk9FYWc6MQ#gid=0'>
-          {t('about.foundation.signup')}
-        </Button>
-        <br />
-        <br />
         <p>
-          {t('about.foundation.agree')}{' '}
-          <Link href='https://www.opentechschool.org/foundation/archive/aktuelle-Satzung.pdf'>
-            {t('about.foundation.agree2')}
+          {t('about.foundation.contactTheBoard')}{' '}
+          <Link href='mailto:foundation.board@opentechschool.org'>
+            foundation.board@opentechschool.org
+          </Link>
+          .
+        </p>
+        <h2>{t('about.foundation.membership.title')}</h2>
+        <p>{t('about.foundation.membership.description1')}</p>
+        <p>{t('about.foundation.membership.description2')}</p>
+        <p>
+          <Button href='https://docs.google.com/a/opentechschool.org/spreadsheet/viewform?formkey=dGYycmhYal9SSW1WRUdQcUhUSk9FYWc6MQ#gid=0'>
+            {t('about.foundation.membership.signup')}
+          </Button>
+        </p>
+        <p>
+          {t('about.foundation.membership.agree')}{' '}
+          <Link href='/foundation/archive/aktuelle-Satzung.pdf' target='_blank'>
+            {t('about.foundation.membership.agree2')}
           </Link>
         </p>
-        <h2>{t('about.foundation.donation')}</h2>
-        <p>{t('about.foundation.donationDesc')}</p>
-        <br />
-        <Button href=''>Donate</Button>
       </TextSection>
       <style jsx>{`
         ul {
