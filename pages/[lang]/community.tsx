@@ -30,45 +30,48 @@ const Community: NextPage = () => {
               className='community-img'
             />
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={5}>
             <p>{t('community.description')}</p>
+            <p>{t('community.description2')}</p>
           </Grid>
         </Grid>
       </TextSection>
 
       <TextSection classname='pink' title='Our values'>
-        <Grid container justify='center'>
-          <Grid item xs={12} md={4}>
+        <Grid container justify='space-between'>
+          <Grid item xs={12} md={5}>
             <h3>{t('about.coreValue.empowerment.title')}</h3>
+            <p>{t('about.coreValue.empowerment.shortDescription')}</p>
             <h3>{t('about.coreValue.handsOn.title')}</h3>
+            <p>{t('about.coreValue.handsOn.shortDescription')}</p>
             <h3>{t('about.coreValue.welcoming.title')}</h3>
+            <p>{t('about.coreValue.welcoming.shortDescription')}</p>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={5}>
             <h3>{t('about.coreValue.openness.title')}</h3>
+            <p>{t('about.coreValue.openness.shortDescription')}</p>
             <h3>{t('about.coreValue.transparency.title')}</h3>
+            <p>{t('about.coreValue.transparency.shortDescription')}</p>
             <h3>{t('about.coreValue.nonProfit.title')}</h3>
+            <p>{t('about.coreValue.nonProfit.shortDescription')}</p>
           </Grid>
         </Grid>
         <br />
         <br />
-        <Grid container justify='center'>
-          <Grid item xs={12} md={4}>
-            <Link
-              href={`/[lang]/about#core-values`}
-              as={`/${locale}/about#core-values`}
-            >
-              <a>{t('community.readCommunityValues')}</a>
-            </Link>
-            <br />
-            <Link
-              href={`/[lang]/codeOfConduct`}
-              as={`/${locale}/codeOfConduct`}
-            >
-              <a>{t('community.readCodeOfConduct')}</a>
-            </Link>
-          </Grid>
-          <Grid item xs={12} md={3}></Grid>
-        </Grid>
+        <Link
+          href={`/[lang]/about#core-values`}
+          as={`/${locale}/about#core-values`}
+        >
+          <a>{t('community.readCommunityValues')}</a>
+        </Link>
+      </TextSection>
+
+      <TextSection title={t('community.codeOfConduct.title')}>
+        <p>{t('community.codeOfConduct.description')}</p>
+        <p>{t('community.codeOfConduct.description2')}</p>
+        <Link href={`/[lang]/codeOfConduct`} as={`/${locale}/codeOfConduct`}>
+          <a>{t('community.readCodeOfConduct')}</a>
+        </Link>
       </TextSection>
 
       <TextSection classname='grey' title={t('community.getInvolved.title')}>
