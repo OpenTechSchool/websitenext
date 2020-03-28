@@ -39,8 +39,22 @@ const Community: NextPage = () => {
       </TextSection>
 
       <TextSection title={t('contribute.volunteering.title')} classname='grey'>
-        <Grid container justify='space-between'>
-          <Grid item xs={12} md={3}>
+        <Grid container justify='space-around'>
+          <Grid item xs={12} md={5}>
+            <p className='getInTouch'>
+              {t('contribute.volunteering.getInTouch')}
+            </p>
+          </Grid>
+        </Grid>
+        <Grid container justify='space-around' alignItems='center'>
+          <Grid item xs={12} md={4}>
+            <img
+              src='/illustrations/volunteer.svg'
+              alt='volunteer'
+              className='volunteer-img'
+            />
+          </Grid>
+          <Grid item xs={12} md={5}>
             <h3>{t('contribute.volunteering.coach.title')}</h3>
             <p>{t('contribute.volunteering.coach.description')}</p>
             <p>
@@ -51,8 +65,7 @@ const Community: NextPage = () => {
                 <a>{t('contribute.volunteering.coach.description2')}</a>
               </Link>
             </p>
-          </Grid>
-          <Grid item xs={12} md={3}>
+
             <h3>{t('contribute.volunteering.organize.title')}</h3>
             <p>{t('contribute.volunteering.organize.description')}</p>
             <p>
@@ -63,8 +76,7 @@ const Community: NextPage = () => {
                 <a>{t('contribute.volunteering.organize.description2')}</a>
               </Link>
             </p>
-          </Grid>
-          <Grid item xs={12} md={3}>
+
             <h3>{t('contribute.volunteering.openChapter.title')}</h3>
             <p>{t('contribute.volunteering.openChapter.description')}</p>
             <p>
@@ -77,12 +89,9 @@ const Community: NextPage = () => {
             </p>
           </Grid>
         </Grid>
-        <br />
-        <br />
-        <p>{t('contribute.volunteering.getInTouch')}</p>
       </TextSection>
 
-      <TextSection title={t('contribute.sponsor.title')} anchor='sponsor'>
+      <TextSection title={t('contribute.supporter.title')} anchor='sponsor'>
         <Grid container justify='center' alignItems='center'>
           <Grid item xs={12} md={3}>
             <img
@@ -92,12 +101,17 @@ const Community: NextPage = () => {
             />
           </Grid>
           <Grid item xs={12} md={6}>
-            <p>{t('contribute.sponsor.description')}</p>
-            <p>{t('contribute.sponsor.description2')}</p>
-            <p>
-              <Button href=''>{t('contribute.sponsor.membership')}</Button>{' '}
-              <Button href=''>{t('contribute.sponsor.donation')}</Button>
-            </p>
+            <p>{t('contribute.supporter.description')}</p>
+            <p>{t('contribute.supporter.sponsor')}</p>
+            <Button href='mailto:info@opentechschool.org'>
+              {t('contribute.supporter.contact')}
+            </Button>
+            <br />
+            <br />
+            <p>{t('contribute.supporter.membership')}</p>
+            <Button href='https://docs.google.com/a/opentechschool.org/spreadsheet/viewform?formkey=dGYycmhYal9SSW1WRUdQcUhUSk9FYWc6MQ#gid=0'>
+              {t('contribute.supporter.readMore')}
+            </Button>
           </Grid>
         </Grid>
       </TextSection>
@@ -108,6 +122,9 @@ const Community: NextPage = () => {
         .sponsor-img,
         .organizer-img {
           margin: 0 auto 20px auto;
+        }
+        .getInTouch {
+          margin-bottom: 40px;
         }
       `}</style>
     </PageLayout>

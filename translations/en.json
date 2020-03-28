@@ -192,11 +192,11 @@
     "siteDescription": "OpenTechSchool Contribute",
     "contribute": {
       "title": "Contribute",
-      "description": "The OpenTechSchool is a non-profit foundation that offers free tech education. This is possible because of the work of many volunteers. If you are interested in supporting the OTS with your time or you want to donate money, please get in touch with us.",
-      "description2": "Join the movement by organising events, coaching learners or offer general support. Read more about how you can contribute below."
+      "description": "Thanks to the work of many volunteers the OpenTechSchool is able to offer free tech education to a wide range of learners. Volunteers contribute their time and share their knowledge to make OTS events a place where everyone can learn, connect and grow.",
+      "description2": "Join the movement by organising events in your city, coaching learners or offering general support. If you have ideas on how to improve the learning experience, just come and tell us! The OpenTechSchool is always looking for individuals who like to give back to the community."
     },
     "volunteering": {
-      "title": "Volunteering",
+      "title": "Become a volunteer",
       "coach": {
         "title": "Become a coach",
         "description": "Coaches help to spread the fun of coding. They are not only supporting learners with the expertise and knowledge, they also try to create a friendly and welcoming environment at the events.",
@@ -204,22 +204,23 @@
       },
       "organize": {
         "title": "Organize a meetup",
-        "description": "As an organizer you pland and schedule events, promote them and make sure there are enough coaches available.",
+        "description": "As an organizer you plan and schedule a meetup in your city, promote them and make sure there are enough coaches available.",
         "description2": "Read more about how to organize a co-learning meetup."
       },
       "openChapter": {
         "title": "Open a new chapter",
         "description": "Your city does not yet have an chapter, but you are interested in organizing tech events or regular meetups for the community we can help you getting started.",
-        "description2": "Read more about how to get started."
+        "description2": "Read more about how to start a chapter."
       },
-      "getInTouch": "If you are intersted in volunteering work, get in touch with us via email or Slack."
+      "getInTouch": "If you are intersted in volunteering work, don't hesitate to contact us even if you are not sure how to contribute yet. Here are a few examples on how to volunteer, but there are so many more!"
     },
-    "sponsor": {
-      "title": "Become a sponsor",
-      "description": "If you like what OpenTechSchool is doing, but you can't volunteer there are other ways to support the initiative. Maybe you have a space to offer or you want to sponsor the next event. Please get in touch with us via email.",
-      "description2": "The OpenTechSchool is non-profit foundation that also offers a membership. Or you can simply contribute us a donation.",
-      "membership": "Membership",
-      "donation": "Donation"
+    "supporter": {
+      "title": "Become a supporter",
+      "description": "If you like what OpenTechSchool is doing, but you can't volunteer, there are other ways to support the initiative.",
+      "sponsor": "Maybe you have a space to offer or you want to sponsor the next event. If you are interested in a cooperation please get in touch.",
+      "contact": "Contact us",
+      "membership": "Another way to support the OpenTechSchool is to become a member of the foundation. By becoming a member you're actively supporting the community with your membership fees.",
+      "readMore": "Sign up for membership"
     }
   },
   "guides": {
