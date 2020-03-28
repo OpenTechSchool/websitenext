@@ -158,7 +158,7 @@ export default function Footer() {
           <Grid item xs={10} sm={11}>
             <p className='license'>{t('footer.createCommons')}</p>
             <p className='copyright'>
-              © {new Date().getFullYear()} by OpenTechSchool e.V.
+              © 2012-{new Date().getFullYear()} by OpenTechSchool e.V.
             </p>
           </Grid>
         </Grid>
