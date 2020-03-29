@@ -2,7 +2,7 @@ import { NextPage } from 'next'
 import PageLayout from '../../components/PageLayout/PageLayout'
 import Grid from '@material-ui/core/Grid'
 import TextSection from '../../components/Section/TextSection'
-import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
+// import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 import Button from '../../components/Button/Button'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
@@ -16,9 +16,9 @@ const About: NextPage = () => {
       siteTitle='about.siteTitle'
       siteDescription={t('about.siteDescription')}
     >
-      <section>
+      {/* <section>
         <LocalSwitcher />
-      </section>
+      </section> */}
       <TextSection
         classname='default'
         title={t('about.history.title')}

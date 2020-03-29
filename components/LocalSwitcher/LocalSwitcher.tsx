@@ -3,8 +3,15 @@ import { useRouter } from 'next/dist/client/router'
 import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
+import { withStyles } from '@material-ui/core/styles'
 import { locales, languageNames } from '../../translations/config'
 import { LocaleContext } from '../../context/LocaleContext'
+
+const MenuItemStyle = withStyles({
+  root: {
+    fontSize: '1.4rem',
+  },
+})(MenuItem)
 
 const LocaleSwitcher: React.FC = () => {
   const router = useRouter()
@@ -24,11 +31,16 @@ const LocaleSwitcher: React.FC = () => {
   return (
     <section>
       <FormControl>
-        <Select value={locale} onChange={handleLocaleChange} displayEmpty>
+        <Select
+          className='localSwitch-select'
+          value={locale}
+          onChange={handleLocaleChange}
+          displayEmpty
+        >
           {locales.map(locale => (
-            <MenuItem key={locale} value={locale}>
+            <MenuItemStyle key={locale} value={locale}>
               {languageNames[locale]}
-            </MenuItem>
+            </MenuItemStyle>
           ))}
         </Select>
       </FormControl>
@@ -38,8 +50,15 @@ const LocaleSwitcher: React.FC = () => {
           display: flex;
           min-height: 50px;
           align-items: center;
-          justify-content: flex-end;
           padding: 0 20px;
+        }
+
+        section :global(.localSwitch-select) {
+          font-size: 1.4rem;
+        }
+
+        section :global(li.localSwitch-select svg) {
+          font-size: 20px;
         }
       `}</style>
     </section>

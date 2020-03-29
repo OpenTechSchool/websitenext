@@ -2,7 +2,7 @@ import { NextPage } from 'next'
 import Grid from '@material-ui/core/Grid'
 import Link from 'next/link'
 import PageLayout from '../../components/PageLayout/PageLayout'
-import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
+// import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
 import TextSection from '../../components/Section/TextSection'
@@ -15,9 +15,9 @@ const Guides: NextPage = () => {
       siteTitle={t('guides.siteTitle')}
       siteDescription={t('guides.siteDescription')}
     >
-      <section>
+      {/* <section>
         <LocalSwitcher />
-      </section>
+      </section> */}
 
       <TextSection title='Guides'>
         <Grid container justify='space-between'>

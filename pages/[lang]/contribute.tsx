@@ -2,7 +2,7 @@ import { NextPage } from 'next'
 import Grid from '@material-ui/core/Grid'
 import Link from 'next/link'
 import PageLayout from '../../components/PageLayout/PageLayout'
-import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
+// import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
 import TextSection from '../../components/Section/TextSection'
@@ -16,9 +16,9 @@ const Community: NextPage = () => {
       siteTitle={t('contribute.siteTitle')}
       siteDescription={t('contribute.siteDescription')}
     >
-      <section>
+      {/* <section>
         <LocalSwitcher />
-      </section>
+      </section> */}
 
       <TextSection title={t('contribute.contribute.title')}>
         <Grid container justify='center' alignItems='center'>

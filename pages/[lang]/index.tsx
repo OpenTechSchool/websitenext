@@ -9,7 +9,7 @@ import useTranslation from '../../hooks/useTranslation'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import WithLocale from '../../containers/withLocale'
 import PageLayout from '../../components/PageLayout/PageLayout'
-import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
+// import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 import TextSection from '../../components/Section/TextSection'
 import ChapterSection, { cities } from '../../components/Section/ChapterSection'
 import Button from '../../components/Button/Button'
@@ -76,9 +76,9 @@ export const Index: NextPage = () => {
     >
       <Masthead />
 
-      <section>
+      {/* <section>
         <LocalSwitcher />
-      </section>
+      </section> */}
 
       <TextSection>
         <Grid container justify='space-between' alignItems='center'>
