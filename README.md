@@ -106,7 +106,14 @@ Another must have even if the page will not broke in case this piece is missing,
 Each city page expect at least two images: Cover image and description image.<br />
 Please place these two images in the `/public` folder. The name must be: `cityName_cityBg.jpg` for cover picture and `cityName_cityAbout.jpg` for the image next to your description.
 
-In order to show the team members on your city page you can either add your team at [discourse](https://discourse.opentechschool.org/) and they will automatically added to the page. If your team is not using discourse you can just list the team members in your markdown file in the frontmatter section as follows and add the corresponding image as `.jpg` to the `public/members` folder.
+In order to show the team members on your city page you can either add your team at [discourse](https://discourse.opentechschool.org/) or manually add the members to the page. In order to automatically pull the team names from discourse you need to specify your discourse team in the frontmatter section as follows. Members will be sorted by `last_seen_at` (last active member go first).
+
+```
+---
+discourse_group: Name of the group
+```
+
+If your team is not using discourse you can just list the team members in your markdown file in the frontmatter section as follows and add the corresponding image as `.jpg` to the `public/members` folder.
 
 ```
 members:
