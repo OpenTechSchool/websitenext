@@ -6,7 +6,6 @@ import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
 import TextSection from '../../components/Section/TextSection'
-import Button from '../../components/Button/Button'
 import ContactSection from '../../components/Section/ContactSection'
 
 const Community: NextPage = () => {
@@ -91,7 +90,7 @@ const Community: NextPage = () => {
         </Grid>
       </TextSection>
 
-      <TextSection title={t('contribute.supporter.title')} anchor='sponsor'>
+      <TextSection title={t('contribute.supporter.title')} anchor='supporter'>
         <Grid container justify='center' alignItems='center'>
           <Grid item xs={12} md={3}>
             <img
@@ -102,16 +101,23 @@ const Community: NextPage = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <p>{t('contribute.supporter.description')}</p>
-            <p>{t('contribute.supporter.sponsor')}</p>
-            <Button href='mailto:info@opentechschool.org'>
-              {t('contribute.supporter.contact')}
-            </Button>
-            <br />
-            <br />
-            <p>{t('contribute.supporter.membership')}</p>
-            <Button href='https://docs.google.com/a/opentechschool.org/spreadsheet/viewform?formkey=dGYycmhYal9SSW1WRUdQcUhUSk9FYWc6MQ#gid=0'>
-              {t('contribute.supporter.readMore')}
-            </Button>
+            <p>
+              {t('contribute.supporter.sponsor')}{' '}
+              <a href='mailto:info@opentechschool.org'>
+                {t('contribute.supporter.getInTouch')}
+              </a>
+              .
+            </p>
+            <p>
+              {t('contribute.supporter.membership')}
+              <Link
+                href={`/[lang]/about#membership`}
+                as={`/${locale}/about#membership`}
+              >
+                <a> {t('contribute.supporter.readMore')}</a>
+              </Link>
+              .
+            </p>
           </Grid>
         </Grid>
       </TextSection>

@@ -122,7 +122,7 @@ const About: NextPage = () => {
           </Link>
           .
         </p>
-        <h2>{t('about.foundation.membership.title')}</h2>
+        <h2 id='membership'>{t('about.foundation.membership.title')}</h2>
         <p>{t('about.foundation.membership.description1')}</p>
         <p>{t('about.foundation.membership.description2')}</p>
         <p>
