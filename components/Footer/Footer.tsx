@@ -39,11 +39,11 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={`/[lang]/contribute#sponsor`}
-                  as={`/${locale}/contribute#sponsor`}
+                  href={`/[lang]/contribute#supporter`}
+                  as={`/${locale}/contribute#supporter`}
                   scroll={false}
                 >
-                  <a>{t('footer.becomeSponsor')}</a>
+                  <a>{t('footer.becomeSupporter')}</a>
                 </Link>
               </li>
             </ul>
