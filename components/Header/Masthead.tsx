@@ -59,8 +59,8 @@ export function Masthead() {
           }
           .squid {
             position: absolute;
-            right: -50px;
-            top: 0px;
+            right: -60px;
+            top: 20px;
           }
           @media (${mediaquery.mobile}) {
             .masthead {
@@ -70,17 +70,24 @@ export function Masthead() {
           @media (${mediaquery.tabletToDesktop}) {
             .squid {
               right: 20px;
-              top: 60px;
+              top: 0;
             }
           }
           @media (${mediaquery.desktopToBigScreen}) {
+            .squid {
+              right: 40px;
+              top: 0;
+            }
+          }
+          @media screen and (min-width: 1400px) {
             h1 {
               font-size: 58px;
               font-size: 5.8rem;
               padding: 60px 0;
             }
             .squid {
-              right: 10%;
+              right: calc(50vw - 650px);
+              top: 60px;
             }
           }
         `}
