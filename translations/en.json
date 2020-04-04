@@ -10,7 +10,7 @@
     "siteDescription": "OpenTechSchool",
     "otsInitiative": {
       "title": "The OTS initiative",
-      "description": "The OpenTechSchool is a movement aiming to offer free tech education.",
+      "description": "OpenTechSchool is a movement aiming to offer free tech education.",
       "description2": "Volunteers all around Europe organizing welcoming and inclusive code learning happenings around the year. The meetups bring people together and provides a space for hands-on learning.",
       "learnMore": "More about OpenTechSchool ..."
     },
@@ -115,6 +115,7 @@
       "link": "Creative Commons Attribution-ShareAlike 3.0 Unported License:"
     },
     "foundation": {
+      "title": "Foundation",
       "description": "The OpenTechSchool e.V. has officially been established January 5th, 2013. As of March 25th, 2013 it is officially registered as a \"gemeinütziger e.V.\" — a non-profit foundation under German law. The main objective of creating the OpenTechSchool e.V. was to have a legal entity to help with sponsoring and structural things. Generally the foundations goal is to provide any kinds of service and help to nurture the OpenTechSchool movement all over the globe.",
       "details": "Details",
       "address": "Postal Address:",
@@ -191,11 +192,11 @@
     "siteDescription": "OpenTechSchool Contribute",
     "contribute": {
       "title": "Contribute",
-      "description": "The OpenTechSchool is a non-profit foundation that offers free tech education. This is possible because of the work of many volunteers. If you are interested in supporting the OTS with your time or you want to donate money, please get in touch with us.",
-      "description2": "Join the movement by organising events, coaching learners or offer general support. Read more about how you can contribute below."
+      "description": "Thanks to the work of many volunteers OpenTechSchool is able to offer free tech education to a wide range of learners. Volunteers contribute their time and share their knowledge to make OTS events a place where everyone can learn, connect and grow.",
+      "description2": "Join the movement by coaching to learners, organising events in your city or offering general support. If you have ideas on how to improve the learning experience, just come and tell us! OpenTechSchool is always looking for individuals who like to give back to the community."
     },
     "volunteering": {
-      "title": "Volunteering",
+      "title": "Become a volunteer",
       "coach": {
         "title": "Become a coach",
         "description": "Coaches help to spread the fun of coding. They are not only supporting learners with the expertise and knowledge, they also try to create a friendly and welcoming environment at the events.",
@@ -203,22 +204,23 @@
       },
       "organize": {
         "title": "Organize a meetup",
-        "description": "As an organizer you pland and schedule events, promote them and make sure there are enough coaches available.",
+        "description": "As an organizer you plan and schedule a meetup in your city, promote them and make sure there are enough coaches available.",
         "description2": "Read more about how to organize a co-learning meetup."
       },
       "openChapter": {
         "title": "Open a new chapter",
-        "description": "Your city does not yet have an chapter, but you are interested in organizing tech events or regular meetups for the community we can help you getting started.",
-        "description2": "Read more about how to get started."
+        "description": "If you are interested in organising tech events or regular meetups for the community but your city doesn't have an OTS chapter yet, we can help you getting started.",
+        "description2": "Read more about how to start a chapter."
       },
-      "getInTouch": "If you are intersted in volunteering work, get in touch with us via email or Slack."
+      "getInTouch": "If you are intersted in volunteering work, don't hesitate to contact us even if you are not sure how to contribute yet. Here are a few examples on how to volunteer, but there are so many more!"
     },
-    "sponsor": {
-      "title": "Become a sponsor",
-      "description": "If you like what OpenTechSchool is doing, but you can't volunteer there are other ways to support the initiative. Maybe you have a space to offer or you want to sponsor the next event. Please get in touch with us via email.",
-      "description2": "The OpenTechSchool is non-profit foundation that also offers a membership. Or you can simply contribute us a donation.",
-      "membership": "Membership",
-      "donation": "Donation"
+    "supporter": {
+      "title": "Become a supporter",
+      "description": "If you like what OpenTechSchool is doing, but you can't volunteer, there are other ways to support the initiative.",
+      "sponsor": "Maybe you have a space to offer or you want to sponsor the next event. If you are interested in a cooperation please",
+      "getInTouch": "get in touch",
+      "membership": "Another way to support the OpenTechSchool is to become a member of the foundation. By becoming a member you're actively supporting the community with your membership fees.",
+      "readMore": "Read more about a membership"
     }
   },
   "guides": {
@@ -244,16 +246,16 @@
     "joinMeetup": "Join a meetup",
     "organizeEvent": "Organize an event",
     "startChapter": "Start a chapter",
-    "becomeSponsor": "Become a sponsor",
-    "ourValues": "Our Values",
-    "whatDrivesUs": "What drives us",
-    "coreValues": "Core values",
-    "coachingGuidelines": "Coaching guidelines",
-    "codeOfConduct": "Code of Conduct",
+    "becomeSupporter": "Become a supporter",
+    "connect": "Connect",
     "aboutUs": "About us",
-    "learnMore": "Learn more",
+    "history": "History",
+    "foundation": "Foundation",
+    "coreValues": "Core values",
+    "moreContent": "More",
+    "codeOfConduct": "Code of Conduct",
+    "coachingGuidelines": "Coaching guidelines",
     "imprint": "Imprint",
-    "contactUs": "Contact us",
     "createCommons": "Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License."
   }
 }

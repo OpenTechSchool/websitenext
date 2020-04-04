@@ -19,7 +19,11 @@ const About: NextPage = () => {
       <section>
         <LocalSwitcher />
       </section>
-      <TextSection classname='default' title={t('about.history.title')}>
+      <TextSection
+        classname='default'
+        title={t('about.history.title')}
+        anchor='history'
+      >
         <Grid container justify='space-between' alignItems='center'>
           <Grid item xs={12} md={5}>
             <img src='/about.jpg' />
@@ -70,7 +74,7 @@ const About: NextPage = () => {
           {t('about.policy.description2')}
         </p>
       </TextSection>
-      <TextSection title='Foundation'>
+      <TextSection title={t('about.foundation.title')} anchor='foundation'>
         <h2>OpenTechSchool e.V.</h2>
         <p>{t('about.foundation.description')}</p>
         <h2>{t('about.foundation.details')}</h2>
@@ -118,7 +122,7 @@ const About: NextPage = () => {
           </Link>
           .
         </p>
-        <h2>{t('about.foundation.membership.title')}</h2>
+        <h2 id='membership'>{t('about.foundation.membership.title')}</h2>
         <p>{t('about.foundation.membership.description1')}</p>
         <p>{t('about.foundation.membership.description2')}</p>
         <p>

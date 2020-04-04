@@ -137,6 +137,9 @@ export default css.global`
     text-align: center;
     margin-bottom: 26px;
   }
+  ul {
+    text-align: center;
+  }
 
   @media (${mediaquery.smallToTablet}) {
     h1 {
@@ -168,6 +171,9 @@ export default css.global`
     p {
       text-align: left;
       margin-bottom: 30px;
+    }
+    ul {
+      text-align: left;
     }
   }
 
