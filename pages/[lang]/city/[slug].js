@@ -31,7 +31,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
   const { t } = useTranslation()
   const markdownBody = content
   const frontmatter = data
-  const cityName = `${frontmatter.title}`.toLowerCase()
+  const cityName = `${frontmatter.slug}`.toLowerCase()
   const meetupName = frontmatter.meetup_name
 
   const [events, setEvents] = useState({})
@@ -120,7 +120,9 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
           <Grid item xs={12} md={6}>
             <div className='about-img-container'>
               <img src={`/${cityName}_cityAbout.jpg`} />
-              <p className='credits'>Credits: {frontmatter.credits}</p>
+              {frontmatter.credits && (
+                <p className='credits'>Credits: {frontmatter.credits}</p>
+              )}
             </div>
           </Grid>
         </Grid>
@@ -142,7 +144,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
 
       <TeamSection frontmatter={frontmatter} />
 
-      <TwitterFeed screenName={frontmatter.twitter} />
+      {frontmatter.twitter && <TwitterFeed screenName={frontmatter.twitter} />}
 
       <style jsx>{`
         .markdown :global(p) {

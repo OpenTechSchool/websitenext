@@ -52,7 +52,7 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
               </small>
             )}
           </p>
-          <p className='credits'>Credits: {credits}</p>
+          {credits && <p className='credits'>Credits: {credits}</p>}
         </div>
       </section>
 
