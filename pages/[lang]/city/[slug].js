@@ -31,7 +31,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
   const { t } = useTranslation()
   const markdownBody = content
   const frontmatter = data
-  const cityName = `${frontmatter.title}`.toLowerCase()
+  const cityName = `${frontmatter.slug}`.toLowerCase()
   const meetupName = frontmatter.meetup_name
 
   const [events, setEvents] = useState({})
