@@ -144,7 +144,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
 
       <TeamSection frontmatter={frontmatter} />
 
-      <TwitterFeed screenName={frontmatter.twitter} />
+      {frontmatter.twitter && <TwitterFeed screenName={frontmatter.twitter} />}
 
       <style jsx>{`
         .markdown :global(p) {
