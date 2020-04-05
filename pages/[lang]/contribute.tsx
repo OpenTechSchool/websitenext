@@ -37,7 +37,11 @@ const Community: NextPage = () => {
         </Grid>
       </TextSection>
 
-      <TextSection title={t('contribute.volunteering.title')} classname='grey'>
+      <TextSection
+        title={t('contribute.volunteering.title')}
+        classname='grey'
+        anchor='volunteering'
+      >
         <Grid container justify='space-around'>
           <Grid item xs={12} md={5}>
             <p className='getInTouch'>
