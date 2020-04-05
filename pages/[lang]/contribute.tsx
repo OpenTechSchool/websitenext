@@ -109,12 +109,12 @@ const Community: NextPage = () => {
               .
             </p>
             <p>
-              {t('contribute.supporter.membership')}
+              {t('contribute.supporter.membership')}{' '}
               <Link
                 href={`/[lang]/about#membership`}
                 as={`/${locale}/about#membership`}
               >
-                <a> {t('contribute.supporter.readMore')}</a>
+                <a>{t('contribute.supporter.readMore')}</a>
               </Link>
               .
             </p>
