@@ -6,7 +6,6 @@ import TextSection from '../../components/Section/TextSection'
 import Button from '../../components/Button/Button'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
-import { Link } from '@material-ui/core'
 
 const About: NextPage = () => {
   const { t } = useTranslation()
@@ -19,11 +18,8 @@ const About: NextPage = () => {
       {/* <section>
         <LocalSwitcher />
       </section> */}
-      <TextSection
-        classname='default'
-        title={t('about.history.title')}
-        anchor='history'
-      >
+
+      <TextSection title={t('about.history.title')} anchor='history'>
         <Grid container justify='space-between' alignItems='center'>
           <Grid item xs={12} md={5}>
             <img src='/about.jpg' />
@@ -38,11 +34,7 @@ const About: NextPage = () => {
       <TextSection classname='pink' title={t('about.explanation.title')}>
         <p>{t('about.explanation.description')}</p>
       </TextSection>
-      <TextSection
-        classname='highlight'
-        title={t('about.coreValue.title')}
-        anchor='core-values'
-      >
+      <TextSection title={t('about.coreValue.title')} anchor='core-values'>
         <p>{t('about.coreValue.description')}</p>
 
         <h2>{t('about.coreValue.openness.title')}</h2>
@@ -103,9 +95,9 @@ const About: NextPage = () => {
         </Grid>
         <p>
           {t('about.foundation.registered')}{' '}
-          <Link href='https://www.opentechschool.org/foundation/archive/Register_Bestaetigung.pdf'>
+          <a href='https://www.opentechschool.org/foundation/archive/Register_Bestaetigung.pdf'>
             Amtsgericht Charlottenburg under VR32310B
-          </Link>
+          </a>
           .
         </p>
         <p>{t('about.foundation.representedByBoard')}</p>
@@ -117,24 +109,33 @@ const About: NextPage = () => {
         <br />
         <p>
           {t('about.foundation.contactTheBoard')}{' '}
-          <Link href='mailto:foundation.board@opentechschool.org'>
+          <a href='mailto:foundation.board@opentechschool.org'>
             foundation.board@opentechschool.org
-          </Link>
+          </a>
           .
         </p>
         <h2 id='membership'>{t('about.foundation.membership.title')}</h2>
         <p>{t('about.foundation.membership.description1')}</p>
         <p>{t('about.foundation.membership.description2')}</p>
         <p>
-          <Button href='https://docs.google.com/a/opentechschool.org/spreadsheet/viewform?formkey=dGYycmhYal9SSW1WRUdQcUhUSk9FYWc6MQ#gid=0'>
-            {t('about.foundation.membership.signup')}
+          <Button>
+            <a
+              href='https://docs.google.com/a/opentechschool.org/spreadsheet/viewform?formkey=dGYycmhYal9SSW1WRUdQcUhUSk9FYWc6MQ#gid=0'
+              className='invert button'
+            >
+              {t('about.foundation.membership.signup')}
+            </a>
           </Button>
         </p>
         <p>
           {t('about.foundation.membership.agree')}{' '}
-          <Link href='/foundation/archive/aktuelle-Satzung.pdf' target='_blank'>
+          <a
+            href='/foundation/archive/aktuelle-Satzung.pdf'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             {t('about.foundation.membership.agree2')}
-          </Link>
+          </a>
         </p>
       </TextSection>
       <style jsx>{`

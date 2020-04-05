@@ -62,7 +62,7 @@ const Community: NextPage = () => {
           href={`/[lang]/about#core-values`}
           as={`/${locale}/about#core-values`}
         >
-          <a>{t('community.readCommunityValues')}</a>
+          <a className='invert'>{t('community.readCommunityValues')}</a>
         </Link>
       </TextSection>
 

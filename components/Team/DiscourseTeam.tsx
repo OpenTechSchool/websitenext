@@ -102,9 +102,6 @@ const Team = ({ discourseGroupName }) => {
                     font-weight: bold;
                     font-size: 20px;
                   }
-                  a:hover {
-                    text-decoration: underline;
-                  }
                 `}</style>
               </Grid>
             )

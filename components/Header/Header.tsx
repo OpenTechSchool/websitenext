@@ -40,20 +40,20 @@ export function Header({ setIsMenuOpen }) {
 
           {isDesktop && (
             <nav role='navigation' aria-label='main navigation'>
-              <a href='https://learn.opentechschool.org/'>
+              <a href='https://learn.opentechschool.org/' className='invert'>
                 {t('header.learn')}
               </a>
 
               <Link href={`/[lang]/contribute`} as={`/${locale}/contribute`}>
-                <a>{t('header.contribute')}</a>
+                <a className='invert'>{t('header.contribute')}</a>
               </Link>
 
               <Link href={`/[lang]/community`} as={`/${locale}/community`}>
-                <a>{t('header.community')}</a>
+                <a className='invert'>{t('header.community')}</a>
               </Link>
 
               <Link href={`/[lang]/about`} as={`/${locale}/about`}>
-                <a>{t('header.about')}</a>
+                <a className='invert'>{t('header.about')}</a>
               </Link>
             </nav>
           )}
@@ -85,18 +85,20 @@ export function Header({ setIsMenuOpen }) {
             role='navigation'
             aria-label='main navigation'
           >
-            <a href='https://learn.opentechschool.org/'>{t('header.learn')}</a>
+            <a href='https://learn.opentechschool.org/' className='invert'>
+              {t('header.learn')}
+            </a>
 
             <Link href={`/[lang]/contribute`} as={`/${locale}/contribute`}>
-              <a>{t('header.contribute')}</a>
+              <a className='invert'>{t('header.contribute')}</a>
             </Link>
 
             <Link href={`/[lang]/community`} as={`/${locale}/community`}>
-              <a>{t('header.community')}</a>
+              <a className='invert'>{t('header.community')}</a>
             </Link>
 
             <Link href={`/[lang]/about`} as={`/${locale}/about`}>
-              <a>{t('header.about')}</a>
+              <a className='invert'>{t('header.about')}</a>
             </Link>
           </nav>
 
@@ -144,15 +146,10 @@ export function Header({ setIsMenuOpen }) {
             padding-bottom: 5px;
             text-transform: uppercase;
             letter-spacing: 0.01em;
-            color: white;
           }
 
           nav a:last-child {
             margin-right: 0;
-          }
-
-          nav a:hover {
-            border-bottom: 2px solid white;
           }
 
           /* Mobile Menu */

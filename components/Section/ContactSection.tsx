@@ -45,7 +45,7 @@ export default function ContactSection() {
               <p>{t('homepage.getInTouch.events.description')}</p>
               <p>
                 <Link href={`/[lang]#events`} as={`/${locale}#events`}>
-                  <a className='primaryLink'>
+                  <a className='highlight'>
                     {t('homepage.getInTouch.events.cta')}
                   </a>
                 </Link>
@@ -58,7 +58,7 @@ export default function ContactSection() {
               <p>{t('homepage.getInTouch.slack.description')}</p>
               <p>
                 <a
-                  className='primaryLink'
+                  className='highlight'
                   href='https://opentechschool-slack.herokuapp.com/'
                   target='_blank'
                   rel='noopener noreferrer'
@@ -73,10 +73,7 @@ export default function ContactSection() {
               </h4>
               <p>{t('homepage.getInTouch.email.description')}</p>
               <p>
-                <a
-                  className='primaryLink'
-                  href='mailto:info@opentechschool.org'
-                >
+                <a className='highlight' href='mailto:info@opentechschool.org'>
                   {t('homepage.getInTouch.email.cta')}
                 </a>
               </p>
@@ -101,12 +98,6 @@ export default function ContactSection() {
         }
         .content :global(li:first-child) .subHeading:first-child {
           padding-top: 0;
-        }
-        .primaryLink {
-          color: var(--pink);
-        }
-        .primaryLink:hover {
-          color: var(--mainBlue);
         }
       `}</style>
     </TextSection>

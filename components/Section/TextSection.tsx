@@ -83,7 +83,6 @@ export default function TextSection({
 
         .pink :global(a) {
           color: white;
-          text-decoration: underline;
         }
 
         .grey {
