@@ -206,7 +206,6 @@ export const Index: NextPage = () => {
           {t('chapter.events')}
         </h4>
         <Events
-          title={t('city.suggestEvent')}
           events={events}
           isLoading={isLoading}
           hasEvents={hasEvents}

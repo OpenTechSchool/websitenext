@@ -228,8 +228,7 @@
     "siteDescription": "OpenTechSchool Guide"
   },
   "city": {
-    "eventsTitle": "Upcoming Events",
-    "suggestEvent": "Suggest One!"
+    "eventsTitle": "Upcoming Events"
   },
   "twitterfeed": {
     "tweetsFrom": "by"
