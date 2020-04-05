@@ -42,6 +42,7 @@ const TeamSection = ({ members }) => {
             })}
             <style jsx>{`
               p.name {
+                text-align: center;
                 font-weight: bold;
                 font-size: 20px;
               }
