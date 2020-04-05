@@ -152,6 +152,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href={`/[lang]/guides`} as={`/${locale}/guides`}>
+                  <a>{t('footer.guides')}</a>
+                </Link>
+              </li>
+              <li>
                 <Link href={`/[lang]/imprint`} as={`/${locale}/imprint`}>
                   <a className='invert'>{t('footer.imprint')}</a>
                 </Link>

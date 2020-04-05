@@ -224,8 +224,87 @@
     }
   },
   "guides": {
-    "siteTitle": "OpenTechSchool Guide",
-    "siteDescription": "OpenTechSchool Guide"
+    "siteTitle": "OpenTechSchool Guides",
+    "siteDescription": "OpenTechSchool Guides",
+    "hero": {
+      "title": "OpenTechSchool Guides",
+      "description": "We are happy to hear that you would like to get involved in the OTS community.",
+      "description2": "This page offers guides around how to volunteering as a coach, organizing events or start OpenTechSchool in your city.",
+      "jumpToIt": "Jump right to it:",
+      "howToCoach": "How to coach",
+      "howToCity": "How to start OpenTechSchool in my city",
+      "howToMeetup": "How to organize a meetup",
+      "howToRequest": "How to request a meetup or workshop"
+    },
+    "coaching": {
+      "title": "Coaching guidelines",
+      "intro": "You are about to help out at an OpenTechSchool meetup or workshop as a coach. We want to give you a quick introduction of what that means. The focus for the event is to show learners that coding and tech is nothing to be afraid of, but rather a lot of fun!",
+      "notTeachingHeadline": "Coaching isn't teaching",
+      "notTeaching": "Instead of standing infront to teach something, coaches are right there when needed, encourage learners and ensure they having fun doing it.",
+      "friendlyEnvHeadline": "Creating a friendly environment",
+      "friendlyEnv": "Smile, make eye contact, be kind and friendly. Look around to see if someone else might be having trouble. Come by once in a while and ask if you can help.",
+      "questionsHeadline": "Questions are good",
+      "questions": "Get people comfortable asking questions. Give other learners the chance to answer. Respond to questions positively.",
+      "dontHeadline": "Dont's",
+      "dont": "We don't roll our eyes or laugh at questions. We do not debate which programming language, methods or technologies are better.",
+      "fullGuide": "Read the full guide"
+    },
+    "organizeMeetup": {
+      "title": "Organize an co-learning meetup",
+      "description": "A co-learning meetup is an event aimed at everyone who’s learning to code, develop software, or anything tech-related. This includes both absolute beginners as well as developers who want to acquire new tech skills and get into passionate conversations about it. After all: lifelong, we are all learners!",
+      "description2": "The other purpose of this event is to help build a community around OTS and keep its members engaged, offering a regular event as reference meeting point for learners who want to ask questions or present their latest projects, coaches willing to offer their skills by joining the event’s discussions, and anyone interested in participating in a skill exchange.",
+      "previousChapters": "Learn from previous chapters in your city. What has worked, what didn't?",
+      "agreement": "Make sure the event and its idea is in agreement with our",
+      "values": "values",
+      "inParticular": "In particular:",
+      "valuesBullet": "even though your event may be targeting a certain group of people, it needs to be as open and inclusive as possible",
+      "valuesBullet2": "you have to make sure that the event is enjoyable/accessible at a beginner’s level",
+      "valuesBullet3": "always remember that the Co-learning Meetup ought to give beginners the chance to learn, (hopefully) get answers to their questions, and present what they have created or discovered",
+      "valuesBullet4": "you are responsible for creating a welcoming learning environment, where learners are encouraged to ask questions and nothing is assumed to be “self-explanatory.” State this explicitly at the beginning of the meetup, to embolden the shy people and so everyone attending can help you create this environment."
+    },
+    "newChapter": {
+      "title": "How to start OpenTechSchool in my city",
+      "intro": "We won’t lie to you: starting something is always hard. This might not only be hard, but also very frustrating at times. This guide is here for you. You can also contact us when you get stuck and we’ll see how we can help you.",
+      "teamingUpHeadline": "Teaming up",
+      "teamingUp": "Get a team together. Make sure you have people that are:",
+      "bullet1": "excited about organizing tech events",
+      "bullet2": "already organizing (or organized) some tech events (e.g. meetups, usergroups)",
+      "bullet3": "know how to code and is enthusiast about coaching at a beginner level",
+      "connect": "Something very helpful in getting people to get in touch with each other. OTS can help you out! We already have a Slack where you can get connected.",
+      "social": "Social networks are a great tool to promote your events and get in touch with more tech enthusiasts every day. OTS has its own (global) Facebook and Twitter profiles and in addition to this, we’ll provide a localized OTS Twitter account for your city.",
+      "previousChapters": "Also keep in mind that there might has been a chapter in your city before. It's best to reach out to them and learn about what went well and what didn't. OpenTechSchool can provide you with a list of previous chapters and contacts.",
+      "planningMeetup": {
+        "title": "Planning the meetup",
+        "findOrganizers": "Find co-organizers",
+        "notAlone": "Always more fun to not do it alone.",
+        "venue": {
+          "title": "Find a venue",
+          "description": "We suggest trying to get in contact with coworking spaces, hacker spaces, and start-ups that might want to offer their office for an OTS event. Any space that would make a good fit with the OTS network and spirit."
+        },
+        "date": {
+          "title": "Find a date",
+          "findDate": "We suggest picking a weeknight (optimally, Tuesday - Friday), starting no later than 19:30 and going on no longer than two hours (break included). Ideally, you would already plan to have the meetup monthly, but this is not mandatory."
+        },
+        "attendees": {
+          "title": "Find attendees",
+          "description": "Find attendees. We can help! If it doesn’t already exist, we will set up an OTS Meetup account for your city (e.g. meetup.com/opentechschool-yourcity) and you’ll be able to use it to communicate about the meetup and have people join the event.",
+          "description2": "Furthermore, we’ll promote the event page through our social media channels, mailing lists, user groups, and communities. Of course we also need you to spread the word and get people to join!"
+        }
+      },
+      "atMeetup": {
+        "title": "At the meetup",
+        "description": "Be sure to get to the venue at least one hour in advance and with at least another co-organizer, in order to set up the space and the projector, put signs up outside, as well as meet the speakers in advance.",
+        "description2": "Have a member of the OTS team moderate the event. When everybody is sitting, they should do a quick introduction covering:",
+        "bullet": "what is OTS?",
+        "bullet2": "what is the Learners Meetup?",
+        "bullet3": "explain that the event is meant to be especially welcoming for beginners",
+        "bullet4": "the meetup’s format and timetable",
+        "bullet5": "point out the other organizers and coaches",
+        "bullet6": "point out projects",
+        "readMore": "Read more on",
+        "readMore2": "organizing a meetup"
+      }
+    }
   },
   "city": {
     "eventsTitle": "Upcoming Events"
@@ -253,6 +332,7 @@
     "coreValues": "Core values",
     "moreContent": "More",
     "codeOfConduct": "Code of Conduct",
+    "guides": "Guides",
     "coachingGuidelines": "Coaching guidelines",
     "imprint": "Imprint",
     "createCommons": "Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License."
