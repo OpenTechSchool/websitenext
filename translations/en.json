@@ -307,6 +307,10 @@
         "bullet6": "point out projects",
         "readMore": "Read more on",
         "readMore2": "organizing a meetup"
+      },
+      "inactiveChapters": {
+        "title": "Inactive chapters",
+        "description": "Check out if someone has already started a meetup in your city in the past that has gone inactive. You'll find some contact information on the city page. Maybe you can team up and revive the meetup!"
       }
     }
   },

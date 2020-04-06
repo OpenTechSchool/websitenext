@@ -200,7 +200,10 @@ export const Index: NextPage = () => {
       </TextSection>
 
       <TextSection title={t('chapter.title')} anchor='find-events'>
-        <ChapterSection />
+        <ChapterSection
+          title={t('chapter.active')}
+          hideInactiveChapters={true}
+        />
 
         <h4 className='chapter-events' id='events'>
           {t('chapter.events')}

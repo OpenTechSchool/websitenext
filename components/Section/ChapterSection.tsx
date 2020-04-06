@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import matter from 'gray-matter'
 import Grid from '@material-ui/core/Grid'
+import PropTypes from 'prop-types'
 import useTranslation from '../../hooks/useTranslation'
 import { mediaquery } from '../../style/style'
 
@@ -19,17 +20,23 @@ export const cities = (ctx => {
   return data
 })(require.context(`../../data/cities/en`, true, /\.md$/))
 
-export default function ChapterSection() {
-  const { locale, t } = useTranslation()
+export default function ChapterSection({
+  title,
+  hideActiveChapters,
+  hideInactiveChapters,
+}) {
+  const { locale } = useTranslation()
 
   return (
     <div className='chaptersWrapper'>
-      <h4>{t('chapter.active')}</h4>
-
+      {title ? <h4>{title}</h4> : ''}
       <Grid container justify='space-around'>
         {cities &&
           cities.map(({ cityContent: { data } }, i) => {
-            if (!data.is_inactive)
+            if (
+              (hideInactiveChapters && !data.is_inactive) ||
+              (hideActiveChapters && data.is_inactive)
+            )
               return (
                 <Grid item key={i}>
                   <div className='chapter'>
@@ -97,4 +104,10 @@ export default function ChapterSection() {
       `}</style>
     </div>
   )
+}
+
+ChapterSection.propTypes = {
+  title: PropTypes.string,
+  hideActiveChapters: PropTypes.bool,
+  hideInactiveChapters: PropTypes.bool,
 }

@@ -8,6 +8,7 @@ import WithLocale from '../../containers/withLocale'
 import TextSection from '../../components/Section/TextSection'
 import Button from '../../components/Button/Button'
 import ContactSection from '../../components/Section/ContactSection'
+import ChapterSection from '../../components/Section/ChapterSection'
 
 const Guides: NextPage = () => {
   const { t, locale } = useTranslation()
@@ -190,6 +191,11 @@ const Guides: NextPage = () => {
             >
               {t('guides.newChapter.atMeetup.readMore2')}
             </Link>
+          </Grid>
+          <Grid item xs={12}>
+            <h2>{t('guides.newChapter.inactiveChapters.title')}</h2>
+            <p>{t('guides.newChapter.inactiveChapters.description')}</p>
+            <ChapterSection hideActiveChapters={true} />
           </Grid>
         </Grid>
       </TextSection>
