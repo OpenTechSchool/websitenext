@@ -153,12 +153,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href={`/[lang]/guides`} as={`/${locale}/guides`}>
-                  <a>{t('footer.guides')}</a>
-                </Link>
-              </li>
-              <li>
-                <Link href={`/[lang]/guides`} as={`/${locale}/guides`}>
-                  <a>{t('footer.guides')}</a>
+                  <a className='invert'>{t('footer.guides')}</a>
                 </Link>
               </li>
               <li>
