@@ -32,12 +32,14 @@ export default function ChapterSection() {
             if (!data.is_inactive)
               return (
                 <Grid item key={i}>
-                  <Link
-                    href={`/[lang]/city/[slug]`}
-                    as={`/${locale}/city/${data.slug}`}
-                  >
-                    <a className='city'>{data.title}</a>
-                  </Link>
+                  <div className='chapter'>
+                    <Link
+                      href={`/[lang]/city/[slug]`}
+                      as={`/${locale}/city/${data.slug}`}
+                    >
+                      <a className='highlight'>{data.title}</a>
+                    </Link>
+                  </div>
                 </Grid>
               )
           })}
@@ -49,19 +51,17 @@ export default function ChapterSection() {
           margin: 0 auto;
         }
 
-        .city {
-          color: var(--pink);
+        .highlight {
           text-transform: uppercase;
           font-family: var(--primaryFont);
           font-weight: 600;
           font-size: 20px;
-          padding: 0 8px;
-          margin-bottom: 20px;
           display: inline-block;
         }
 
-        .city:hover {
-          color: var(--mainBlue);
+        .chapter {
+          padding: 0 8px;
+          height: 50px;
         }
 
         h4 {
@@ -85,9 +85,12 @@ export default function ChapterSection() {
             margin: 0;
           }
 
-          .city {
-            font-size: 24px;
+          .chapter {
             padding: 0 12px;
+          }
+
+          .highlight {
+            font-size: 24px;
             display: inline;
           }
         }

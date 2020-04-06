@@ -53,17 +53,29 @@ export default css.global`
   }
   a {
     text-decoration: none;
-    transition: opacity 0.2s ease;
     color: var(--mainBlue);
     font-weight: bold;
     cursor: pointer;
   }
   a:hover {
-    opacity: 1;
-    text-decoration-color: inherit;
+    border-bottom: 2px solid var(--mainBlue);
+  }
+  a.highlight {
+    color: var(--pink);
+  }
+  a.highlight:hover {
+    border-bottom: 2px solid var(--pink);
   }
   a.invert {
-    color: var(--pink);
+    color: white;
+  }
+  a.invert:hover {
+    border-bottom: 2px solid white;
+  }
+  a.icon:hover,
+  a.logo:hover,
+  a.button:hover {
+    border-bottom: none;
   }
   strong,
   b {

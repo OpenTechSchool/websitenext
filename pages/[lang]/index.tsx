@@ -141,7 +141,13 @@ export const Index: NextPage = () => {
               </div>
               <h3>{t('homepage.waysToJoin.learner.title')}</h3>
               <p>{t('homepage.waysToJoin.learner.description')}</p>
-              <Button href=''>{t('homepage.waysToJoin.learner.cta')}</Button>
+              <Button>
+                <Link href={`/[lang]/community`} as={`/${locale}/community`}>
+                  <a className='invert button'>
+                    {t('homepage.waysToJoin.learner.cta')}
+                  </a>
+                </Link>
+              </Button>
             </div>
           </Grid>
           <Grid item xs={12} md={4}>
@@ -155,7 +161,16 @@ export const Index: NextPage = () => {
               </div>
               <h3>{t('homepage.waysToJoin.support.title')}</h3>
               <p>{t('homepage.waysToJoin.support.description')}</p>
-              <Button href=''>{t('homepage.waysToJoin.support.cta')}</Button>
+              <Button>
+                <Link
+                  href={`/contribute#supporter`}
+                  as={`/${locale}/contribute#supporter`}
+                >
+                  <a className='invert button'>
+                    {t('homepage.waysToJoin.support.cta')}
+                  </a>
+                </Link>
+              </Button>
             </div>
           </Grid>
           <Grid item xs={12} md={4}>
@@ -169,7 +184,16 @@ export const Index: NextPage = () => {
               </div>
               <h3>{t('homepage.waysToJoin.coach.title')}</h3>
               <p>{t('homepage.waysToJoin.coach.description')}</p>
-              <Button href=''>{t('homepage.waysToJoin.coach.cta')}</Button>
+              <Button>
+                <Link
+                  href={`/contribute#volunteering`}
+                  as={`/${locale}/contribute#volunteering`}
+                >
+                  <a className='invert button'>
+                    {t('homepage.waysToJoin.coach.cta')}
+                  </a>
+                </Link>
+              </Button>
             </div>
           </Grid>
         </Grid>
@@ -182,7 +206,6 @@ export const Index: NextPage = () => {
           {t('chapter.events')}
         </h4>
         <Events
-          title={t('city.suggestEvent')}
           events={events}
           isLoading={isLoading}
           hasEvents={hasEvents}

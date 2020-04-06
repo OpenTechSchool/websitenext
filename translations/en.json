@@ -12,12 +12,12 @@
       "title": "The OTS initiative",
       "description": "OpenTechSchool is a movement aiming to offer free tech education.",
       "description2": "Volunteers all around Europe organizing welcoming and inclusive code learning happenings around the year. The meetups bring people together and provides a space for hands-on learning.",
-      "learnMore": "More about OpenTechSchool ..."
+      "learnMore": "Learn more about OpenTechSchool"
     },
     "otsCommunity": {
       "title": "Your local community",
       "description": "Meet other learners at weekly meetups in your city. Bring your projects, questions and positive attitude. Get the chance to meet people with different experience levels and backgrounds. This is the place to get support, learn together and connect.",
-      "learnMore": "More about the community ..."
+      "learnMore": "Read more about OTS community"
     },
     "waysToJoin": {
       "title": "Ways to join us",
@@ -228,8 +228,7 @@
     "siteDescription": "OpenTechSchool Guide"
   },
   "city": {
-    "eventsTitle": "Upcoming Events",
-    "suggestEvent": "Suggest One!"
+    "eventsTitle": "Upcoming Events"
   },
   "twitterfeed": {
     "tweetsFrom": "by"

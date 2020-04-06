@@ -21,7 +21,7 @@ function Event({ event }) {
           <div className='info'>
             <div className='eventName'>{name}</div>
             <div className='venue'>
-              {venue && `${venue.name} - ${venue.city}`}
+              {venue && `${venue.name} ${venue.city ? ' - ' + venue.city : ''}`}
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ Event.propTypes = {
     local_time: PropTypes.string.isRequired,
     venue: PropTypes.shape({
       name: PropTypes.string.isRequired,
-      city: PropTypes.string.isRequired,
+      city: PropTypes.string,
     }),
   }).isRequired,
 }

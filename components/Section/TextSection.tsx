@@ -32,7 +32,9 @@ export default function TextSection({
           margin-left: 20px;
         }
 
-        .iconCenter :global(span) {
+        .icon-center :global(span) {
+          display: block;
+          margin: 0 auto;
           font-size: 50px;
           margin-top: 20px;
         }
@@ -83,7 +85,6 @@ export default function TextSection({
 
         .pink :global(a) {
           color: white;
-          text-decoration: underline;
         }
 
         .grey {

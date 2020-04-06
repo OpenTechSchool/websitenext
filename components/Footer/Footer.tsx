@@ -18,7 +18,7 @@ export default function Footer() {
                   href={`/[lang]#find-events`}
                   as={`/${locale}#find-events`}
                 >
-                  <a>{t('footer.joinMeetup')}</a>
+                  <a className='invert'>{t('footer.joinMeetup')}</a>
                 </Link>
               </li>
               <li>
@@ -26,7 +26,7 @@ export default function Footer() {
                   href={`/[lang]/guides#organize-meetup`}
                   as={`/${locale}/guides#organize-meetup`}
                 >
-                  <a>{t('footer.organizeEvent')}</a>
+                  <a className='invert'>{t('footer.organizeEvent')}</a>
                 </Link>
               </li>
               <li>
@@ -34,7 +34,7 @@ export default function Footer() {
                   href={`/[lang]/guides#start-chapter`}
                   as={`/${locale}/guides#start-chapter`}
                 >
-                  <a>{t('footer.startChapter')}</a>
+                  <a className='invert'>{t('footer.startChapter')}</a>
                 </Link>
               </li>
               <li>
@@ -43,7 +43,7 @@ export default function Footer() {
                   as={`/${locale}/contribute#supporter`}
                   scroll={false}
                 >
-                  <a>{t('footer.becomeSupporter')}</a>
+                  <a className='invert'>{t('footer.becomeSupporter')}</a>
                 </Link>
               </li>
             </ul>
@@ -56,6 +56,7 @@ export default function Footer() {
                   href='https://twitter.com/opentechschool'
                   target='_blank'
                   rel='noopener noreferrer'
+                  className='invert'
                 >
                   Twitter
                 </a>
@@ -65,6 +66,7 @@ export default function Footer() {
                   href='https://www.facebook.com/OpenTechSchool'
                   target='_blank'
                   rel='noopener noreferrer'
+                  className='invert'
                 >
                   Facebook
                 </a>
@@ -74,6 +76,7 @@ export default function Footer() {
                   href='https://www.meetup.com/find/?allMeetups=true&keywords=opentechschool&radius=Infinity&sort=default'
                   target='_blank'
                   rel='noopener noreferrer'
+                  className='invert'
                 >
                   Meetup
                 </a>
@@ -83,6 +86,7 @@ export default function Footer() {
                   href='https://github.com/OpenTechSchool/'
                   target='_blank'
                   rel='noopener noreferrer'
+                  className='invert'
                 >
                   GitHub
                 </a>
@@ -92,6 +96,7 @@ export default function Footer() {
                   href='https://discourse.opentechschool.org/'
                   target='_blank'
                   rel='noopener noreferrer'
+                  className='invert'
                 >
                   Discourse
                 </a>
@@ -106,7 +111,7 @@ export default function Footer() {
                   href={`/[lang]/about#history`}
                   as={`/${locale}/about#history`}
                 >
-                  <a>{t('footer.history')}</a>
+                  <a className='invert'>{t('footer.history')}</a>
                 </Link>
               </li>
               <li>
@@ -114,7 +119,7 @@ export default function Footer() {
                   href={`/[lang]/about#foundation`}
                   as={`/${locale}/about#foundation`}
                 >
-                  <a>{t('footer.foundation')}</a>
+                  <a className='invert'>{t('footer.foundation')}</a>
                 </Link>
               </li>
               <li>
@@ -122,7 +127,7 @@ export default function Footer() {
                   href={`/[lang]/about#core-values`}
                   as={`/${locale}/about#core-values`}
                 >
-                  <a>{t('footer.coreValues')}</a>
+                  <a className='invert'>{t('footer.coreValues')}</a>
                 </Link>
               </li>
             </ul>
@@ -135,7 +140,7 @@ export default function Footer() {
                   href={`/[lang]/codeOfConduct`}
                   as={`/${locale}/codeOfConduct`}
                 >
-                  <a>{t('footer.codeOfConduct')}</a>
+                  <a className='invert'>{t('footer.codeOfConduct')}</a>
                 </Link>
               </li>
               <li>
@@ -143,12 +148,12 @@ export default function Footer() {
                   href={`/[lang]/guides#coaching-guidelines`}
                   as={`/${locale}/guides#coaching-guidelines`}
                 >
-                  <a>{t('footer.coachingGuidelines')}</a>
+                  <a className='invert'>{t('footer.coachingGuidelines')}</a>
                 </Link>
               </li>
               <li>
                 <Link href={`/[lang]/imprint`} as={`/${locale}/imprint`}>
-                  <a>{t('footer.imprint')}</a>
+                  <a className='invert'>{t('footer.imprint')}</a>
                 </Link>
               </li>
             </ul>
@@ -176,17 +181,12 @@ export default function Footer() {
           color: #fff;
         }
 
-        h4,
-        a {
+        h4 {
           color: #fff;
         }
 
         a {
           font-weight: normal;
-        }
-
-        a:hover {
-          border-bottom: 2px solid #fff;
         }
 
         .license {

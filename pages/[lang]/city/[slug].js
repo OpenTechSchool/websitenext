@@ -133,7 +133,6 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
         icon='event'
       >
         <Events
-          title={t('city.suggestEvent')}
           events={events}
           isLoading={isLoading}
           hasEvents={hasEvents}

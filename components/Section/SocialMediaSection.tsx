@@ -19,6 +19,7 @@ export default function SocialMediaSection({ bgColor = '' }) {
             href='https://www.facebook.com/OpenTechSchool'
             target='_blank'
             rel='noopener noreferrer'
+            className='icon'
           >
             <FacebookIcon style={iconStyle} />
           </a>
@@ -28,6 +29,7 @@ export default function SocialMediaSection({ bgColor = '' }) {
             href='https://twitter.com/OpenTechSchool'
             target='_blank'
             rel='noopener noreferrer'
+            className='icon'
           >
             <TwitterIcon style={iconStyle} />
           </a>
@@ -37,6 +39,7 @@ export default function SocialMediaSection({ bgColor = '' }) {
             href='https://github.com/OpenTechSchool'
             target='_blank'
             rel='noopener noreferrer'
+            className='icon'
           >
             <GitHubIcon style={iconStyle} />
           </a>

@@ -62,7 +62,7 @@ const Community: NextPage = () => {
           href={`/[lang]/about#core-values`}
           as={`/${locale}/about#core-values`}
         >
-          <a>{t('community.readCommunityValues')}</a>
+          <a className='invert'>{t('community.readCommunityValues')}</a>
         </Link>
       </TextSection>
 
@@ -77,7 +77,6 @@ const Community: NextPage = () => {
       <TextSection classname='grey' title={t('community.getInvolved.title')}>
         <Grid container justify='space-between' spacing={10}>
           <Grid item xs={12} md={4}>
-            <div className='placeholder-sm'></div>
             <h3>{t('community.getInvolved.learner.title')}</h3>
             <p>
               {t('community.getInvolved.learner.description')}
@@ -89,7 +88,6 @@ const Community: NextPage = () => {
             </p>
           </Grid>
           <Grid item xs={12} md={4}>
-            <div className='placeholder-sm'></div>
             <h3>{t('community.getInvolved.coach.title')}</h3>
             <p>
               {t('community.getInvolved.coach.description')}
@@ -104,7 +102,6 @@ const Community: NextPage = () => {
             </p>
           </Grid>
           <Grid item xs={12} md={4}>
-            <div className='placeholder-sm'></div>
             <h3>{t('community.getInvolved.organizer.title')}</h3>
             <p>
               {t('community.getInvolved.organizer.description')}

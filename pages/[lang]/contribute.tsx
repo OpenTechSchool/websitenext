@@ -37,7 +37,11 @@ const Community: NextPage = () => {
         </Grid>
       </TextSection>
 
-      <TextSection title={t('contribute.volunteering.title')} classname='grey'>
+      <TextSection
+        title={t('contribute.volunteering.title')}
+        classname='grey'
+        anchor='volunteering'
+      >
         <Grid container justify='space-around'>
           <Grid item xs={12} md={5}>
             <p className='getInTouch'>
@@ -109,12 +113,12 @@ const Community: NextPage = () => {
               .
             </p>
             <p>
-              {t('contribute.supporter.membership')}
+              {t('contribute.supporter.membership')}{' '}
               <Link
                 href={`/[lang]/about#membership`}
                 as={`/${locale}/about#membership`}
               >
-                <a> {t('contribute.supporter.readMore')}</a>
+                <a>{t('contribute.supporter.readMore')}</a>
               </Link>
               .
             </p>
