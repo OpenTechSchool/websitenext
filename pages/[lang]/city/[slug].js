@@ -10,7 +10,7 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import useTranslation from '../../../hooks/useTranslation'
 import WithLocale from '../../../containers/withLocale'
-import LocalSwitcher from '../../../components/LocalSwitcher/LocalSwitcher'
+// import LocalSwitcher from '../../../components/LocalSwitcher/LocalSwitcher'
 import CityLayout from '../../../components/CityLayout/CityLayout'
 import CityHero from '../../../components/CityHero/CityHero'
 import TextSection from '../../../components/Section/TextSection'
@@ -79,9 +79,9 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
         meetupName={frontmatter.meetup_name}
         credits={frontmatter.credits}
       />
-      <section>
+      {/* <section>
         <LocalSwitcher />
-      </section>
+      </section> */}
       <TextSection classname='default'>
         <Grid
           container

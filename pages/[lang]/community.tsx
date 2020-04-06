@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import Link from 'next/link'
 import PageLayout from '../../components/PageLayout/PageLayout'
 import ChapterSection from '../../components/Section/ChapterSection'
-import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
+// import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
 import TextSection from '../../components/Section/TextSection'
@@ -17,9 +17,9 @@ const Community: NextPage = () => {
       siteTitle={t('community.siteTitle')}
       siteDescription={t('community.siteDescription')}
     >
-      <section>
+      {/* <section>
         <LocalSwitcher />
-      </section>
+      </section> */}
 
       <TextSection title='Community'>
         <Grid container justify='center' alignItems='center'>
