@@ -34,6 +34,7 @@ module.exports = {
     'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
     'react/prop-types': 1,
     'no-unused-vars': 1,
+    'no-prototype-builtins': 0,
     'jsx-a11y/anchor-is-valid': 0,
     '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/member-delimiter-style': 0,

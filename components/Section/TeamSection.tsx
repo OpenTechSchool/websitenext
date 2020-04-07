@@ -42,6 +42,10 @@ const TeamSection = ({ frontmatter }) => {
         .team-members :global(.row:last-child) {
           margin-bottom: 0;
         }
+
+        .team-members :global(.member-title) {
+          text-align: center;
+        }
       `}</style>
     </TextSection>
   )

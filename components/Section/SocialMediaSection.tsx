@@ -36,6 +36,21 @@ export default function SocialMediaSection({ bgColor = '' }) {
         </Grid>
         <Grid item xs={4} md={1}>
           <a
+            href='http://discourse.opentechschool.org/'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='icon'
+          >
+            <img
+              src='/discourse_blue_icon.png'
+              style={iconStyle}
+              alt='discourse'
+              className='iconImg'
+            />
+          </a>
+        </Grid>
+        <Grid item xs={4} md={1}>
+          <a
             href='https://github.com/OpenTechSchool'
             target='_blank'
             rel='noopener noreferrer'
@@ -52,6 +67,11 @@ export default function SocialMediaSection({ bgColor = '' }) {
 
         .with-bgColor {
           color: white;
+        }
+
+        .iconImg {
+          width: 50px;
+          margin: 0 auto;
         }
       `}</style>
     </TextSection>

@@ -5,6 +5,8 @@ location: 'Brussels, Belgium'
 tagline: 'Where knowledge is brewed'
 discourse_group: TeamBrussels
 meetup_name: OpenTechSchool-Brussels
+twitter: false
+socials: false
 ---
 
 ## About

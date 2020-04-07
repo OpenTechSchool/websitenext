@@ -13,7 +13,7 @@ socials:
 members:
   - christina: Christina
   - daniel: Daniel
-  - krissi: Krissi
+  - kriss: Krissi
   - norma: Norma
 ---
 
