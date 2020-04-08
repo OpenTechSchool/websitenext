@@ -8,10 +8,14 @@
   "homepage": {
     "siteTitle": "OpenTechSchool",
     "siteDescription": "OpenTechSchool",
+    "masthead": {
+      "title": "Free tech education",
+      "subtitle": "OpenTechSchool is a movement aiming to offer free tech education."
+    },
     "otsInitiative": {
       "title": "The OTS initiative",
       "description": "OpenTechSchool is a movement aiming to offer free tech education.",
-      "description2": "Volunteers all around Europe organizing welcoming and inclusive code learning happenings around the year. The meetups bring people together and provides a space for hands-on learning.",
+      "description2": "Volunteers all around Europe organizing welcoming and inclusive code learnings happenings with real people in the real world. \n We offer free tech workshops with learning material and in-person learning support. \n People of all genders, backgrounds, levels, ages come together to learn, to coach or to organize in a cozy and including space provided for hands-on learning.",
       "learnMore": "Learn more about OpenTechSchool"
     },
     "otsCommunity": {
@@ -111,7 +115,7 @@
     "policy": {
       "title": "Our Licensing Policy",
       "description": "In correspondence with our values we release all learning materials, blueprints and any other kind of content under the",
-      "description2": "As long as you attribute the work to the OpenTechSchool (usually by mentioning such and providing the link to the original material) and share it under the same licence again, you are free to use, share, copy and modify it - even in a commercial context.",
+      "description2": "As long as you attribute the work to OpenTechSchool (usually by mentioning such and providing the link to the original material) and share it under the same licence again, you are free to use, share, copy and modify it - even in a commercial context.",
       "link": "Creative Commons Attribution-ShareAlike 3.0 Unported License:"
     },
     "foundation": {
@@ -219,7 +223,7 @@
       "description": "If you like what OpenTechSchool is doing, but you can't volunteer, there are other ways to support the initiative.",
       "sponsor": "Maybe you have a space to offer or you want to sponsor the next event. If you are interested in a cooperation please",
       "getInTouch": "get in touch",
-      "membership": "Another way to support the OpenTechSchool is to become a member of the foundation. By becoming a member you're actively supporting the community with your membership fees.",
+      "membership": "Another way to support OpenTechSchool is to become a member of the foundation. By becoming a member you're actively supporting the community with your membership fees.",
       "readMore": "Read more about a membership"
     }
   },

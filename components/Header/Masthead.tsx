@@ -2,11 +2,13 @@ import Grid from '@material-ui/core/Grid'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Squid from '../Svg/OtsSquid'
 import Wave from '../Svg/Wave'
+import useTranslation from '../../hooks/useTranslation'
 
 import { mediaquery } from '../../style/style'
 
 export function Masthead() {
   const showIllustration = useMediaQuery(`(min-width: 960px)`)
+  const { t } = useTranslation()
 
   return (
     <div className='masthead'>
@@ -14,11 +16,8 @@ export function Masthead() {
         <div className='content-wrapper'>
           <Grid container justify='space-between'>
             <Grid item xs={12} md={4}>
-              <h1>Free tech education</h1>
-              <p>
-                The OpenTechSchool is a movement aiming to offer free tech
-                education.
-              </p>
+              <h1>{t('homepage.masthead.title')}</h1>
+              <p>{t('homepage.masthead.subtitle')}</p>
             </Grid>
           </Grid>
         </div>
