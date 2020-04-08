@@ -14,6 +14,42 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
           name='Description'
           content={noTranslation ? siteDescription : t(siteDescription)}
         ></meta>
+        <meta
+          property='og:title'
+          content={noTranslation ? siteTitle : t(siteTitle)}
+        />
+        <meta property='fb:admins' content='825782113' />
+        <meta
+          property='og:image'
+          content='/sharing-images/facebook-sharing.jpg'
+        />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@OpenTechSchool' />
+        <meta
+          name='twitter:title'
+          content={noTranslation ? siteTitle : t(siteTitle)}
+        />
+        <meta
+          name='twitter:description'
+          content={noTranslation ? siteDescription : t(siteDescription)}
+        />
+        <meta
+          name='twitter:image'
+          content='/sharing-images/twitter-sharing.jpg'
+        />
+        <link rel='shortcut icon' href='/favicon.ico' />
+        <link
+          rel='icon'
+          type='image/png'
+          href='/favicon-32.png'
+          sizes='32x32'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          href='/favicon-96.png'
+          sizes='96x96'
+        />
         <link
           rel='stylesheet'
           href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'

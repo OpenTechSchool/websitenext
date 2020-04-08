@@ -7,7 +7,7 @@
   },
   "homepage": {
     "siteTitle": "OpenTechSchool",
-    "siteDescription": "OpenTechSchool",
+    "siteDescription": "OpenTechSchool is a movement aiming to offer free tech education.",
     "masthead": {
       "title": "Free tech education",
       "subtitle": "OpenTechSchool is a movement aiming to offer free tech education."
@@ -139,7 +139,7 @@
   },
   "community": {
     "siteTitle": "Join the OpenTechSchool Community",
-    "siteDescription": "Joing the OpenTechSchool Community",
+    "siteDescription": "Join the OpenTechSchool Community",
     "description": "The OTS community is a group of tech-enthusiast, that like to learn and teach coding in a friendly environment.",
     "description2": "Tired of learning by yourself? We offer free local meetups, where learners with different experience levels can join, exchange knowledge, coach and motivate each other.",
     "readCommunityValues": "Read more about our community values",
@@ -193,7 +193,7 @@
   },
   "contribute": {
     "siteTitle": "OpenTechSchool Contribute",
-    "siteDescription": "OpenTechSchool Contribute",
+    "siteDescription": "How to contribute to OpenTechSchool",
     "contribute": {
       "title": "Contribute",
       "description": "Thanks to the work of many volunteers OpenTechSchool is able to offer free tech education to a wide range of learners. Volunteers contribute their time and share their knowledge to make OTS events a place where everyone can learn, connect and grow.",
