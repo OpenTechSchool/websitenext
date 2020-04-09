@@ -6,7 +6,7 @@ tagline: 'Your beginners friendly tech community in Zurich'
 meetup_name: opentechschool-zurich
 socials:
   - github: https://github.com/opentechschool-zurich/
-  - matrix: #ots-zh:matrix.org
+  - matrix: https://matrix.to/#/#ots-zh:matrix.org
 members:
   - ale: Ale Rimoldi
 ---

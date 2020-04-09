@@ -23,6 +23,7 @@ const socialIconsList = {
   twitter: <TwitterIcon />,
   github: <GitHubIcon />,
   discourse: { imgSrc: '/discourse_blue_icon.png' },
+  matrix: { imgSrc: '/matrix_logo.png' },
 }
 
 const WrappedIcon = props => <Icon {...props} />
@@ -110,6 +111,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
                       iconName.charAt(0).toUpperCase()
                     ) : socialIconsList[iconName].hasOwnProperty('imgSrc') ? (
                       <img
+                        className='social-img'
                         src={socialIconsList[iconName].imgSrc}
                         alt={socialIconsList[iconName]}
                       />
@@ -178,6 +180,11 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
 
         .social-link:hover {
           border-bottom: 0;
+        }
+
+        .social-img {
+          position: relative;
+          top: 10px;
         }
 
         .credits {
