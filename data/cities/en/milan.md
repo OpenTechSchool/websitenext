@@ -1,4 +1,5 @@
 ---
+is_inactive: true
 slug: milan
 title: Milan
 location: 'Milan, Italy'

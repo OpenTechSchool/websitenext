@@ -22,6 +22,8 @@ const socialIconsList = {
   facebook: <FacebookIcon />,
   twitter: <TwitterIcon />,
   github: <GitHubIcon />,
+  discourse: { imgSrc: '/discourse_blue_icon.png' },
+  matrix: { imgSrc: '/matrix_logo.png' },
 }
 
 const WrappedIcon = props => <Icon {...props} />
@@ -93,7 +95,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
             <div className='markdown'>
               <ReactMarkdown source={markdownBody} escapeHtml={false} />
             </div>
-            {frontmatter.socials.length !== 0 &&
+            {frontmatter.socials &&
               frontmatter.socials.map(social => {
                 const iconName = Object.keys(social)[0]
                 const link = social[iconName]
@@ -105,14 +107,24 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
                     key={iconName}
                     className='social-link'
                   >
-                    <WrappedIcon
-                      style={{
-                        color: 'var(--mainBlue)',
-                        transform: `scale(1.6)`,
-                      }}
-                    >
-                      {socialIconsList[iconName]}
-                    </WrappedIcon>
+                    {!socialIconsList[iconName] ? (
+                      iconName.charAt(0).toUpperCase()
+                    ) : socialIconsList[iconName].hasOwnProperty('imgSrc') ? (
+                      <img
+                        className='social-img'
+                        src={socialIconsList[iconName].imgSrc}
+                        alt={socialIconsList[iconName]}
+                      />
+                    ) : (
+                      <WrappedIcon
+                        style={{
+                          color: 'var(--mainBlue)',
+                          transform: `scale(1.6)`,
+                        }}
+                      >
+                        {socialIconsList[iconName]}
+                      </WrappedIcon>
+                    )}
                   </a>
                 )
               })}
@@ -164,6 +176,15 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
           height: 33px;
           margin-right: 12px;
           margin-top: 12px;
+        }
+
+        .social-link:hover {
+          border-bottom: 0;
+        }
+
+        .social-img {
+          position: relative;
+          top: 10px;
         }
 
         .credits {

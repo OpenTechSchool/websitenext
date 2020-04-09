@@ -5,6 +5,13 @@ location: 'Bristol, UK'
 tagline: 'The start of a great adventure'
 meetup_name: CodeHub-Bristol
 twitter: CodeHubBs
+socials:
+  - twitter: https://twitter.com/CodeHubBs
+members:
+  - katja: Katja Durrani
+  - gicela: Gicela Morales
+  - rob: Robert Thumpston
+  - carl: Carl Sargunar
 ---
 
 ## About

@@ -6,7 +6,7 @@ tagline: 'Your beginners friendly tech community in Zurich'
 meetup_name: opentechschool-zurich
 socials:
   - github: https://github.com/opentechschool-zurich/
-  - matrix: #ots-zh:matrix.org
+  - matrix: https://matrix.to/#/#ots-zh:matrix.org
 members:
   - ale: Ale Rimoldi
 ---
@@ -30,4 +30,3 @@ A big thanks to [Liip](https://liip.ch) for sponsoring the event space.
 ## Contact
 
 You can send us an [email](mailto:team.zurich@opentechschool.org) or join us in [Matrix/Riot.im](https://riot.im/app/#/room/!QfxBFKxPagVsgBPhpa:matrix.org?via=matrix.org) (channel: #ots-zh:matrix.org / opentechschool-zurich).
-

@@ -1,4 +1,5 @@
 ---
+is_inactive: true
 slug: hamburg
 title: Hamburg
 location: 'Hamburg, Germany'
