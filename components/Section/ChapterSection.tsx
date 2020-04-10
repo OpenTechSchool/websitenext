@@ -34,8 +34,8 @@ export default function ChapterSection() {
                 <Grid item key={i}>
                   <div className='chapter'>
                     <Link
-                      href={`/[lang]/city/[slug]`}
-                      as={`/${locale}/city/${data.slug}`}
+                      href={`/[lang]/cities/[slug]`}
+                      as={`/${locale}/cities/${data.slug}`}
                     >
                       <a className='highlight'>{data.title}</a>
                     </Link>
