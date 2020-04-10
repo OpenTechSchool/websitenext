@@ -40,7 +40,7 @@ export default function ChapterSection({
               return (
                 <Grid item key={i}>
                   <div className='chapter'>
-                    {data.is_active ? (
+                    {!data.is_inactive ? (
                       <Link
                         href={`/[lang]/cities/[slug]`}
                         as={`/${locale}/cities/${data.slug}`}
