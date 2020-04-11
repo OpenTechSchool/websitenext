@@ -1,13 +1,13 @@
 import Grid from '@material-ui/core/Grid'
 import { NextPage } from 'next'
 import Link from 'next/link'
-import PageLayout from '../../components/PageLayout/PageLayout'
-import ChapterSection from '../../components/Section/ChapterSection'
-// import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
-import useTranslation from '../../hooks/useTranslation'
-import WithLocale from '../../containers/withLocale'
-import TextSection from '../../components/Section/TextSection'
-import ContactSection from '../../components/Section/ContactSection'
+import PageLayout from '../components/PageLayout/PageLayout'
+import ChapterSection from '../components/Section/ChapterSection'
+// import LocalSwitcher from '../components/LocalSwitcher/LocalSwitcher'
+import useTranslation from '../hooks/useTranslation'
+import WithLocale from '../containers/withLocale'
+import TextSection from '../components/Section/TextSection'
+import ContactSection from '../components/Section/ContactSection'
 
 const Community: NextPage = () => {
   const { t, locale } = useTranslation()
@@ -58,10 +58,7 @@ const Community: NextPage = () => {
         </Grid>
         <br />
         <br />
-        <Link
-          href={`/[lang]/about#core-values`}
-          as={`/${locale}/about#core-values`}
-        >
+        <Link href={`/about#core-values`}>
           <a className='invert'>{t('community.readCommunityValues')}</a>
         </Link>
       </TextSection>
@@ -69,7 +66,7 @@ const Community: NextPage = () => {
       <TextSection title={t('community.codeOfConduct.title')}>
         <p>{t('community.codeOfConduct.description')}</p>
         <p>{t('community.codeOfConduct.description2')}</p>
-        <Link href={`/[lang]/code-of-conduct`} as={`/${locale}/code-of-conduct`}>
+        <Link href={`/code-of-conduct`}>
           <a>{t('community.readCodeOfConduct')}</a>
         </Link>
       </TextSection>
@@ -82,7 +79,7 @@ const Community: NextPage = () => {
               {t('community.getInvolved.learner.description')}
               <br />
               <br />
-              <Link href={`/[lang]#find-events`} as={`/${locale}#find-events`}>
+              <Link href={`/#find-events`}>
                 <a>{t('community.getInvolved.learner.link')}</a>
               </Link>
             </p>
@@ -93,10 +90,7 @@ const Community: NextPage = () => {
               {t('community.getInvolved.coach.description')}
               <br />
               <br />
-              <Link
-                href={`/[lang]/guides#coaching-guidelines`}
-                as={`/${locale}/guides#coaching-guidelines`}
-              >
+              <Link href={`/guides#coaching-guidelines`}>
                 <a>{t('community.getInvolved.coach.link')}</a>
               </Link>
             </p>
@@ -107,10 +101,7 @@ const Community: NextPage = () => {
               {t('community.getInvolved.organizer.description')}
               <br />
               <br />
-              <Link
-                href={`/[lang]/guides#organize-meetup`}
-                as={`/${locale}/guides#organize-meetup`}
-              >
+              <Link href={`/guides#organize-meetup`}>
                 <a>{t('community.getInvolved.organizer.link')}</a>
               </Link>
             </p>

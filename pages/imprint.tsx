@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
-import PageLayout from '../../components/PageLayout/PageLayout'
-import TextSection from '../../components/Section/TextSection'
-import WithLocale from '../../containers/withLocale'
+import PageLayout from '../components/PageLayout/PageLayout'
+import TextSection from '../components/Section/TextSection'
+import WithLocale from '../containers/withLocale'
 
 const Imprint: NextPage = () => {
   return (

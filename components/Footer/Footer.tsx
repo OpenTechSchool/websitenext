@@ -14,35 +14,22 @@ export default function Footer() {
             <h4>{t('footer.getinvolved')}</h4>
             <ul>
               <li>
-                <Link
-                  href={`/[lang]#find-events`}
-                  as={`/${locale}#find-events`}
-                >
+                <Link href={`/#find-events`}>
                   <a className='invert'>{t('footer.joinMeetup')}</a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href={`/[lang]/guides#organize-meetup`}
-                  as={`/${locale}/guides#organize-meetup`}
-                >
+                <Link href={`/guides#organize-meetup`}>
                   <a className='invert'>{t('footer.organizeEvent')}</a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href={`/[lang]/guides#start-chapter`}
-                  as={`/${locale}/guides#start-chapter`}
-                >
+                <Link href={`/guides#start-chapter`}>
                   <a className='invert'>{t('footer.startChapter')}</a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href={`/[lang]/contribute#supporter`}
-                  as={`/${locale}/contribute#supporter`}
-                  scroll={false}
-                >
+                <Link href={`/contribute#supporter`} scroll={false}>
                   <a className='invert'>{t('footer.becomeSupporter')}</a>
                 </Link>
               </li>
@@ -107,26 +94,17 @@ export default function Footer() {
             <h4>{t('footer.aboutUs')}</h4>
             <ul>
               <li>
-                <Link
-                  href={`/[lang]/about#history`}
-                  as={`/${locale}/about#history`}
-                >
+                <Link href={`/about#history`}>
                   <a className='invert'>{t('footer.history')}</a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href={`/[lang]/about#foundation`}
-                  as={`/${locale}/about#foundation`}
-                >
+                <Link href={`/about#foundation`}>
                   <a className='invert'>{t('footer.foundation')}</a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href={`/[lang]/about#core-values`}
-                  as={`/${locale}/about#core-values`}
-                >
+                <Link href={`/about#core-values`}>
                   <a className='invert'>{t('footer.coreValues')}</a>
                 </Link>
               </li>
@@ -136,28 +114,22 @@ export default function Footer() {
             <h4>{t('footer.moreContent')}</h4>
             <ul>
               <li>
-                <Link
-                  href={`/[lang]/code-of-conduct`}
-                  as={`/${locale}/code-of-conduct`}
-                >
+                <Link href={`/code-of-conduct`}>
                   <a className='invert'>{t('footer.codeOfConduct')}</a>
                 </Link>
               </li>
               <li>
-                <Link
-                  href={`/[lang]/guides#coaching-guidelines`}
-                  as={`/${locale}/guides#coaching-guidelines`}
-                >
+                <Link href={`/guides#coaching-guidelines`}>
                   <a className='invert'>{t('footer.coachingGuidelines')}</a>
                 </Link>
               </li>
               <li>
-                <Link href={`/[lang]/guides`} as={`/${locale}/guides`}>
+                <Link href={`/guides`}>
                   <a className='invert'>{t('footer.guides')}</a>
                 </Link>
               </li>
               <li>
-                <Link href={`/[lang]/imprint`} as={`/${locale}/imprint`}>
+                <Link href={`/imprint`}>
                   <a className='invert'>{t('footer.imprint')}</a>
                 </Link>
               </li>

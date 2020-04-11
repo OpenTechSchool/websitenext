@@ -1,12 +1,12 @@
 import { NextPage } from 'next'
 import Grid from '@material-ui/core/Grid'
 import Link from 'next/link'
-import PageLayout from '../../components/PageLayout/PageLayout'
-// import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
-import useTranslation from '../../hooks/useTranslation'
-import WithLocale from '../../containers/withLocale'
-import TextSection from '../../components/Section/TextSection'
-import ContactSection from '../../components/Section/ContactSection'
+import PageLayout from '../components/PageLayout/PageLayout'
+// import LocalSwitcher from '../components/LocalSwitcher/LocalSwitcher'
+import useTranslation from '../hooks/useTranslation'
+import WithLocale from '../containers/withLocale'
+import TextSection from '../components/Section/TextSection'
+import ContactSection from '../components/Section/ContactSection'
 
 const Community: NextPage = () => {
   const { t, locale } = useTranslation()
@@ -61,10 +61,7 @@ const Community: NextPage = () => {
             <h3>{t('contribute.volunteering.coach.title')}</h3>
             <p>{t('contribute.volunteering.coach.description')}</p>
             <p>
-              <Link
-                href={`/[lang]/guides#coaching-guidelines`}
-                as={`/${locale}/guides#coaching-guidelines`}
-              >
+              <Link href={`/guides#coaching-guidelines`}>
                 <a>{t('contribute.volunteering.coach.description2')}</a>
               </Link>
             </p>
@@ -72,10 +69,7 @@ const Community: NextPage = () => {
             <h3>{t('contribute.volunteering.organize.title')}</h3>
             <p>{t('contribute.volunteering.organize.description')}</p>
             <p>
-              <Link
-                href={`/[lang]/guides#organize-meetup`}
-                as={`/${locale}/guides#organize-meetup`}
-              >
+              <Link href={`/guides#organize-meetup`}>
                 <a>{t('contribute.volunteering.organize.description2')}</a>
               </Link>
             </p>
@@ -83,10 +77,7 @@ const Community: NextPage = () => {
             <h3>{t('contribute.volunteering.openChapter.title')}</h3>
             <p>{t('contribute.volunteering.openChapter.description')}</p>
             <p>
-              <Link
-                href={`/[lang]/guides#start-chapter`}
-                as={`/${locale}/guides#start-chapter`}
-              >
+              <Link href={`/guides#start-chapter`}>
                 <a>{t('contribute.volunteering.openChapter.description2')}</a>
               </Link>
             </p>
@@ -114,10 +105,7 @@ const Community: NextPage = () => {
             </p>
             <p>
               {t('contribute.supporter.membership')}{' '}
-              <Link
-                href={`/[lang]/about#membership`}
-                as={`/${locale}/about#membership`}
-              >
+              <Link href={`/about#membership`}>
                 <a>{t('contribute.supporter.readMore')}</a>
               </Link>
               .
