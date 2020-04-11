@@ -69,7 +69,7 @@ const Community: NextPage = () => {
       <TextSection title={t('community.codeOfConduct.title')}>
         <p>{t('community.codeOfConduct.description')}</p>
         <p>{t('community.codeOfConduct.description2')}</p>
-        <Link href={`/[lang]/codeOfConduct`} as={`/${locale}/codeOfConduct`}>
+        <Link href={`/[lang]/code-of-conduct`} as={`/${locale}/code-of-conduct`}>
           <a>{t('community.readCodeOfConduct')}</a>
         </Link>
       </TextSection>

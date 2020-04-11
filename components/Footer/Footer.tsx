@@ -137,8 +137,8 @@ export default function Footer() {
             <ul>
               <li>
                 <Link
-                  href={`/[lang]/codeOfConduct`}
-                  as={`/${locale}/codeOfConduct`}
+                  href={`/[lang]/code-of-conduct`}
+                  as={`/${locale}/code-of-conduct`}
                 >
                   <a className='invert'>{t('footer.codeOfConduct')}</a>
                 </Link>
