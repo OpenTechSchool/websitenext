@@ -143,7 +143,10 @@ const Community: NextPage = () => {
       </TextSection>
 
       <TextSection title={t('community.chapter.title')} anchor='find-events'>
-        <ChapterSection />
+        <ChapterSection
+          title={t('chapter.active')}
+          hideInactiveChapters={true}
+        />
       </TextSection>
 
       <ContactSection />
