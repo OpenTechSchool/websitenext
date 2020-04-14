@@ -15,5 +15,6 @@
     { "source": "/bristol/", "destination": "/cities/bristol" },
     { "source": "/romagna/", "destination": "/cities/romagna" },
     { "source": "/handbooks/(.*)", "destination": "/guides" }
-  ]
+  ],
+  "trailingSlash": false
 }
