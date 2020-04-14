@@ -52,11 +52,7 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
         />
         <link
           rel='stylesheet'
-          href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
-        />
-        <link
-          href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap'
-          rel='stylesheet'
+          href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Open+Sans:300,400,700,800&display=swap'
         />
         <link
           rel='stylesheet'
