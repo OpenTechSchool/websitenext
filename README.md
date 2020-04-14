@@ -1,7 +1,9 @@
 # OpenTechSchool Website Restyle
 
-New version of [opentechschool website](http://opentechschool.org).<br />
+New version of [opentechschool website](https://opentechschool.org).<br />
 Newer and fresher UI, with updated and easier to navigate content.
+
+Based on [Next.js](https://nextjs.org/).
 
 ## Add/Modify my chapter page
 
