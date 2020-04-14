@@ -1,14 +1,14 @@
 import { NextPage } from 'next'
 import Grid from '@material-ui/core/Grid'
 import Link from 'next/link'
-import PageLayout from '../../components/PageLayout/PageLayout'
-// import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
-import useTranslation from '../../hooks/useTranslation'
-import WithLocale from '../../containers/withLocale'
-import TextSection from '../../components/Section/TextSection'
-import Button from '../../components/Button/Button'
-import ContactSection from '../../components/Section/ContactSection'
-import ChapterSection from '../../components/Section/ChapterSection'
+import PageLayout from '../components/PageLayout/PageLayout'
+// import LocalSwitcher from '../components/LocalSwitcher/LocalSwitcher'
+import useTranslation from '../hooks/useTranslation'
+import WithLocale from '../containers/withLocale'
+import TextSection from '../components/Section/TextSection'
+import Button from '../components/Button/Button'
+import ContactSection from '../components/Section/ContactSection'
+import ChapterSection from '../components/Section/ChapterSection'
 
 const Guides: NextPage = () => {
   const { t, locale } = useTranslation()
@@ -27,32 +27,20 @@ const Guides: NextPage = () => {
                 <p>{t('guides.hero.description')}</p>
                 <p>{t('guides.hero.description2')}</p>
                 <p>{t('guides.hero.jumpToIt')}</p>
-                <Link
-                  href={`/[lang]/guides#coaching-guidelines`}
-                  as={`/${locale}/guides#coaching-guidelines`}
-                >
+                <Link href={`/guides#coaching-guidelines`}>
                   {t('guides.hero.howToCoach')}
                 </Link>
                 <br />
-                <Link
-                  href={`/[lang]/guides#organize-meetup`}
-                  as={`/${locale}/guides#organize-meetup`}
-                >
+                <Link href={`/guides#organize-meetup`}>
                   {t('guides.hero.howToMeetup')}
                 </Link>
                 <br />
-                <Link
-                  href={`/[lang]/guides#start-chapter`}
-                  as={`/${locale}/guides#start-chapter`}
-                >
+                <Link href={`/guides#start-chapter`}>
                   {t('guides.hero.howToCity')}
                 </Link>
 
                 <br />
-                <Link
-                  href={`/[lang]/guides#request-event`}
-                  as={`/${locale}/guides#request-event`}
-                >
+                <Link href={`/guides#request-event`}>
                   {t('guides.hero.howToRequest')}
                 </Link>
                 <br />
@@ -105,10 +93,7 @@ const Guides: NextPage = () => {
             <p>{t('guides.organizeMeetup.description2')}</p>
             <p>
               {t('guides.organizeMeetup.agreement')}{' '}
-              <Link
-                href={`/[lang]/about#core-values`}
-                as={`/${locale}/about#core-values`}
-              >
+              <Link href={`/about#core-values`}>
                 <a>{t('guides.organizeMeetup.values')}</a>
               </Link>
               . {t('guides.organizeMeetup.inParticular')}
@@ -185,10 +170,7 @@ const Guides: NextPage = () => {
             </ul>
             <br />
             {t('guides.newChapter.atMeetup.readMore')}{' '}
-            <Link
-              href={`/[lang]/guides#organize-meetup`}
-              as={`/${locale}/guides#organize-meetup`}
-            >
+            <Link href={`/guides#organize-meetup`}>
               {t('guides.newChapter.atMeetup.readMore2')}
             </Link>
           </Grid>

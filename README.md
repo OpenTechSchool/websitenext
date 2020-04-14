@@ -40,14 +40,6 @@ Always feel free to reach out for help. You can write in the issue it self, you 
 
 ## File Structure and major library
 
-### Index file
-
-The index.js file found in the particular Nextjs `/pages` directory, is a file which only purpose is to redirect to a language specific subpages.<br />
-Edit on this file must be reduced to the minimum.<br />
-The actual **Homepage** can be found in `pages/[lang]/index.tsx`.
-
-Any new pages (page is a content that has its own url) should be created under `pages/[lang]/`
-
 ### Styles
 
 The global styles can be found in `style/style-global.js` file.<br />
@@ -125,8 +117,6 @@ members:
 Translation are located in `translations/`. Here there are some configuration and typescript file needed to make translation works but most important there are `json` files for each language.<br />
 Those are translation for all the website except the city page.<br />
 If you create new content, please remember to add your text to those files, at least to the english translation.
-
-The language dropdown is a react component `<LocalSwitcher />` that can be added or remove from each page, leaving us the freedom to translate just some part of the website.
 
 If you add a new language add a `yourLanguage.json` file in the `translations/` directory and remember to add your language to the `config.ts` files to make it available to the `<LocalSwitcher />`
 

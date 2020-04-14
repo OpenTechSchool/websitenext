@@ -9,12 +9,12 @@ interface LangProps {
 
 export default (WrappedPage: NextPage<any>) => {
   const WithLocale: NextPage<any, LangProps> = ({ locale, ...pageProps }) => {
-    if (!locale) {
-      return <Error statusCode={404} />
-    }
+    // if (!locale) {
+    //   return <Error statusCode={404} />
+    // }
 
     return (
-      <LocaleProvider lang={locale}>
+      <LocaleProvider lang={'en' /*locale*/}>
         <WrappedPage {...pageProps} />
       </LocaleProvider>
     )
