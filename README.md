@@ -147,6 +147,10 @@ Style is fairly simple and we since we rely on material ui, it usually keep it p
 Therefore we want to keep it in the same page as the component/page.<br />
 Yet, we avoid using javascript-in-css as much as possible therefore it will be easier to move to plain css file, if we will ever decide to do so.
 
+## Deployment
+
+This website is being deployed to [Zeit.co](https://zeit.co/) on the free team account https://zeit.co/opentechschool. Every push to master goes live automatically via their Github integration.
+
 ## Contact
 
 Found an issue, a bug or have an idea for a great new feature?
