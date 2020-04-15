@@ -42,16 +42,24 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
             </Link>
           </OutlineButton>
         </span> */}
-          <p className='members'>
-            <span className='membersIcon'>
-              <PermIdentity />
-            </span>
-            {members && (
-              <small>
-                {members} {t('common.learners')}
-              </small>
-            )}
-          </p>
+          {members && (
+            <a
+              className='members-link'
+              href={`https://www.meetup.com/${meetupName}`}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <p className='members'>
+                <span className='membersIcon'>
+                  <PermIdentity />
+                </span>
+                <small>
+                  {members} {t('common.learners')}
+                </small>
+              </p>
+            </a>
+          )}
+
           {credits && <p className='credits'>Credits: {credits}</p>}
         </div>
       </section>
@@ -81,6 +89,20 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
           height: 100%;
           z-index: 0;
           background-color: rgba(45, 156, 219, 0.7);
+        }
+
+        .members-link {
+          color: white;
+          z-index: 1;
+          border-bottom: 2px solid transparent;
+        }
+
+        .members-link:hover {
+          border-bottom: 2px solid white;
+        }
+
+        .members-link p {
+          margin-bottom: 0;
         }
 
         @media (${mediaquery.desktopToBigScreen}) {
