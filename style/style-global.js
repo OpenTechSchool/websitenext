@@ -106,10 +106,6 @@ export default css.global`
     font-family: var(--secondaryFont);
     color: var(--mainBlue);
   }
-  h1,
-  h2 {
-    font-weight: 500;
-  }
   h1 {
     font-size: 38px;
     font-size: 3.8rem;
