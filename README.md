@@ -1,7 +1,9 @@
 # OpenTechSchool Website Restyle
 
-New version of [opentechschool website](http://opentechschool.org).<br />
+New version of [opentechschool website](https://opentechschool.org).<br />
 Newer and fresher UI, with updated and easier to navigate content.
+
+Based on [Next.js](https://nextjs.org/).
 
 ## Add/Modify my chapter page
 
@@ -39,14 +41,6 @@ Always feel free to reach out for help. You can write in the issue it self, you 
    You might need to reload the page. (we still need to improve the process)
 
 ## File Structure and major library
-
-### Index file
-
-The index.js file found in the particular Nextjs `/pages` directory, is a file which only purpose is to redirect to a language specific subpages.<br />
-Edit on this file must be reduced to the minimum.<br />
-The actual **Homepage** can be found in `pages/[lang]/index.tsx`.
-
-Any new pages (page is a content that has its own url) should be created under `pages/[lang]/`
 
 ### Styles
 
@@ -126,8 +120,6 @@ Translation are located in `translations/`. Here there are some configuration an
 Those are translation for all the website except the city page.<br />
 If you create new content, please remember to add your text to those files, at least to the english translation.
 
-The language dropdown is a react component `<LocalSwitcher />` that can be added or remove from each page, leaving us the freedom to translate just some part of the website.
-
 If you add a new language add a `yourLanguage.json` file in the `translations/` directory and remember to add your language to the `config.ts` files to make it available to the `<LocalSwitcher />`
 
 If you want to use translation in a file, you can use the `t()` function, which it takes as a argument the string to translate from the language jons file.<br />
@@ -156,6 +148,10 @@ We try however to not over do it with Typescript since is a simple project and w
 Style is fairly simple and we since we rely on material ui, it usually keep it pretty short.<br />
 Therefore we want to keep it in the same page as the component/page.<br />
 Yet, we avoid using javascript-in-css as much as possible therefore it will be easier to move to plain css file, if we will ever decide to do so.
+
+## Deployment
+
+This website is being deployed to [Zeit.co](https://zeit.co/) on the free team account https://zeit.co/opentechschool. Every push to master goes live automatically via their Github integration.
 
 ## Contact
 

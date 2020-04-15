@@ -8,15 +8,15 @@ import Icon from '@material-ui/core/Icon'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
-import useTranslation from '../../../hooks/useTranslation'
-import WithLocale from '../../../containers/withLocale'
-// import LocalSwitcher from '../../../components/LocalSwitcher/LocalSwitcher'
-import CityLayout from '../../../components/CityLayout/CityLayout'
-import CityHero from '../../../components/CityHero/CityHero'
-import TextSection from '../../../components/Section/TextSection'
-import TeamSection from '../../../components/Section/TeamSection'
-import TwitterFeed from '../../../components/TwitterFeed'
-import Events from '../../../components/Events'
+import useTranslation from '../../hooks/useTranslation'
+import WithLocale from '../../containers/withLocale'
+// import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
+import CityLayout from '../../components/CityLayout/CityLayout'
+import CityHero from '../../components/CityHero/CityHero'
+import TextSection from '../../components/Section/TextSection'
+import TeamSection from '../../components/Section/TeamSection'
+import TwitterFeed from '../../components/TwitterFeed'
+import Events from '../../components/Events'
 
 const socialIconsList = {
   facebook: <FacebookIcon />,
@@ -196,9 +196,9 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
 }
 
 CityTemplate.getInitialProps = async ctx => {
-  const { lang, slug } = ctx.query
+  const { lang = 'en', slug } = ctx.query
 
-  const content = await import(`../../../data/cities/${lang}/${slug}.md`)
+  const content = await import(`../../data/cities/${lang}/${slug}.md`)
   // gray-matter parses the yaml frontmatter from the md body
   const data = matter(content.default)
 

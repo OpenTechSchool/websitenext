@@ -44,15 +44,15 @@ export function Header({ setIsMenuOpen }) {
                 {t('header.learn')}
               </a>
 
-              <Link href={`/[lang]/contribute`} as={`/${locale}/contribute`}>
+              <Link href={`/contribute`}>
                 <a className='invert'>{t('header.contribute')}</a>
               </Link>
 
-              <Link href={`/[lang]/community`} as={`/${locale}/community`}>
+              <Link href={`/community`}>
                 <a className='invert'>{t('header.community')}</a>
               </Link>
 
-              <Link href={`/[lang]/about`} as={`/${locale}/about`}>
+              <Link href={`/about`}>
                 <a className='invert'>{t('header.about')}</a>
               </Link>
             </nav>
@@ -89,15 +89,15 @@ export function Header({ setIsMenuOpen }) {
               {t('header.learn')}
             </a>
 
-            <Link href={`/[lang]/contribute`} as={`/${locale}/contribute`}>
+            <Link href={`/contribute`}>
               <a className='invert'>{t('header.contribute')}</a>
             </Link>
 
-            <Link href={`/[lang]/community`} as={`/${locale}/community`}>
+            <Link href={`/community`}>
               <a className='invert'>{t('header.community')}</a>
             </Link>
 
-            <Link href={`/[lang]/about`} as={`/${locale}/about`}>
+            <Link href={`/about`}>
               <a className='invert'>{t('header.about')}</a>
             </Link>
           </nav>

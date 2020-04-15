@@ -110,7 +110,7 @@ function Events({
     <div className='eventSection'>
       {!hasMixedGroups && (
         <h3>
-          <Link href={`/[lang]/guides`} as={`/${locale}/guides`}>
+          <Link href={`/guides`}>
             <a>{title}</a>
           </Link>
         </h3>

@@ -36,7 +36,6 @@ export default css.global`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     word-break: break-word;
-    white-space: pre-line;
     font-size: 18px;
     font-size: 1.8rem;
     letter-spacing: -0.5px;

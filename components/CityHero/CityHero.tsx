@@ -37,7 +37,7 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
           </p>
           {/* <span className='button'>
           <OutlineButton>
-            <Link href={`/[lang]/guides`} as={`/${locale}/guides`}>
+            <Link href={`/guides`}>
               <a>{t('common.joinNow')}</a>
             </Link>
           </OutlineButton>
