@@ -9,7 +9,9 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta charSet='utf-8' />
-        <title>{noTranslation ? siteTitle : t(siteTitle)}</title>
+        <title>
+          {`${noTranslation ? siteTitle : t(siteTitle)} | OpenTechSchool`}
+        </title>
         <meta
           name='Description'
           content={noTranslation ? siteDescription : t(siteDescription)}

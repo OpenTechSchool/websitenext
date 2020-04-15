@@ -6,8 +6,8 @@
     "more": "more"
   },
   "homepage": {
-    "siteTitle": "OpenTechSchool",
-    "siteDescription": "OpenTechSchool is a movement aiming to offer free tech education.",
+    "siteTitle": "Free tech education",
+    "siteDescription": "OpenTechSchool is a movement offering free tech workshops with learning material and in-person learning support. People of all genders, backgrounds, levels, ages come together to learn, to coach or to organize in a cozy and including space provided for hands-on learning.",
     "masthead": {
       "title": "Free tech education",
       "subtitle": "OpenTechSchool is a movement aiming to offer free tech education."
@@ -66,12 +66,12 @@
     "events": "Upcoming events"
   },
   "about": {
-    "siteTitle": "About",
-    "siteDescription": "About OpenTechSchool",
+    "siteTitle": "About us - history, core values, foundation",
+    "siteDescription": "The OpenTechSchool was born in April 2012 in Berlin. The first local RailsGirls event had just taken place. Why not expand the concept to all tech topics people might possibly want to learn and open the events to an audience of all genders and experience levels? Since then, thousands of people have joined as coaches, learners, organizers, and sponsors.",
     "history": {
       "title": "History",
-      "description": "OTS was born in April of 2012 in Berlin. The first local RailsGirls event — a free tech workshop with freshly created learning materials dedicated to an audience of women of all ages and backgrounds during a both thrilling and cosy weekend — had just taken place, and had created much admiration and enthusiasm in its wake.",
-      "description2": "Why not expand the concept to all tech topics people might possibly want to learn and open the events to an audience of all genders and experience levels? The challenge couldn’t be greater. Since then, hundreds of people have joined OTS as coaches, learners, organizers, and sponsors, in Berlin, Leipzig, and soon: even in more new cities (yours!)."
+      "description": "The OpenTechSchool was born in April 2012 in Berlin. The first local RailsGirls event — a free tech workshop with freshly created learning materials dedicated to an audience of women of all ages and backgrounds during a both thrilling and cosy weekend — had just taken place, and had created much admiration and enthusiasm in its wake.",
+      "description2": "Why not expand the concept to all tech topics people might possibly want to learn and open the events to an audience of all genders and experience levels? The challenge couldn’t be greater. Since then, thousands of people have joined as coaches, learners, organizers, and sponsors, in Berlin, Leipzig, and soon: even in more new cities (yours!)."
     },
     "explanation": {
       "title": "What is OpenTechSchool?",
@@ -79,11 +79,11 @@
     },
     "coreValue": {
       "title": "Core values",
-      "description": "OpenTechSchool is best described through our core values.",
+      "description": "OpenTechSchool is best described through our core values:",
       "openness": {
         "title": "Openess",
-        "shortDescription": "All OTS discussions, training materials, and blueprints are openly accessible through our website",
-        "description": "All OTS discussions, training materials, and blueprints are openly accessible through our website so that anyone can find them and contribute to their development. Furthermore, for OTS, openness also means sharing: our coaches share their skills and time, and our learners share their own knowledge with the community, both by presenting their achievements during the beginners meetup and by later becoming coaches themselves."
+        "shortDescription": "All discussions, training materials, and blueprints are openly accessible through our website",
+        "description": "All discussions, training materials, and blueprints are openly accessible through our website so that anyone can find them and contribute to their development. Furthermore, for us, openness also means sharing: our coaches share their skills and time, and our learners share their own knowledge with the community, both by presenting their achievements during the beginners meetup and by later becoming coaches themselves."
       },
       "empowerment": {
         "title": "Empowerment",
@@ -138,8 +138,8 @@
     }
   },
   "community": {
-    "siteTitle": "Join the OpenTechSchool Community",
-    "siteDescription": "Join the OpenTechSchool Community",
+    "siteTitle": "Community - local groups, meetup formats, how to join",
+    "siteDescription": "The OTS community is a group of tech-enthusiast, that like to learn and teach coding in a friendly environment. Tired of learning by yourself? We offer free local meetups, where learners with different experience levels can join, exchange knowledge, coach and motivate each other.",
     "description": "The OTS community is a group of tech-enthusiast, that like to learn and teach coding in a friendly environment.",
     "description2": "Tired of learning by yourself? We offer free local meetups, where learners with different experience levels can join, exchange knowledge, coach and motivate each other.",
     "readCommunityValues": "Read more about our community values",
@@ -192,8 +192,8 @@
     }
   },
   "contribute": {
-    "siteTitle": "OpenTechSchool Contribute",
-    "siteDescription": "How to contribute to OpenTechSchool",
+    "siteTitle": "Contribute as a coach, organizer or supporter",
+    "siteDescription": "Join the movement by coaching learners, organizing events in your city or offering general support. If you have ideas on how to improve the learning experience, just come and tell us! OpenTechSchool is always looking for individuals who like to give back to the community.",
     "contribute": {
       "title": "Contribute",
       "description": "Thanks to the work of many volunteers, OpenTechSchool is able to offer free tech education to a wide range of learners. Volunteers contribute their time and share their knowledge to make OTS events a place where everyone can learn, connect and grow.",
@@ -228,12 +228,12 @@
     }
   },
   "guides": {
-    "siteTitle": "OpenTechSchool Guides",
-    "siteDescription": "OpenTechSchool Guides",
+    "siteTitle": "Guides for contributers and learners",
+    "siteDescription": "This page offers guides around how to volunteer as a coach, organize events or start an OpenTechSchool group in your city.",
     "hero": {
       "title": "OpenTechSchool Guides",
       "description": "We are happy to hear that you would like to get involved in the OTS community.",
-      "description2": "This page offers guides around how to volunteering as a coach, organizing events or start OpenTechSchool in your city.",
+      "description2": "This page offers guides around how to volunteer as a coach, organize events or start an OpenTechSchool group in your city.",
       "jumpToIt": "Jump right to it:",
       "howToCoach": "How to coach",
       "howToCity": "How to start OpenTechSchool in my city",
