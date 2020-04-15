@@ -16,7 +16,26 @@ function ErrorPage({ errorCode }) {
           siteTitle={t('404.siteTitle')}
           siteDescription={t('404.siteDescription')}
         >
-          <Error statusCode={errorCode} />
+          <div className='error'>
+            Sorry, we could not find what you are looking for.
+            <br />
+            <b>Did you get lost in the sea?</b>
+            <img src='/illustrations/lost.svg' width='300' alt='lost' />
+          </div>
+          <style jsx>
+            {`
+              .error {
+                background-color: var(--otsColor);
+                text-align: center;
+                color: white;
+                padding: 120px;
+                line-height: 40px;
+              }
+              .error img {
+                margin: 50px auto;
+              }
+            `}
+          </style>
         </PageLayout>
       )
     default:
