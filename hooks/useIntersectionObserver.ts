@@ -7,23 +7,22 @@ const useIntersectionObserver = ({
   rootMargin = '0px',
 }) => {
   useEffect(() => {
+    if (!window.IntersectionObserver) {
+      return
+    }
+
     const observer = new IntersectionObserver(onIntersect, {
       rootMargin,
       threshold,
     })
 
-    if (!target) {
-      console.warn('No target specified for Intersection Observer')
-      return
-    }
-
-    observer.observe(target.current);
+    observer.observe(target.current)
 
     // Let's clean up after ourselves.
     return () => {
-      observer.unobserve(target.current);
+      observer.unobserve(target.current)
     }
-  })
+  }, [target.current])
 }
 
 export default useIntersectionObserver
