@@ -71,8 +71,8 @@ export const Index: NextPage = () => {
 
   return (
     <PageLayout
-      siteTitle='homepage.siteTitle'
-      siteDescription='homepage.siteDescription'
+      pageTitle='homepage.pageTitle'
+      pageDescription='homepage.pageDescription'
     >
       <Masthead />
 

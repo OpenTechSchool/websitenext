@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Layout from '../Layout/Layout'
 
-export default function CityLayout({ siteTitle, siteDescription, children }) {
+export default function CityLayout({ pageTitle, pageDescription, children }) {
   return (
     <Layout
-      siteTitle={siteTitle}
-      siteDescription={siteDescription}
+      pageTitle={pageTitle}
+      pageDescription={pageDescription}
       noTranslation
     >
       <section className='cityPage'>
@@ -20,6 +20,6 @@ export default function CityLayout({ siteTitle, siteDescription, children }) {
 
 CityLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  siteTitle: PropTypes.string.isRequired,
-  siteDescription: PropTypes.string.isRequired,
+  pageTitle: PropTypes.string.isRequired,
+  pageDescription: PropTypes.string.isRequired,
 }

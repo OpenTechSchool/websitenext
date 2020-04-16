@@ -15,8 +15,8 @@ const Guides: NextPage = () => {
 
   return (
     <PageLayout
-      siteTitle={t('guides.siteTitle')}
-      siteDescription={t('guides.siteDescription')}
+      pageTitle={t('guides.pageTitle')}
+      pageDescription={t('guides.pageDescription')}
     >
       <div className='hero'>
         <div className='content-wrapper'>

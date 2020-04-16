@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import useTranslation from '../hooks/useTranslation'
 
-export default function Meta({ siteTitle, siteDescription, noTranslation }) {
+export default function Meta({ pageTitle, pageDescription, noTranslation }) {
   const { t } = useTranslation()
   return (
     <>
@@ -10,17 +10,17 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta charSet='utf-8' />
         <title>
-          {`${noTranslation ? siteTitle : t(siteTitle)} | OpenTechSchool`}
+          {`${noTranslation ? pageTitle : t(pageTitle)} | OpenTechSchool`}
         </title>
-        {!!siteDescription && (
+        {!!pageDescription && (
           <meta
             name='Description'
-            content={noTranslation ? siteDescription : t(siteDescription)}
+            content={noTranslation ? pageDescription : t(pageDescription)}
           />
         )}
         <meta
           property='og:title'
-          content={noTranslation ? siteTitle : t(siteTitle)}
+          content={noTranslation ? pageTitle : t(pageTitle)}
         />
         <meta property='fb:admins' content='825782113' />
         <meta
@@ -31,12 +31,12 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
         <meta name='twitter:site' content='@OpenTechSchool' />
         <meta
           name='twitter:title'
-          content={noTranslation ? siteTitle : t(siteTitle)}
+          content={noTranslation ? pageTitle : t(pageTitle)}
         />
-        {!!siteDescription && (
+        {!!pageDescription && (
           <meta
             name='twitter:description'
-            content={noTranslation ? siteDescription : t(siteDescription)}
+            content={noTranslation ? pageDescription : t(pageDescription)}
           />
         )}
         <meta
@@ -70,7 +70,7 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
 }
 
 Meta.propTypes = {
-  siteTitle: PropTypes.string.isRequired,
-  siteDescription: PropTypes.string,
+  pageTitle: PropTypes.string.isRequired,
+  pageDescription: PropTypes.string,
   noTranslation: PropTypes.bool,
 }

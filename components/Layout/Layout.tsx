@@ -9,8 +9,8 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import { otsTheme } from '../../style/style'
 
 export const Layout = ({
-  siteTitle,
-  siteDescription,
+  pageTitle,
+  pageDescription,
   noTranslation,
   children,
 }) => {
@@ -19,8 +19,8 @@ export const Layout = ({
   return (
     <ThemeProvider theme={otsTheme}>
       <Meta
-        siteTitle={siteTitle}
-        siteDescription={siteDescription}
+        pageTitle={pageTitle}
+        pageDescription={pageDescription}
         noTranslation={noTranslation}
       />
       <div className={isMenuOpen ? 'bodyFixed' : ''}>
@@ -45,7 +45,7 @@ export default Layout
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  siteTitle: PropTypes.string.isRequired,
-  siteDescription: PropTypes.string.isRequired,
+  pageTitle: PropTypes.string.isRequired,
+  pageDescription: PropTypes.string,
   noTranslation: PropTypes.bool,
 }

@@ -1,7 +1,7 @@
 ---
 slug: romagna
 title: Romagna
-description: |
+page_description: |
   Cesena has always been also a center for culture and studies. The picture you see is from the City's ancient library, the Europe first civic library build in 1447.
   We organize free learning groups to be both an opportunity for partecipants to meet like-minded people and to promote code and technology as a mean of expression.
 location: 'Cesena, Italy'

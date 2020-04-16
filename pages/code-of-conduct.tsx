@@ -5,7 +5,7 @@ import PageLayout from '../components/PageLayout/PageLayout'
 
 const CodeOfConduct: NextPage = () => {
   return (
-    <PageLayout siteTitle='' siteDescription=''>
+    <PageLayout pageTitle='' pageDescription=''>
       <TextSection title='Code of Conduct'>
         <h3 id='purpose'>Purpose</h3>
 

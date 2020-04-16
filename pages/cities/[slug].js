@@ -74,8 +74,8 @@ export function CityTemplate({ content, data }) {
 
   return (
     <CityLayout
-      siteTitle={`${frontmatter.title} chapter`}
-      siteDescription={frontmatter.description}
+      pageTitle={`${frontmatter.title} chapter`}
+      pageDescription={frontmatter.page_description}
     >
       <CityHero
         cityName={cityName}

@@ -5,7 +5,7 @@ import WithLocale from '../containers/withLocale'
 
 const Imprint: NextPage = () => {
   return (
-    <PageLayout siteTitle='' siteDescription=''>
+    <PageLayout pageTitle='' pageDescription=''>
       <TextSection title='Imprint'>
         <p>Angaben gemäß § 5 TMG:</p>
         <p>
