@@ -344,5 +344,14 @@
     "coachingGuidelines": "Coaching guidelines",
     "imprint": "Imprint",
     "createCommons": "Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License."
+  },
+  "404": {
+    "siteTitle": "Page not found",
+    "description": "Sorry, we could not find what you are looking for.",
+    "description2": "Did you get lost in the sea?"
+  },
+  "500": {
+    "siteTitle": "Server error",
+    "description": "It's not you, it's us! Unfortunately there was a problem with our server, please try again in a few minutes."
   }
 }
