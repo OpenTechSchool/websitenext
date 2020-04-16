@@ -85,7 +85,6 @@ Event.propTypes = {
 }
 
 function Events({
-  title,
   events,
   isLoading,
   hasEvents,
@@ -108,13 +107,6 @@ function Events({
 
   return (
     <div className='eventSection'>
-      {!hasMixedGroups && (
-        <h3>
-          <Link href={`/guides`}>
-            <a>{title}</a>
-          </Link>
-        </h3>
-      )}
       <div className='events'>
         {isLoading && '...'}
         {!isLoading && !hasEvents && <p> No events planned </p>}
@@ -192,7 +184,6 @@ function Events({
 }
 
 Events.propTypes = {
-  title: PropTypes.string.isRequired,
   events: PropTypes.object.isRequired,
   isLoading: PropTypes.bool.isRequired,
   hasEvents: PropTypes.bool.isRequired,

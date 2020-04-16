@@ -12,7 +12,7 @@ socials:
 
 ## About OpenTechSchool
 
-OpenTechSchool e.V. is a non-profit organisation. OpenTechSchool Dortmund is a regional chapter. We love to encourage people to learn more about open technologies as well as start coding in general. This is an important part of our mission. We teach non-programmers, the basics of programming. Usually during workshop weekends. You can find all our planned workshops over the Meetup Group.
+OpenTechSchool e.V. is a non-profit organization. OpenTechSchool Dortmund is a regional chapter. We love to encourage people to learn more about open technologies as well as start coding in general. This is an important part of our mission. We teach non-programmers, the basics of programming. Usually during workshop weekends. You can find all our planned workshops over the Meetup Group.
 
 ## About chapter Dortmund
 
