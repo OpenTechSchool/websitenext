@@ -22,8 +22,6 @@
     "ots",
     "next"
   ],
-  "author": "designbygio",
-  "license": "ISC",
   "dependencies": {
     "@material-ui/core": "4.7.0",
     "date-fns": "2.9.0",
