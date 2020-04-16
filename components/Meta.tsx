@@ -12,10 +12,12 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
         <title>
           {`${noTranslation ? siteTitle : t(siteTitle)} | OpenTechSchool`}
         </title>
-        <meta
-          name='Description'
-          content={noTranslation ? siteDescription : t(siteDescription)}
-        ></meta>
+        {!!siteDescription && (
+          <meta
+            name='Description'
+            content={noTranslation ? siteDescription : t(siteDescription)}
+          />
+        )}
         <meta
           property='og:title'
           content={noTranslation ? siteTitle : t(siteTitle)}
@@ -31,10 +33,12 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
           name='twitter:title'
           content={noTranslation ? siteTitle : t(siteTitle)}
         />
-        <meta
-          name='twitter:description'
-          content={noTranslation ? siteDescription : t(siteDescription)}
-        />
+        {!!siteDescription && (
+          <meta
+            name='twitter:description'
+            content={noTranslation ? siteDescription : t(siteDescription)}
+          />
+        )}
         <meta
           name='twitter:image'
           content='/sharing-images/twitter-sharing.jpg'
@@ -54,11 +58,7 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
         />
         <link
           rel='stylesheet'
-          href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
-        />
-        <link
-          href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap'
-          rel='stylesheet'
+          href='https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans:400,500,700&display=swap'
         />
         <link
           rel='stylesheet'
@@ -71,6 +71,6 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
 
 Meta.propTypes = {
   siteTitle: PropTypes.string.isRequired,
-  siteDescription: PropTypes.string.isRequired,
+  siteDescription: PropTypes.string,
   noTranslation: PropTypes.bool,
 }

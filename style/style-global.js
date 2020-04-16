@@ -77,11 +77,6 @@ export default css.global`
   a.button:hover {
     border-bottom: none;
   }
-  strong,
-  b {
-    font-weight: bold;
-    font-weight: 500;
-  }
 
   /* TYPOGRAPHY------------------------------------- */
   h1,
@@ -105,14 +100,9 @@ export default css.global`
     font-family: var(--secondaryFont);
     color: var(--mainBlue);
   }
-  h1,
-  h2 {
-    font-weight: 500;
-  }
   h1 {
     font-size: 38px;
     font-size: 3.8rem;
-    font-weight: bold;
     letter-spacing: -1px;
     line-height: 1.1875;
     padding: 40px 0;
@@ -120,7 +110,6 @@ export default css.global`
   h2 {
     font-size: 36px;
     font-size: 3.6rem;
-    font-weight: bold;
     letter-spacing: -0.75px;
     line-height: 1.2;
     padding: 30px 0;
@@ -128,7 +117,6 @@ export default css.global`
   h3 {
     font-size: 26px;
     font-size: 2.6rem;
-    font-weight: bold;
     letter-spacing: -0.5px;
     line-height: 1.1875;
     padding: 25px 0;
@@ -136,7 +124,6 @@ export default css.global`
   h4 {
     font-size: 22px;
     font-size: 2.2rem;
-    font-weight: bold;
     padding: 20px 0;
   }
   h1,
