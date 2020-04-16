@@ -14,8 +14,8 @@ const TwitterFeed = ({ screenName }) => {
     target: twitterFeedContainer,
     rootMargin: '100px',
     onIntersect: ([{ isIntersecting }]) => {
-      if (!isTwitterFeedVisible) {
-        setTwitterFeedVisible(isIntersecting)
+      if (isIntersecting && !isTwitterFeedVisible) {
+        setTwitterFeedVisible(true)
       }
     },
   })
