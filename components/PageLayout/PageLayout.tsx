@@ -14,5 +14,5 @@ export default function PageLayout({ siteTitle, siteDescription, children }) {
 PageLayout.propTypes = {
   children: PropTypes.node.isRequired,
   siteTitle: PropTypes.string.isRequired,
-  siteDescription: PropTypes.string.isRequired,
+  siteDescription: PropTypes.string,
 }

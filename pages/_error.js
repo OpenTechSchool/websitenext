@@ -1,4 +1,3 @@
-import Error from 'next/error'
 import NextError from 'next/error'
 import PropTypes from 'prop-types'
 import PageLayout from '../components/PageLayout/PageLayout'
@@ -12,14 +11,11 @@ function ErrorPage({ errorCode }) {
     case 200: // Also display a 404 if someone requests /_error explicitly
     case 404:
       return (
-        <PageLayout
-          siteTitle={t('404.siteTitle')}
-          siteDescription={t('404.siteDescription')}
-        >
+        <PageLayout siteTitle={t('404.siteTitle')}>
           <div className='error'>
-            Sorry, we could not find what you are looking for.
+            {t('404.description')}
             <br />
-            <b>Did you get lost in the sea?</b>
+            <b>{t('404.description2')}</b>
             <img src='/illustrations/lost.svg' width='300' alt='lost' />
           </div>
           <style jsx>
@@ -40,11 +36,9 @@ function ErrorPage({ errorCode }) {
       )
     default:
       return (
-        <PageLayout
-          siteTitle={t('500.siteTitle')}
-          siteDescription={t('500.siteDescription')}
-        >
-          <NextError statusCode={errorCode} />
+        <PageLayout siteTitle={t('500.siteTitle')}>
+          <NextError statusCode={errorCode} title={t('500.siteTitle')} />
+          <div className='error'>{t('500.description')}</div>
         </PageLayout>
       )
   }

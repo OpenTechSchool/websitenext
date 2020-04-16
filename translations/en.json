@@ -347,10 +347,11 @@
   },
   "404": {
     "siteTitle": "Page not found",
-    "siteDescription": "Unfortunately the page you are looking for is not here :("
+    "description": "Sorry, we could not find what you are looking for.",
+    "description2": "Did you get lost in the sea?"
   },
   "500": {
     "siteTitle": "Server error",
-    "siteDescription": "Is not you, is us! Unfortunately there was a problem with our server, please try again in some minutes."
+    "description": "It's not you, it's us! Unfortunately there was a problem with our server, please try again in a few minutes."
   }
 }

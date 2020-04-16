@@ -10,10 +10,12 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta charSet='utf-8' />
         <title>{noTranslation ? siteTitle : t(siteTitle)}</title>
-        <meta
-          name='Description'
-          content={noTranslation ? siteDescription : t(siteDescription)}
-        ></meta>
+        {!!siteDescription && (
+          <meta
+            name='Description'
+            content={noTranslation ? siteDescription : t(siteDescription)}
+          />
+        )}
         <meta
           property='og:title'
           content={noTranslation ? siteTitle : t(siteTitle)}
@@ -29,10 +31,12 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
           name='twitter:title'
           content={noTranslation ? siteTitle : t(siteTitle)}
         />
-        <meta
-          name='twitter:description'
-          content={noTranslation ? siteDescription : t(siteDescription)}
-        />
+        {!!siteDescription && (
+          <meta
+            name='twitter:description'
+            content={noTranslation ? siteDescription : t(siteDescription)}
+          />
+        )}
         <meta
           name='twitter:image'
           content='/sharing-images/twitter-sharing.jpg'
@@ -69,6 +73,6 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
 
 Meta.propTypes = {
   siteTitle: PropTypes.string.isRequired,
-  siteDescription: PropTypes.string.isRequired,
+  siteDescription: PropTypes.string,
   noTranslation: PropTypes.bool,
 }
