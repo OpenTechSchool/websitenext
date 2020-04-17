@@ -1,10 +1,6 @@
 {
   "version": 2,
   "trailingSlash": false,
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 404, "dest": "/_error" }
-  ],
   "redirects": [
     { "source": "/about.html", "destination": "/about" },
     { "source": "/foundation", "destination": "/about#foundation" },
