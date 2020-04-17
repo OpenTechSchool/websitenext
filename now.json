@@ -1,4 +1,5 @@
 {
+  "trailingSlash": false,
   "redirects": [
     { "source": "/about\\.html", "destination": "/about" },
     { "source": "/foundation/", "destination": "/about#foundation" },
@@ -8,13 +9,12 @@
     { "source": "/sponsors\\.html", "destination": "/contribute#supporter" },
     { "source": "/imprint\\.html", "destination": "/imprint" },
     { "source": "/material\\.html", "destination": "https://learn.opentechschool.org/" },
-    { "source": "/berlin/", "destination": "/cities/berlin" },
-    { "source": "/leipzig/", "destination": "/cities/leipzig" },
-    { "source": "/zurich/", "destination": "/cities/zurich" },
-    { "source": "/brussels/", "destination": "/cities/brussels" },
-    { "source": "/bristol/", "destination": "/cities/bristol" },
-    { "source": "/romagna/", "destination": "/cities/romagna" },
+    { "source": "/berlin", "destination": "/cities/berlin" },
+    { "source": "/leipzig", "destination": "/cities/leipzig" },
+    { "source": "/zurich", "destination": "/cities/zurich" },
+    { "source": "/brussels", "destination": "/cities/brussels" },
+    { "source": "/bristol", "destination": "/cities/bristol" },
+    { "source": "/romagna", "destination": "/cities/romagna" },
     { "source": "/handbooks/(.*)", "destination": "/guides" }
-  ],
-  "trailingSlash": false
+  ]
 }
