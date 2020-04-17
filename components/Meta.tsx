@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import useTranslation from '../hooks/useTranslation'
 
-export default function Meta({ pageTitle, pageDescription }) {
+export default function Meta({ pageTitle, pageDescription, pageImage }) {
   const { t } = useTranslation()
   return (
     <>
@@ -17,7 +17,7 @@ export default function Meta({ pageTitle, pageDescription }) {
         <meta property='fb:admins' content='825782113' />
         <meta
           property='og:image'
-          content='/sharing-images/facebook-sharing.jpg'
+          content={pageImage || '/sharing-images/website-into-sharing.png'}
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@OpenTechSchool' />
@@ -58,4 +58,5 @@ export default function Meta({ pageTitle, pageDescription }) {
 Meta.propTypes = {
   pageTitle: PropTypes.string.isRequired,
   pageDescription: PropTypes.string.isRequired,
+  pageImage: PropTypes.string,
 }
