@@ -8,21 +8,12 @@ import globalStyle from '../../style/style-global'
 import { ThemeProvider } from '@material-ui/core/styles'
 import { otsTheme } from '../../style/style'
 
-export const Layout = ({
-  siteTitle,
-  siteDescription,
-  noTranslation,
-  children,
-}) => {
+export const Layout = ({ pageTitle, pageDescription, children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
     <ThemeProvider theme={otsTheme}>
-      <Meta
-        siteTitle={siteTitle}
-        siteDescription={siteDescription}
-        noTranslation={noTranslation}
-      />
+      <Meta pageTitle={pageTitle} pageDescription={pageDescription} />
       <div className={isMenuOpen ? 'bodyFixed' : ''}>
         <Header setIsMenuOpen={setIsMenuOpen} />
 
@@ -45,7 +36,6 @@ export default Layout
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  siteTitle: PropTypes.string.isRequired,
-  siteDescription: PropTypes.string.isRequired,
-  noTranslation: PropTypes.bool,
+  pageTitle: PropTypes.string.isRequired,
+  pageDescription: PropTypes.string.isRequired,
 }

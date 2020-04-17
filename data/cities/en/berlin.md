@@ -1,6 +1,10 @@
 ---
 slug: berlin
 title: Berlin
+page_description: |
+  We are the group of people who created the first chapter of OpenTechSchool and
+  want you to start one in your own city! The venue that supported us from the
+  very beginning and where we host our events is the fantastic coworking space, Co.Up.
 location: 'Berlin, Germany'
 tagline: 'Where everything started... and you can take a ride in a rotating TV tower'
 twitter: OTS_BLN
@@ -16,6 +20,6 @@ discourse_group: TeamBerlin
 We are the group of people who created the first chapter of OpenTechSchool and
 want you to start one in your own city! The venue that supported us from the
 very beginning and where we host our events is the fantastic coworking space,
-[co.up].
+[Co.Up].
 
-[co.up]: https://co-up.de/
+[Co.Up]: https://co-up.de/

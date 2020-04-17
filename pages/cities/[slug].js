@@ -29,7 +29,7 @@ const socialIconsList = {
 const WrappedIcon = props => <Icon {...props} />
 WrappedIcon.muiName = 'Icon'
 
-export function CityTemplate({ content, data, siteTitle, siteDescription }) {
+export function CityTemplate({ content, data }) {
   const { t } = useTranslation()
   const markdownBody = content
   const frontmatter = data
@@ -73,7 +73,10 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
   }, [showMoreLink])
 
   return (
-    <CityLayout siteTitle={siteTitle} siteDescription={siteDescription}>
+    <CityLayout
+      pageTitle={`${frontmatter.title} chapter`}
+      pageDescription={frontmatter.page_description}
+    >
       <CityHero
         cityName={cityName}
         title={frontmatter.title}
@@ -203,8 +206,6 @@ CityTemplate.getInitialProps = async ctx => {
   const data = matter(content.default)
 
   return {
-    siteTitle: slug,
-    siteDescription: 'some description',
     content,
     ...data,
   }
@@ -215,6 +216,4 @@ export default WithLocale(CityTemplate)
 CityTemplate.propTypes = {
   content: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
-  siteTitle: PropTypes.string.isRequired,
-  siteDescription: PropTypes.string.isRequired,
 }

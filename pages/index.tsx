@@ -21,7 +21,7 @@ import Events from '../components/Events'
 import { mediaquery } from '../style/style.js'
 
 export const Index: NextPage = () => {
-  const { t, locale } = useTranslation()
+  const { t } = useTranslation()
   const theme = useTheme()
   const direction: GridDirection = useMediaQuery(theme.breakpoints.up('md'))
     ? 'row'
@@ -71,8 +71,8 @@ export const Index: NextPage = () => {
 
   return (
     <PageLayout
-      siteTitle='homepage.siteTitle'
-      siteDescription='homepage.siteDescription'
+      pageTitle={t('homepage.pageTitle')}
+      pageDescription={t('homepage.pageDescription')}
     >
       <Masthead />
 

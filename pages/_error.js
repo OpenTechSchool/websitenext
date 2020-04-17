@@ -11,7 +11,7 @@ function ErrorPage({ errorCode }) {
     case 200: // Also display a 404 if someone requests /_error explicitly
     case 404:
       return (
-        <PageLayout siteTitle={t('404.siteTitle')}>
+        <PageLayout pageTitle={t('404.pageTitle')}>
           <div className='error'>
             {t('404.description')}
             <br />
@@ -36,8 +36,8 @@ function ErrorPage({ errorCode }) {
       )
     default:
       return (
-        <PageLayout siteTitle={t('500.siteTitle')}>
-          <NextError statusCode={errorCode} title={t('500.siteTitle')} />
+        <PageLayout pageTitle={t('500.pageTitle')}>
+          <NextError statusCode={errorCode} title={t('500.pageTitle')} />
           <div className='error'>{t('500.description')}</div>
         </PageLayout>
       )

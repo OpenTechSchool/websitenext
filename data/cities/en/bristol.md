@@ -1,6 +1,8 @@
 ---
 slug: bristol
 title: Bristol
+page_description: |
+  Bristol: home of Banksy, Aardman, Concorde and great cider. And, after London, the UK's leading hub of digital enterprise. In 2013, we set up CodeHub to create a space for developers to learn from one another. Seeing that it was quite similar to OpenTechSchool, we decided to join the global network.
 location: 'Bristol, UK'
 tagline: 'The start of a great adventure'
 meetup_name: CodeHub-Bristol

@@ -10,12 +10,12 @@ import TextSection from '../components/Section/TextSection'
 import ContactSection from '../components/Section/ContactSection'
 
 const Community: NextPage = () => {
-  const { t, locale } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <PageLayout
-      siteTitle={t('community.siteTitle')}
-      siteDescription={t('community.siteDescription')}
+      pageTitle={t('community.pageTitle')}
+      pageDescription={t('community.pageDescription')}
     >
       {/* <section>
         <LocalSwitcher />

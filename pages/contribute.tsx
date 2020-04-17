@@ -13,8 +13,8 @@ const Community: NextPage = () => {
 
   return (
     <PageLayout
-      siteTitle={t('contribute.siteTitle')}
-      siteDescription={t('contribute.siteDescription')}
+      pageTitle={t('contribute.pageTitle')}
+      pageDescription={t('contribute.pageDescription')}
     >
       {/* <section>
         <LocalSwitcher />

@@ -1,8 +1,11 @@
 ---
 slug: leipzig
 title: Leipzig
+page_description: |
+  We are a friendly group of tech enthusiasts that meet regularly to work on projects, discuss technologies and help each other.
+  We organize events to learn, collaborate and meet other learners. If you interested in tech, would like to try out programming or if you need help with your project, feel free to join the community.
 location: Leipzig, Germany
-tagline: Your beginners friendly tech community in Leipzig
+tagline: Your beginner friendly tech community in Leipzig
 credits: Thanks to Christian Doeller (www.christiandoeller.de)
 meetup_name: opentechschool-leipzig
 twitter: ots_le
