@@ -1,16 +1,22 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/foundation",
-      "status": 308,
-      "headers": { "Location": "/about#foundation" }
-    },
-    {
-      "src": "/about.html",
-      "status": 308,
-      "headers": { "Location": "/about" }
-    },
-    { "handle": "filesystem" }
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/about.html", "destination": "/about" },
+    { "source": "/team.html", "destination": "/about" },
+    { "source": "/press.html", "destination": "/about" },
+    { "source": "/contact.html", "destination": "/#get-in-touch" },
+    { "source": "/sponsors.html", "destination": "/contribute#supporter" },
+    { "source": "/imprint.html", "destination": "/imprint" },
+    { "source": "/material.html", "destination": "https://learn.opentechschool.org/" },
+    { "source": "/berlin", "destination": "/cities/berlin" },
+    { "source": "/leipzig", "destination": "/cities/leipzig" },
+    { "source": "/zurich", "destination": "/cities/zurich" },
+    { "source": "/brussels", "destination": "/cities/brussels" },
+    { "source": "/bristol", "destination": "/cities/bristol" },
+    { "source": "/romagna", "destination": "/cities/romagna" },
+    { "source": "/handbooks/(.*)", "destination": "/guides" },
+    { "handle": "filesystem" },
+    { "source": "/foundation", "destination": "/about#foundation" }
   ]
 }
