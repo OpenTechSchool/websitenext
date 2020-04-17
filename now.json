@@ -1,6 +1,13 @@
 {
   "version": 2,
   "trailingSlash": false,
+  "routes": [
+    {
+      "src": "/foundation",
+      "status": 308,
+      "headers": { "Location": "/about#foundation" }
+    }
+  ],
   "redirects": [
     { "source": "/about.html", "destination": "/about" },
     { "source": "/team.html", "destination": "/about" },
@@ -9,7 +16,6 @@
     { "source": "/sponsors.html", "destination": "/contribute#supporter" },
     { "source": "/imprint.html", "destination": "/imprint" },
     { "source": "/material.html", "destination": "https://learn.opentechschool.org/" },
-    { "source": "/foundation/", "destination": "/about#foundation" },
     { "source": "/berlin", "destination": "/cities/berlin" },
     { "source": "/leipzig", "destination": "/cities/leipzig" },
     { "source": "/zurich", "destination": "/cities/zurich" },
