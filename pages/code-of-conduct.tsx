@@ -8,8 +8,8 @@ const CodeOfConduct: NextPage = () => {
   const { t } = useTranslation()
   return (
     <PageLayout
-      pageTitle={t('codeOfCondact.pageTitle')}
-      pageDescription={t('codeOfCondact.pageDescription')}
+      pageTitle={t('codeOfConduct.pageTitle')}
+      pageDescription={t('codeOfConduct.pageDescription')}
     >
       <TextSection title='Code of Conduct'>
         <h3 id='purpose'>Purpose</h3>
