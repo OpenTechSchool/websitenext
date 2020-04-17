@@ -4,11 +4,7 @@ import Layout from '../Layout/Layout'
 
 export default function CityLayout({ pageTitle, pageDescription, children }) {
   return (
-    <Layout
-      pageTitle={pageTitle}
-      pageDescription={pageDescription}
-      noTranslation
-    >
+    <Layout pageTitle={pageTitle} pageDescription={pageDescription}>
       <section className='cityPage'>
         <div className='main'>{children}</div>
       </section>

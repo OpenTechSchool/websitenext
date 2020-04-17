@@ -10,7 +10,7 @@ import TextSection from '../components/Section/TextSection'
 import ContactSection from '../components/Section/ContactSection'
 
 const Community: NextPage = () => {
-  const { t, locale } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <PageLayout

@@ -12,7 +12,7 @@ const About: NextPage = () => {
 
   return (
     <PageLayout
-      pageTitle='about.pageTitle'
+      pageTitle={t('about.pageTitle')}
       pageDescription={t('about.pageDescription')}
     >
       {/* <section>

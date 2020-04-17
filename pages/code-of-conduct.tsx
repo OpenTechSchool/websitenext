@@ -1,11 +1,16 @@
 import { NextPage } from 'next'
 import TextSection from '../components/Section/TextSection'
 import WithLocale from '../containers/withLocale'
+import useTranslation from '../hooks/useTranslation'
 import PageLayout from '../components/PageLayout/PageLayout'
 
 const CodeOfConduct: NextPage = () => {
+  const { t } = useTranslation()
   return (
-    <PageLayout pageTitle='' pageDescription=''>
+    <PageLayout
+      pageTitle={t('codeOfCondact.pageTitle')}
+      pageDescription={t('codeOfCondact.pageDescription')}
+    >
       <TextSection title='Code of Conduct'>
         <h3 id='purpose'>Purpose</h3>
 

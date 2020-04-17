@@ -2,26 +2,18 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import useTranslation from '../hooks/useTranslation'
 
-export default function Meta({ pageTitle, pageDescription, noTranslation }) {
+export default function Meta({ pageTitle, pageDescription }) {
   const { t } = useTranslation()
   return (
     <>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta charSet='utf-8' />
-        <title>
-          {`${noTranslation ? pageTitle : t(pageTitle)} | OpenTechSchool`}
-        </title>
+        <title>{`${pageTitle} | OpenTechSchool`}</title>
         {!!pageDescription && (
-          <meta
-            name='Description'
-            content={noTranslation ? pageDescription : t(pageDescription)}
-          />
+          <meta name='Description' content={pageDescription} />
         )}
-        <meta
-          property='og:title'
-          content={noTranslation ? pageTitle : t(pageTitle)}
-        />
+        <meta property='og:title' content={pageTitle} />
         <meta property='fb:admins' content='825782113' />
         <meta
           property='og:image'
@@ -29,15 +21,9 @@ export default function Meta({ pageTitle, pageDescription, noTranslation }) {
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@OpenTechSchool' />
-        <meta
-          name='twitter:title'
-          content={noTranslation ? pageTitle : t(pageTitle)}
-        />
+        <meta name='twitter:title' content={pageTitle} />
         {!!pageDescription && (
-          <meta
-            name='twitter:description'
-            content={noTranslation ? pageDescription : t(pageDescription)}
-          />
+          <meta name='twitter:description' content={pageDescription} />
         )}
         <meta
           name='twitter:image'
@@ -71,6 +57,5 @@ export default function Meta({ pageTitle, pageDescription, noTranslation }) {
 
 Meta.propTypes = {
   pageTitle: PropTypes.string.isRequired,
-  pageDescription: PropTypes.string,
-  noTranslation: PropTypes.bool,
+  pageDescription: PropTypes.string.isRequired,
 }
