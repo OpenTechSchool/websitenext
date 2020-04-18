@@ -21,7 +21,8 @@ export default function Meta({ pageTitle, pageDescription, pageImage }) {
         <meta property='fb:admins' content='825782113' />
         <meta
           property='og:image'
-          content={pageImage || '/sharing-images/website-into-sharing.png'}
+          content={`https://www.opentechschool.org${pageImage ||
+            '/sharing-images/website-into-sharing.png'}`}
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@OpenTechSchool' />
