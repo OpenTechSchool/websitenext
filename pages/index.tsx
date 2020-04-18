@@ -85,7 +85,7 @@ export const Index: NextPage = () => {
           <Grid item xs={12} md={5}>
             <div className='ots-initiative'>
               <h2>{t('homepage.otsInitiative.title')}</h2>
-              <p>{t('homepage.otsInitiative.description2')}</p>
+              <p>{t('homepage.otsInitiative.description')}</p>
               <Link href={`/about`}>
                 <a>{t('homepage.otsInitiative.learnMore')}</a>
               </Link>
