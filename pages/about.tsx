@@ -130,7 +130,7 @@ const About: NextPage = () => {
         <p>
           {t('about.foundation.membership.agree')}{' '}
           <a
-            href='/foundation/archive/aktuelle-Satzung.pdf'
+            href='/files/foundation/aktuelle-Satzung.pdf'
             target='_blank'
             rel='noopener noreferrer'
           >
