@@ -12,9 +12,12 @@ export default function Meta({ pageTitle, pageDescription, pageImage }) {
         <meta charSet='utf-8' />
         <title>{pageTitle}</title>
         {!!pageDescription && (
-          <meta name='Description' content={pageDescription} />
+          <meta name='description' content={pageDescription} />
         )}
         <meta property='og:title' content={pageTitle} />
+        {!!pageDescription && (
+          <meta name='og:description' content={pageDescription} />
+        )}
         <meta property='fb:admins' content='825782113' />
         <meta
           property='og:image'
