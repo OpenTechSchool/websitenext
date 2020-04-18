@@ -22,14 +22,6 @@ export default function Meta({ pageTitle, pageDescription, pageImage }) {
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@OpenTechSchool' />
-        <meta name='twitter:title' content={pageTitle} />
-        {!!pageDescription && (
-          <meta name='twitter:description' content={pageDescription} />
-        )}
-        <meta
-          name='twitter:image'
-          content='/sharing-images/twitter-sharing.jpg'
-        />
         <link rel='shortcut icon' href='/favicon.ico' />
         <link
           rel='icon'
