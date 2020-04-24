@@ -6,13 +6,12 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import MenuIcon from '@material-ui/icons/Menu'
 import CloseIcon from '@material-ui/icons/Close'
 import useTranslation from '../../hooks/useTranslation'
-import SocialMediaSection from '../Section/SocialMediaSection'
 
 import { mediaquery } from '../../style/style'
 
 export function Header({ setIsMenuOpen }) {
   const isDesktop = useMediaQuery(`(${mediaquery.smallToTablet})`)
-  const { locale, t } = useTranslation()
+  const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
 
   const menuIconStyle = {
@@ -101,10 +100,6 @@ export function Header({ setIsMenuOpen }) {
               <a className='invert'>{t('header.about')}</a>
             </Link>
           </nav>
-
-          <div className='socialSection'>
-            <SocialMediaSection bgColor='ots-blue' />
-          </div>
         </div>
       )}
 
@@ -164,6 +159,12 @@ export function Header({ setIsMenuOpen }) {
 
           .mobile-nav {
             margin: 30px 0;
+            height: calc(
+              100% - 60px - 72px
+            ); /* 60px are the margins + 72px the header height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
           }
 
           .mobile-nav a {
