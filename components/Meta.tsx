@@ -22,7 +22,7 @@ export default function Meta({ pageTitle, pageDescription, pageImage }) {
         <meta
           property='og:image'
           content={`https://www.opentechschool.org${pageImage ||
-            '/sharing-images/website-into-sharing.png'}`}
+            '/sharing-images/website-into-sharing.png?1'}`}
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@OpenTechSchool' />
