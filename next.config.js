@@ -1,6 +1,7 @@
 const path = require('path')
+const withImages = require('next-images')
 
-module.exports = {
+module.exports = withImages({
   webpack: function(config) {
     config.module.rules.push({
       test: /\.md$/,
@@ -14,4 +15,4 @@ module.exports = {
       MEETUP_URL: 'http://meetup.com',
     },
   },
-}
+})
