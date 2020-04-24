@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import Head from 'next/head'
 import useTranslation from '../hooks/useTranslation'
+import openGraphImage from '../assets/open-graph-image.png'
 
 export default function Meta({ pageTitle, pageDescription, pageImage }) {
   const { t } = useTranslation()
@@ -22,7 +23,7 @@ export default function Meta({ pageTitle, pageDescription, pageImage }) {
         <meta
           property='og:image'
           content={`https://www.opentechschool.org${pageImage ||
-            '/sharing-images/website-into-sharing.png?1'}`}
+            openGraphImage}`}
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@OpenTechSchool' />
