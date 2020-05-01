@@ -11,7 +11,9 @@
     "open": "sleepms 5000 && open http://localhost:3000",
     "dev": "npm run clean-cache && npm run lint && concurrently \"npm run lint:watch\" next \"npm run open\" --names \"🛂,🏗️,🖥️\" --prefix name ",
     "build": "npm run clean-cache && next build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -33,7 +35,8 @@
     "react-dom": "^16.13.1",
     "react-markdown": "^4.3.1",
     "react-twitter-embed": "^3.0.3",
-    "styled-components": "^4.4.1"
+    "styled-components": "^4.4.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@material-ui/icons": "^4.9.1",
@@ -66,5 +69,6 @@
     "singleQuote": true,
     "jsxSingleQuote": true,
     "jsxBracketSameLine": false
-  }
+  },
+  "snyk": true
 }
