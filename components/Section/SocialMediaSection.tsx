@@ -4,6 +4,8 @@ import TextSection from './TextSection'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
+import InstagramIcon from '@material-ui/icons/Instagram'
+
 
 export default function SocialMediaSection({ bgColor = '' }) {
   const iconStyle = {
@@ -57,6 +59,16 @@ export default function SocialMediaSection({ bgColor = '' }) {
             className='icon'
           >
             <GitHubIcon style={iconStyle} />
+          </a>
+        </Grid>
+        <Grid item xs={4} md={1}>
+          <a
+            href='https://instagram.com/opentechschool_leipzig'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='icon'
+          >
+            <InstagramIcon style={iconStyle} />
           </a>
         </Grid>
       </Grid>
