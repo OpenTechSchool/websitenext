@@ -63,7 +63,7 @@ export default function SocialMediaSection({ bgColor = '' }) {
         </Grid>
         <Grid item xs={4} md={1}>
           <a
-            href='https://instagram.com/opentechschool_leipzig'
+            href=''
             target='_blank'
             rel='noopener noreferrer'
             className='icon'
