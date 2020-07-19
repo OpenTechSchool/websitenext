@@ -5,6 +5,7 @@ import FacebookIcon from '@material-ui/icons/Facebook'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
 
+
 export default function SocialMediaSection({ bgColor = '' }) {
   const iconStyle = {
     fontSize: 50,

@@ -13,6 +13,7 @@ socials:
   - twitter: https://twitter.com/ots_le
   - github: http://github.com/opentechschool-leipzig
   - facebook: http://facebook.com/opentechschool.leipzig
+  - instagram: https://www.instagram.com/opentechschool_leipzig/
 members:
   - christina: Christina
   - daniel: Daniel

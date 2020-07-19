@@ -8,6 +8,7 @@ import Icon from '@material-ui/core/Icon'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
+import InstagramIcon from '@material-ui/icons/Instagram'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
 // import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
@@ -22,6 +23,7 @@ const socialIconsList = {
   facebook: <FacebookIcon />,
   twitter: <TwitterIcon />,
   github: <GitHubIcon />,
+  instagram: <InstagramIcon />,
   discourse: { imgSrc: '/discourse_blue_icon.png' },
   matrix: { imgSrc: '/matrix_logo.png' },
 }
