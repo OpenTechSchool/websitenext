@@ -33,7 +33,7 @@
     "raw-loader": "^4.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-markdown": "^4.3.1",
+    "react-markdown": "^5.0.0",
     "react-twitter-embed": "^3.0.3",
     "styled-components": "^4.4.1",
     "snyk": "^1.316.1"
