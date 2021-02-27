@@ -2,7 +2,6 @@ import Link from 'next/link'
 import matter from 'gray-matter'
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
-import useTranslation from '../../hooks/useTranslation'
 import { mediaquery } from '../../style/style'
 
 export const cities = (ctx => {
@@ -25,8 +24,6 @@ export default function ChapterSection({
   hideActiveChapters,
   hideInactiveChapters,
 }) {
-  const { locale } = useTranslation()
-
   return (
     <div className='chaptersWrapper'>
       {title ? <h4>{title}</h4> : ''}
