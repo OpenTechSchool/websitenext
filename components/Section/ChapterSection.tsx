@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import useTranslation from '../../hooks/useTranslation'
 import { mediaquery } from '../../style/style'
 
-export const cities = (ctx => {
+export const cities = ((ctx) => {
   const keys = ctx.keys() // get all keys from data/cities/en
   const values = keys.map(ctx) // grab the content from these files
 

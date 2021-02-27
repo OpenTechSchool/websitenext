@@ -37,7 +37,7 @@ const LocaleSwitcher: React.FC = () => {
           onChange={handleLocaleChange}
           displayEmpty
         >
-          {locales.map(locale => (
+          {locales.map((locale) => (
             <MenuItemStyle key={locale} value={locale}>
               {languageNames[locale]}
             </MenuItemStyle>

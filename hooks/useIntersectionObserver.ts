@@ -20,6 +20,10 @@ const useIntersectionObserver = ({
 
     // Let's clean up after ourselves.
     return () => {
+      if (!target || !target.current) {
+        return
+      }
+
       observer.unobserve(target.current)
     }
   }, [target.current])

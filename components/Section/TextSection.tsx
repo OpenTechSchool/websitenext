@@ -2,7 +2,7 @@ import React from 'react'
 import Icon from '@material-ui/core/Icon'
 import { mediaquery } from '../../style/style'
 
-const WrappedIcon = props => <Icon {...props} />
+const WrappedIcon = (props) => <Icon {...props} />
 WrappedIcon.muiName = 'Icon'
 
 interface TextSectionProps {
