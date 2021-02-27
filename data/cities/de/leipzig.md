@@ -13,7 +13,6 @@ socials:
   - instagram: https://www.instagram.com/opentechschool_leipzig/
 members:
   - christina: Christina
-  - daniel: Daniel
   - krissi: Krissi
   - norma: Norma
 ---
