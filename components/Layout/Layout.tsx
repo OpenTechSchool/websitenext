@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Meta from '../Meta'
@@ -5,14 +6,12 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 
 import globalStyle from '../../style/style-global'
-import { ThemeProvider } from '@material-ui/core/styles'
-import { otsTheme } from '../../style/style'
 
 export const Layout = ({ pageTitle, pageDescription, children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <ThemeProvider theme={otsTheme}>
+    <React.Fragment>
       <Meta pageTitle={pageTitle} pageDescription={pageDescription} />
       <div className={isMenuOpen ? 'bodyFixed' : ''}>
         <Header setIsMenuOpen={setIsMenuOpen} />
@@ -28,7 +27,7 @@ export const Layout = ({ pageTitle, pageDescription, children }) => {
           }
         `}</style>
       </div>
-    </ThemeProvider>
+    </React.Fragment>
   )
 }
 

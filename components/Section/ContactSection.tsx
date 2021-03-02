@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { mediaquery } from '../../style/style.js'
 
 export default function ContactSection() {
-  const { locale, t } = useTranslation()
+  const { t } = useTranslation()
   const chatIconStyleFirst = { fontSize: 180, color: 'var(--pink)' }
   const chatIconStyleSecond = {
     fontSize: 100,
