@@ -4,7 +4,7 @@ import useTranslation from '../../hooks/useTranslation'
 import { mediaquery } from '../../style/style'
 
 export default function Footer() {
-  const { locale, t } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <footer>
