@@ -12,8 +12,8 @@ const About: NextPage = () => {
 
   return (
     <PageLayout
-      siteTitle='about.siteTitle'
-      siteDescription={t('about.siteDescription')}
+      pageTitle={t('about.pageTitle')}
+      pageDescription={t('about.pageDescription')}
     >
       {/* <section>
         <LocalSwitcher />
@@ -130,7 +130,7 @@ const About: NextPage = () => {
         <p>
           {t('about.foundation.membership.agree')}{' '}
           <a
-            href='/foundation/archive/aktuelle-Satzung.pdf'
+            href='/files/foundation/aktuelle-Satzung.pdf'
             target='_blank'
             rel='noopener noreferrer'
           >

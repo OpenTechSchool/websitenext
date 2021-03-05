@@ -25,8 +25,8 @@ const Team = ({ discourseGroupName }) => {
     fetch(
       `https://discourse.opentechschool.org/groups/${team}/members.json?limit=100`
     )
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         // resort items depending on last seen
         // prefer last active users
         let members = data.members
@@ -60,7 +60,7 @@ const Team = ({ discourseGroupName }) => {
                 justify='center'
                 spacing={4}
               >
-                {memberChunk.map(member => {
+                {memberChunk.map((member) => {
                   let thumbnail = member.avatar_template.replace(
                     '{size}',
                     '256'

@@ -21,7 +21,7 @@ import Events from '../components/Events'
 import { mediaquery } from '../style/style.js'
 
 export const Index: NextPage = () => {
-  const { t, locale } = useTranslation()
+  const { t } = useTranslation()
   const theme = useTheme()
   const direction: GridDirection = useMediaQuery(theme.breakpoints.up('md'))
     ? 'row'
@@ -71,8 +71,8 @@ export const Index: NextPage = () => {
 
   return (
     <PageLayout
-      siteTitle='homepage.siteTitle'
-      siteDescription='homepage.siteDescription'
+      pageTitle={t('homepage.pageTitle')}
+      pageDescription={t('homepage.pageDescription')}
     >
       <Masthead />
 
@@ -85,7 +85,7 @@ export const Index: NextPage = () => {
           <Grid item xs={12} md={5}>
             <div className='ots-initiative'>
               <h2>{t('homepage.otsInitiative.title')}</h2>
-              <p>{t('homepage.otsInitiative.description2')}</p>
+              <p>{t('homepage.otsInitiative.description')}</p>
               <Link href={`/about`}>
                 <a>{t('homepage.otsInitiative.learnMore')}</a>
               </Link>

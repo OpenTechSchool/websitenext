@@ -8,6 +8,7 @@ import Icon from '@material-ui/core/Icon'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import TwitterIcon from '@material-ui/icons/Twitter'
+import InstagramIcon from '@material-ui/icons/Instagram'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
 // import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
@@ -22,14 +23,15 @@ const socialIconsList = {
   facebook: <FacebookIcon />,
   twitter: <TwitterIcon />,
   github: <GitHubIcon />,
+  instagram: <InstagramIcon />,
   discourse: { imgSrc: '/discourse_blue_icon.png' },
   matrix: { imgSrc: '/matrix_logo.png' },
 }
 
-const WrappedIcon = props => <Icon {...props} />
+const WrappedIcon = (props) => <Icon {...props} />
 WrappedIcon.muiName = 'Icon'
 
-export function CityTemplate({ content, data, siteTitle, siteDescription }) {
+export function CityTemplate({ content, data }) {
   const { t } = useTranslation()
   const markdownBody = content
   const frontmatter = data
@@ -73,7 +75,10 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
   }, [showMoreLink])
 
   return (
-    <CityLayout siteTitle={siteTitle} siteDescription={siteDescription}>
+    <CityLayout
+      pageTitle={`${frontmatter.title} chapter`}
+      pageDescription={frontmatter.page_description}
+    >
       <CityHero
         cityName={cityName}
         title={frontmatter.title}
@@ -96,7 +101,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
               <ReactMarkdown source={markdownBody} escapeHtml={false} />
             </div>
             {frontmatter.socials &&
-              frontmatter.socials.map(social => {
+              frontmatter.socials.map((social) => {
                 const iconName = Object.keys(social)[0]
                 const link = social[iconName]
                 return (
@@ -195,7 +200,7 @@ export function CityTemplate({ content, data, siteTitle, siteDescription }) {
   )
 }
 
-CityTemplate.getInitialProps = async ctx => {
+CityTemplate.getInitialProps = async (ctx) => {
   const { lang = 'en', slug } = ctx.query
 
   const content = await import(`../../data/cities/${lang}/${slug}.md`)
@@ -203,8 +208,6 @@ CityTemplate.getInitialProps = async ctx => {
   const data = matter(content.default)
 
   return {
-    siteTitle: slug,
-    siteDescription: 'some description',
     content,
     ...data,
   }
@@ -215,6 +218,4 @@ export default WithLocale(CityTemplate)
 CityTemplate.propTypes = {
   content: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
-  siteTitle: PropTypes.string.isRequired,
-  siteDescription: PropTypes.string.isRequired,
 }

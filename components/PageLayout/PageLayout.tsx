@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Layout from '../Layout/Layout'
 
-export default function PageLayout({ siteTitle, siteDescription, children }) {
+export default function PageLayout({ pageTitle, pageDescription, children }) {
   return (
-    <Layout siteTitle={siteTitle} siteDescription={siteDescription}>
+    <Layout pageTitle={pageTitle} pageDescription={pageDescription}>
       <section className='page'>
         <div className='main'>{children}</div>
       </section>
@@ -13,6 +13,6 @@ export default function PageLayout({ siteTitle, siteDescription, children }) {
 }
 PageLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  siteTitle: PropTypes.string.isRequired,
-  siteDescription: PropTypes.string.isRequired,
+  pageTitle: PropTypes.string.isRequired,
+  pageDescription: PropTypes.string.isRequired,
 }

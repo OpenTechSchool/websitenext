@@ -2,41 +2,30 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import useTranslation from '../hooks/useTranslation'
 
-export default function Meta({ siteTitle, siteDescription, noTranslation }) {
+export default function Meta({ pageTitle, pageDescription, pageImage }) {
   const { t } = useTranslation()
+  pageTitle = `${pageTitle} | OpenTechSchool`
   return (
     <>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta charSet='utf-8' />
-        <title>{noTranslation ? siteTitle : t(siteTitle)}</title>
-        <meta
-          name='Description'
-          content={noTranslation ? siteDescription : t(siteDescription)}
-        ></meta>
-        <meta
-          property='og:title'
-          content={noTranslation ? siteTitle : t(siteTitle)}
-        />
+        <title>{pageTitle}</title>
+        {!!pageDescription && (
+          <meta name='description' content={pageDescription} />
+        )}
+        <meta property='og:title' content={pageTitle} />
+        {!!pageDescription && (
+          <meta name='og:description' content={pageDescription} />
+        )}
         <meta property='fb:admins' content='825782113' />
         <meta
           property='og:image'
-          content='/sharing-images/facebook-sharing.jpg'
+          content={`https://www.opentechschool.org${pageImage ||
+            '/sharing-images/website-into-sharing.png?1'}`}
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@OpenTechSchool' />
-        <meta
-          name='twitter:title'
-          content={noTranslation ? siteTitle : t(siteTitle)}
-        />
-        <meta
-          name='twitter:description'
-          content={noTranslation ? siteDescription : t(siteDescription)}
-        />
-        <meta
-          name='twitter:image'
-          content='/sharing-images/twitter-sharing.jpg'
-        />
         <link rel='shortcut icon' href='/favicon.ico' />
         <link
           rel='icon'
@@ -52,11 +41,7 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
         />
         <link
           rel='stylesheet'
-          href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
-        />
-        <link
-          href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap'
-          rel='stylesheet'
+          href='https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans:400,500,700&display=swap'
         />
         <link
           rel='stylesheet'
@@ -68,7 +53,7 @@ export default function Meta({ siteTitle, siteDescription, noTranslation }) {
 }
 
 Meta.propTypes = {
-  siteTitle: PropTypes.string.isRequired,
-  siteDescription: PropTypes.string.isRequired,
-  noTranslation: PropTypes.bool,
+  pageTitle: PropTypes.string.isRequired,
+  pageDescription: PropTypes.string.isRequired,
+  pageImage: PropTypes.string,
 }

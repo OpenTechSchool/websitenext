@@ -2,10 +2,9 @@ import Link from 'next/link'
 import matter from 'gray-matter'
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types'
-import useTranslation from '../../hooks/useTranslation'
 import { mediaquery } from '../../style/style'
 
-export const cities = (ctx => {
+export const cities = ((ctx) => {
   const keys = ctx.keys() // get all keys from data/cities/en
   const values = keys.map(ctx) // grab the content from these files
 
@@ -25,8 +24,6 @@ export default function ChapterSection({
   hideActiveChapters,
   hideInactiveChapters,
 }) {
-  const { locale } = useTranslation()
-
   return (
     <div className='chaptersWrapper'>
       {title ? <h4>{title}</h4> : ''}
