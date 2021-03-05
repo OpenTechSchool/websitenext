@@ -1,5 +1,4 @@
 import { NextPage } from 'next'
-import Error from 'next/error'
 import { isLocale, Locale } from '../translations/types'
 import { LocaleProvider } from '../context/LocaleContext'
 
@@ -7,8 +6,8 @@ interface LangProps {
   locale?: Locale
 }
 
-export default (WrappedPage: NextPage<any>) => {
-  const WithLocale: NextPage<any, LangProps> = ({ locale, ...pageProps }) => {
+const WithLocale = (WrappedPage: NextPage<any>) => {
+  const WithLocale: NextPage<any, LangProps> = ({ ...pageProps }) => {
     // if (!locale) {
     //   return <Error statusCode={404} />
     // }
@@ -35,3 +34,5 @@ export default (WrappedPage: NextPage<any>) => {
 
   return WithLocale
 }
+
+export default WithLocale

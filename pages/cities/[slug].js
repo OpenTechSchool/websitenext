@@ -28,7 +28,7 @@ const socialIconsList = {
   matrix: { imgSrc: '/matrix_logo.png' },
 }
 
-const WrappedIcon = props => <Icon {...props} />
+const WrappedIcon = (props) => <Icon {...props} />
 WrappedIcon.muiName = 'Icon'
 
 export function CityTemplate({ content, data }) {
@@ -101,7 +101,7 @@ export function CityTemplate({ content, data }) {
               <ReactMarkdown source={markdownBody} escapeHtml={false} />
             </div>
             {frontmatter.socials &&
-              frontmatter.socials.map(social => {
+              frontmatter.socials.map((social) => {
                 const iconName = Object.keys(social)[0]
                 const link = social[iconName]
                 return (
@@ -200,7 +200,7 @@ export function CityTemplate({ content, data }) {
   )
 }
 
-CityTemplate.getInitialProps = async ctx => {
+CityTemplate.getInitialProps = async (ctx) => {
   const { lang = 'en', slug } = ctx.query
 
   const content = await import(`../../data/cities/${lang}/${slug}.md`)
