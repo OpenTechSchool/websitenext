@@ -26,19 +26,25 @@ export default function Meta({ pageTitle, pageDescription, pageImage }) {
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@OpenTechSchool' />
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='/apple-touch-icon.png'
+        />
         <link rel='shortcut icon' href='/favicon.ico' />
         <link
           rel='icon'
           type='image/png'
-          href='/favicon-32.png'
+          href='/favicon-32x32.png'
           sizes='32x32'
         />
         <link
           rel='icon'
           type='image/png'
-          href='/favicon-96.png'
+          href='/favicon-96x96.png'
           sizes='96x96'
         />
+        <link rel='manifest' href='/site.webmanifest' />
         <link
           rel='stylesheet'
           href='https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans:400,500,700&display=swap'
