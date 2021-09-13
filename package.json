@@ -36,7 +36,7 @@
     "react-markdown": "^5.0.3",
     "react-twitter-embed": "^3.0.3",
     "styled-components": "^5.2.1",
-    "snyk": "^1.461.0"
+    "snyk": "^1.685.0"
   },
   "devDependencies": {
     "@material-ui/icons": "^4.11.2",
