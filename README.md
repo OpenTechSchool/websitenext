@@ -151,7 +151,7 @@ Yet, we avoid using javascript-in-css as much as possible therefore it will be e
 
 ## Deployment
 
-This website is being deployed to [Zeit.co](https://zeit.co/) on the free team account https://zeit.co/opentechschool. Every push to master goes live automatically via their Github integration.
+The app is exported as static HTML page using `npm run export` and hosted via Netlify.
 
 ## Contact
 

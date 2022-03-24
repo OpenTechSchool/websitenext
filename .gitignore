@@ -6,3 +6,4 @@ src/out/
 npm-debug.log
 next-env.d.ts
 .next
+out
