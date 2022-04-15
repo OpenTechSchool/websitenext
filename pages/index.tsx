@@ -46,12 +46,12 @@ export const Index: NextPage = () => {
 
     setLoading(true)
     Promise.all(
-      meetupNames.map(meetupName =>
-        fetchJsonp(`https://api.meetup.com/${meetupName}/events`).then(resp =>
+      meetupNames.map((meetupName) =>
+        fetchJsonp(`https://api.meetup.com/${meetupName}/events`).then((resp) =>
           resp.json()
         )
       )
-    ).then(jsons => {
+    ).then((jsons) => {
       const mixEvents = flatten(jsons.map(({ data }) => data.splice(0, 10)))
       mixEvents.sort(
         (a, b) => Date.parse(a.local_date) - Date.parse(b.local_date)
