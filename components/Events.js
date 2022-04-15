@@ -132,12 +132,14 @@ function Events({
               </div>
             ) : hasMixedGroups ? null : (
               <div>
+                {/* eslint-disable no-undef */}
                 <a
                   className='moreEvents'
                   href={`${process.env.external.MEETUP_URL}/${meetupName}`}
                   rel='noopener noreferrer'
                   target='_blank'
                 >
+                  {/* eslint-enable no-undef */}
                   check all events{' '}
                   <span className='arrowRight'>
                     <ArrowRight style={arrowRightStyle} />
