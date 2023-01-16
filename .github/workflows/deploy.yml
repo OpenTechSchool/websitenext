@@ -29,6 +29,7 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          scope: ${{ secrets.VERCEL_TEAM_SLUG }}
           working-directory: ./
           alias-domains: |
             pr-{{PR_NUMBER}}-websitenext.opentechschool.org
@@ -40,5 +41,6 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          scope: ${{ secrets.VERCEL_TEAM_SLUG }}
           working-directory: ./
           vercel-args: '--prod '
