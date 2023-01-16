@@ -11,9 +11,7 @@
     "open": "sleepms 5000 && open http://localhost:3000",
     "dev": "npm run clean-cache && npm run lint && concurrently \"npm run lint:watch\" next \"npm run open\" --names \"🛂,🏗️,🖥️\" --prefix name ",
     "build": "npm run clean-cache && next build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
     "hooks": {
@@ -68,6 +66,5 @@
     "singleQuote": true,
     "jsxSingleQuote": true,
     "jsxBracketSameLine": false
-  },
-  "snyk": true
+  }
 }
