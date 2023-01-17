@@ -46,8 +46,6 @@ jobs:
           scope: ${{ secrets.VERCEL_TEAM_SLUG }}
           vercel-args: --prebuilt
           working-directory: ./
-          alias-domains: |
-            websitenext-pr-{{PR_NUMBER}}.opentechschool.org
       - run: |
           npx vercel build --prod
         if: github.event_name == 'push'
