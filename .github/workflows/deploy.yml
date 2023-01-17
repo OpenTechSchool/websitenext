@@ -12,8 +12,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v1
+      - uses: actions/checkout@v3
+      - uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -35,7 +35,7 @@ jobs:
         env:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      - uses: amondnet/vercel-action@v20 #deploy
+      - uses: amondnet/vercel-action@v25 #deploy
         id: now-deployment-staging
         if: github.event_name == 'pull_request_target'
         with:
@@ -53,7 +53,7 @@ jobs:
         env:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      - uses: amondnet/vercel-action@v20 #deploy
+      - uses: amondnet/vercel-action@v25 #deploy
         id: now-deployment-production
         if: github.event_name == 'push'
         with:
