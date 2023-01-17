@@ -47,18 +47,7 @@ jobs:
           vercel-args: --prebuilt
           working-directory: ./
           alias-domains: |
-            pr-{{PR_NUMBER}}-websitenext.opentechschool.org
-      - name: production or not
-        id: prod_or_not
-        run: |
-          if [ "$REF" == 'refs/heads/master' ]
-          then
-              echo "vercel-args=--prod --prebuilt" >> $GITHUB_OUTPUT
-          else
-              echo "vercel-args=--prebuilt" >> $GITHUB_OUTPUT
-          fi
-        env:
-          REF: ${{ github.ref }}
+            websitenext-pr-{{PR_NUMBER}}.opentechschool.org
       - run: |
           npx vercel build --prod
         if: github.event_name == 'push'
@@ -75,5 +64,5 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           scope: ${{ secrets.VERCEL_TEAM_SLUG }}
-          vercel-args: ${{ steps.prod_or_not.outputs.vercel-args }}
+          vercel-args: --prod --prebuilt
           working-directory: ./
