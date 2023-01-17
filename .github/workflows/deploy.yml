@@ -1,3 +1,5 @@
+# https://github.com/amondnet/vercel-action/blob/master/.github/workflows/example-nextjs.yml
+
 name: deploy website
 
 on:
@@ -20,9 +22,21 @@ jobs:
       - name: build
         run: |
           npm ci
-          npm run build
+          npx vercel pull --yes --token=${VERCEL_TOKEN}
+        working-directory: ./
+        env:
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      - run: |
+          npx vercel build
+        if: github.event_name == 'pull_request_target'
+        working-directory: ./
+        env:
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
       - uses: amondnet/vercel-action@v20 #deploy
-        id: vercel-action-staging
+        id: now-deployment-staging
         if: github.event_name == 'pull_request_target'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -30,11 +44,30 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           scope: ${{ secrets.VERCEL_TEAM_SLUG }}
+          vercel-args: --prebuilt
           working-directory: ./
           alias-domains: |
             pr-{{PR_NUMBER}}-websitenext.opentechschool.org
+      - name: production or not
+        id: prod_or_not
+        run: |
+          if [ "$REF" == 'refs/heads/master' ]
+          then
+              echo "vercel-args=--prod --prebuilt" >> $GITHUB_OUTPUT
+          else
+              echo "vercel-args=--prebuilt" >> $GITHUB_OUTPUT
+          fi
+        env:
+          REF: ${{ github.ref }}
+      - run: |
+          npx vercel build --prod
+        if: github.event_name == 'push'
+        working-directory: ./
+        env:
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
       - uses: amondnet/vercel-action@v20 #deploy
-        id: vercel-action-production
+        id: now-deployment-production
         if: github.event_name == 'push'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -42,5 +75,5 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           scope: ${{ secrets.VERCEL_TEAM_SLUG }}
+          vercel-args: ${{ steps.prod_or_not.outputs.vercel-args }}
           working-directory: ./
-          vercel-args: '--prod '
