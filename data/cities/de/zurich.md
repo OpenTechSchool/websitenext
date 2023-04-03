@@ -30,4 +30,4 @@ Herzlichen Dank an [Liip](https://liip.ch) für die Bereitstellung der Räumlich
 
 ## Kontakt
 
-Hast du noch Fragen, dann schicke uns eine [E-Mail](mailto:team.zurich@opentechschool.org) or melde dich in unserem [Matrix / Riot.im Chat](https://riot.im/app/#/room/!QfxBFKxPagVsgBPhpa:matrix.org?via=matrix.org) (Channel: #ots-zh:matrix.org / opentechschool-zurich).
+Hast du noch Fragen, dann schicke uns eine [E-Mail](mailto:team.zurich@opentechschool.org) or melde dich in unserem [Matrix / Element](https://matrix.to/#/#ots-zh:matrix.org) (Channel: #ots-zh:matrix.org / opentechschool-zurich).
