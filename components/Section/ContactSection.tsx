@@ -59,7 +59,7 @@ export default function ContactSection() {
               <p>
                 <a
                   className='highlight'
-                  href='https://opentechschool-slack.herokuapp.com/'
+                  href='https://join.slack.com/t/opentechschool/shared_invite/zt-1mpx31hk2-C0~bk3sXUhzyT57f8J4Smg'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
