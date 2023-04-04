@@ -26,7 +26,7 @@ During the winter months, we also meet on Sunday evenings from 17:30 to 19:30.
 
 The event is free and everyone is welcome to participate. We don't offer regular coding workshops, but we meet to talk about coding issues or any kind of question you might have when getting started with programming. People that join our meetup have different experience levels and are always happy to help.
 
-Please read our [Code of Conduct]({{site.baseurl}}/code-of-conduct/) before you join.
+Please read our [Code of Conduct](/code-of-conduct/) before you join.
 
 A big thanks to [Liip](https://liip.ch) for sponsoring the event space.
 

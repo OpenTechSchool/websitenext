@@ -27,7 +27,7 @@ Wir treffen uns regelmäßig Montag oder Donnerstag zwischen 19 und 22 Uhr im Ba
 
 Die Veranstaltung ist kostenlos und jeder ist herzlich eingeladen teilzunehmen. Wir bieten keine fortlaufenden Programmierworkshops an, aber wir treffen uns um deine Fragen zu beantworten und dich beim Lernen zu unterstützen. Die Teilnehmer unseres Meetups haben unterschiedliche Erfahrungsbereiche und helfen dir gerne weiter.
 
-Bitte lies unseren [Code of Conduct]({{site.baseurl}}/code-of-conduct/) bevor du vorbei kommst.
+Bitte lies unseren [Code of Conduct](/code-of-conduct/) bevor du vorbei kommst.
 
 Vielen Dank auch an das [Basislager](https://www.basislager.co) für die Bereitstellung der Räumlichkeiten.
 
