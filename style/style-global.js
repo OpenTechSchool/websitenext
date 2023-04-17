@@ -17,6 +17,43 @@ export default css.global`
     --secondaryFont: 'Open Sans', sans-serif;
   }
 
+  @font-face {
+    font-family: 'Open Sans';
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('../fonts/OpenSans/OpenSans.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('../fonts/Roboto/Roboto.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/MaterialIcons/MaterialIcons.woff2') format('woff2');
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -moz-font-feature-settings: 'liga';
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   * {
     box-sizing: inherit;
     padding: 0;

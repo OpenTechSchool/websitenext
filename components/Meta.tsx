@@ -46,14 +46,6 @@ export default function Meta({ pageTitle, pageDescription, pageImage }) {
           sizes='96x96'
         />
         <link rel='manifest' href='/site.webmanifest' />
-        <link
-          rel='stylesheet'
-          href='https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans:400,500,700&display=swap'
-        />
-        <link
-          rel='stylesheet'
-          href='https://fonts.googleapis.com/icon?family=Material+Icons'
-        />
       </Head>
     </>
   )
