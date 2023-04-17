@@ -23,7 +23,7 @@ In den Wintermonaten treffen wir auch am Sonntag Abend von 17:30 bis 19:30 Uhr.
 
 Die Veranstaltung ist kostenlos und jeder ist herzlich willkommen. Wir bieten keine regelmässigen Programmier-Workshops an, aber bei unsere Treffen werden Programmierporblemen besprochen und alle möglichen Fragen gestellt, die beim Einstieg in die Programmierung auftauchen können. Die Teilnehmer, haben unterschiedliche Erfahrungsbereiche und Niveaus und helfen dir gerne weiter.
 
-Bitte lies unseren [Code of Conduct]({{site.baseurl}}/code-of-conduct/) bevor du vorbei kommst.
+Bitte lies unseren [Code of Conduct](/code-of-conduct/) bevor du vorbei kommst.
 
 Herzlichen Dank an [Liip](https://liip.ch) für die Bereitstellung der Räumlichkeiten.
 

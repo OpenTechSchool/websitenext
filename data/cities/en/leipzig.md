@@ -30,7 +30,7 @@ We meet every week Monday or Thursday between 7 and 10pm at Basislager to learn,
 
 The event is free and everyone is welcome to participate. We don't offer regular coding workshops, but we meet to talk about coding issues or any kind of question you might have when getting started with programming. People that join our meetup have different experience levels and are always happy to help.
 
-Please read our [Code of Conduct]({{site.baseurl}}/code-of-conduct/) before you join.
+Please read our [Code of Conduct](/code-of-conduct/) before you join.
 
 Also a big thanks to [Basislager](https://www.basislager.co) for sponsoring the event space.
 
