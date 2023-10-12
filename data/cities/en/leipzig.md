@@ -44,4 +44,4 @@ We have a bunch ongoing projects and are always looking for people who like to c
 
 ## Contact
 
-You can send us an [email](mailto:leipzig@opentechschool.org) or join us at [Slack](https://opentechschool-slack.herokuapp.com) (channel: #leipzig).
+You can send us an [email](mailto:leipzig@opentechschool.org) or join us at [Slack](https://join.slack.com/t/opentechschool/shared_invite/zt-1mpx31hk2-C0~bk3sXUhzyT57f8J4Smg) (channel: #leipzig).
