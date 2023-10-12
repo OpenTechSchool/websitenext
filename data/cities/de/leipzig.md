@@ -42,4 +42,4 @@ Um mehr zu Erfahren, schaue auf unseren [Github Seite](http://github.com/opentec
 
 ## Kontakt
 
-Hast du noch Fragen, dann sende uns eine [E-Mail](mailto:leipzig@opentechschool.org) or melde dich in unserem [Slack](https://opentechschool-slack.herokuapp.com) (channel: #leipzig).
+Hast du noch Fragen, dann sende uns eine [E-Mail](mailto:leipzig@opentechschool.org) or melde dich in unserem [Slack](https://join.slack.com/t/opentechschool/shared_invite/zt-1mpx31hk2-C0~bk3sXUhzyT57f8J4Smg) (channel: #leipzig).
