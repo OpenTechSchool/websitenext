@@ -26,7 +26,7 @@ We organize events to learn, collaborate and meet other learners. If you interes
 
 ## Our meetup
 
-We meet every week Monday or Thursday between 7 and 10pm at Basislager to learn, educate and motivate each other when getting started with coding or when working on a project.
+We meet bi-weekly Thursday between 7 and 10pm at Basislager to learn, educate and motivate each other when getting started with coding or when working on a project.
 
 The event is free and everyone is welcome to participate. We don't offer regular coding workshops, but we meet to talk about coding issues or any kind of question you might have when getting started with programming. People that join our meetup have different experience levels and are always happy to help.
 

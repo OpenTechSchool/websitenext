@@ -23,7 +23,7 @@ Wir organisieren Veranstaltungen zum Lernen, Zusammenzuarbeiten und um andere Le
 
 ## Unser Meetup
 
-Wir treffen uns regelmäßig Montag oder Donnerstag zwischen 19 und 22 Uhr im Basislager um gemeinsam zu lernen, uns bei der Arbeit an Projekten zu unterstützen oder gegenseitig zu motivieren.
+Wir treffen uns regelmäßig zwei-wöchentlich am Donnerstag zwischen 19 und 22 Uhr im Basislager um gemeinsam zu lernen, uns bei der Arbeit an Projekten zu unterstützen oder gegenseitig zu motivieren.
 
 Die Veranstaltung ist kostenlos und jeder ist herzlich eingeladen teilzunehmen. Wir bieten keine fortlaufenden Programmierworkshops an, aber wir treffen uns um deine Fragen zu beantworten und dich beim Lernen zu unterstützen. Die Teilnehmer unseres Meetups haben unterschiedliche Erfahrungsbereiche und helfen dir gerne weiter.
 
