@@ -13,6 +13,9 @@
     "build": "npm run clean-cache && next build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engine": {
+    "node": ">=22"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
