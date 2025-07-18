@@ -35,7 +35,7 @@ jobs:
         env:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      - uses: amondnet/vercel-action@v25 #deploy
+      - uses: amondnet/vercel-action@v41.1.4 #deploy
         id: now-deployment-staging
         if: github.event_name == 'pull_request_target'
         with:
@@ -53,7 +53,7 @@ jobs:
         env:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      - uses: amondnet/vercel-action@v25 #deploy
+      - uses: amondnet/vercel-action@v41.1.4 #deploy
         id: now-deployment-production
         if: github.event_name == 'push'
         with:
