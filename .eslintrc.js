@@ -38,6 +38,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/member-delimiter-style': 0,
     '@typescript-eslint/no-explicit-any': 0,
+    'react/no-unknown-property': ['error', { ignore: ['jsx', 'global'] }],
   },
   settings: {
     react: 'detect',
