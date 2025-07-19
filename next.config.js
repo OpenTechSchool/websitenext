@@ -1,11 +1,12 @@
 const path = require('path')
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false
+const hasCustomDomain = process.env.CUSTOM_DOMAIN === 'true'
 
 let assetPrefix = ''
 let basePath = ''
 
-if (isGithubActions) {
+if (isGithubActions && !hasCustomDomain) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
   assetPrefix = `/${repo}/`
   basePath = `/${repo}`
@@ -36,5 +37,6 @@ module.exports = {
     // Make build-time environment variables available at runtime
     NEXT_PUBLIC_GITHUB_ACTIONS: process.env.GITHUB_ACTIONS || 'false',
     NEXT_PUBLIC_GITHUB_REPOSITORY: process.env.GITHUB_REPOSITORY || '',
+    NEXT_PUBLIC_CUSTOM_DOMAIN: process.env.CUSTOM_DOMAIN || 'false',
   },
 }

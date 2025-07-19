@@ -2,7 +2,8 @@ import css from 'styled-jsx/css'
 import { mediaquery } from './style.js'
 
 const isGithubActions = process.env.NEXT_PUBLIC_GITHUB_ACTIONS || false
-const basePath = isGithubActions ? `/${process.env.NEXT_PUBLIC_GITHUB_REPOSITORY?.replace(/.*?\//, '') || ''}` : ''
+const hasCustomDomain = process.env.NEXT_PUBLIC_CUSTOM_DOMAIN === 'true'
+const basePath = (isGithubActions && !hasCustomDomain) ? `/${process.env.NEXT_PUBLIC_GITHUB_REPOSITORY?.replace(/.*?\//, '') || ''}` : ''
 
 export default css.global`
   :root {

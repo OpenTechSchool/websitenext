@@ -151,13 +151,15 @@ This website is deployed to GitHub Pages. Every push to the `github-pages-new` b
 
 To test the GitHub Pages build locally with the correct basePath configuration:
 
+Note: We are using `out` instead of `websitenext`, but the github action will copy files from `out` to `websitenext`
+
 ```bash
 # Build and export with GitHub Pages environment variables
-GITHUB_ACTIONS=true GITHUB_REPOSITORY=OpenTechSchool/websitenext npm run build
-GITHUB_ACTIONS=true GITHUB_REPOSITORY=OpenTechSchool/websitenext npx next export
+GITHUB_ACTIONS=true GITHUB_REPOSITORY=OpenTechSchool/out npm run build
+GITHUB_ACTIONS=true GITHUB_REPOSITORY=OpenTechSchool/out npx next export
 
 # The static files will be generated in the 'out' directory
-# All asset paths (images, fonts, links) will include the /websitenext basePath
+# All asset paths (images, fonts, links) will include the /out basePath
 ```
 
 **Important:** When building for GitHub Pages, the build process:
@@ -173,6 +175,10 @@ npm run dev        # Development server
 npm run build      # Production build (local)
 npm run export     # Static export (local)
 ```
+
+### Using a custom domain
+
+Set `CUSTOM_DOMAIN` to true in `deploy-github-pages.yml` when using a custom domain e.g. opentechschool.org
 
 ## Contact
 

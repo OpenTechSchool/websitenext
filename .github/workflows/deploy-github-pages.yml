@@ -38,6 +38,8 @@ jobs:
         env:
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
+          # Set CUSTOM_DOMAIN=true when using custom domain (e.g., opentechschool.org)
+          # CUSTOM_DOMAIN: true
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
