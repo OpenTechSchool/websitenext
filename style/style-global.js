@@ -1,6 +1,9 @@
 import css from 'styled-jsx/css'
 import { mediaquery } from './style.js'
 
+const isGithubActions = process.env.GITHUB_ACTIONS || false
+const basePath = isGithubActions ? `/${process.env.GITHUB_REPOSITORY?.replace(/.*?\//, '') || ''}` : ''
+
 export default css.global`
   :root {
     /* COLORS */
@@ -21,21 +24,21 @@ export default css.global`
     font-family: 'Open Sans';
     font-stretch: 100%;
     font-display: swap;
-    src: url('/fonts/OpenSans/OpenSans.woff2') format('woff2');
+    src: url('${basePath}/fonts/OpenSans/OpenSans.woff2') format('woff2');
   }
 
   @font-face {
     font-family: 'Roboto';
     font-stretch: 100%;
     font-display: swap;
-    src: url('/fonts/Roboto/Roboto.woff2') format('woff2');
+    src: url('${basePath}/fonts/Roboto/Roboto.woff2') format('woff2');
   }
 
   @font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url('/fonts/MaterialIcons/MaterialIcons.woff2') format('woff2');
+    src: url('${basePath}/fonts/MaterialIcons/MaterialIcons.woff2') format('woff2');
   }
   
   .material-icons {
