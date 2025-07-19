@@ -9,12 +9,8 @@ export default function useTranslation() {
 
   let strings
   const ENstrings: Strings = require('../translations/en.json')
-  const DEstrings: Strings = require('../translations/de.json')
 
   switch (locale) {
-    // case 'de':
-    //   strings = DEstrings
-    //   break
     default:
       strings = ENstrings
   }

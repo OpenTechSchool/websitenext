@@ -19,9 +19,11 @@ import TwitterFeed from '../components/TwitterFeed'
 import Masthead from '../components/Header/Masthead'
 import Events from '../components/Events'
 import { mediaquery } from '../style/style.js'
+import { useAssetPath } from '../utils/assetPath'
 
 export const Index: NextPage = () => {
   const { t } = useTranslation()
+  const assetPath = useAssetPath()
   const theme = useTheme()
   const direction: GridDirection = useMediaQuery(theme.breakpoints.up('md'))
     ? 'row'
@@ -92,7 +94,11 @@ export const Index: NextPage = () => {
             </div>
           </Grid>
           <Grid item xs={12} md={5}>
-            <img src='/illustrations/code.svg' alt='code' className='image' />
+            <img
+              src={assetPath('/illustrations/code.svg')}
+              alt='code'
+              className='image'
+            />
           </Grid>
         </Grid>
       </TextSection>
@@ -106,7 +112,7 @@ export const Index: NextPage = () => {
         >
           <Grid item xs={12} md={5}>
             <img
-              src='/illustrations/community.svg'
+              src={assetPath('/illustrations/community.svg')}
               alt='community'
               className='image'
             />
@@ -134,7 +140,7 @@ export const Index: NextPage = () => {
             <div className='ways-to-join'>
               <div className='ways-to-join-img'>
                 <img
-                  src='/illustrations/learner.svg'
+                  src={assetPath('/illustrations/learner.svg')}
                   alt='learner'
                   className='center'
                 />
@@ -154,7 +160,7 @@ export const Index: NextPage = () => {
             <div className='ways-to-join'>
               <div className='ways-to-join-img'>
                 <img
-                  src='/illustrations/sponsor.svg'
+                  src={assetPath('/illustrations/sponsor.svg')}
                   alt='sponsor'
                   className='center'
                 />
@@ -174,7 +180,7 @@ export const Index: NextPage = () => {
             <div className='ways-to-join'>
               <div className='ways-to-join-img'>
                 <img
-                  src='/illustrations/organizer.svg'
+                  src={assetPath('/illustrations/organizer.svg')}
                   alt='organizer'
                   className='center'
                 />

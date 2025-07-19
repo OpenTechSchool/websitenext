@@ -9,9 +9,11 @@ import TextSection from '../components/Section/TextSection'
 import Button from '../components/Button/Button'
 import ContactSection from '../components/Section/ContactSection'
 import ChapterSection from '../components/Section/ChapterSection'
+import { useAssetPath } from '../utils/assetPath'
 
 const Guides: NextPage = () => {
   const { t, locale } = useTranslation()
+  const assetPath = useAssetPath()
 
   return (
     <PageLayout
@@ -47,7 +49,11 @@ const Guides: NextPage = () => {
                 <br />
               </Grid>
               <Grid item xs={12} md={5}>
-                <img src='/illustrations/coding.svg' width='300' alt='coding' />
+                <img
+                  src={assetPath('/illustrations/coding.svg')}
+                  width='300'
+                  alt='coding'
+                />
               </Grid>
             </Grid>
           </section>
@@ -77,7 +83,7 @@ const Guides: NextPage = () => {
             </Button>
           </Grid>
           <Grid item xs={12} md={4}>
-            <img src='/illustrations/code.svg' alt='colearning' />
+            <img src={assetPath('/illustrations/code.svg')} alt='colearning' />
           </Grid>
         </Grid>
       </TextSection>
@@ -107,7 +113,7 @@ const Guides: NextPage = () => {
           </Grid>
           <Grid item xs={12} md={4}>
             <img
-              src='/colearning-berlin2.jpg'
+              src={assetPath('/colearning-berlin2.jpg')}
               className='co-learning-img'
               alt='colearning'
             />
@@ -137,7 +143,7 @@ const Guides: NextPage = () => {
             <p>{t('guides.newChapter.previousChapters')}</p>
           </Grid>
           <Grid item xs={12} md={4}>
-            <img src='/colearning-berlin.jpg' alt='colearning' />
+            <img src={assetPath('/colearning-berlin.jpg')} alt='colearning' />
             <small>Web frontend co-learning Berlin</small>
           </Grid>
         </Grid>

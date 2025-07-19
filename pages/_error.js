@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import PageLayout from '../components/PageLayout/PageLayout'
 import useTranslation from '../hooks/useTranslation'
 import WithLocale from '../containers/withLocale'
+import { getAssetPath } from '../utils/assetPath'
 
 function ErrorPage({ errorCode }) {
   const { t } = useTranslation()
@@ -16,7 +17,11 @@ function ErrorPage({ errorCode }) {
             {t('404.description')}
             <br />
             <b>{t('404.description2')}</b>
-            <img src='/illustrations/lost.svg' width='300' alt='lost' />
+            <img
+              src={getAssetPath('/illustrations/lost.svg')}
+              width='300'
+              alt='lost'
+            />
           </div>
           <style jsx>
             {`

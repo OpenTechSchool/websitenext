@@ -6,9 +6,11 @@ import TextSection from '../components/Section/TextSection'
 import Button from '../components/Button/Button'
 import useTranslation from '../hooks/useTranslation'
 import WithLocale from '../containers/withLocale'
+import { useAssetPath } from '../utils/assetPath'
 
 const About: NextPage = () => {
   const { t } = useTranslation()
+  const assetPath = useAssetPath()
 
   return (
     <PageLayout
@@ -22,7 +24,7 @@ const About: NextPage = () => {
       <TextSection title={t('about.history.title')} anchor='history'>
         <Grid container justify='space-between' alignItems='center'>
           <Grid item xs={12} md={5}>
-            <img src='/about.jpg' />
+            <img src={assetPath('/about.jpg')} />
           </Grid>
           <Grid item xs={12} md={5}>
             <p>{t('about.history.description')}</p>
@@ -130,7 +132,7 @@ const About: NextPage = () => {
         <p>
           {t('about.foundation.membership.agree')}{' '}
           <a
-            href='/files/foundation/aktuelle-Satzung.pdf'
+            href={assetPath('/files/foundation/aktuelle-Satzung.pdf')}
             target='_blank'
             rel='noopener noreferrer'
           >
