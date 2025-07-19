@@ -151,7 +151,34 @@ Yet, we avoid using javascript-in-css as much as possible therefore it will be e
 
 ## Deployment
 
-This website is being deployed to [Zeit.co](https://zeit.co/) on the free team account https://zeit.co/opentechschool. Every push to master goes live automatically via their Github integration.
+This website is deployed to GitHub Pages. Every push to the `github-pages-new` branch automatically triggers the GitHub Actions workflow that builds and deploys the static site.
+
+### Building for GitHub Pages Locally
+
+To test the GitHub Pages build locally with the correct basePath configuration:
+
+```bash
+# Build and export with GitHub Pages environment variables
+GITHUB_ACTIONS=true GITHUB_REPOSITORY=OpenTechSchool/websitenext npm run build
+GITHUB_ACTIONS=true GITHUB_REPOSITORY=OpenTechSchool/websitenext npx next export
+
+# The static files will be generated in the 'out' directory
+# All asset paths (images, fonts, links) will include the /websitenext basePath
+```
+
+**Important:** When building for GitHub Pages, the build process:
+
+- Adds `/websitenext` basePath to all asset URLs
+- Configures static export for proper GitHub Pages deployment
+- Ensures fonts, images, and internal links work correctly with the repository's subpath
+
+For local development without basePath, use the standard commands:
+
+```bash
+npm run dev        # Development server
+npm run build      # Production build (local)
+npm run export     # Static export (local)
+```
 
 ## Contact
 
