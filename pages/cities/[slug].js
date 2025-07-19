@@ -200,16 +200,38 @@ export function CityTemplate({ content, data }) {
   )
 }
 
-CityTemplate.getInitialProps = async (ctx) => {
-  const { lang = 'en', slug } = ctx.query
+export async function getStaticPaths() {
+  const fs = require('fs')
+  const path = require('path')
+  
+  const citiesDir = path.join(process.cwd(), 'data/cities/en')
+  const filenames = fs.readdirSync(citiesDir)
+  
+  const paths = filenames.map((name) => ({
+    params: {
+      slug: name.replace(/\.md$/, ''),
+    },
+  }))
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }) {
+  const { slug } = params
+  const lang = 'en' // Since we removed multi-language support
 
   const content = await import(`../../data/cities/${lang}/${slug}.md`)
   // gray-matter parses the yaml frontmatter from the md body
   const data = matter(content.default)
 
   return {
-    content,
-    ...data,
+    props: {
+      content: data.content,
+      data: data.data,
+    },
   }
 }
 

@@ -14,7 +14,6 @@ if (isGithubActions) {
 module.exports = {
   ...(assetPrefix && { assetPrefix }),
   ...(basePath && { basePath }),
-  output: 'export',
   trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,

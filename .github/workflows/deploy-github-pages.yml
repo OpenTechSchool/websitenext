@@ -34,7 +34,7 @@ jobs:
         run: npm ci
         
       - name: Build static site
-        run: npm run build
+        run: npm run export
         env:
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
