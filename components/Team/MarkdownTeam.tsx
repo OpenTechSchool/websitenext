@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
+import { useAssetPath } from '../../utils/assetPath'
 
 function chunkArray(array, size) {
   const chunkedArray = []
@@ -12,6 +13,7 @@ function chunkArray(array, size) {
 }
 
 const TeamSection = ({ members }) => {
+  const assetPath = useAssetPath()
   const chunksOfFour = chunkArray(members, 4)
 
   return (
@@ -35,7 +37,7 @@ const TeamSection = ({ members }) => {
                   key={key}
                   item
                 >
-                  <img src={`/members/${Object.keys(member)[0]}.jpg`} />
+                  <img src={assetPath(`/members/${Object.keys(member)[0]}.jpg`)} />
                   <p className='name'>{Object.values(member)}</p>
                 </Grid>
               )

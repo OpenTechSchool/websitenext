@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types'
 import Head from 'next/head'
 import useTranslation from '../hooks/useTranslation'
+import { useAssetPath } from '../utils/assetPath'
 
 export default function Meta({ pageTitle, pageDescription, pageImage }) {
   const { t } = useTranslation()
+  const assetPath = useAssetPath()
   pageTitle = `${pageTitle} | OpenTechSchool`
   return (
     <>
@@ -22,7 +24,7 @@ export default function Meta({ pageTitle, pageDescription, pageImage }) {
         <meta
           property='og:image'
           content={`https://www.opentechschool.org${
-            pageImage || '/sharing-images/website-into-sharing.png?1'
+            pageImage || assetPath('/sharing-images/website-into-sharing.png?1')
           }`}
         />
         <meta name='twitter:card' content='summary_large_image' />
@@ -30,22 +32,22 @@ export default function Meta({ pageTitle, pageDescription, pageImage }) {
         <link
           rel='apple-touch-icon'
           sizes='180x180'
-          href='/apple-touch-icon.png'
+          href={assetPath('/apple-touch-icon.png')}
         />
-        <link rel='shortcut icon' href='/favicon.ico' />
+        <link rel='shortcut icon' href={assetPath('/favicon.ico')} />
         <link
           rel='icon'
           type='image/png'
-          href='/favicon-32x32.png'
+          href={assetPath('/favicon-32x32.png')}
           sizes='32x32'
         />
         <link
           rel='icon'
           type='image/png'
-          href='/favicon-96x96.png'
+          href={assetPath('/favicon-96x96.png')}
           sizes='96x96'
         />
-        <link rel='manifest' href='/site.webmanifest' />
+        <link rel='manifest' href={assetPath('/site.webmanifest')} />
       </Head>
     </>
   )

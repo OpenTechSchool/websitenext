@@ -18,25 +18,27 @@ import TextSection from '../../components/Section/TextSection'
 import TeamSection from '../../components/Section/TeamSection'
 import TwitterFeed from '../../components/TwitterFeed'
 import Events from '../../components/Events'
-
-const socialIconsList = {
-  facebook: <FacebookIcon />,
-  twitter: <TwitterIcon />,
-  github: <GitHubIcon />,
-  instagram: <InstagramIcon />,
-  discourse: { imgSrc: '/discourse_blue_icon.png' },
-  matrix: { imgSrc: '/matrix_logo.png' },
-}
+import { useAssetPath } from '../../utils/assetPath'
 
 const WrappedIcon = (props) => <Icon {...props} />
 WrappedIcon.muiName = 'Icon'
 
 export function CityTemplate({ content, data }) {
   const { t } = useTranslation()
+  const assetPath = useAssetPath()
   const markdownBody = content
   const frontmatter = data
   const cityName = `${frontmatter.slug}`.toLowerCase()
   const meetupName = frontmatter.meetup_name
+
+  const socialIconsList = {
+    facebook: <FacebookIcon />,
+    twitter: <TwitterIcon />,
+    github: <GitHubIcon />,
+    instagram: <InstagramIcon />,
+    discourse: { imgSrc: assetPath('/discourse_blue_icon.png') },
+    matrix: { imgSrc: assetPath('/matrix_logo.png') },
+  }
 
   const [events, setEvents] = useState({})
   const [hasEvents, setHasEvents] = useState(false)
@@ -136,7 +138,7 @@ export function CityTemplate({ content, data }) {
           </Grid>
           <Grid item xs={12} md={6}>
             <div className='about-img-container'>
-              <img src={`/${cityName}_cityAbout.jpg`} />
+              <img src={assetPath(`/${cityName}_cityAbout.jpg`)} />
               {frontmatter.credits && (
                 <p className='credits'>Credits: {frontmatter.credits}</p>
               )}
@@ -203,10 +205,10 @@ export function CityTemplate({ content, data }) {
 export async function getStaticPaths() {
   const fs = require('fs')
   const path = require('path')
-  
+
   const citiesDir = path.join(process.cwd(), 'data/cities/en')
   const filenames = fs.readdirSync(citiesDir)
-  
+
   const paths = filenames.map((name) => ({
     params: {
       slug: name.replace(/\.md$/, ''),
