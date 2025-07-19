@@ -33,5 +33,8 @@ module.exports = {
     external: {
       MEETUP_URL: 'http://meetup.com',
     },
+    // Make build-time environment variables available at runtime
+    NEXT_PUBLIC_GITHUB_ACTIONS: process.env.GITHUB_ACTIONS || 'false',
+    NEXT_PUBLIC_GITHUB_REPOSITORY: process.env.GITHUB_REPOSITORY || '',
   },
 }
