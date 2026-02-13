@@ -25,11 +25,11 @@ If you want to contribute but don't know on what to work on, check our github is
 
 If you are beginner, search for the label `good first issues`.<br />
 Assign the issue to your self and when you are done, make a PR to review.<br />
-Always feel free to reach out for help. You can write in the issue it self, you can open a PR as draft and ask suggestion about your code or you can contact us on [slack](https://opentechschool-slack.herokuapp.com) in the #website-dev channel.
+Always feel free to reach out for help. You can write in the issue itself, you can open a PR as draft and ask suggestion about your code.
 
-### Requisit:
+### Requirements:
 
-`Node version > 9`
+`Node version >= 12` (recommended: Node 18+ or 20+)
 
 `npm`
 
@@ -71,9 +71,8 @@ WrappedIcon.muiName = Icon.muiName;
 
 ## Cities data
 
-Markdown for city can be found in data/cities.<br />
-Inside this folder you will find subfolders based on language. Each city must have at least english language to be visible.<br />
-Add as many language as you wish for your city. The files must have always the same name: `city-name.md`.<br />
+Markdown for city can be found in `data/cities/en/`.<br />
+Each city file should be named `city-name.md` and placed in the English directory.<br />
 If you want to add a city that is currently inactive, just add `is_inactive` to the markdown.
 
 Each city **MUST HAVE**:
@@ -116,26 +115,21 @@ members:
 
 ### Translation
 
-Translation are located in `translations/`. Here there are some configuration and typescript file needed to make translation works but most important there are `json` files for each language.<br />
-Those are translation for all the website except the city page.<br />
-If you create new content, please remember to add your text to those files, at least to the english translation.
+Translations are located in `translations/` directory. The website currently supports English only after the conversion to static site generation.<br />
+If you create new content, please remember to add your text to the `en.json` translation file.
 
-If you add a new language add a `yourLanguage.json` file in the `translations/` directory and remember to add your language to the `config.ts` files to make it available to the `<LocalSwitcher />`
+To use translations in a component, use the `t()` function from the `useTranslation` hook:
 
-If you want to use translation in a file, you can use the `t()` function, which it takes as a argument the string to translate from the language jons file.<br />
-Example:
-In my `en.json` i have such string:
+```javascript
+import useTranslation from '../hooks/useTranslation'
 
-```
-"about": {
-   "title": "About OTS"
+const MyComponent = () => {
+  const { t } = useTranslation()
+  return <h1>{t('about.title')}</h1>
 }
 ```
 
-in my `about.tsx` page i can use the `t` function like that: `t('about.title')`.
-`t()` function always fall back to english. If the translation doesn't exists even in the `en.json` file, you will see printed the string of your translation (i.e. `about.title`) and a warning will show up in your console.
-
-`t()` function can be extracted form the `useTranslation` hook and in order to be effective in a page, the page must be wrapped with the `WithLocale()` HOC.
+The `t()` function takes a key from the `en.json` file and falls back to displaying the key if translation is missing.
 
 ### Conventions
 
@@ -151,7 +145,40 @@ Yet, we avoid using javascript-in-css as much as possible therefore it will be e
 
 ## Deployment
 
-This website is being deployed to [Zeit.co](https://zeit.co/) on the free team account https://zeit.co/opentechschool. Every push to master goes live automatically via their Github integration.
+This website is deployed to GitHub Pages. Every push to the `github-pages-new` branch automatically triggers the GitHub Actions workflow that builds and deploys the static site.
+
+### Building for GitHub Pages Locally
+
+To test the GitHub Pages build locally with the correct basePath configuration:
+
+Note: We are using `out` instead of `websitenext`, but the github action will copy files from `out` to `websitenext`
+
+```bash
+# Build and export with GitHub Pages environment variables
+GITHUB_ACTIONS=true GITHUB_REPOSITORY=OpenTechSchool/out npm run build
+GITHUB_ACTIONS=true GITHUB_REPOSITORY=OpenTechSchool/out npx next export
+
+# The static files will be generated in the 'out' directory
+# All asset paths (images, fonts, links) will include the /out basePath
+```
+
+**Important:** When building for GitHub Pages, the build process:
+
+- Adds `/websitenext` basePath to all asset URLs
+- Configures static export for proper GitHub Pages deployment
+- Ensures fonts, images, and internal links work correctly with the repository's subpath
+
+For local development without basePath, use the standard commands:
+
+```bash
+npm run dev        # Development server
+npm run build      # Production build (local)
+npm run export     # Static export (local)
+```
+
+### Using a custom domain
+
+Set `CUSTOM_DOMAIN` to true in `deploy-github-pages.yml` when using a custom domain e.g. opentechschool.org
 
 ## Contact
 
@@ -161,4 +188,4 @@ Feel free to open a new issue here on github. Try to label it as best as you can
 Have an idea and already know how to develop it? Go ahead and make a PR, we are very happy to review it.
 
 Have an idea but would like to talk to someone to know how to better proceed?
-Join us on [slack](https://opentechschool-slack.herokuapp.com): channel #website-dev
+Feel free to open a GitHub issue to discuss your ideas and get guidance on implementation.

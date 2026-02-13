@@ -7,9 +7,11 @@ import useTranslation from '../hooks/useTranslation'
 import WithLocale from '../containers/withLocale'
 import TextSection from '../components/Section/TextSection'
 import ContactSection from '../components/Section/ContactSection'
+import { useAssetPath } from '../utils/assetPath'
 
 const Community: NextPage = () => {
   const { t, locale } = useTranslation()
+  const assetPath = useAssetPath()
 
   return (
     <PageLayout
@@ -24,7 +26,7 @@ const Community: NextPage = () => {
         <Grid container justify='center' alignItems='center'>
           <Grid item xs={12} md={3}>
             <img
-              src='/illustrations/organizer.svg'
+              src={assetPath('/illustrations/organizer.svg')}
               alt='organizer'
               className='organizer-img'
             />
@@ -52,7 +54,7 @@ const Community: NextPage = () => {
         <Grid container justify='space-around' alignItems='center'>
           <Grid item xs={12} md={4}>
             <img
-              src='/illustrations/volunteer.svg'
+              src={assetPath('/illustrations/volunteer.svg')}
               alt='volunteer'
               className='volunteer-img'
             />
@@ -89,7 +91,7 @@ const Community: NextPage = () => {
         <Grid container justify='center' alignItems='center'>
           <Grid item xs={12} md={3}>
             <img
-              src='/illustrations/sponsor.svg'
+              src={assetPath('/illustrations/sponsor.svg')}
               alt='sponsor'
               className='sponsor-img'
             />

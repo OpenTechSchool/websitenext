@@ -11,6 +11,7 @@
     "open": "sleepms 5000 && open http://localhost:3000",
     "dev": "npm run clean-cache && npm run lint && concurrently \"npm run lint:watch\" next \"npm run open\" --names \"🛂,🏗️,🖥️\" --prefix name ",
     "build": "npm run clean-cache && next build",
+    "export": "npm run clean-cache && next build && next export",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {

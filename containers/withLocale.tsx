@@ -8,28 +8,11 @@ interface LangProps {
 
 const WithLocale = (WrappedPage: NextPage<any>) => {
   const WithLocale: NextPage<any, LangProps> = ({ ...pageProps }) => {
-    // if (!locale) {
-    //   return <Error statusCode={404} />
-    // }
-
     return (
-      <LocaleProvider lang={'en' /*locale*/}>
+      <LocaleProvider lang={'en'}>
         <WrappedPage {...pageProps} />
       </LocaleProvider>
     )
-  }
-
-  WithLocale.getInitialProps = async ctx => {
-    let pageProps = {}
-    if (WrappedPage.getInitialProps) {
-      pageProps = await WrappedPage.getInitialProps(ctx)
-    }
-
-    if (typeof ctx.query.lang !== 'string' || !isLocale(ctx.query.lang)) {
-      return { ...pageProps, locale: undefined }
-    }
-
-    return { ...pageProps, locale: ctx.query.lang }
   }
 
   return WithLocale

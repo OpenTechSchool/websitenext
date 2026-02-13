@@ -2,8 +2,10 @@ node_modules
 src/.next
 .env
 src/out/
+out/
 .DS_Store
 npm-debug.log
 next-env.d.ts
 .next
 .vercel
+.claude/

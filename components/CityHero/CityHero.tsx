@@ -6,9 +6,11 @@ import { mediaquery } from '../../style/style'
 // import Link from 'next/link'
 // import OutlineButton from '../Button/OutlineButton'
 import useTranslation from '../../hooks/useTranslation'
+import { useAssetPath } from '../../utils/assetPath'
 
 function CityHero({ cityName, title, tagline, meetupName, credits }) {
   const { t } = useTranslation()
+  const assetPath = useAssetPath()
   const [members, setMembers] = useState()
 
   useEffect(() => {
@@ -30,7 +32,7 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
   return (
     <div>
       <section>
-        <div style={{ backgroundImage: `url(/${cityName}_cityBg.jpg)` }}>
+        <div style={{ backgroundImage: `url(${assetPath(`/${cityName}_cityBg.jpg`)})` }}>
           <h1>{title}</h1>
           <p className='tagline'>
             <i>&quot;{tagline}&quot;</i>
