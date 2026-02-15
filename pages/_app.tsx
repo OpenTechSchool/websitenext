@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ThemeProvider } from '@material-ui/core/styles'
+import { ThemeProvider } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
 import { otsTheme } from '../style/style'
 
 export default function MyApp(props) {
@@ -19,6 +20,7 @@ export default function MyApp(props) {
   return (
     <React.Fragment>
       <ThemeProvider theme={otsTheme}>
+        <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
     </React.Fragment>

@@ -1,5 +1,5 @@
-import Grid from '@material-ui/core/Grid'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import Grid from '@mui/material/Grid'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import Squid from '../Svg/OtsSquid'
 import Wave from '../Svg/Wave'
 import useTranslation from '../../hooks/useTranslation'
@@ -14,7 +14,7 @@ export function Masthead() {
     <div className='masthead'>
       <section>
         <div className='content-wrapper'>
-          <Grid container justify='space-between'>
+          <Grid container justifyContent='space-between'>
             <Grid item xs={12} md={4}>
               <h1>{t('homepage.masthead.title')}</h1>
               <p>{t('homepage.masthead.subtitle')}</p>

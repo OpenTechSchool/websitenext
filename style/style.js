@@ -1,4 +1,4 @@
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createTheme } from '@mui/material/styles'
 
 const customBreakpoints = {
   sm: 760,
@@ -6,7 +6,7 @@ const customBreakpoints = {
   lg: 1200,
 }
 
-export const otsTheme = createMuiTheme({
+export const otsTheme = createTheme({
   breakpoints: {
     values: customBreakpoints,
   },

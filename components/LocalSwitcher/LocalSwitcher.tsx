@@ -1,24 +1,22 @@
 import React, { useContext, useCallback } from 'react'
 import { useRouter } from 'next/dist/client/router'
-import MenuItem from '@material-ui/core/MenuItem'
-import FormControl from '@material-ui/core/FormControl'
-import Select from '@material-ui/core/Select'
-import { withStyles } from '@material-ui/core/styles'
+import MenuItem from '@mui/material/MenuItem'
+import FormControl from '@mui/material/FormControl'
+import Select, { SelectChangeEvent } from '@mui/material/Select'
+import { styled } from '@mui/material/styles'
 import { locales, languageNames } from '../../translations/config'
 import { LocaleContext } from '../../context/LocaleContext'
 
-const MenuItemStyle = withStyles({
-  root: {
-    fontSize: '1.4rem',
-  },
-})(MenuItem)
+const MenuItemStyle = styled(MenuItem)({
+  fontSize: '1.4rem',
+})
 
 const LocaleSwitcher: React.FC = () => {
   const router = useRouter()
   const { locale } = useContext(LocaleContext)
 
   const handleLocaleChange = useCallback(
-    (e: React.ChangeEvent<HTMLSelectElement>) => {
+    (e: SelectChangeEvent) => {
       const regex = new RegExp(`^/(${locales.join('|')})`)
       router.push(
         router.pathname,

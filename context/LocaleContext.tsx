@@ -12,7 +12,7 @@ export const LocaleContext = createContext<ContextProps>({
   setLocale: () => null,
 })
 
-export const LocaleProvider: React.FC<{ lang: Locale }> = ({
+export const LocaleProvider: React.FC<{ lang: Locale; children?: React.ReactNode }> = ({
   lang,
   children,
 }) => {

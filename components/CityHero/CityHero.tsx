@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import fetchJsonp from 'fetch-jsonp'
-import { PermIdentity } from '@material-ui/icons'
+import { PermIdentity } from '@mui/icons-material'
 import { mediaquery } from '../../style/style'
 // import Link from 'next/link'
 // import OutlineButton from '../Button/OutlineButton'
@@ -32,7 +32,11 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
   return (
     <div>
       <section>
-        <div style={{ backgroundImage: `url(${assetPath(`/${cityName}_cityBg.jpg`)})` }}>
+        <div
+          style={{
+            backgroundImage: `url(${assetPath(`/${cityName}_cityBg.jpg`)})`,
+          }}
+        >
           <h1>{title}</h1>
           <p className='tagline'>
             <i>&quot;{tagline}&quot;</i>

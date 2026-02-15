@@ -1,4 +1,4 @@
-import Grid from '@material-ui/core/Grid'
+import Grid from '@mui/material/Grid'
 import { NextPage } from 'next'
 import Link from 'next/link'
 import PageLayout from '../components/PageLayout/PageLayout'
@@ -24,7 +24,7 @@ const Community: NextPage = () => {
       </section> */}
 
       <TextSection title='Community'>
-        <Grid container justify='center' alignItems='center'>
+        <Grid container justifyContent='center' alignItems='center'>
           <Grid item xs={12} md={3}>
             <img
               src={assetPath('/illustrations/community.svg')}
@@ -40,7 +40,7 @@ const Community: NextPage = () => {
       </TextSection>
 
       <TextSection classname='pink' title='Our values'>
-        <Grid container justify='space-between'>
+        <Grid container justifyContent='space-between'>
           <Grid item xs={12} md={5}>
             <h3>{t('about.coreValue.empowerment.title')}</h3>
             <p>{t('about.coreValue.empowerment.shortDescription')}</p>
@@ -74,7 +74,7 @@ const Community: NextPage = () => {
       </TextSection>
 
       <TextSection classname='grey' title={t('community.getInvolved.title')}>
-        <Grid container justify='space-between' spacing={10}>
+        <Grid container justifyContent='space-between' spacing={10}>
           <Grid item xs={12} md={4}>
             <h3>{t('community.getInvolved.learner.title')}</h3>
             <p>
@@ -115,7 +115,7 @@ const Community: NextPage = () => {
         <p>{t('community.formats.description')}</p>
         <p>{t('community.formats.description2')}</p>
         <p>{t('community.formats.description3')}</p>
-        <Grid container justify='space-between'>
+        <Grid container justifyContent='space-between'>
           <Grid item xs={12} md={5}>
             <h2>{t('community.formats.workshop.title')}</h2>
             <p>{t('community.formats.workshop.description')}</p>

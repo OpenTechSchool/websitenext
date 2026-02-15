@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import Grid from '@material-ui/core/Grid'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import MenuIcon from '@material-ui/icons/Menu'
-import CloseIcon from '@material-ui/icons/Close'
+import Grid from '@mui/material/Grid'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
 import useTranslation from '../../hooks/useTranslation'
 
 import { mediaquery } from '../../style/style'
@@ -21,9 +21,9 @@ export function Header({ setIsMenuOpen }) {
   return (
     <header>
       <div className='content-wrapper'>
-        <Grid container justify='space-between'>
-          <Link href='/'>
-            <a className='logo'>{t('header.websiteTitle')}</a>
+        <Grid container justifyContent='space-between'>
+          <Link href='/' className='logo'>
+            {t('header.websiteTitle')}
           </Link>
           {!isDesktop && (
             <span className='MenuIconMobile'>
@@ -43,16 +43,16 @@ export function Header({ setIsMenuOpen }) {
                 {t('header.learn')}
               </a>
 
-              <Link href={`/contribute`}>
-                <a className='invert'>{t('header.contribute')}</a>
+              <Link href='/contribute' className='invert'>
+                {t('header.contribute')}
               </Link>
 
-              <Link href={`/community`}>
-                <a className='invert'>{t('header.community')}</a>
+              <Link href='/community' className='invert'>
+                {t('header.community')}
               </Link>
 
-              <Link href={`/about`}>
-                <a className='invert'>{t('header.about')}</a>
+              <Link href='/about' className='invert'>
+                {t('header.about')}
               </Link>
             </nav>
           )}
@@ -63,9 +63,9 @@ export function Header({ setIsMenuOpen }) {
         <div className='mobileMenuWrapper open'>
           <header>
             <div className='content-wrapper'>
-              <Grid container justify='space-between'>
-                <Link href='/'>
-                  <a className='logo'>{t('header.websiteTitle')}</a>
+              <Grid container justifyContent='space-between'>
+                <Link href='/' className='logo'>
+                  {t('header.websiteTitle')}
                 </Link>
                 <span className='MenuIconMobile'>
                   <CloseIcon
@@ -88,16 +88,16 @@ export function Header({ setIsMenuOpen }) {
               {t('header.learn')}
             </a>
 
-            <Link href={`/contribute`}>
-              <a className='invert'>{t('header.contribute')}</a>
+            <Link href='/contribute' className='invert'>
+              {t('header.contribute')}
             </Link>
 
-            <Link href={`/community`}>
-              <a className='invert'>{t('header.community')}</a>
+            <Link href='/community' className='invert'>
+              {t('header.community')}
             </Link>
 
-            <Link href={`/about`}>
-              <a className='invert'>{t('header.about')}</a>
+            <Link href='/about' className='invert'>
+              {t('header.about')}
             </Link>
           </nav>
         </div>

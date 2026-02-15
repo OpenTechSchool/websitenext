@@ -1,12 +1,12 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
-import Grid, { GridDirection } from '@material-ui/core/Grid'
-import { useTheme } from '@material-ui/core/styles'
+import Grid, { GridDirection } from '@mui/material/Grid'
+import { useTheme } from '@mui/material/styles'
 import flatten from 'lodash/flatten'
 import { useState, useEffect } from 'react'
 import fetchJsonp from 'fetch-jsonp'
 import useTranslation from '../hooks/useTranslation'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import WithLocale from '../containers/withLocale'
 import PageLayout from '../components/PageLayout/PageLayout'
 // import LocalSwitcher from '../components/LocalSwitcher/LocalSwitcher'
@@ -83,7 +83,7 @@ export const Index: NextPage = () => {
       </section> */}
 
       <TextSection>
-        <Grid container justify='space-between' alignItems='center'>
+        <Grid container justifyContent='space-between' alignItems='center'>
           <Grid item xs={12} md={5}>
             <div className='ots-initiative'>
               <h2>{t('homepage.otsInitiative.title')}</h2>
@@ -107,7 +107,7 @@ export const Index: NextPage = () => {
         <Grid
           container
           direction={direction}
-          justify='space-between'
+          justifyContent='space-between'
           alignItems='center'
         >
           <Grid item xs={12} md={5}>
@@ -132,7 +132,7 @@ export const Index: NextPage = () => {
       <TextSection classname='grey' title={t('homepage.waysToJoin.title')}>
         <Grid
           container
-          justify='space-between'
+          justifyContent='space-between'
           alignItems='center'
           spacing={10}
         >

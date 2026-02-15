@@ -1,4 +1,4 @@
-import Grid from '@material-ui/core/Grid'
+import Grid from '@mui/material/Grid'
 import Link from 'next/link'
 import useTranslation from '../../hooks/useTranslation'
 import { mediaquery } from '../../style/style'
@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer>
       <div className='grid-wrapper'>
-        <Grid container justify='space-between'>
+        <Grid container justifyContent='space-between'>
           <Grid item xs={12} sm={3}>
             <h4>{t('footer.getinvolved')}</h4>
             <ul>
@@ -136,7 +136,7 @@ export default function Footer() {
             </ul>
           </Grid>
         </Grid>
-        <Grid container justify='center'>
+        <Grid container justifyContent='center'>
           <Grid item xs={10} sm={11}>
             <p className='license'>{t('footer.createCommons')}</p>
             <p className='copyright'>

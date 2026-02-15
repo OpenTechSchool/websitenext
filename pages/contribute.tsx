@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import Grid from '@material-ui/core/Grid'
+import Grid from '@mui/material/Grid'
 import Link from 'next/link'
 import PageLayout from '../components/PageLayout/PageLayout'
 // import LocalSwitcher from '../components/LocalSwitcher/LocalSwitcher'
@@ -23,7 +23,7 @@ const Community: NextPage = () => {
       </section> */}
 
       <TextSection title={t('contribute.contribute.title')}>
-        <Grid container justify='center' alignItems='center'>
+        <Grid container justifyContent='center' alignItems='center'>
           <Grid item xs={12} md={3}>
             <img
               src={assetPath('/illustrations/organizer.svg')}
@@ -44,14 +44,14 @@ const Community: NextPage = () => {
         classname='grey'
         anchor='volunteering'
       >
-        <Grid container justify='space-around'>
+        <Grid container justifyContent='space-around'>
           <Grid item xs={12} md={5}>
             <p className='getInTouch'>
               {t('contribute.volunteering.getInTouch')}
             </p>
           </Grid>
         </Grid>
-        <Grid container justify='space-around' alignItems='center'>
+        <Grid container justifyContent='space-around' alignItems='center'>
           <Grid item xs={12} md={4}>
             <img
               src={assetPath('/illustrations/volunteer.svg')}
@@ -88,7 +88,7 @@ const Community: NextPage = () => {
       </TextSection>
 
       <TextSection title={t('contribute.supporter.title')} anchor='supporter'>
-        <Grid container justify='center' alignItems='center'>
+        <Grid container justifyContent='center' alignItems='center'>
           <Grid item xs={12} md={3}>
             <img
               src={assetPath('/illustrations/sponsor.svg')}

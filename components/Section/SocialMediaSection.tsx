@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
-import Grid from '@material-ui/core/Grid'
+import Grid from '@mui/material/Grid'
 import TextSection from './TextSection'
-import FacebookIcon from '@material-ui/icons/Facebook'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import TwitterIcon from '@material-ui/icons/Twitter'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import TwitterIcon from '@mui/icons-material/Twitter'
 
 export default function SocialMediaSection({ bgColor = '' }) {
   const iconStyle = {
@@ -13,7 +13,7 @@ export default function SocialMediaSection({ bgColor = '' }) {
   return (
     <TextSection title='' classname={`center ${bgColor}`}>
       <h4 className={bgColor !== '' ? 'with-bgColor' : ''}>Connect</h4>
-      <Grid container justify='center'>
+      <Grid container justifyContent='center'>
         <Grid item xs={3} md={1}>
           <a
             href='https://www.facebook.com/OpenTechSchool'

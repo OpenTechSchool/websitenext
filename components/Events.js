@@ -1,11 +1,11 @@
 import { Fragment } from 'react'
-import Grid from '@material-ui/core/Grid'
+import Grid from '@mui/material/Grid'
 import PropTypes from 'prop-types'
 import format from 'date-fns/format'
 import Link from 'next/link'
 import useTranslation from '../hooks/useTranslation'
-import ArrowDown from '@material-ui/icons/ArrowDropDown'
-import ArrowRight from '@material-ui/icons/ArrowRight'
+import ArrowDown from '@mui/icons-material/ArrowDropDown'
+import ArrowRight from '@mui/icons-material/ArrowRight'
 
 function Event({ event }) {
   const { link, name, local_date, local_time, venue } = event
@@ -132,14 +132,12 @@ function Events({
               </div>
             ) : hasMixedGroups ? null : (
               <div>
-                {/* eslint-disable no-undef */}
                 <a
                   className='moreEvents'
-                  href={`${process.env.external.MEETUP_URL}/${meetupName}`}
+                  href={`https://www.meetup.com/${meetupName}`}
                   rel='noopener noreferrer'
                   target='_blank'
                 >
-                  {/* eslint-enable no-undef */}
                   check all events{' '}
                   <span className='arrowRight'>
                     <ArrowRight style={arrowRightStyle} />

@@ -1,14 +1,18 @@
+import fs from 'fs'
+import path from 'path'
+import process from 'process'
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import fetchJsonp from 'fetch-jsonp'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-import Grid from '@material-ui/core/Grid'
-import Icon from '@material-ui/core/Icon'
-import FacebookIcon from '@material-ui/icons/Facebook'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import TwitterIcon from '@material-ui/icons/Twitter'
-import InstagramIcon from '@material-ui/icons/Instagram'
+import rehypeRaw from 'rehype-raw'
+import Grid from '@mui/material/Grid'
+import Icon from '@mui/material/Icon'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import InstagramIcon from '@mui/icons-material/Instagram'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
 // import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
@@ -94,13 +98,15 @@ export function CityTemplate({ content, data }) {
       <TextSection classname='default'>
         <Grid
           container
-          justify='space-between'
+          justifyContent='space-between'
           alignItems='stretch'
           spacing={4}
         >
           <Grid item xs={12} md={6}>
             <div className='markdown'>
-              <ReactMarkdown source={markdownBody} escapeHtml={false} />
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                {markdownBody}
+              </ReactMarkdown>
             </div>
             {frontmatter.socials &&
               frontmatter.socials.map((social) => {
@@ -203,9 +209,6 @@ export function CityTemplate({ content, data }) {
 }
 
 export async function getStaticPaths() {
-  const fs = require('fs')
-  const path = require('path')
-
   const citiesDir = path.join(process.cwd(), 'data/cities/en')
   const filenames = fs.readdirSync(citiesDir)
 
