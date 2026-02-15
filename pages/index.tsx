@@ -2,22 +2,18 @@ import { NextPage } from 'next'
 import Link from 'next/link'
 import Grid, { GridDirection } from '@mui/material/Grid'
 import { useTheme } from '@mui/material/styles'
-import flatten from 'lodash/flatten'
-import { useState, useEffect } from 'react'
-import fetchJsonp from 'fetch-jsonp'
 import useTranslation from '../hooks/useTranslation'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import WithLocale from '../containers/withLocale'
 import PageLayout from '../components/PageLayout/PageLayout'
 // import LocalSwitcher from '../components/LocalSwitcher/LocalSwitcher'
 import TextSection from '../components/Section/TextSection'
-import ChapterSection, { cities } from '../components/Section/ChapterSection'
+import ChapterSection from '../components/Section/ChapterSection'
 import Button from '../components/Button/Button'
 import ContactSection from '../components/Section/ContactSection'
 import SocialMediaSection from '../components/Section/SocialMediaSection'
 import TwitterFeed from '../components/TwitterFeed'
 import Masthead from '../components/Header/Masthead'
-import Events from '../components/Events'
 import { mediaquery } from '../style/style.js'
 import { useAssetPath } from '../utils/assetPath'
 
@@ -28,49 +24,6 @@ export const Index: NextPage = () => {
   const direction: GridDirection = useMediaQuery(theme.breakpoints.up('md'))
     ? 'row'
     : 'column-reverse'
-  const meetupNames = cities
-    .filter(
-      ({ cityContent: { data } }) => !data.is_inactive && data.meetup_name
-    )
-    .map(({ cityContent: { data } }) => data.meetup_name)
-
-  const [events, setEvents] = useState<any>({})
-  const [hasEvents, setHasEvents] = useState(false)
-  const [showMoreLink, setShowMoreLink] = useState(true)
-  const [isLoading, setLoading] = useState(true)
-  useEffect(() => {
-    if (events.firstBatch) {
-      const secondBatch = [...events.allEvents].splice(6, 10)
-      if (!secondBatch.length) setShowMoreLink(false)
-      setEvents({ ...events, secondBatch })
-      return
-    }
-
-    setLoading(true)
-    Promise.all(
-      meetupNames.map((meetupName) =>
-        fetchJsonp(`https://api.meetup.com/${meetupName}/events`).then((resp) =>
-          resp.json()
-        )
-      )
-    ).then((jsons) => {
-      const mixEvents = flatten(jsons.map(({ data }) => data.splice(0, 10)))
-      mixEvents.sort(
-        (a, b) => Date.parse(a.local_date) - Date.parse(b.local_date)
-      )
-
-      if (mixEvents.length) {
-        const firstBatch = [...mixEvents].splice(0, 6)
-        setEvents({ firstBatch, allEvents: mixEvents })
-        setHasEvents(true)
-      } else {
-        setHasEvents(false)
-      }
-    })
-
-    setLoading(false)
-  }, [showMoreLink])
-
   return (
     <PageLayout
       pageTitle={t('homepage.pageTitle')}
@@ -200,17 +153,6 @@ export const Index: NextPage = () => {
           hideInactiveChapters={true}
         />
 
-        <h4 className='chapter-events' id='events'>
-          {t('chapter.events')}
-        </h4>
-        <Events
-          events={events}
-          isLoading={isLoading}
-          hasEvents={hasEvents}
-          showMoreLink={showMoreLink}
-          setShowMoreLink={setShowMoreLink}
-          hasMixedGroups
-        />
       </TextSection>
       <TwitterFeed screenName='OpenTechSchool' />
       <ContactSection />
@@ -268,16 +210,6 @@ export const Index: NextPage = () => {
         .ots-community {
           margin-bottom: 30px;
           text-align: center;
-        }
-
-        .chapter-events {
-          font-family: var(--secondaryFont);
-          font-weight: 500;
-          font-size: 22px;
-          color: #828282;
-          text-align: center;
-          text-transform: uppercase;
-          margin-top: 40px;
         }
 
         @media (${mediaquery.smallToTablet}) {

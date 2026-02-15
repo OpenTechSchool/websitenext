@@ -1,34 +1,9 @@
-import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import fetchJsonp from 'fetch-jsonp'
-import { PermIdentity } from '@mui/icons-material'
 import { mediaquery } from '../../style/style'
-// import Link from 'next/link'
-// import OutlineButton from '../Button/OutlineButton'
-import useTranslation from '../../hooks/useTranslation'
 import { useAssetPath } from '../../utils/assetPath'
 
-function CityHero({ cityName, title, tagline, meetupName, credits }) {
-  const { t } = useTranslation()
+function CityHero({ cityName, title, tagline, credits }) {
   const assetPath = useAssetPath()
-  const [members, setMembers] = useState()
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await fetchJsonp(`https://api.meetup.com/${meetupName}`)
-
-        if (result.ok) {
-          const json = await result.json()
-          const group = json.data
-          setMembers(group.members)
-        }
-      } catch (err) {
-        console.error('fetch error', err)
-      }
-    }
-    fetchData()
-  }, [])
   return (
     <div>
       <section>
@@ -48,24 +23,6 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
             </Link>
           </OutlineButton>
         </span> */}
-          {members && (
-            <a
-              className='members-link'
-              href={`https://www.meetup.com/${meetupName}`}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <p className='members'>
-                <span className='membersIcon'>
-                  <PermIdentity />
-                </span>
-                <small>
-                  {members} {t('common.learners')}
-                </small>
-              </p>
-            </a>
-          )}
-
           {credits && <p className='credits'>Credits: {credits}</p>}
         </div>
       </section>
@@ -97,20 +54,6 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
           background-color: rgba(45, 156, 219, 0.7);
         }
 
-        .members-link {
-          color: white;
-          z-index: 1;
-          border-bottom: 2px solid transparent;
-        }
-
-        .members-link:hover {
-          border-bottom: 2px solid white;
-        }
-
-        .members-link p {
-          margin-bottom: 0;
-        }
-
         @media (${mediaquery.desktopToBigScreen}) {
           section div {
             max-width: 1440px;
@@ -140,19 +83,6 @@ function CityHero({ cityName, title, tagline, meetupName, credits }) {
           z-index: 1;
         }
 
-        .members {
-          margin-top: 40px;
-          z-index: 1;
-        }
-
-        .members :global(svg) {
-          font-size: 1em;
-          position: relative;
-          top: 2px;
-          margin-right: 6px;
-          transform: scale(1.2);
-        }
-
         .credits {
           color: #fff;
           font-size: 14px;
@@ -171,7 +101,6 @@ CityHero.propTypes = {
   cityName: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   tagline: PropTypes.string.isRequired,
-  meetupName: PropTypes.string.isRequired,
   credits: PropTypes.string,
 }
 
