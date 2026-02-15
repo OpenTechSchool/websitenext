@@ -21,7 +21,6 @@ const Community: NextPage = () => {
       {/* <section>
         <LocalSwitcher />
       </section> */}
-
       <TextSection title={t('contribute.contribute.title')}>
         <Grid container justifyContent='center' alignItems='center'>
           <Grid item xs={12} md={3}>
@@ -38,7 +37,6 @@ const Community: NextPage = () => {
           </Grid>
         </Grid>
       </TextSection>
-
       <TextSection
         title={t('contribute.volunteering.title')}
         classname='grey'
@@ -64,7 +62,7 @@ const Community: NextPage = () => {
             <p>{t('contribute.volunteering.coach.description')}</p>
             <p>
               <Link href={`/guides#coaching-guidelines`}>
-                <a>{t('contribute.volunteering.coach.description2')}</a>
+                {t('contribute.volunteering.coach.description2')}
               </Link>
             </p>
 
@@ -72,7 +70,7 @@ const Community: NextPage = () => {
             <p>{t('contribute.volunteering.organize.description')}</p>
             <p>
               <Link href={`/guides#organize-meetup`}>
-                <a>{t('contribute.volunteering.organize.description2')}</a>
+                {t('contribute.volunteering.organize.description2')}
               </Link>
             </p>
 
@@ -80,13 +78,12 @@ const Community: NextPage = () => {
             <p>{t('contribute.volunteering.openChapter.description')}</p>
             <p>
               <Link href={`/guides#start-chapter`}>
-                <a>{t('contribute.volunteering.openChapter.description2')}</a>
+                {t('contribute.volunteering.openChapter.description2')}
               </Link>
             </p>
           </Grid>
         </Grid>
       </TextSection>
-
       <TextSection title={t('contribute.supporter.title')} anchor='supporter'>
         <Grid container justifyContent='center' alignItems='center'>
           <Grid item xs={12} md={3}>
@@ -108,16 +105,14 @@ const Community: NextPage = () => {
             <p>
               {t('contribute.supporter.membership')}{' '}
               <Link href={`/about#membership`}>
-                <a>{t('contribute.supporter.readMore')}</a>
+                {t('contribute.supporter.readMore')}
               </Link>
               .
             </p>
           </Grid>
         </Grid>
       </TextSection>
-
       <ContactSection />
-
       <style jsx>{`
         .sponsor-img,
         .organizer-img {
@@ -128,7 +123,7 @@ const Community: NextPage = () => {
         }
       `}</style>
     </PageLayout>
-  )
+  );
 }
 
 export default WithLocale(Community)

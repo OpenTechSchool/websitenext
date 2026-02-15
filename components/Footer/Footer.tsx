@@ -14,23 +14,27 @@ export default function Footer() {
             <h4>{t('footer.getinvolved')}</h4>
             <ul>
               <li>
-                <Link href={`/#find-events`}>
-                  <a className='invert'>{t('footer.joinMeetup')}</a>
+                <Link href={`/#find-events`} className='invert'>
+                  {t('footer.joinMeetup')}
                 </Link>
               </li>
               <li>
-                <Link href={`/guides#organize-meetup`}>
-                  <a className='invert'>{t('footer.organizeEvent')}</a>
+                <Link href={`/guides#organize-meetup`} className='invert'>
+                  {t('footer.organizeEvent')}
                 </Link>
               </li>
               <li>
-                <Link href={`/guides#start-chapter`}>
-                  <a className='invert'>{t('footer.startChapter')}</a>
+                <Link href={`/guides#start-chapter`} className='invert'>
+                  {t('footer.startChapter')}
                 </Link>
               </li>
               <li>
-                <Link href={`/contribute#supporter`} scroll={false}>
-                  <a className='invert'>{t('footer.becomeSupporter')}</a>
+                <Link
+                  href={`/contribute#supporter`}
+                  scroll={false}
+                  className='invert'
+                >
+                  {t('footer.becomeSupporter')}
                 </Link>
               </li>
             </ul>
@@ -94,18 +98,18 @@ export default function Footer() {
             <h4>{t('footer.aboutUs')}</h4>
             <ul>
               <li>
-                <Link href={`/about#history`}>
-                  <a className='invert'>{t('footer.history')}</a>
+                <Link href={`/about#history`} className='invert'>
+                  {t('footer.history')}
                 </Link>
               </li>
               <li>
-                <Link href={`/about#foundation`}>
-                  <a className='invert'>{t('footer.foundation')}</a>
+                <Link href={`/about#foundation`} className='invert'>
+                  {t('footer.foundation')}
                 </Link>
               </li>
               <li>
-                <Link href={`/about#core-values`}>
-                  <a className='invert'>{t('footer.coreValues')}</a>
+                <Link href={`/about#core-values`} className='invert'>
+                  {t('footer.coreValues')}
                 </Link>
               </li>
             </ul>
@@ -114,23 +118,23 @@ export default function Footer() {
             <h4>{t('footer.moreContent')}</h4>
             <ul>
               <li>
-                <Link href={`/code-of-conduct`}>
-                  <a className='invert'>{t('footer.codeOfConduct')}</a>
+                <Link href={`/code-of-conduct`} className='invert'>
+                  {t('footer.codeOfConduct')}
                 </Link>
               </li>
               <li>
-                <Link href={`/guides#coaching-guidelines`}>
-                  <a className='invert'>{t('footer.coachingGuidelines')}</a>
+                <Link href={`/guides#coaching-guidelines`} className='invert'>
+                  {t('footer.coachingGuidelines')}
                 </Link>
               </li>
               <li>
-                <Link href={`/guides`}>
-                  <a className='invert'>{t('footer.guides')}</a>
+                <Link href={`/guides`} className='invert'>
+                  {t('footer.guides')}
                 </Link>
               </li>
               <li>
-                <Link href={`/imprint`}>
-                  <a className='invert'>{t('footer.imprint')}</a>
+                <Link href={`/imprint`} className='invert'>
+                  {t('footer.imprint')}
                 </Link>
               </li>
             </ul>

@@ -39,8 +39,12 @@ export default function ChapterSection({
                 <Grid item key={i}>
                   <div className='chapter'>
                     {!data.is_inactive ? (
-                      <Link href={`/cities/[slug]`} as={`/cities/${data.slug}`}>
-                        <a className='highlight'>{data.title}</a>
+                      <Link
+                        href={`/cities/[slug]`}
+                        as={`/cities/${data.slug}`}
+                        className='highlight'
+                      >
+                        {data.title}
                       </Link>
                     ) : (
                       <span className='highlight'>{data.title}</span>
@@ -50,7 +54,6 @@ export default function ChapterSection({
               )
           })}
       </Grid>
-
       <style jsx>{`
         .chaptersWrapper {
           max-width: 550px;

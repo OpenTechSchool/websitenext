@@ -100,7 +100,7 @@ const Guides: NextPage = () => {
             <p>
               {t('guides.organizeMeetup.agreement')}{' '}
               <Link href={`/about#core-values`}>
-                <a>{t('guides.organizeMeetup.values')}</a>
+                {t('guides.organizeMeetup.values')}
               </Link>
               . {t('guides.organizeMeetup.inParticular')}
             </p>
@@ -245,7 +245,7 @@ const Guides: NextPage = () => {
         }
       `}</style>
     </PageLayout>
-  )
+  );
 }
 
 export default WithLocale(Guides)

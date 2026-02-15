@@ -77,11 +77,9 @@ export const Index: NextPage = () => {
       pageDescription={t('homepage.pageDescription')}
     >
       <Masthead />
-
       {/* <section>
         <LocalSwitcher />
       </section> */}
-
       <TextSection>
         <Grid container justifyContent='space-between' alignItems='center'>
           <Grid item xs={12} md={5}>
@@ -89,7 +87,7 @@ export const Index: NextPage = () => {
               <h2>{t('homepage.otsInitiative.title')}</h2>
               <p>{t('homepage.otsInitiative.description')}</p>
               <Link href={`/about`}>
-                <a>{t('homepage.otsInitiative.learnMore')}</a>
+                {t('homepage.otsInitiative.learnMore')}
               </Link>
             </div>
           </Grid>
@@ -102,7 +100,6 @@ export const Index: NextPage = () => {
           </Grid>
         </Grid>
       </TextSection>
-
       <TextSection>
         <Grid
           container
@@ -122,13 +119,12 @@ export const Index: NextPage = () => {
               <h2>{t('homepage.otsCommunity.title')}</h2>
               <p>{t('homepage.otsCommunity.description')}</p>
               <Link href={`/community`}>
-                <a>{t('homepage.otsCommunity.learnMore')}</a>
+                {t('homepage.otsCommunity.learnMore')}
               </Link>
             </div>
           </Grid>
         </Grid>
       </TextSection>
-
       <TextSection classname='grey' title={t('homepage.waysToJoin.title')}>
         <Grid
           container
@@ -148,10 +144,10 @@ export const Index: NextPage = () => {
               <h3>{t('homepage.waysToJoin.learner.title')}</h3>
               <p>{t('homepage.waysToJoin.learner.description')}</p>
               <Button>
-                <Link href={`/community`}>
-                  <a className='invert button'>
-                    {t('homepage.waysToJoin.learner.cta')}
-                  </a>
+                <Link href={`/community`} className='invert button'>
+
+                  {t('homepage.waysToJoin.learner.cta')}
+
                 </Link>
               </Button>
             </div>
@@ -168,10 +164,10 @@ export const Index: NextPage = () => {
               <h3>{t('homepage.waysToJoin.support.title')}</h3>
               <p>{t('homepage.waysToJoin.support.description')}</p>
               <Button>
-                <Link href={`/contribute#supporter`}>
-                  <a className='invert button'>
-                    {t('homepage.waysToJoin.support.cta')}
-                  </a>
+                <Link href={`/contribute#supporter`} className='invert button'>
+
+                  {t('homepage.waysToJoin.support.cta')}
+
                 </Link>
               </Button>
             </div>
@@ -188,17 +184,16 @@ export const Index: NextPage = () => {
               <h3>{t('homepage.waysToJoin.coach.title')}</h3>
               <p>{t('homepage.waysToJoin.coach.description')}</p>
               <Button>
-                <Link href={`/contribute#volunteering`}>
-                  <a className='invert button'>
-                    {t('homepage.waysToJoin.coach.cta')}
-                  </a>
+                <Link href={`/contribute#volunteering`} className='invert button'>
+
+                  {t('homepage.waysToJoin.coach.cta')}
+
                 </Link>
               </Button>
             </div>
           </Grid>
         </Grid>
       </TextSection>
-
       <TextSection title={t('chapter.title')} anchor='find-events'>
         <ChapterSection
           title={t('chapter.active')}
@@ -217,13 +212,9 @@ export const Index: NextPage = () => {
           hasMixedGroups
         />
       </TextSection>
-
       <TwitterFeed screenName='OpenTechSchool' />
-
       <ContactSection />
-
       <SocialMediaSection />
-
       <style jsx>{`
         h1 {
           padding-top: 0;
@@ -304,7 +295,7 @@ export const Index: NextPage = () => {
         }
       `}</style>
     </PageLayout>
-  )
+  );
 }
 
 export default WithLocale(Index)

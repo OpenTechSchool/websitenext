@@ -44,10 +44,8 @@ export default function ContactSection() {
               </h4>
               <p>{t('homepage.getInTouch.events.description')}</p>
               <p>
-                <Link href={`/#events`}>
-                  <a className='highlight'>
-                    {t('homepage.getInTouch.events.cta')}
-                  </a>
+                <Link href={`/#events`} className='highlight'>
+                  {t('homepage.getInTouch.events.cta')}
                 </Link>
               </p>
             </li>
