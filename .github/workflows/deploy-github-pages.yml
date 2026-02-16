@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+      - main
+      - github-pages
+  workflow_dispatch:
 
 permissions:
   contents: read
