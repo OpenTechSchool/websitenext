@@ -189,3 +189,4 @@ Have an idea and already know how to develop it? Go ahead and make a PR, we are 
 
 Have an idea but would like to talk to someone to know how to better proceed?
 Feel free to open a GitHub issue to discuss your ideas and get guidance on implementation.
+
