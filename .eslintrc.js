@@ -46,4 +46,12 @@ module.exports = {
       version: 'detect',
     },
   },
+  overrides: [
+    {
+      files: ['*.mjs'],
+      env: {
+        node: true,
+      },
+    },
+  ],
 }

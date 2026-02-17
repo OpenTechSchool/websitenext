@@ -1,5 +1,3 @@
-const path = require('path')
-
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 const hasCustomDomain = process.env.CUSTOM_DOMAIN === 'true'
 
@@ -24,7 +22,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  webpack: function(config) {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,
       type: 'asset/source',
@@ -38,4 +36,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+export default nextConfig
