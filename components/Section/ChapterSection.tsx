@@ -60,7 +60,7 @@ export default function ChapterSection({
           margin: 0 auto;
         }
 
-        .highlight {
+        :global(.highlight) {
           text-transform: uppercase;
           font-family: var(--primaryFont);
           font-weight: 600;
@@ -98,7 +98,7 @@ export default function ChapterSection({
             padding: 0 12px;
           }
 
-          .highlight {
+          :global(.highlight) {
             font-size: 24px;
             display: inline;
           }

@@ -166,10 +166,6 @@ export default function Footer() {
           color: #fff;
         }
 
-        a {
-          font-weight: normal;
-        }
-
         .license {
           font-size: 14px;
           margin-top: 100px;

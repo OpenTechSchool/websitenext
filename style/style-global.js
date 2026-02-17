@@ -109,6 +109,7 @@ export default css.global`
   }
   a.invert {
     color: white;
+    font-weight: normal;
   }
   a.invert:hover {
     border-bottom: 2px solid white;

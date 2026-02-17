@@ -117,7 +117,7 @@ export function Header({ setIsMenuOpen }) {
             background: var(--otsColor);
           }
 
-          .logo {
+          :global(.logo) {
             color: white;
             font-size: 22px;
             font-size: 2.2rem;
@@ -133,7 +133,7 @@ export function Header({ setIsMenuOpen }) {
             width: 0.8em;
           }
 
-          nav a {
+          nav :global(a) {
             font-size: 17px;
             font-size: 1.7rem;
             font-weight: 400;
@@ -143,7 +143,7 @@ export function Header({ setIsMenuOpen }) {
             letter-spacing: 0.01em;
           }
 
-          nav a:last-child {
+          nav :global(a:last-child) {
             margin-right: 0;
           }
 
@@ -167,7 +167,7 @@ export function Header({ setIsMenuOpen }) {
             justify-content: space-evenly;
           }
 
-          .mobile-nav a {
+          .mobile-nav :global(a) {
             display: block;
             text-align: center;
             font-size: 22px;
@@ -177,7 +177,7 @@ export function Header({ setIsMenuOpen }) {
             padding: 20px 0;
           }
 
-          .mobile-nav a:hover {
+          .mobile-nav :global(a:hover) {
             border-bottom: 0px;
           }
 
@@ -188,7 +188,7 @@ export function Header({ setIsMenuOpen }) {
           }
 
           @media (${mediaquery.smallToTablet}) {
-            .logo {
+            :global(.logo) {
               font-size: 20px;
               font-size: 2rem;
             }
