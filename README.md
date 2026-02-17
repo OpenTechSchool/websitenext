@@ -156,7 +156,6 @@ Note: We are using `out` instead of `websitenext`, but the github action will co
 ```bash
 # Build and export with GitHub Pages environment variables
 GITHUB_ACTIONS=true GITHUB_REPOSITORY=OpenTechSchool/out npm run build
-GITHUB_ACTIONS=true GITHUB_REPOSITORY=OpenTechSchool/out npx next export
 
 # The static files will be generated in the 'out' directory
 # All asset paths (images, fonts, links) will include the /out basePath
