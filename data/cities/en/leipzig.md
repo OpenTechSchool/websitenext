@@ -8,14 +8,7 @@ location: Leipzig, Germany
 tagline: Your beginner friendly tech community in Leipzig
 credits: Thanks to Christian Doeller (www.christiandoeller.de)
 meetup_name: opentechschool-leipzig
-twitter: ots_le
-socials:
-  - twitter: https://twitter.com/ots_le
-  - github: http://github.com/opentechschool-leipzig
-  - facebook: http://facebook.com/opentechschool.leipzig
-  - instagram: https://www.instagram.com/opentechschool_leipzig/
 members:
-  - christina: Christina
   - krissi: Krissi
   - norma: Norma
 ---
@@ -26,7 +19,7 @@ We organize events to learn, collaborate and meet other learners. If you interes
 
 ## Our meetup
 
-We meet every week Monday or Thursday between 7 and 10pm at Basislager to learn, educate and motivate each other when getting started with coding or when working on a project.
+We meet bi-weekly on Thursday between 7 and 9pm at Basislager to learn, educate and motivate each other when getting started with coding or when working on a project.
 
 The event is free and everyone is welcome to participate. We don't offer regular coding workshops, but we meet to talk about coding issues or any kind of question you might have when getting started with programming. People that join our meetup have different experience levels and are always happy to help.
 
@@ -44,4 +37,4 @@ We have a bunch ongoing projects and are always looking for people who like to c
 
 ## Contact
 
-You can send us an [email](mailto:leipzig@opentechschool.org) or join us at [Slack](https://join.slack.com/t/opentechschool/shared_invite/zt-1mpx31hk2-C0~bk3sXUhzyT57f8J4Smg) (channel: #leipzig).
+Please send us an email [email](mailto:hello@nullaufein.org).
