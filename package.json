@@ -7,7 +7,6 @@
     "lint": "eslint --fix --ext .tsx,.js pages/**/** components/**/**",
     "lint:watch": "nodemon --exec \"npm run lint || exit 1\" --ext ts,js",
     "clean-cache": "rimraf -rf ./node_modules/.cache",
-    "prod": "next start",
     "open": "sleepms 5000 && open http://localhost:3000",
     "dev": "npm run clean-cache && npm run lint && concurrently \"npm run lint:watch\" next \"npm run open\" --names \"🛂,🏗️,🖥️\" --prefix name ",
     "build": "npm run clean-cache && next build",
