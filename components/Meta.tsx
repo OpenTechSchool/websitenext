@@ -25,9 +25,7 @@ export default function Meta({ pageTitle, pageDescription, pageImage }) {
             pageImage || assetPath('/sharing-images/website-into-sharing.png?1')
           }`}
         />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:site' content='@OpenTechSchool' />
-        <link
+<link
           rel='apple-touch-icon'
           sizes='180x180'
           href={assetPath('/apple-touch-icon.png')}

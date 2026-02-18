@@ -4,9 +4,6 @@ title: Melbourne
 location: 'Melbourne, Australia'
 is_inactive: true
 tagline: 'Great learning is achieved with great coffee!'
-twitter: OTS_AU
-socials:
-  - twitter: https://twitter.com/ots_au
 ---
 
 ## About

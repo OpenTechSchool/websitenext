@@ -3,8 +3,6 @@ import Grid from '@mui/material/Grid'
 import TextSection from './TextSection'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import GitHubIcon from '@mui/icons-material/GitHub'
-import TwitterIcon from '@mui/icons-material/Twitter'
-
 export default function SocialMediaSection({ bgColor = '' }) {
   const iconStyle = {
     fontSize: 50,
@@ -22,16 +20,6 @@ export default function SocialMediaSection({ bgColor = '' }) {
             className='icon'
           >
             <FacebookIcon style={iconStyle} />
-          </a>
-        </Grid>
-        <Grid item xs={3} md={1}>
-          <a
-            href='https://twitter.com/OpenTechSchool'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='icon'
-          >
-            <TwitterIcon style={iconStyle} />
           </a>
         </Grid>
         <Grid item xs={3} md={1}>

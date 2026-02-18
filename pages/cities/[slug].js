@@ -9,7 +9,6 @@ import Grid from '@mui/material/Grid'
 import Icon from '@mui/material/Icon'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import GitHubIcon from '@mui/icons-material/GitHub'
-import TwitterIcon from '@mui/icons-material/Twitter'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
@@ -18,7 +17,6 @@ import CityLayout from '../../components/CityLayout/CityLayout'
 import CityHero from '../../components/CityHero/CityHero'
 import TextSection from '../../components/Section/TextSection'
 import TeamSection from '../../components/Section/TeamSection'
-import TwitterFeed from '../../components/TwitterFeed'
 import { useAssetPath } from '../../utils/assetPath'
 
 const WrappedIcon = (props) => <Icon {...props} />
@@ -34,7 +32,6 @@ export function CityTemplate({ content, data }) {
 
   const socialIconsList = {
     facebook: <FacebookIcon />,
-    twitter: <TwitterIcon />,
     github: <GitHubIcon />,
     instagram: <InstagramIcon />,
     discourse: { imgSrc: assetPath('/discourse_blue_icon.png') },
@@ -131,8 +128,6 @@ export function CityTemplate({ content, data }) {
       )}
 
       <TeamSection frontmatter={frontmatter} />
-
-      {frontmatter.twitter && <TwitterFeed screenName={frontmatter.twitter} />}
 
       <style jsx>{`
         .markdown :global(p) {

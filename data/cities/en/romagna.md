@@ -7,7 +7,6 @@ page_description: |
 location: 'Cesena, Italy'
 tagline: 'Code, Piadina and Sangiovese'
 meetup_name: opentechschool-romagna
-twitter: false
 socials: false
 discourse_group: TeamRomagna
 ---

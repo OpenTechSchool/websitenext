@@ -4,7 +4,6 @@ title: Istanbul
 location: 'İstanbul, Turkey'
 is_inactive: true
 tagline: 'Bridging two continents, and the people.'
-twitter: OTS_IST
 ---
 
 ## About

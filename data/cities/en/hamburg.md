@@ -4,7 +4,6 @@ slug: hamburg
 title: Hamburg
 location: 'Hamburg, Germany'
 tagline: 'Shipping is our tradition... and so are Franzbrötchen.'
-twitter: false
 discourse_group: TeamHamburg
 ---
 
