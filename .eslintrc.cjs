@@ -48,7 +48,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.mjs', '*.cjs'],
+      files: ['*.mjs', '*.cjs', 'style-global.js'],
       env: {
         node: true,
       },

@@ -3,7 +3,10 @@ import { mediaquery } from './style.js'
 
 const isGithubActions = process.env.NEXT_PUBLIC_GITHUB_ACTIONS || false
 const hasCustomDomain = process.env.NEXT_PUBLIC_CUSTOM_DOMAIN === 'true'
-const basePath = (isGithubActions && !hasCustomDomain) ? `/${process.env.NEXT_PUBLIC_GITHUB_REPOSITORY?.replace(/.*?\//, '') || ''}` : ''
+const basePath =
+  isGithubActions && !hasCustomDomain
+    ? `/${process.env.NEXT_PUBLIC_GITHUB_REPOSITORY?.replace(/.*?\//, '') || ''}`
+    : ''
 
 export default css.global`
   :root {

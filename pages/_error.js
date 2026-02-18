@@ -1,5 +1,3 @@
-import NextError from 'next/error'
-import PropTypes from 'prop-types'
 import PageLayout from '../components/PageLayout/PageLayout'
 import useTranslation from '../hooks/useTranslation'
 import WithLocale from '../containers/withLocale'

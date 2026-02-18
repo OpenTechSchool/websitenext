@@ -13,63 +13,60 @@ You will need to add/modify just one file and can forget about all the rest.<br 
 Run locally the project, modify your page and then open a PR to this project.<br />
 Please read [the city section](#citySection) to learn how can you take care of your chapter page.
 
-## quick start:
+## Quick Start
 
 1. `npm i`
 2. `npm run dev`
 
-## To contribute:
+## To Contribute
 
 Here is an explanation to help you contribute easily.<br />
 If you want to contribute but don't know on what to work on, check our github issues, we try to label them as accurate as possible.
 
-If you are beginner, search for the label `good first issues`.<br />
-Assign the issue to your self and when you are done, make a PR to review.<br />
-Always feel free to reach out for help. You can write in the issue itself, you can open a PR as draft and ask suggestion about your code.
+If you are a beginner, search for the label `good first issues`.<br />
+Assign the issue to yourself and when you are done, make a PR for review.<br />
+Always feel free to reach out for help. You can write in the issue itself, you can open a PR as draft and ask for suggestions about your code.
 
-### Requirements:
+### Requirements
 
-`Node version >= 12` (recommended: Node 18+ or 20+)
-
-`npm`
+- Node.js version >= 25
+- npm >= 10.0.0
 
 ### Running
 
 1. `npm i`
 2. `npm run dev`
-3. check you browsers, a window should be now open at `localhost:3000`<br />
-   You might need to reload the page. (we still need to improve the process)
+3. a window should open at `localhost:3000`
 
-## File Structure and major library
+## File Structure and Major Libraries
 
 ### Styles
 
 The global styles can be found in `style/style-global.js` file.<br />
 In `style/style.js` we define project variables and
-the variables needed by material UI theme.
+the variables needed by MUI theme.
 
-#### Material UI
+#### Material UI (MUI)
 
-For this project UI we use [material UI library](https://material-ui.com/).<br />
-Material UI is rich of components easy to use in a react application and we also relay on [its grid system](https://material-ui.com/components/grid/#grid).<br />
-Most of [the icon](https://material-ui.com/components/material-icons/) we use also come from material ui.
+For this project UI we use [MUI (Material UI) library](https://mui.com/).<br />
+MUI is rich of components easy to use in a react application and we also relay on [its grid system](https://mui.com/material-ui/react-grid/).<br />
+Most of [the icons](https://mui.com/material-ui/material-icons/) we use also come from MUI.
 
 <b>Tips:</b>
-MaterialUI has its own way to pass a component as prop.<br />
-Here is the [documentation to help you out with it](https://material-ui.com/guides/composition/)
+MUI has its own way to pass a component as prop.<br />
+Here is the [documentation to help you out with it](https://mui.com/material-ui/guides/composition/)
 
-The component has some material UI props that need to be pass down to the child component.<br />
+The component has some MUI props that need to be passed down to the child component.<br />
 You need to wrap the component that you want to forward the properties.
 
-```
-const WrappedIcon = props => <Icon {...props} />;
-WrappedIcon.muiName = Icon.muiName;
-
+```javascript
+const WrappedIcon = (props) => <Icon {...props} />
+WrappedIcon.muiName = Icon.muiName
 ```
 
 <a name="citySection"></a>
 
-## Cities data
+## Cities Data
 
 Markdown for city can be found in `data/cities/en/`.<br />
 Each city file should be named `city-name.md` and placed in the English directory.<br />
@@ -133,19 +130,14 @@ The `t()` function takes a key from the `en.json` file and falls back to display
 
 ### Conventions
 
-**Typescript or Javascript?**
-You will see that some page use typescript and some other don't. There is no restricted
-rules about it, both extension will work, use the one that make you feel more comfortable.<br />
-We try however to not over do it with Typescript since is a simple project and we like to keep it simple.
-
-**Style in jsx**
-Style is fairly simple and we since we rely on material ui, it usually keep it pretty short.<br />
+**Style in JSX**
+Style is fairly simple and since we rely on MUI, it usually keeps it pretty short.<br />
 Therefore we want to keep it in the same page as the component/page.<br />
-Yet, we avoid using javascript-in-css as much as possible therefore it will be easier to move to plain css file, if we will ever decide to do so.
+Yet, we avoid using JavaScript-in-CSS as much as possible therefore it will be easier to move to plain CSS file, if we will ever decide to do so.
 
 ## Deployment
 
-This website is deployed to GitHub Pages. Every push to the `github-pages-new` branch automatically triggers the GitHub Actions workflow that builds and deploys the static site.
+This website is deployed to GitHub Pages. Every push to the `github-pages` branch automatically triggers the GitHub Actions workflow that builds and deploys the static site.
 
 ### Building for GitHub Pages Locally
 
@@ -154,7 +146,7 @@ To test the GitHub Pages build locally with the correct basePath configuration:
 Note: We are using `out` instead of `websitenext`, but the github action will copy files from `out` to `websitenext`
 
 ```bash
-# Build and export with GitHub Pages environment variables
+# Build with GitHub Pages environment variables
 GITHUB_ACTIONS=true GITHUB_REPOSITORY=OpenTechSchool/out npm run build
 
 # The static files will be generated in the 'out' directory
@@ -172,7 +164,6 @@ For local development without basePath, use the standard commands:
 ```bash
 npm run dev        # Development server
 npm run build      # Production build (local)
-npm run export     # Static export (local)
 ```
 
 ### Using a custom domain

@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types'
 import Head from 'next/head'
-import useTranslation from '../hooks/useTranslation'
 import { useAssetPath } from '../utils/assetPath'
 
 export default function Meta({ pageTitle, pageDescription, pageImage }) {
-  const { t } = useTranslation()
   const assetPath = useAssetPath()
   pageTitle = `${pageTitle} | OpenTechSchool`
   return (
@@ -40,12 +38,6 @@ export default function Meta({ pageTitle, pageDescription, pageImage }) {
           type='image/png'
           href={assetPath('/favicon-32x32.png')}
           sizes='32x32'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          href={assetPath('/favicon-96x96.png')}
-          sizes='96x96'
         />
         <link rel='manifest' href={assetPath('/site.webmanifest')} />
       </Head>
