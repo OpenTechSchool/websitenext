@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 permissions:
   contents: read
@@ -11,7 +14,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -20,30 +23,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '25.1.0'
           cache: 'npm'
-          
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Build static site
-        run: npm run export
+        run: npm run build
         env:
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
           # Set CUSTOM_DOMAIN=true when using custom domain (e.g., opentechschool.org)
           CUSTOM_DOMAIN: true
-          
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
   deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
