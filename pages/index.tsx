@@ -12,7 +12,6 @@ import ChapterSection from '../components/Section/ChapterSection'
 import Button from '../components/Button/Button'
 import ContactSection from '../components/Section/ContactSection'
 import SocialMediaSection from '../components/Section/SocialMediaSection'
-import TwitterFeed from '../components/TwitterFeed'
 import Masthead from '../components/Header/Masthead'
 import { mediaquery } from '../style/style.js'
 import { useAssetPath } from '../utils/assetPath'
@@ -98,9 +97,7 @@ export const Index: NextPage = () => {
               <p>{t('homepage.waysToJoin.learner.description')}</p>
               <Button>
                 <Link href={`/community`} className='invert button'>
-
                   {t('homepage.waysToJoin.learner.cta')}
-
                 </Link>
               </Button>
             </div>
@@ -118,9 +115,7 @@ export const Index: NextPage = () => {
               <p>{t('homepage.waysToJoin.support.description')}</p>
               <Button>
                 <Link href={`/contribute#supporter`} className='invert button'>
-
                   {t('homepage.waysToJoin.support.cta')}
-
                 </Link>
               </Button>
             </div>
@@ -137,10 +132,11 @@ export const Index: NextPage = () => {
               <h3>{t('homepage.waysToJoin.coach.title')}</h3>
               <p>{t('homepage.waysToJoin.coach.description')}</p>
               <Button>
-                <Link href={`/contribute#volunteering`} className='invert button'>
-
+                <Link
+                  href={`/contribute#volunteering`}
+                  className='invert button'
+                >
                   {t('homepage.waysToJoin.coach.cta')}
-
                 </Link>
               </Button>
             </div>
@@ -152,9 +148,7 @@ export const Index: NextPage = () => {
           title={t('chapter.active')}
           hideInactiveChapters={true}
         />
-
       </TextSection>
-      <TwitterFeed screenName='OpenTechSchool' />
       <ContactSection />
       <SocialMediaSection />
       <style jsx>{`
@@ -227,7 +221,7 @@ export const Index: NextPage = () => {
         }
       `}</style>
     </PageLayout>
-  );
+  )
 }
 
 export default WithLocale(Index)

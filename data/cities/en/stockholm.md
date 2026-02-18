@@ -4,9 +4,6 @@ title: Stockholm
 location: 'Stockholm, Sweden'
 is_inactive: true
 tagline: 'Where kanelbullar and köttbullar come from'
-twitter: OTS_STHLM
-socials:
-  - twitter: https://twitter.com/ots_sthml
 ---
 
 ## About

@@ -44,16 +44,6 @@ export default function Footer() {
             <ul>
               <li>
                 <a
-                  href='https://twitter.com/opentechschool'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='invert'
-                >
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a
                   href='https://www.facebook.com/OpenTechSchool'
                   target='_blank'
                   rel='noopener noreferrer'

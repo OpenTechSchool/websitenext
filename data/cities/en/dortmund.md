@@ -4,10 +4,7 @@ title: Dortmund
 location: 'Dortmund, Germany'
 is_inactive: true
 tagline: 'Between currywurst, football and compilers.'
-twitter: OTS_DO
 discourse_group: TeamDortmund
-socials:
-  - twitter: https://twitter.com/ots_do
 ---
 
 ## About OpenTechSchool

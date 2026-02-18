@@ -78,7 +78,6 @@ Each city **MUST HAVE**:
 - title
 - tagline
 - meetup_name
-- twitter
 - some content
 
 If you want to show a list of social icons after your city description, add the social block to your markdown.<br />
@@ -86,7 +85,6 @@ Example:
 
 ```
 socials:
-  - twitter: https://twitter.com/ots_bln
   - facebook: https://www.facebook.com/opentechschool.berlin
 ```
 
