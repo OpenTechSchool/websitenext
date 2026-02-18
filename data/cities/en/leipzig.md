@@ -23,18 +23,14 @@ We meet bi-weekly on Thursday between 7 and 9pm at Basislager to learn, educate 
 
 The event is free and everyone is welcome to participate. We don't offer regular coding workshops, but we meet to talk about coding issues or any kind of question you might have when getting started with programming. People that join our meetup have different experience levels and are always happy to help.
 
-Please read our [Code of Conduct](/code-of-conduct/) before you join.
+Please read our [Code of Conduct](https://nullaufeins.org/de/codeofconduct/) before you join.
 
 Also a big thanks to [Basislager](https://www.basislager.co) for sponsoring the event space.
 
 ## Learning Resources
 
-We have a collection of learning resources [here](https://github.com/OpenTechSchool-Leipzig/learning-resources). Feel free to contribute and add your favourite tutorial.
-
-## Projects
-
-We have a bunch ongoing projects and are always looking for people who like to contribute. Please see our [Github account](http://github.com/opentechschool-leipzig) to learn more or get in touch with us.
+We have a collection of learning resources and projects [here](https://github.com/OpenTechMeetup-Leipzig/learning-resources). Feel free to contribute and add your favourite tutorial.
 
 ## Contact
 
-Please send us an email [email](mailto:hello@nullaufein.org).
+Please send us an email [email](mailto:events@nullaufein.org).
