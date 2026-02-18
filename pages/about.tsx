@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import PageLayout from '../components/PageLayout/PageLayout'
-import Grid from '@material-ui/core/Grid'
+import Grid from '@mui/material/Grid'
 import TextSection from '../components/Section/TextSection'
 // import LocalSwitcher from '../components/LocalSwitcher/LocalSwitcher'
 import Button from '../components/Button/Button'
@@ -22,7 +22,7 @@ const About: NextPage = () => {
       </section> */}
 
       <TextSection title={t('about.history.title')} anchor='history'>
-        <Grid container justify='space-between' alignItems='center'>
+        <Grid container justifyContent='space-between' alignItems='center'>
           <Grid item xs={12} md={5}>
             <img src={assetPath('/about.jpg')} />
           </Grid>

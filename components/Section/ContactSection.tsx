@@ -1,9 +1,9 @@
-import Grid, { GridDirection } from '@material-ui/core/Grid'
-import { useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import Grid, { GridDirection } from '@mui/material/Grid'
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import useTranslation from '../../hooks/useTranslation'
 import TextSection from './TextSection'
-import ChatIcon from '@material-ui/icons/Chat'
+import ChatIcon from '@mui/icons-material/Chat'
 import Link from 'next/link'
 import { mediaquery } from '../../style/style.js'
 
@@ -27,7 +27,7 @@ export default function ContactSection() {
 
   return (
     <TextSection classname='grey' anchor='get-in-touch'>
-      <Grid container direction={direction} justify='center'>
+      <Grid container direction={direction} justifyContent='center'>
         <Grid item xs={12} md={4}>
           <div className='message-icons'>
             <ChatIcon style={chatIconStyleFirst} />
@@ -44,10 +44,8 @@ export default function ContactSection() {
               </h4>
               <p>{t('homepage.getInTouch.events.description')}</p>
               <p>
-                <Link href={`/#events`}>
-                  <a className='highlight'>
-                    {t('homepage.getInTouch.events.cta')}
-                  </a>
+                <Link href={`/#events`} className='highlight'>
+                  {t('homepage.getInTouch.events.cta')}
                 </Link>
               </p>
             </li>

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import matter from 'gray-matter'
-import Grid from '@material-ui/core/Grid'
+import Grid from '@mui/material/Grid'
 import PropTypes from 'prop-types'
 import { mediaquery } from '../../style/style'
 
@@ -10,7 +10,8 @@ export const cities = ((ctx) => {
 
   const data = keys.map((key, index) => {
     const value = values[index]
-    const cityContent = matter((value as any).default)
+    const content = typeof value === 'string' ? value : (value as any).default
+    const cityContent = matter(content)
 
     return {
       cityContent,
@@ -27,7 +28,7 @@ export default function ChapterSection({
   return (
     <div className='chaptersWrapper'>
       {title ? <h4>{title}</h4> : ''}
-      <Grid container justify='space-around'>
+      <Grid container justifyContent='space-around'>
         {cities &&
           cities.map(({ cityContent: { data } }, i) => {
             if (
@@ -38,8 +39,12 @@ export default function ChapterSection({
                 <Grid item key={i}>
                   <div className='chapter'>
                     {!data.is_inactive ? (
-                      <Link href={`/cities/[slug]`} as={`/cities/${data.slug}`}>
-                        <a className='highlight'>{data.title}</a>
+                      <Link
+                        href={`/cities/[slug]`}
+                        as={`/cities/${data.slug}`}
+                        className='highlight'
+                      >
+                        {data.title}
                       </Link>
                     ) : (
                       <span className='highlight'>{data.title}</span>
@@ -49,14 +54,13 @@ export default function ChapterSection({
               )
           })}
       </Grid>
-
       <style jsx>{`
         .chaptersWrapper {
           max-width: 550px;
           margin: 0 auto;
         }
 
-        .highlight {
+        :global(.highlight) {
           text-transform: uppercase;
           font-family: var(--primaryFont);
           font-weight: 600;
@@ -94,7 +98,7 @@ export default function ChapterSection({
             padding: 0 12px;
           }
 
-          .highlight {
+          :global(.highlight) {
             font-size: 24px;
             display: inline;
           }

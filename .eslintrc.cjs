@@ -21,7 +21,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2018,
+    ecmaVersion: 2022,
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
@@ -48,9 +48,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.js'],
-      parser: 'babel-eslint',
-      rules: { '@typescript-eslint/camelcase': 0 },
+      files: ['*.mjs', '*.cjs', 'style-global.js'],
+      env: {
+        node: true,
+      },
     },
   ],
 }

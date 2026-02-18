@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import Grid from '@material-ui/core/Grid'
+import Grid from '@mui/material/Grid'
 import Link from 'next/link'
 import PageLayout from '../components/PageLayout/PageLayout'
 // import LocalSwitcher from '../components/LocalSwitcher/LocalSwitcher'
@@ -23,7 +23,7 @@ const Guides: NextPage = () => {
       <div className='hero'>
         <div className='content-wrapper'>
           <section>
-            <Grid container justify='space-between' alignItems='flex-end'>
+            <Grid container justifyContent='space-between' alignItems='flex-end'>
               <Grid item xs={12} md={5}>
                 <h1>{t('guides.hero.title')}</h1>
                 <p>{t('guides.hero.description')}</p>
@@ -66,7 +66,7 @@ const Guides: NextPage = () => {
         title={t('guides.coaching.title')}
         anchor='coaching-guidelines'
       >
-        <Grid container justify='space-around'>
+        <Grid container justifyContent='space-around'>
           <Grid item xs={12} md={6}>
             <p>{t('guides.coaching.intro')}</p>
             <h3>{t('guides.coaching.notTeachingHeadline')}</h3>
@@ -92,7 +92,7 @@ const Guides: NextPage = () => {
         classname='grey'
         anchor='organize-meetup'
       >
-        <Grid container justify='space-between'>
+        <Grid container justifyContent='space-between'>
           <Grid item xs={12} md={6}>
             <p>{t('guides.organizeMeetup.description')}</p>
             <br />
@@ -100,7 +100,7 @@ const Guides: NextPage = () => {
             <p>
               {t('guides.organizeMeetup.agreement')}{' '}
               <Link href={`/about#core-values`}>
-                <a>{t('guides.organizeMeetup.values')}</a>
+                {t('guides.organizeMeetup.values')}
               </Link>
               . {t('guides.organizeMeetup.inParticular')}
             </p>
@@ -122,13 +122,13 @@ const Guides: NextPage = () => {
         </Grid>
       </TextSection>
       <TextSection title={t('guides.newChapter.title')} anchor='start-chapter'>
-        <Grid container justify='space-between'>
+        <Grid container justifyContent='space-between'>
           <Grid item xs={12} md={6}>
             <p>{t('guides.newChapter.intro')}</p>
           </Grid>
           <Grid item xs={12} md={4}></Grid>
         </Grid>
-        <Grid container justify='space-between'>
+        <Grid container justifyContent='space-between'>
           <Grid item xs={12} md={6}>
             <h2>{t('guides.newChapter.teamingUpHeadline')}</h2>
             <p>{t('guides.newChapter.teamingUp')}</p>
@@ -147,7 +147,7 @@ const Guides: NextPage = () => {
             <small>Web frontend co-learning Berlin</small>
           </Grid>
         </Grid>
-        <Grid container justify='space-between'>
+        <Grid container justifyContent='space-between'>
           <Grid item xs={12} md={6}>
             <h2>{t('guides.newChapter.planningMeetup.title')}</h2>
             <h3>{t('guides.newChapter.planningMeetup.findOrganizers')}</h3>
@@ -245,7 +245,7 @@ const Guides: NextPage = () => {
         }
       `}</style>
     </PageLayout>
-  )
+  );
 }
 
 export default WithLocale(Guides)

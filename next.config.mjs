@@ -1,5 +1,3 @@
-const path = require('path')
-
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 const hasCustomDomain = process.env.CUSTOM_DOMAIN === 'true'
 
@@ -12,31 +10,30 @@ if (isGithubActions && !hasCustomDomain) {
   basePath = `/${repo}`
 }
 
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   ...(assetPrefix && { assetPrefix }),
   ...(basePath && { basePath }),
   trailingSlash: true,
+  output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
   },
   images: {
     unoptimized: true,
   },
-  webpack: function(config) {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,
-      // test: path.resolve(__dirname, 'pages/**/*.md'),
-      use: 'raw-loader',
+      type: 'asset/source',
     })
     return config
   },
   env: {
-    external: {
-      MEETUP_URL: 'http://meetup.com',
-    },
-    // Make build-time environment variables available at runtime
     NEXT_PUBLIC_GITHUB_ACTIONS: process.env.GITHUB_ACTIONS || 'false',
     NEXT_PUBLIC_GITHUB_REPOSITORY: process.env.GITHUB_REPOSITORY || '',
     NEXT_PUBLIC_CUSTOM_DOMAIN: process.env.CUSTOM_DOMAIN || 'false',
   },
 }
+
+export default nextConfig

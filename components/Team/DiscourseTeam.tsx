@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import Grid from '@material-ui/core/Grid'
+import Grid from '@mui/material/Grid'
 
 const Team = ({ discourseGroupName }) => {
   const [isLoading, setIsLoading] = useState(false)
@@ -57,7 +57,7 @@ const Team = ({ discourseGroupName }) => {
                 className='row'
                 key={key}
                 container
-                justify='center'
+                justifyContent='center'
                 spacing={4}
               >
                 {memberChunk.map((member) => {

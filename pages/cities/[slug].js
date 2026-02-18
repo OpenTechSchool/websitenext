@@ -1,14 +1,16 @@
-import { useState, useEffect } from 'react'
+import fs from 'fs'
+import path from 'path'
+import process from 'process'
 import PropTypes from 'prop-types'
-import fetchJsonp from 'fetch-jsonp'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-import Grid from '@material-ui/core/Grid'
-import Icon from '@material-ui/core/Icon'
-import FacebookIcon from '@material-ui/icons/Facebook'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import TwitterIcon from '@material-ui/icons/Twitter'
-import InstagramIcon from '@material-ui/icons/Instagram'
+import rehypeRaw from 'rehype-raw'
+import Grid from '@mui/material/Grid'
+import Icon from '@mui/material/Icon'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import InstagramIcon from '@mui/icons-material/Instagram'
 import useTranslation from '../../hooks/useTranslation'
 import WithLocale from '../../containers/withLocale'
 // import LocalSwitcher from '../../components/LocalSwitcher/LocalSwitcher'
@@ -17,7 +19,6 @@ import CityHero from '../../components/CityHero/CityHero'
 import TextSection from '../../components/Section/TextSection'
 import TeamSection from '../../components/Section/TeamSection'
 import TwitterFeed from '../../components/TwitterFeed'
-import Events from '../../components/Events'
 import { useAssetPath } from '../../utils/assetPath'
 
 const WrappedIcon = (props) => <Icon {...props} />
@@ -40,42 +41,6 @@ export function CityTemplate({ content, data }) {
     matrix: { imgSrc: assetPath('/matrix_logo.png') },
   }
 
-  const [events, setEvents] = useState({})
-  const [hasEvents, setHasEvents] = useState(false)
-  const [showMoreLink, setShowMoreLink] = useState(true)
-  const [isLoading, setLoading] = useState(true)
-  useEffect(() => {
-    const fetchData = async () => {
-      if (events.firstBatch) {
-        const secondBatch = [...events.allEvents].splice(6, 10)
-        if (!secondBatch.length) setShowMoreLink(false)
-        setEvents({ ...events, secondBatch })
-        return
-      }
-
-      setLoading(true)
-
-      const result = await fetchJsonp(
-        `https://api.meetup.com/${meetupName}/events`
-      )
-
-      if (result.ok) {
-        setLoading(false)
-
-        const json = await result.json()
-        const allEvents = json.data
-        if (allEvents.length) {
-          const firstBatch = [...allEvents].splice(0, 6)
-          setEvents({ firstBatch, allEvents })
-          setHasEvents(true)
-        } else {
-          setHasEvents(false)
-        }
-      }
-    }
-    fetchData()
-  }, [showMoreLink])
-
   return (
     <CityLayout
       pageTitle={`${frontmatter.title} chapter`}
@@ -85,7 +50,6 @@ export function CityTemplate({ content, data }) {
         cityName={cityName}
         title={frontmatter.title}
         tagline={frontmatter.tagline}
-        meetupName={frontmatter.meetup_name}
         credits={frontmatter.credits}
       />
       {/* <section>
@@ -94,13 +58,15 @@ export function CityTemplate({ content, data }) {
       <TextSection classname='default'>
         <Grid
           container
-          justify='space-between'
+          justifyContent='space-between'
           alignItems='stretch'
           spacing={4}
         >
           <Grid item xs={12} md={6}>
             <div className='markdown'>
-              <ReactMarkdown source={markdownBody} escapeHtml={false} />
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                {markdownBody}
+              </ReactMarkdown>
             </div>
             {frontmatter.socials &&
               frontmatter.socials.map((social) => {
@@ -146,19 +112,23 @@ export function CityTemplate({ content, data }) {
           </Grid>
         </Grid>
       </TextSection>
-      <TextSection
-        classname='default'
-        title={t('city.eventsTitle')}
-        icon='event'
-      >
-        <Events
-          events={events}
-          isLoading={isLoading}
-          hasEvents={hasEvents}
-          showMoreLink={showMoreLink}
-          setShowMoreLink={setShowMoreLink}
-        />
-      </TextSection>
+      {meetupName && (
+        <TextSection
+          classname='default'
+          title={t('city.eventsTitle')}
+          icon='event'
+        >
+          <p style={{ textAlign: 'center' }}>
+            <a
+              href={`https://www.meetup.com/${meetupName}`}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {t('city.eventsTitle')} →
+            </a>
+          </p>
+        </TextSection>
+      )}
 
       <TeamSection frontmatter={frontmatter} />
 
@@ -203,9 +173,6 @@ export function CityTemplate({ content, data }) {
 }
 
 export async function getStaticPaths() {
-  const fs = require('fs')
-  const path = require('path')
-
   const citiesDir = path.join(process.cwd(), 'data/cities/en')
   const filenames = fs.readdirSync(citiesDir)
 

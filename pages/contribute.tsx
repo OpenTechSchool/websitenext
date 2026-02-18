@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import Grid from '@material-ui/core/Grid'
+import Grid from '@mui/material/Grid'
 import Link from 'next/link'
 import PageLayout from '../components/PageLayout/PageLayout'
 // import LocalSwitcher from '../components/LocalSwitcher/LocalSwitcher'
@@ -21,9 +21,8 @@ const Community: NextPage = () => {
       {/* <section>
         <LocalSwitcher />
       </section> */}
-
       <TextSection title={t('contribute.contribute.title')}>
-        <Grid container justify='center' alignItems='center'>
+        <Grid container justifyContent='center' alignItems='center'>
           <Grid item xs={12} md={3}>
             <img
               src={assetPath('/illustrations/organizer.svg')}
@@ -38,20 +37,19 @@ const Community: NextPage = () => {
           </Grid>
         </Grid>
       </TextSection>
-
       <TextSection
         title={t('contribute.volunteering.title')}
         classname='grey'
         anchor='volunteering'
       >
-        <Grid container justify='space-around'>
+        <Grid container justifyContent='space-around'>
           <Grid item xs={12} md={5}>
             <p className='getInTouch'>
               {t('contribute.volunteering.getInTouch')}
             </p>
           </Grid>
         </Grid>
-        <Grid container justify='space-around' alignItems='center'>
+        <Grid container justifyContent='space-around' alignItems='center'>
           <Grid item xs={12} md={4}>
             <img
               src={assetPath('/illustrations/volunteer.svg')}
@@ -64,7 +62,7 @@ const Community: NextPage = () => {
             <p>{t('contribute.volunteering.coach.description')}</p>
             <p>
               <Link href={`/guides#coaching-guidelines`}>
-                <a>{t('contribute.volunteering.coach.description2')}</a>
+                {t('contribute.volunteering.coach.description2')}
               </Link>
             </p>
 
@@ -72,7 +70,7 @@ const Community: NextPage = () => {
             <p>{t('contribute.volunteering.organize.description')}</p>
             <p>
               <Link href={`/guides#organize-meetup`}>
-                <a>{t('contribute.volunteering.organize.description2')}</a>
+                {t('contribute.volunteering.organize.description2')}
               </Link>
             </p>
 
@@ -80,15 +78,14 @@ const Community: NextPage = () => {
             <p>{t('contribute.volunteering.openChapter.description')}</p>
             <p>
               <Link href={`/guides#start-chapter`}>
-                <a>{t('contribute.volunteering.openChapter.description2')}</a>
+                {t('contribute.volunteering.openChapter.description2')}
               </Link>
             </p>
           </Grid>
         </Grid>
       </TextSection>
-
       <TextSection title={t('contribute.supporter.title')} anchor='supporter'>
-        <Grid container justify='center' alignItems='center'>
+        <Grid container justifyContent='center' alignItems='center'>
           <Grid item xs={12} md={3}>
             <img
               src={assetPath('/illustrations/sponsor.svg')}
@@ -108,16 +105,14 @@ const Community: NextPage = () => {
             <p>
               {t('contribute.supporter.membership')}{' '}
               <Link href={`/about#membership`}>
-                <a>{t('contribute.supporter.readMore')}</a>
+                {t('contribute.supporter.readMore')}
               </Link>
               .
             </p>
           </Grid>
         </Grid>
       </TextSection>
-
       <ContactSection />
-
       <style jsx>{`
         .sponsor-img,
         .organizer-img {
@@ -128,7 +123,7 @@ const Community: NextPage = () => {
         }
       `}</style>
     </PageLayout>
-  )
+  );
 }
 
 export default WithLocale(Community)

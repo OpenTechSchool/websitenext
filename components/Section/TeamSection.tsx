@@ -15,8 +15,8 @@ const TeamSection = ({ frontmatter }) => {
   const teamMembers = frontmatter.discourse_group
     ? showDiscourseTeam(frontmatter)
     : frontmatter.members
-    ? showMarkdownTeam(frontmatter)
-    : []
+      ? showMarkdownTeam(frontmatter)
+      : []
 
   return (
     <TextSection

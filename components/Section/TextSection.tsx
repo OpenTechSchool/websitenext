@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '@material-ui/core/Icon'
+import Icon from '@mui/material/Icon'
 import { mediaquery } from '../../style/style'
 
 const WrappedIcon = (props) => <Icon {...props} />
