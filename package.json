@@ -31,7 +31,7 @@
     "@mui/icons-material": "^6.3.0",
     "@mui/material": "^6.3.0",
     "gray-matter": "^4.0.3",
-    "next": "^15.1.7",
+    "next": "^15.5.14",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
